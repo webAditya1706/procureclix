@@ -47,6 +47,27 @@
   background-position: center;
   background-size: contain;
 }
+
+.nav-item .active{
+  cursor: pointer;
+}
+
+.nav-item .dropdown.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-shrink: 0;
+  background-image: url("../images/Ellipse_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
 .drawer_menu {
   background-color: var(--primary_bg_color);
   max-width: 75%;
@@ -92,7 +113,7 @@ a {
   background: #eefeff;
 }
 
-.bg_EEFEFF_rounded{
+.bg_EEFEFF_rounded {
   border-radius: 8px;
   background: #eefeff;
 }
@@ -239,53 +260,33 @@ a {
   letter-spacing: 0.14px;
 }
 
-.fs_26_fw_700_c_1313 {
-  color: var(--Black, #131313);
+.fs_12_fw_400_c_B5B8B8 {
+  color: var(--Stroke, #b5b8b8);
   font-family: Poppins;
-  font-size: 26px;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 26px; /* 100% */
-}
-
-.fs_28_fw_700_c_1313 {
-  color: var(--Black, #131313);
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px; /* 100% */
-}
-
-.fs_18_fw_700_c_1313 {
-  color: #131313;
-  font-family: Poppins;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px; /* 100% */
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  text-transform: capitalize;
 }
 
 .fs_10_fw_400_c_1313 {
   color: var(--Black, #131313);
-font-family: Poppins;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
-line-height: 14px; /* 140% */
-}
-
-.active .fs_18_fw_600_c_1313 {
-  color: #fff;
-}
-
-.fs_18_fw_600_c_1313 {
-  color: #131313;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 10px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 18px; /* 100% */
+  font-weight: 400;
+  line-height: 14px; /* 140% */
+}
+
+.fs_12_fw_400_c_1313 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  text-transform: capitalize;
 }
 
 .fs_14_fw_400_c_1313 {
@@ -305,6 +306,73 @@ line-height: 14px; /* 140% */
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 173.333% */
+}
+
+.fs_16_fw_400_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 100% */
+}
+
+.fs_16_fw_600_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 112.5% */
+}
+
+.fs_16_fw_700_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
+}
+
+.fs_18_fw_600_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+}
+
+.fs_18_fw_700_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 100% */
+}
+
+.fs_26_fw_700_c_1313 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px; /* 100% */
+}
+
+.fs_28_fw_700_c_1313 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 100% */
+}
+
+.active .fs_18_fw_600_c_1313 {
+  color: #fff;
 }
 
 .fs_16_fw_600_c_009DFF {
@@ -348,6 +416,15 @@ line-height: 14px; /* 140% */
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.fs_13_fw_700_c_fff {
+  color: var(--White, #fff);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 13px; /* 100% */
 }
 
 .fs_36_fw_700_c_fff {
@@ -397,6 +474,16 @@ line-height: 14px; /* 140% */
   line-height: 32px; /* 145.455% */
 }
 
+.fs_15_fw_400_c_fff {
+  color: var(--White, #fff);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px; /* 100% */
+  text-transform: capitalize;
+}
+
 .fs_20_fw_500_background {
   font-family: Poppins;
   font-size: 20px;
@@ -429,36 +516,8 @@ line-height: 14px; /* 140% */
   -webkit-text-fill-color: transparent;
 }
 
-.text_stroke{
+.text_stroke {
   -webkit-text-stroke: 0.5px #004263;
-}
-
-
-.fs_16_fw_400_c_1313 {
-  color: #131313;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px; /* 100% */
-}
-
-.fs_16_fw_600_c_1313 {
-  color: #131313;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 18px; /* 112.5% */
-}
-
-.fs_16_fw_700_c_1313 {
-  color: #131313;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 18px; /* 112.5% */
 }
 
 .fs_24_fw_700_c_1B3A4B {
@@ -645,7 +704,10 @@ line-height: 14px; /* 140% */
   align-items: center;
   gap: 10px;
   border-radius: 20px;
-background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
 }
 
 .footer_bg_image {
@@ -809,7 +871,7 @@ background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 20px 40px;
+  margin: 10px 40px;
 }
 
 .divider::before,
@@ -851,6 +913,31 @@ background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
 /* form css end */
 
 /* Comming soon css */
+
+.comingSoon_container{
+  margin: 60px 0px;
+}
+
+.comingSoon_parent{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.comingSoon_text {
+  font-family: "Times New Roman";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90px; /* 112.5% */
+  background: var(
+    --Gradient-2,
+    linear-gradient(180deg, #1b5b7e 0%, #105479 104.16%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .comingSoon_bg_image {
   background-image: url("../images/comming_soon_Logo_ProcureClix.jpg");
   min-height: 100vh;
