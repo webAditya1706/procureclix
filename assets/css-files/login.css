@@ -1,0 +1,174 @@
+.login_form {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.forgot_pass {
+  color: #c40003;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 100% */
+  letter-spacing: 0.14px;
+}
+
+.terms_privacy_text {
+  background: var(
+    --Gradient-2,
+    linear-gradient(180deg, #1b5b7e 0%, #105479 104.16%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 12.96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+}
+
+.login_form_sec {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* .login_form_sec::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 50vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: 0; 
+}*/
+
+.login_form_sec::after {
+  content: "";
+  /* Required for ::after pseudo-element */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  /* Ensure it covers the full width */
+  height: 100%;
+  /* Ensure it covers the full height */
+  max-height: 50vh;
+  /* Maintain your minimum height condition */
+  background-image: url("../images/login_bg.png");
+  background-size: cover;
+  /* Ensures the image scales properly */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  opacity: 0.9;
+  /* Optional for a faded effect */
+  z-index: -1;
+  /* Keeps the background behind content */
+}
+
+.form-control {
+  padding: 0.65rem 0.75rem;
+}
+
+.sign_in_btn {
+  background-color: aquamarine;
+  display: flex;
+  height: 44px;
+  padding: 10px 7.405px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.405px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+
+  /* text style */
+  color: var(--Text-Slate-Color-01, #fff);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 100% */
+  letter-spacing: -0.14px;
+}
+
+.sign_in_btn:hover{
+  color: #fff;
+}
+
+.spacer_40 {
+  height: 40px;
+}
+
+.lenguage_select {
+  background-color: #EEFAFF;
+  border-radius: 8px;
+  max-width: 200px;
+  /* text */
+  color: #004263;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 100% */
+}
+
+.lenguage_select option{
+  color: #004263;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 12px; /* 100% */
+}
+.reserved_col {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+}
+
+.logo_col {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+}
+
+
+/* meidia query */
+@media (max-width: 1000px) {
+  .reserved_col {
+    position: relative;
+    bottom: 0px;
+    /* margin-top: 50px; */
+  }
+
+  .logo_col {
+    position: relative;
+    bottom: 0px;
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+  }
+  .login_form_sec::after{
+    max-height: 90vh;
+  }
+}
