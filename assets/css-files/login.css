@@ -112,7 +112,7 @@
   letter-spacing: -0.14px;
 }
 
-.sign_in_btn:hover{
+.sign_in_btn:hover {
   color: #fff;
 }
 
@@ -121,54 +121,56 @@
 }
 
 .lenguage_select {
-  background-color: #EEFAFF;
+  background-color: #eefaff;
   border-radius: 8px;
   max-width: 200px;
   /* text */
   color: #004263;
-font-family: Poppins;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px; /* 100% */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
 }
 
-.lenguage_select option{
+.lenguage_select option {
   color: #004263;
-font-family: Poppins;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 12px; /* 100% */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px; /* 100% */
 }
 .reserved_col {
   position: absolute;
-  bottom: 60px;
-  left: 0;
+  bottom: 10px;
+  left: 10px;
 }
 
 .logo_col {
   position: absolute;
-  bottom: 60px;
-  right: 0;
+  bottom: 10px;
+  right: 5px;
 }
 
-
 /* meidia query */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .reserved_col {
     position: relative;
     bottom: 0px;
+
     /* margin-top: 50px; */
   }
 
   .logo_col {
     position: relative;
+    /* margin-left: 15px; */
     bottom: 0px;
+    padding-left: 10px;
     /* margin-top: 50px; */
     /* margin-bottom: 50px; */
   }
-  .login_form_sec::after{
+  .login_form_sec::after {
     max-height: 90vh;
   }
 }
