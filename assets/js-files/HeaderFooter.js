@@ -3,14 +3,14 @@ let HeaderHTML = `
     <!-- Desktop Navbar -->
     <nav class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container-fluid section_contaier">
-            <a class="navbar-brand" href="/index.html">
+            <a class="navbar-brand" href="/">
                 <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
             </a>
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav justify-content-center gap-xl-2 w-100 mb-2 mb-lg-0" id="navbarNav">
                     <li class="nav-item">
                         <div class="dropdown">
-                            <a class="nav-link" href="/index.html">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                         </div>
                     </li>
 
@@ -118,8 +118,11 @@ let HeaderHTML = `
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-evenly w-100 mb-2 mb-lg-0" id="navbarNav">
-                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="nav-link" href="/">Home</a>
+                        </div>
+                    </li>
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <button class="nav-link dropdown-toggle" type="button"
@@ -226,7 +229,7 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/index.html" class="footer_link">Home</a>
+                                    <a href="/" class="footer_link">Home</a>
                                     <a href="/about-us.html" class="footer_link">About Us</a>
                                     <a href="/procurement-software-pricing.html" class="footer_link">Pricing</a>
                                     <a href="/contact-us.html" class="footer_link">Contact Us</a>

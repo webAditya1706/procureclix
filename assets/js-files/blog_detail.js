@@ -1,6 +1,6 @@
 $(document).ready(() => {
   const urlParams = new URLSearchParams(window.location.search);
-  const blogId = urlParams.get("id");
+  const blogId = urlParams.get("blogPage");
 
   const iframeWrapper = $("#blog_detail");
 
@@ -43,11 +43,9 @@ $(document).ready(() => {
     //   });
     // }
 
-    let header = `<div id="header-placeholder"></div>`;
-    let footer = `<div id="footer_wrapper"></div>`;
     const iframe = $(`
           <iframe
-            src="${blogId}"
+            src="https://procureclix.com/blog/${blogId}"
             frameborder="0"
             class="iframe_doc_detail"
             onload="hideLoader()"

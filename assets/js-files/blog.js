@@ -7,23 +7,25 @@ $(document).ready(() => {
     $.ajax({
       url: API_URL,
       method: "GET",
-      data: {
-        per_page: POSTS_PER_PAGE,
-        page: page,
-      },
+      // data: {
+      //   per_page: POSTS_PER_PAGE,
+      //   page: page,
+      // },
       success: function (data, textStatus, request) {
         // hideLoader();
         $("#blog-container").empty();
 
         data.forEach((post) => {
-          console.log(post,"=========post");
-          
-          const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || "https://via.placeholder.com/300x180";
+          console.log(post, "=========post");
+
+          const imageUrl =
+            post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+            "https://via.placeholder.com/300x180";
 
           const blogHTML = `
-            <div class="col-md-6 col-xl-4">
+            <div class="col-md-6 col-xl-4 mx-2">
              <!-- <div class="blog__card" data-id="${post.id}"> --!>
-              <div class="blog__card" data-id="${post.link}">
+              <div class="blog__card" data-id="${post.slug}">
                 <img src="${imageUrl}" alt="Blog Image" class="mt-0" />
                 <div class="blog__card-content">
                   <div class="blog__card-title">${post.title.rendered}</div>
@@ -31,11 +33,14 @@ $(document).ready(() => {
                 </div>
               </div>
             </div>`;
-          $("#blog-container").append(blogHTML);
+          $(".blog_carosal").append(blogHTML);
         });
-
-        const totalPages = parseInt(request.getResponseHeader("X-WP-TotalPages")) || 1;
-        setupPagination(totalPages, page);
+        if ($(".blog_carosal").hasClass("slick-initialized")) {
+          $(".blog_carosal").slick("unslick");
+        }
+        loadCarosalSlider();
+        // const totalPages = parseInt(request.getResponseHeader("X-WP-TotalPages")) || 1;
+        // setupPagination(totalPages, page);
       },
       error: function (err) {
         console.error("Error loading blogs:", err);
@@ -48,17 +53,23 @@ $(document).ready(() => {
     let paginationHTML = "";
 
     if (currentPage > 1) {
-      paginationHTML += `<a href="#" class="page-link" data-page="${currentPage - 1}">&laquo;</a>`;
+      paginationHTML += `<a href="#" class="page-link" data-page="${
+        currentPage - 1
+      }">&laquo;</a>`;
     } else {
       paginationHTML += `<a href="#" class="disabled">&laquo;</a>`;
     }
 
     for (let i = 1; i <= totalPages; i++) {
-      paginationHTML += `<a href="#" class="page-link ${i === currentPage ? "active" : ""}" data-page="${i}">${i}</a>`;
+      paginationHTML += `<a href="#" class="page-link ${
+        i === currentPage ? "active" : ""
+      }" data-page="${i}">${i}</a>`;
     }
 
     if (currentPage < totalPages) {
-      paginationHTML += `<a href="#" class="page-link" data-page="${currentPage + 1}">&raquo;</a>`;
+      paginationHTML += `<a href="#" class="page-link" data-page="${
+        currentPage + 1
+      }">&raquo;</a>`;
     } else {
       paginationHTML += `<a href="#" class="disabled">&raquo;</a>`;
     }
@@ -68,12 +79,11 @@ $(document).ready(() => {
 
   // Handle card click
   $(document).on("click", ".blog__card", function () {
-    
     const blogId = $(this).data("id");
-    console.log(blogId,"============$(this).data");
-
     if (blogId) {
-      window.location.href = `blog-detail.html?id=${blogId}`;
+      let url = `blog-detail/?blogPage=${blogId}`;
+      console.log(url, "============$(this).url");
+      window.location.href = url;
     }
   });
 
@@ -99,4 +109,31 @@ $(document).ready(() => {
 
   // Initial Load
   fetchBlogs(1);
+
+  const loadCarosalSlider = () => {
+    $(".blog_carosal").slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+      nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+  };
 });

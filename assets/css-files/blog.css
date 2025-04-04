@@ -25,7 +25,7 @@ body {
 .blog__card {
   width: 100%;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -185,4 +185,39 @@ img{
 .iframe_doc_detail::-webkit-scrollbar {
   display: none;                /* Hide scrollbar in Chrome/Safari */
 }
+
+
+
+/* carosal css */
+
+/* Slick arrow buttons */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: none;
+  font-size: 20px;
+  z-index: 5;
+  width: 35px;
+  height: 35px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -30px; /* Adjust as needed */
+}
+
+.slick-next {
+  right: -30px; /* Adjust as needed */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #e0e0e0;
+}
+
 

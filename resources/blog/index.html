@@ -26,36 +26,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/slick/slick.css" />
 
     <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Optional for Firefox or legacy browsers */
+        body {
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* IE 10+ */
+        }
+
+        iframe body {}
+
+        iframe header {
+            display: none;
+        }
     </style>
-
-    <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Optional for Firefox or legacy browsers */
-  body {
-    scrollbar-width: none;          /* Firefox */
-    -ms-overflow-style: none;       /* IE 10+ */
-  }
-  iframe body{
-    background: #fff;
-  }
-  iframe header{
-    display: none;
-  }
-</style>
 
 </head>
 
-<body style="scrollbar-width:none; -ms-overflow-style:none;">
+<body style="scrollbar-width:none; -ms-overflow-style:none; background-color: #f9f9f9f9;">
     <!-- loader -->
-    <div id="preloader" class="d-none" >
+    <div id="preloader" class="d-none">
         <div class="ctn-preloader" id="ctn-preloader">
             <div class="round_spinner">
                 <div class="spinner"></div>
@@ -92,68 +92,35 @@
     </section> -->
 
     <div class="spacer_80"></div>
-    <!-- <div class="spacer_80"></div> -->
+    <div class="spacer_80"></div>
 
     <!-- blog card -->
     <section>
         <div class="container">
-            <div class="row" id="blog-container">
-                <!-- <div class="col-md-6 col-xl-4">
-                    <div class="blog__card">
-                        <img src="https://via.placeholder.com/300x180" alt="Blog Image" />
-                        <div class="blog__card-content">
-                            <div class="blog__card-title">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt
-                            </div>
-                            <div class="blog__card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus id sapien
-                                mollis
-                                interdum. Cras feugiat velit vitae eros tempor, a efficitur ipsum sollicitudin.
-                                Donec in
-                                massa sed sem
-                                gravida tincidunt.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus id sapien
-                                mollis
-                                interdum. Cras feugiat velit vitae eros tempor, a efficitur ipsum sollicitudin.
-                                Donec in
-                                massa sed sem
-                                gravida tincidunt.
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+            <div class="row d-flex g-2 blog_carosal" id="blog-container">
             </div>
-            <div class="pagination mt-4" id="pagination">
-                <!-- <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">&raquo;</a> -->
-            </div>
+            <!-- <div class="pagination mt-4" id="pagination">
+            </div> -->
+
+
 
         </div>
     </section>
-
-    <!-- <iframe src="https://procureclix.com/blog" frameborder="0" width="100%" height="100vh"
-        style="overflow:hidden; scrollbar-width:none; -ms-overflow-style:none; height: 100vh;">
-    </iframe> -->
 
 
     <div class="spacer_100"></div>
     <!-- footer -->
     <div id="footer_wrapper"></div>
     <!-- footer end -->
-    <!-- jquery -->
+
     <!-- jQuery MUST come first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="/slick/slick.min.js"></script>
 
     <script src="/assets/js-files/blog.js"></script>
     <script src="/assets/js-files/HeaderFooter.js"></script>
+
 
 </body>
 
