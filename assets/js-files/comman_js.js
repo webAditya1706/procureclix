@@ -31,22 +31,3 @@ navLinks.forEach((link) => {
 
 // comman header link
 
-// ✅ Accordian This script will automatically change the icon to + or - based on the collapse state
-document.querySelectorAll(".accordion-item").forEach(function (item) {
-  // Whenever an accordion is shown
-  item.addEventListener("show.bs.collapse", function () {
-    // Reset all icons to "+"
-    document.querySelectorAll(".icon").forEach(function (icon) {
-      icon.textContent = "+";
-    });
-    // Change the current icon to "-"
-    item.querySelector(".icon").textContent = "-";
-  });
-
-  // Whenever an accordion is hidden
-  item.addEventListener("hide.bs.collapse", function () {
-    item.querySelector(".icon").textContent = "+";
-  });
-});
-
-// accordian end
