@@ -16,6 +16,10 @@
   padding: 30px 40px;
 }
 
+.section_contaier {
+  /* margin: 0px 20px; */
+}
+
 .primary_bg {
   background-color: var(--primary_bg_color);
 }
@@ -324,11 +328,6 @@ a {
 .w_20 {
   width: 20px;
 }
-.integration_img {
-  width: 435px;
-  height: 550px;
-}
-
 /* font size */
 .text_primery {
   background: var(
@@ -572,7 +571,7 @@ a {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px; /* 100% */
+  line-height: 25px; /* 100% */
   background: var(
     --Gradient,
     linear-gradient(180deg, #004263 0%, #0086c9 100%)
@@ -597,16 +596,19 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-.fs_40_fw_700_linear{
+.fs_40_fw_700_linear {
   font-family: Poppins;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 50px; /* 125% */
-background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px; /* 125% */
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fs_16_fw_400_c_fbfb {
@@ -745,6 +747,15 @@ background-clip: text;
   font-size: 16px !important;
   font-weight: 400 !important;
   line-height: normal !important;
+}
+
+.footer_link.active {
+  color: var(--Primary, #1b5b7e) !important;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600 !important;
+  line-height: 16px; /* 100% */
 }
 
 .footer_link:hover {
@@ -1039,7 +1050,7 @@ background-clip: text;
   );
 }
 
-.microsoft_azure{
+.microsoft_azure {
   width: 220px;
 }
 
@@ -1168,3 +1179,29 @@ background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap; 
 } */
+
+/* media query */
+
+@media (max-width: 1024px) {
+  .section_contaier {
+    margin: 0px 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section_contaier {
+    margin: 0px 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section_contaier {
+    margin: 0px 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .section_contaier {
+    margin: 0px 150px;
+  }
+}
