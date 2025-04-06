@@ -1,0 +1,98 @@
+/* rfp services */
+
+.bg_slid {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  bottom: 0;
+  z-index: 0;
+  width: 377px;
+  height: 80vh;
+}
+
+.img_rfq_event {
+  position: absolute;
+  right: 0px;
+  top: 6vh;
+  z-index: 1;
+  height: 100%;
+  max-height: 66vh;
+}
+
+/* benifit */
+.services_benifit_container {
+  border-radius: 10px;
+  background: #eefaff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
+  position: relative;
+  padding: 40px;
+}
+
+.benifit_column {
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--White, #fff);
+  padding: 15px;
+  width: 190px;
+  hyphens: 190px;
+}
+
+.benifit_signal_ring {
+  width: 135px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.benifit_dubble_ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.service_costing_hefty {
+  border-radius: 8px;
+  background: var(--White, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 25px;
+}
+
+.integration_shadow_column {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+  padding: 25px;
+}
+
+
+.numbers_parent{
+    border-top: 1px solid #E0E0E0;
+    justify-content: space-between;
+    padding: 20px 0px;
+  }
+
+  .left_border{
+    border-right: 1px solid #E0E0E0;
+  }
+/* Media query  */
+
+@media (max-width: 1000px) {
+  .img_rfq_event {
+    right: 30px;
+  }
+}
+
+@media (max-width: 770px) {
+  .rfq_ban_img {
+    position: relative;
+  }
+  .bg_slid {
+    position: static;
+    display: none;
+  }
+  .img_rfq_event {
+    position: static;
+    width: 100%;
+    text-align: center;
+  }
+}
