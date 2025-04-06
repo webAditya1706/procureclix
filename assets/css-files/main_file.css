@@ -1039,6 +1039,10 @@ background-clip: text;
   );
 }
 
+.microsoft_azure{
+  width: 220px;
+}
+
 .linear-border {
   /* padding: 15px; */
   background: #fff;
