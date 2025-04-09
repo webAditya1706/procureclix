@@ -42,6 +42,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 0;
 }
 
 .benifit_dubble_ring {
@@ -49,6 +50,7 @@
   top: 0;
   left: 0;
   width: 135px;
+  z-index: 0;
 }
 
 .integration_img {
@@ -70,20 +72,40 @@
   padding: 25px;
 }
 
-.faq_img{
+.faq_img {
   width: 570px;
   max-width: 100%;
 }
 
-.numbers_parent{
-    border-top: 1px solid #E0E0E0;
-    justify-content: space-between;
-    padding: 20px 0px;
-  }
+.numbers_parent {
+  border-top: 1px solid #e0e0e0;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
 
-  .left_border{
-    border-right: 1px solid #E0E0E0;
-  }
+.left_border {
+  border-right: 1px solid #e0e0e0;
+}
+
+.blue_managment_signal_ring {
+  width: 135px;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+}
+
+.challenges_bg {
+  border-radius: 8px;
+  background: var(--White, #fff);
+  margin-top: 40px;
+  padding: 25px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.chalenge_dubble_ring{
+  position: absolute;
+}
 /* Media query  */
 
 @media (max-width: 1000px) {

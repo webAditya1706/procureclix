@@ -23,6 +23,16 @@
 .primary_bg {
   background-color: var(--primary_bg_color);
 }
+.red_gb{
+  border-radius: 10px;
+background: #FEE;
+box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
+}
+.bg-white{
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
 
 .light_bg {
   background-color: #fff;
@@ -467,6 +477,14 @@ a {
   line-height: 18px; /* 100% */
 }
 
+.fs_20_fw_700_c_1313{
+  color: #131313;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 150% */
+}
 .fs_24_fw_700_c_1B3A4B {
   color: #1b3a4b;
   text-align: center;
@@ -568,6 +586,17 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+.fs_20_fw_500_c_red_linear {
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 100% */
+  background: var(--red, linear-gradient(180deg, #630000 0%, #C90000 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
 .fs_20_fw_500_c_linear {
   font-family: Poppins;
   font-size: 20px;
