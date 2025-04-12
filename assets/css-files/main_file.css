@@ -149,6 +149,15 @@ a {
   background: #eefeff;
 }
 
+.img_outer_shadow{
+  border-radius: 10px;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .secondry_bg {
   background-color: var(--secondary_bg_color);
 }

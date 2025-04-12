@@ -7,25 +7,33 @@
   bottom: 0;
   z-index: 0;
   width: 377px;
-  height: 80vh;
+  height: 100vh;
 }
 
 .img_rfq_event {
   position: absolute;
   right: 0px;
-  top: 5vh;
+  top: 50px;
+  bottom: 50px;
   z-index: 1;
   height: 100%;
-  max-height: 68vh;
+  max-height: 88vh;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
 }
 
 /* benifit */
-.services_benifit_container {
-  border-radius: 10px;
-  background: #eefaff;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
-  position: relative;
-  padding: 50px;
+
+.ring_bg_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 .benifit_column {
@@ -40,15 +48,15 @@
 .benifit_signal_ring {
   width: 135px;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -28px;
+  right: -20px;
   z-index: 0;
 }
 
 .benifit_dubble_ring {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -52px;
+  left: -62px;
   width: 135px;
   z-index: 0;
 }
@@ -94,18 +102,6 @@
   right: 0;
 }
 
-.challenges_bg {
-  border-radius: 8px;
-  background: var(--White, #fff);
-  margin-top: 40px;
-  padding: 25px 50px;
-  position: relative;
-  z-index: 1;
-}
-
-.chalenge_dubble_ring{
-  position: absolute;
-}
 /* Media query  */
 
 @media (max-width: 1000px) {
@@ -126,5 +122,40 @@
     position: static;
     width: 100%;
     text-align: center;
+    transform: translateY(0%);
   }
+}
+
+
+/* solutions  */
+
+.suppler_challenges{
+  overflow: hidden;
+  position: relative;
+  padding: 50px;
+  background-image: url("../images/services/solution_supplire_challenges_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.challenges_bg {
+  border-radius: 8px;
+  background: var(--White, #fff);
+  margin-top: 65px;
+  padding: 25px 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.chalenge_dubble_ring {
+  position: absolute;
+}
+
+
+.services_benifit_container {
+  border-radius: 10px;
+  background: #eefaff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
+  position: relative;
+  overflow: hidden;
 }
