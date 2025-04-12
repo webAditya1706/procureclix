@@ -23,15 +23,23 @@
 .primary_bg {
   background-color: var(--primary_bg_color);
 }
-.red_gb{
+.red_gb {
   border-radius: 10px;
-background: #FEE;
-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
+  background: #fee;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
 }
-.bg-white{
+.bg-white {
   background-color: #fff;
   position: relative;
   z-index: 1;
+}
+
+.bg_white_shadow {
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.06);
+  padding: 40px;
 }
 
 .light_bg {
@@ -282,13 +290,12 @@ a {
   align-items: center;
 }
 
-
 .iconbg_2 {
   width: 40px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: #FFEFDC;
+  background: #ffefdc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +345,6 @@ a {
   height: 35px;
 }
 
-
 .w_40 {
   width: 40px;
 }
@@ -347,7 +353,13 @@ a {
   width: 150px !important;
 }
 
+.w_180{
+  width: 180px;
+  max-width: 100%;
+}
+
 .w_200 {
+  width: 200px;
   max-width: 200px;
 }
 
@@ -406,13 +418,13 @@ a {
   text-transform: capitalize;
 }
 
-.fs_13_fw_400_c_5656{
+.fs_13_fw_400_c_5656 {
   color: var(--Light-text, #565656);
-font-family: Poppins;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: 18px; /* 138.462% */
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 138.462% */
 }
 
 .fs_10_fw_400_c_1313 {
@@ -505,10 +517,10 @@ line-height: 18px; /* 138.462% */
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 18px; /* 100% */
+  line-height: 25px; /* 100% */
 }
 
-.fs_20_fw_700_c_1313{
+.fs_20_fw_700_c_1313 {
   color: #131313;
   font-family: Poppins;
   font-size: 20px;
@@ -623,10 +635,10 @@ line-height: 18px; /* 138.462% */
   font-style: normal;
   font-weight: 500;
   line-height: 25px; /* 100% */
-  background: var(--red, linear-gradient(180deg, #630000 0%, #C90000 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: var(--red, linear-gradient(180deg, #630000 0%, #c90000 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .fs_20_fw_500_c_linear {
   font-family: Poppins;
@@ -1245,9 +1257,6 @@ background-clip: text;
 
 /* media query */
 /* media query */
-
-
-
 
 @media (max-width: 1024px) {
   .section_contaier {
