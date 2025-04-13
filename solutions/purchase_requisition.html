@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contract management</title>
+    <title>Purchase Requisition Software | ProcureClix</title>
+    <meta name="description"
+        content="Simplify and automate your procurement process with ProcureClix purchase requisition software. Reduce manual work, ensure compliance, and speed up approvals effortlessly.">
+
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css-files/main_file.css">
     <link rel="stylesheet" href="../assets/css-files/home.css">
+    <link rel="stylesheet" href="../assets/css-files/serves_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,15 +20,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- AOS style link -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <!-- header start -->
     <div class="position-sticky top-0 w-100 primary_bg z-3">
         <nav class="navbar navbar-expand-lg d-none d-lg-block py-4">
             <div class="container-fluid section_contaier">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
+                    <img loading="lazy" src="../assets/images/Logo_ProcureClix.png" class="w_150"
+                        alt="ProcureClix Logo">
                 </a>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                     <ul class="navbar-nav justify-content-center gap-2 w-100 mb-2 mb-lg-0" id="navbarNav">
@@ -32,7 +41,7 @@
                             <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item position-relative">
-                            <div class="dropdown active ">
+                            <div class="dropdown active">
                                 <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Solutions</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="../solutions/purchase_requisition.html">Purchase
@@ -55,9 +64,8 @@
                             </div>
                         </li>
                         <li class="nav-item position-relative">
-                            <div class="dropdown">
-                                <a class="nav-link dropdown-toggle" href="../services/index.html"
-                                    data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown ">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="../services/managed_rfx_rfq_rfp.html" class="dropdown-item">Managed RFX
@@ -88,7 +96,8 @@
                                     <li><a class="dropdown-item"
                                             href="../industries/construction_real_estate.html">Construction & Real
                                             Estate</a></li>
-                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers and
+                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers
+                                            and
                                             Suppliers</a></li>
                                     <li><a class="dropdown-item" href="../industries/biotech_pharma.html">BioTech and
                                             Pharma</a></li>
@@ -143,7 +152,7 @@
         <div class="container-fluid d-block d-lg-none">
             <div class="d-flex justify-content-between align-items-center py-2">
                 <a class="navbar-brand" href="./index.html">
-                    <img src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
+                    <img loading="lazy" src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
                 </a>
                 <!-- Replace the button with an image -->
                 <i class="bi bi-list drawer_icon" class="navbar-toggler-icon" data-bs-toggle="offcanvas"
@@ -227,7 +236,8 @@
                                     <li><a class="dropdown-item"
                                             href="../industries/construction_real_estate.html">Construction & Real
                                             Estate</a></li>
-                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers and
+                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers
+                                            and
                                             Suppliers</a></li>
                                     <li><a class="dropdown-item" href="../industries/biotech_pharma.html">BioTech and
                                             Pharma</a></li>
@@ -285,24 +295,1055 @@
 
     <!-- header End -->
 
-    <!-- comming soon section -->
-    <section>
+    <!-- Banner section -->
+    <section class="position-relative linear_gradient_blue" data-aos="slide-left" data-aos-delay="200"
+        data-aos-duration="1000" data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
         <div class="container-fluid section_contaier">
             <!-- <div class="row comingSoon_bg_image"> -->
-            <div class="comingSoon_container">
-                <div class="row position-relative comming_soon_Logo_ProcureClix">
-                    <img src="../assets/images/Coming_Soon_bg.jpg" class="w-100" alt="">
-                    <div class="comingSoon_text comingSoon_parent">
-                        <span class="">COMING SOON</span>
+            <div class="row align-items-center" style="height: auto; min-height: 100vh;">
+                <div class="col-12 col-md-6 py-5">
+                    <div class="col-12 col-md-10">
+                        <p class="fs_32_fw_700_c_1313 mb-1">Purchase Requisition Software – Fast, Smart, Effortless</p>
+                    </div>
+                    <p class="fs_15_fw_400img_rfq_event_c_1313 mb-4">Messy approvals? Budget surprises? Not anymore.</p>
+                    <div class="row row-gap-2 mb-3">
+                        <div class="col-6 mb-2 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Quick, Seamless Approvals</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Smart Online Catalogs</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Tailored to Your Needs</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Real-Time Budget Control</span>
+                        </div>
+
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Dashboard-KPIs & Performance Analytics</span>
+                        </div>
+
+                    </div>
+                    <p class="fs_14_fw_600_c_linear">See ProcureClix in Action</p>
+                    <a type="button" href="../comingsoon/index.html" class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
+                        Demo Today!</a type="button" href="../comingsoon/index.html">
+
+                </div>
+                <div class="col-12 col-md-6 rfq_ban_img">
+                    <div class="text-center">
+                        <img loading="lazy" src="../assets/images/services/spand_analysis_banner.jpg"
+                            class="img_rfq_event" alt="">
+                        <img loading="lazy" src="../assets/images/servises_rfp/slid_img.png" class="bg_slid" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Challenges section -->
+    <div class="spacer_80"></div>
+    <section data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
+        <div class="container-fluid section_contaier position-relative">
+            <div class="red_gb position-relative overflow-hidden">
+                <img loading="lazy" src="../assets/images/services/red_dubble_round_circle.png"
+                    class="benifit_dubble_ring" alt="" data-aos="fade-right" data-aos-delay="200"
+                    data-aos-duration="1000" data-aos-offset="200">
+                <img loading="lazy" src="../assets/images/services/red_solid_cirdle.png" class="benifit_signal_ring"
+                    alt="" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+                <div class="spacer_40"></div>
+                <div class="position-relative my-2 px-4 px-sm-5">
+                    <img loading="lazy" src="../assets/images/services/orange_bg_ring.png" class="ring_bg_img" alt=""
+                        style="width: 416px; max-width: 100% ;">
+                    <div class="row z-1">
+                        <div class="d-flex justify-content-center align-items-center gap-2 z-1">
+                            <img loading="lazy" src="../assets/images/services/puzzel.png" class="w_16_h_16"
+                                alt="puzzel">
+                            <span class="fs_20_fw_500_c_red_linear">Challenges</span>
+                        </div>
+                        <div class="challenges_bg w-100">
+                            <div class="text-center">
+                                <p class="fs_24_fw_700_c_1313 mb-1">Bogged Down by a Slow, Cumbersome Purchase
+                                    Requisition Process?</p>
+                                <div class="col-12 col-md-8 m-auto text-center">
+                                    <p class="fs_15_fw_400_c_1313">A clunky, outdated paper or email-based system
+                                        doesn’t
+                                        just slow things down—it drains productivity, frustrates your team, and leads to
+                                        costly mistakes. If your purchase requisition process isn’t seamless, you’re
+                                        stuck
+                                        dealing with:</p>
+                                </div>
+                            </div>
+                            <div class="row gx-5">
+                                <!-- one -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Approvals dragging for days—slowing down
+                                                essential purchases.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- three -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Disorganized, error-prone requests leading to
+                                                miscommunication and delays.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- four -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">No real-time budget visibility—causing
+                                                surprise overruns and financial blind spots.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fifth -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">One-size-fits-all workflows that don’t adapt
+                                                to your procurement needs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sixth -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Hours wasted on manual processes instead of
+                                                strategic cost-saving decisions.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="fs_15_fw_400_c_1313 text-center mb-0">Stop wrestling with inefficiencies. It's
+                                    time to automate, streamline, and take control.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer_40"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- benifit section -->
+    <section class="section_contaier" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"
+        data-aos-offset="200">
+        <!-- spacer -->
+        <div class="spacer_100"></div>
+        <div class="container-fluid services_benifit_container px-2 px-sm-5">
+            <img loading="lazy" src="../assets/images/servises_rfp/dubble_ring.png" alt="" class="benifit_dubble_ring"
+                data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+            <img loading="lazy" src="../assets/images/services/managment_blur_solid_ring.png"
+                class="benifit_signal_ring" alt="" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"
+                data-aos-offset="200">
+            <img loading="lazy" src="../assets/images/services/blue_bg_ring.png" class="ring_bg_img" alt="">
+            <div class="row g-4 mb-5 z-1 position-relative">
+                <div class="text-center mb-3 mt-5">
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <img loading="lazy" src="../assets/images/services/managment_benifit.png" class="w_16_h_16"
+                            alt="" srcset="">
+                        <span class="fs_20_fw_500_c_linear">Benefits</span>
+                    </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Why Does Approving a Simple Purchase Feel Like an Endless
+                            Chore?</p>
+                        <p class="fs_15_fw_400_c_1313 mb-2">
+                            You’ve got bigger things to focus on… yet, here you are, stuck in email chains, chasing
+                            approvals, and wrestling with clunky workflows.
+                            <br /> <br />
+                            It’s frustrating. It’s slow. And frankly? It’s a waste of your time.
+                        </p>
+
+                        <div class="d-flex gap-2 align-items-center">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Automate approvals so requests get digitally signed off in
+                                a snap.</span>
+                        </div>
+
+                        <div class="d-flex gap-2 align-items-center">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Speed up decision-making—without the
+                                back-and-forth.</span>
+                        </div>
+
+                        <div class="d-flex gap-2 align-items-center">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Maintain transparency while making approvals
+                                effortless.</span>
+                        </div>
+
+                        <p class="fs_15_fw_400_c_1313 mt-2 mb-0">Because procurement should move as fast as your
+                            business does.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Procurement Shouldn’t Be a Costly Mess</p>
+                        <p class="fs_15_fw_400_c_1313 mb-2">
+                            You just need to buy what your team needs—so why does it feel like a never-ending <b>budget
+                                battle</b> with approvals, rogue spending, and compliance headaches?
+                        </p>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313"><b>Shop smarter</b> with online catalogs that are locked
+                                in for
+                                each preferred supplier at the contracted pricing.</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313"><b>Eliminate overspending</b> with built-in budget
+                                controls—so
+                                there are no surprises.</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313"><b>Stay 100% compliant</b> without manually chasing
+                                approvals.
+                            </span>
+                        </div>
+
+                        <p class="fs_15_fw_400_c_1313 mt-2 mb-0">Because procurement should be effortless—not
+                            exhausting.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Turn Data Into Smart Spending Decisions</p>
+                        <p class="fs_15_fw_400_c_1313 mb-2">
+                            Approvals go through, and orders get placed—but where’s the full picture when you need it
+                            most?</p>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313">Customize purchase requisition forms to match your team’s
+                                exact needs.</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313">Track every detail with optional custom fields—so nothing
+                                slips through the cracks.</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313">Gain real-time insights to make smarter, data-driven
+                                purchasing decisions.</span>
+                        </div>
+
+                        <p class="fs_15_fw_400_c_1313 mt-2 mb-0">Better data. Smarter decisions. Bigger wins.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Budgets Blown? Costs Out of Control?</p>
+                        <p class="fs_15_fw_400_c_1313 mb-2">Expenses approved, purchases made—but how do you stay 100%
+                            in control of your spending?</p>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313">Set hard spending limits so no one can go rogue.</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313">Get instant, real-time audit tracking to catch issues
+                                before they cost you.</span>
+                        </div>
+
+                        <div class="d-flex gap-2">
+                            <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                class="w_14_h_14 mt-1" alt="">
+                            <span class="fs_14_fw_400_c_1313">Lock in total compliance—so every dollar goes exactly
+                                where it should.</span>
+                        </div>
+
+                        <p class="fs_15_fw_400_c_1313 mt-2 mb-0">No guesswork. No surprises. Just flawless, controlled
+                            spending.</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- feacture section -->
+    <section>
+        <!-- spacer -->
+        <div class="spacer_100"></div>
+        <div class="container-fluid section_contaier">
+            <div class="row gx-4">
+                <div class="img_outer_shadow">
+                    <img loading="lazy" src="../assets/images/services/glob_on_hand.png" class="w-100" alt=""
+                        alt="service_full_width_img" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000"
+                        data-aos-offset="200">
+                    <!-- <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/service_full_width_img.png" class="w-100" > -->
+                </div>
+                <div class="text-center mb-3 mt-5" data-aos="slide-left" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-offset="200">
+                    <div class="d-flex gap-2 justify-content-center align-items-center mb-2">
+                        <img loading="lazy" src="../assets/icons/problem_icon.png" class="w_16_h_16" alt="">
+                        <span class="fs_20_fw_500_c_linear">Features</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+
+                <!-- Column 1 (Left side) -->
+                <div class="col-12 col-md-6">
+                    <!-- Block 1 -->
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Never Let Approvals Slow You Down Again</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Stuck in back-to-back meetings? Traveling? Off the grid for a bit? Purchase approvals
+                            shouldn’t wait for you to be at your desk.
+                            <br /> <br />
+                            With mobile and email approvals, you can review, approve, or reject requests
+                            instantly—anytime, anywhere.
+                            <br /> <br />
+                            No delays. No bottlenecks. Just smooth, hassle-free purchasing that keeps business moving
+                            forward.
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Column 2 (Right side) -->
+                <div class=" col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">See Every Dollar—The Moment It’s Spent</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Untracked expenses? Unexpected budget overruns? In procurement, flying blind means reactive
+                            decisions—and costly surprises.
+                            <br /> <br />
+                            Real-time analytics give you instant visibility into every transaction, from purchase
+                            requests to approvals to awards and purchase orders. Track spending patterns, flag
+                            anomalies, and ensure compliance—all without sifting through spreadsheets.
+                            With automated reporting and live dashboards, procurement teams can optimize budgets
+                            proactively, prevent overspending, and stay audit-ready.
+                            <br /> <br />
+                            No blind spots. No budget leaks. Just total spend control.
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Block 3 -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column mt-4">
+                        <span class="fs_16_fw_600_background">Approval Roadblocks? Not Anymore</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Slow approvals stalling important purchases? Chasing down managers just to get a simple
+                            request signed off? Yeah, that ends now.
+                            <br /> <br />
+                            With a custom approval workflow, every purchase requisition flows through the chosen
+                            approval workflow—automatically. Approvals can be driven based on the user defined approval
+                            limit or can be uniformly passed through a fixed channel. Email and mobile approvals keep
+                            things moving, so decisions happen in minutes, not days.
+                            <br /> <br />
+                            No delays. No bottlenecks. Just a seamless, foolproof approval process.
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Block 4 -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column mt-4">
+                        <span class="fs_16_fw_600_background">Vendor Bidding Headaches? Gone. </span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Chasing vendors for quotes? Manually re-entering approved requisitions? Wasting time
+                            juggling emails just to get competitive pricing? That’s over
+                            <br /> <br />
+                            With seamless integration of purchase requisitions, the approved requisitions automatically
+                            convert into RFQ —no chasing, no delays, and no endless email chains. The entire procurement
+                            process flows effortlessly, ensuring you get competitive quotes for goods and services
+                            without the usual headaches. Flipping to an RFQ or Auction from a requisition is just a
+                            couple of clicks.
+                            <br /> <br />
+                            Faster approvals. Smoother requisition management. Greater cost savings.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 5 -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column mt-4">
+                        <span class="fs_16_fw_600_background">Lost in Procurement Chaos? Not Anymore</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Endless email threads. Missed messages. Confusion over purchase requisitions that stalls the
+                            entire procurement process. Sound familiar?
+                            <br /> <br />
+                            It doesn’t have to be this way.
+                            <br /> <br />
+                            With built-in messaging- buyers, vendors, and procurement teams stay in sync—no
+                            back-and-forth, no miscommunication. Clarify requests, resolve issues instantly, and keep
+                            the purchasing process moving without unnecessary delays.
+                            No more guesswork. No more chasing emails. Just simplified, streamlined procurement
+                            communication that works.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 6 -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column mt-4">
+                        <span class="fs_16_fw_600_background">One-Size-Fits-All? Not Anymore</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Ever struggled with rigid forms that don’t fit your procurement process? Missing fields,
+                            irrelevant details, and endless back-and-forth just to get the right information? That’s a
+                            bottleneck you don’t need.
+                            <br /> <br />
+                            With fully customizable purchase requisition forms, you control the layout, fields, and data
+                            points—tailored to your internal requirements. Track every detail, ensure compliance, and
+                            simplify the entire requisition process without the usual headaches.
+                            <br /> <br />
+                            No more gaps. No more wasted time. Just seamless, structured purchasing that works your way.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 7 -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column mt-4">
+                        <span class="fs_16_fw_600_background">Off-Contract Purchases Draining Your Budget? Not
+                            Anymore</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Struggling with employees buying from unapproved vendors? Losing money due to inconsistent
+                            pricing? Fighting compliance issues at every step of the purchasing process? That ends
+                            today.
+                            <br /> <br />
+                            With Online Catalogs, buyers can only create purchase orders with preferred vendors at
+                            pre-negotiated rates—eliminating overspending, ensuring compliance, and keeping budgets in
+                            check.
+                            <br /> <br />
+                            No more off-contract surprises, no more policy violations—just a streamlined procurement
+                            process with seamless integration for greater cost savings and efficiency.
+                            <br /> <br />
+                            Stronger compliance. Effortless requisition management. Maximum savings.
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 8 -->
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column mt-4">
+                        <span class="fs_16_fw_600_background">Expense Overspending? Not Anymore</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Struggling to keep budgets in check? Approvals slipping through the cracks? Dealing with
+                            unauthorized purchases that throw off financial planning? That’s over.
+                            <br /> <br />
+                            With real-time spending limits, every purchase aligns with your policies—automatically. No
+                            more manual approvals, no more budget surprises, and no more policy violations. Control
+                            spending effortlessly while streamlining procurement and boosting efficiency.
+                            <br /> <br />
+                            Smarter spending. Stronger compliance. Greater cost control.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Supplier Management -->
+    <div class="spacer_150"></div>
+    <section class="linear_gradient_blue">
+        <div class="container-fluid section_contaier" data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000"
+            data-aos-offset="200">
+            <div class="row justify-content-center align-items-stretch g-4">
+                <p class="fs_24_fw_700_c_1313 text-center m-0">Why ProcureClix Purchase Requisition Software?</p>
+
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 my-2">
+                    <div class="d-flex gap-2 align-items-center">
+                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                            alt="">
+                        <span class="fs_14_fw_400_c_1313">Manual purchase requests eating up time?</span>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                            alt="">
+                        <span class="fs_14_fw_400_c_1313">Struggling to track approvals and statuses? </span>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                            alt="">
+                        <span class="fs_14_fw_400_c_1313">Team and vendors out of sync?</span>
+                    </div>
+                    <p class="text-center fs_14_fw_400_c_1313">Every delay, lost request, and miscommunication isn’t
+                        just frustrating—it’s costing your business money, efficiency, and growth.</p>
+                </div>
+                <!-- CARD 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <img loading="lazy" src="../assets/images/services/settings.png" class="mb-2"
+                            style="width: 40px;" alt="">
+                        <p class="fs_15_fw_700_c_1313 mb-3">Meet ProcureClix Purchase Requisition
+                            Software.</p>
+                        <p class="fs_14_fw_400_c_1313">The smarter, faster, and frustration-free way to handle purchase
+                            requests.</p>
+                        <div class="d-flex mb-2">
+                            <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                class="w_14_h_14 me-2 mt-1" alt="">
+                            <p class="mb-0 small">Siloed supplier information creates relationship inefficiencies and
+                                communication breakdowns.</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                class="w_14_h_14 me-2 mt-1" alt="">
+                            <p class="mb-0 small">Inconsistent onboarding processes result in compliance gaps and
+                                delayed time-to-value.</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                class="w_14_h_14 me-2 mt-1" alt="">
+                            <p class="mb-0 small">Manual performance tracking leads to missed optimization opportunities
+                                and reactive management.</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                class="w_14_h_14 me-2 mt-1" alt="">
+                            <p class="mb-0 small">Fragmented supplier documentation increases audit complexity and
+                                regulatory exposure.</p>
+                        </div>
+                        <div class="d-flex">
+                            <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                class="w_14_h_14 me-2 mt-1" alt="">
+                            <p class="mb-0 small">Multiple email exchanges with suppliers results in disorganized
+                                information and overlooked details.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center position-relative z-1 mt-2 mt-5" data-aos="fade-right" data-aos-delay="200"
+                    data-aos-duration="1000" data-aos-offset="200">
+                    <p class="fs_14_fw_600_c_linear">See ProcureClix in Action</p>
+                    <a type="button" href="../comingsoon/index.html" class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
+                        Demo
+                        Today!</a>
+                </div>
+            </div>
+        </div>
+        <div class="spacer_60"></div>
+
+    </section>
+
+    <!-- Integration -->
+    <div class="spacer_100"></div>
+    <section>
+        <div class="container-fluid section_contaier">
+            <div class="d-flex flex-wrap gap-2 justify-content-center align-items-center mb-5 aos-init aos-animate"
+                data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
+                <img loading="lazy" loading="lazy" src="../assets/icons/bulb_icon.png" class="w_12h_16" alt="">
+                <span class="fs_20_fw_500_c_linear">Integration</span>
+            </div>
+
+            <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"
+                data-aos-offset="200">
+                <div class="col-12">
+                    <div class="bg_white_shadow px-3 px-md-5 text-center">
+                        <div class="col-12 col-md-9 mx-auto">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/big_star_bg.png"
+                                class="w_65 mb-4" alt="">
+                            <h2 class="fs_24_fw_700_c_1313">Seamlessly Connect Your Procurement Ecosystem</h2>
+                            <p class="fs_15_fw_400_c_1313 mb-5">ProcureClix streamlines procurement with AI-assisted
+                                decision-making
+                                and customized workflow along with effortless integrations. Connect Power BI, Tableau,
+                                accounting systems, Slack, and SSO providers to centralize data, automate workflows, and
+                                gain
+                                real-time visibility. With pre-built connectors and a flexible API, ProcureClix fits
+                                your
+                                tech
+                                stack—cutting processing time by 80% while ensuring full compliance.</p>
+                            <a type="button" href="../comingsoon/index.html"
+                                class="btn_primary_2 fs_16_fw_500_c_fff mb-5">See
+                                All
+                                Integrations!</a>
+                        </div>
+
+                        <div class="d-flex flex-wrap justify-content-between align-items-center text-center gap-5 aos-init aos-animate"
+                            data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"
+                            data-aos-easing="ease-out-cubic" data-aos-once="false">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/plue_abler.png"
+                                class="w_180" alt="">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/oracle_img.png"
+                                class="w_180" alt="">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/syspro.png"
+                                class="w_180" alt="">
+                            <img loading="lazy" loading="lazy"
+                                src="../assets/images/servises_rfp/Dynamics-365-Logo-PNG5 1.png" class="w_180" alt="">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/intuit_img.png"
+                                class="w_180" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Book a demo call -->
+    <section>
+        <div class="spacer_100"></div>
+        <div class="container-fluid section_contaier">
+            <div class="book_demo_bg book_Demo_container aos-init aos-animate" data-aos="slide-right"
+                data-aos-delay="100" data-aos-duration="1000" data-aos-offset="0" data-aos-easing="ease-out-cubic"
+                data-aos-once="false">
+                <div class="row">
+                    <div class="col-12 col-md-6"></div>
+                    <div class="col-12 col-md-6 my-5 aos-init aos-animate" data-aos="fade-left" data-aos-delay="500"
+                        data-aos-duration="1000" data-aos-offset="200">
+                        <div class="d-flex align-items-center gap-2">
+                            <img loading="lazy" loading="lazy" src="../assets/icons/date_picker_icon.png" alt="">
+                            <span class="fs_20_fw_500_background">Book A Demo Call</span>
+                        </div>
+                        <div class=" col-md-10 col-12 text-left my-3">
+                            <h2 class="fs_24_fw_700_c_1313" style="text-align: left;">Ready To Transform Your
+                                Procurement
+                                Process?</h2>
+                        </div>
+                        <div>
+                            <p class="fs_15_fw_400_c_1313 text-capitalize">
+                                Unleash the power of our AI-powered reverse auction suite to drive substantial cost
+                                savings across your entire procurement portfolio. With our intuitive participant
+                                interface, suppliers compete more effectively while you watch prices drop in real time.
+                                Stop leaving money on the table—start transforming your procurement results today with a
+                                solution trusted by industry leaders.
+                            </p>
+                        </div>
+                        <a type="button" href="./comingSoon/index.html" class="btn btn_primary mt-3">Book a Demo</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Rated RFP Section -->
+    <div class="spacer_80"></div>
+    <section>
+        <div class="container-fluid section_contaier">
+            <div class="row g-5 align-items-center">
+                <div class="col-12 col-md-5" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-offset="200">
+                    <img loading="lazy" src="../assets/images/servises_rfp/up_ratio.png" class="faq_img" alt="">
+
+                </div>
+                <div class="col-12 col-md-7" id="counterSection" data-aos="fade-left" data-aos-delay="200"
+                    data-aos-duration="1000" data-aos-offset="200">
+                    <p class="fs_15_fw_700_c_1313">Numbers Don’t Lie—Here’s How We Revolutionize Procurement</p>
+                    <div class="row numbers_parent text-center">
+                        <div class="col-4 left_border">
+                            <div class="">
+                                <span class="fs_40_fw_700_linear" id="counter1">18-40%</span>
+                                <p class="fs_13_fw_400_c_5656 text-start mt-2">savings on purchasing costs—because every
+                                    dollar counts.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-4 left_border">
+                            <span class="fs_40_fw_700_linear text-center">80%</span>
+                            <p class="fs_13_fw_400_c_5656 text-start mt-2">faster approvals—goodbye bottlenecks, hello
+                                seamless workflows.
+                            </p>
+                        </div>
+
+                        <div class="col-4">
+                            <span class="fs_40_fw_700_linear" id="counter2">25k+</span>
+                            <p class="fs_13_fw_400_c_5656 text-start mt-2">users rely on ProcureClix daily—because
+                                efficiency is everything.</p>
+                        </div>
+
+                        <div class="text-start position-relative z-1 mt-2 mt-5 aos-init aos-animate"
+                            data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+                            <p class="fs_14_fw_600_c_linear">See ProcureClix in Action</p>
+                            <a type="button" href="../comingsoon/index.html"
+                                class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
+                                Demo
+                                Today!</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <div class="spacer_100"></div>
+    <section class="" data-aos="slide-left" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"
+        data-aos-easing="ease-out-cubic" data-aos-once="false">
+        <div class="container-fluid section_contaier">
+            <!-- row 1 -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center mb-4">
+                    <div class="d-flex gap-2 justify-content-center mb-2">
+                        <img loading="lazy" src="../assets/icons/question_mark_icon.png" class="w_18_h_18" alt="">
+                        <span class="fs_20_fw_500_background">FAQs</span>
+                    </div>
+                    <h2 class="fs_24_fw_700_c_1313">FAQs About Purchase Requisition Software</h2>
+                </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="row home_faq p-0">
+                <div class="accordion p-0 accordion-flush d-flex flex-column row-gap-2" id="accordionFlushExample">
+                    <div class="accordian_container">
+                        <!-- Accordion Item #1 -->
+                        <div class="accordion-item ">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                    1.What is a Purchase Requisition Software?
+                                    <span class="icon ms-auto ">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Purchase requisition software is a smart, digital solution that automates the entire
+                                    request-to-approval process. There is no more paperwork, delays, or tracking down
+                                    approvals.
+                                    <br />
+                                    With one centralized system, teams across geographic locations and divisions can
+                                    effortlessly create, submit, approve, and track purchase requests, ensuring faster
+                                    approvals, fewer errors, and total compliance.
+                                    <br />
+                                    Less hassle. More control. Seamless procurement at your fingertips.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #2 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    2.How Does ProcureClix Purchase Requisition Module Work?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    It’s simple: Request > Approve > Procure.
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <span class="fs_14_fw_400_c_1313"> <b>Create & Submit</b> – Employees initiate
+                                            the purchase requisition by using easy and pre-configured templates also
+                                            called requisition forms.</span>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <span class="fs_14_fw_400_c_1313"><b>Auto-Route for Approval</b> – Requests are
+                                            instantly sent to the right buyers and vendors, following predefined
+                                            workflows.</span>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <span class="fs_14_fw_400_c_1313"><b>Approve or Reject in Seconds</b> –
+                                            Approvers can review, approve, or decline requests within the requisition
+                                            management system, eliminating delays.</span>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <span class="fs_14_fw_400_c_1313"><b>Seamless Procurement Process</b> – Once
+                                            approved, the system auto-generates a purchase order, integrates with
+                                            purchase order software, and ensures smooth invoice processing.</span>
+                                    </div>
+                                    <span>Simplify your purchasing process. Increase efficiency. Maximize cost savings.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #3 -->
+                    <div class="accordian_container">
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    3.What Are the Benefits of Using Purchase Requisition Software?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+
+                                    <ul>
+                                        <li>Speed Up the Purchasing Process – Automate requests, approvals, and tracking
+                                            to save valuable time.</li>
+                                        <li>Full Visibility & Control – Keep an eye on every request, approval, and
+                                            order—no surprises, no delays.</li>
+                                        <li>Eliminate Errors & Duplicates – Say goodbye to misplaced requests and
+                                            duplicate orders with a smarter, streamlined system.</li>
+                                        <li>Effortless Approvals – Customizable workflows ensure the right approvals
+                                            happen, fast—without bottlenecks.</li>
+                                        <li>Stay Compliant, Stay Audit-Ready – Ensure every transaction follows policies
+                                            and is ready for audits anytime.</li>
+                                        <li>Seamless Integration – Sync with procurement, financial, and purchase order
+                                            software for end-to-end efficiency.</li>
+                                        <li>Less paperwork. More productivity. Smarter purchasing.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #4 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 d-flex justify-content-between align-items-center collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    4.Can ProcureClix Purchase Requisition Software Integrate with Other Procurement
+                                    Systems?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample" style="">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Absolutely! ProcureClix purchase requisition software seamlessly integrates with
+                                    e-procurement platforms, ERP systems, and supplier relationship management (SRM)
+                                    tools—ensuring a smooth, automated procurement process from request to fulfillment.
+                                    <ol>
+                                        <li>Effortless Data Flow – Say goodbye to manual data entry! Sync purchase
+                                            orders, invoices, and vendor details in real time for a simplified
+                                            purchasing process.</li>
+                                        <li>End-to-End Process Automation – From the requisition process to final
+                                            approval, automate workflows and reduce bottlenecks.</li>
+                                        <li>Smarter Procurement, Greater Control – Gain full visibility into your
+                                            procurement process with real-time tracking, compliance monitoring, and cost
+                                            savings.</li>
+                                        <li>Seamless Integration Across Systems – Whether you're managing goods or
+                                            services, ProcureClix connects effortlessly with management software to
+                                            optimize requisition management.</li>
+                                        <li>Simplify your purchasing process. Maximize efficiency. Reduce costs.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #5 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 d-flex justify-content-between align-items-center collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    5.Is ProcureClix Purchase Requisition Software Right for Small Businesses?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample" style="">
+                                <div class="accordion-body fs_15_fw_400_c_1313 pt-0">
+                                    Absolutely! Whether you're a startup, a growing business, or an established company,
+                                    ProcureClix adapts to your needs.
+                                    <ul>
+                                        <li>Smart Spending, Zero Waste – Track every request, approval, and purchase to
+                                            eliminate unnecessary expenses and keep your budget in check.</li>
+                                        <li>Big-Business Efficiency, Small-Business Simplicity – No complex setups or
+                                            learning curves—just an intuitive, streamlined system that makes managing
+                                            purchases a breeze.</li>
+                                        <li>Scale as You Grow – Need more features as your business expands?
+                                            ProcureClix's flexible solutions grow with you, so you’ll never outgrow your
+                                            procurement process.</li>
+
+                                    </ul>
+
+                                    These features enable procurement teams to manage strategic initiatives with the
+                                    same
+                                    precision and accountability as other business functions, ensuring accountability
+                                    and successful outcomes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #6 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 d-flex justify-content-between align-items-center collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    6.How Does ProcureClix Ensure Compliance & Audit-Readiness?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSix" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample" style="">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    No more guesswork. No more missing records. Just total control.
+                                    <ul>
+                                        <li>
+                                            Approval Workflows That Stick – Set spending limits (for each department),
+                                            enforce policies, and ensure every request follows the right process
+                                            automatically.
+                                        </li>
+                                        <li>
+                                            Digital Paper Trail? Done. – Every action—from creation to approval to
+                                            edits—is logged in a secure, time-stamped audit trail for full transparency.
+                                        </li>
+                                        <li>Instant Insights, Zero Surprises – Real-time reporting helps you track
+                                            compliance, spot red flags, and make data-driven decisions before issues
+                                            arise.</li>
+                                        <li>Seamless Financial Integration – Sync with your existing financial systems
+                                            for accurate record-keeping, effortless reporting, and airtight compliance.
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #7 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 d-flex justify-content-between align-items-center collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    7.Why choose to implement ProcureClix purchase requisition software for my
+                                    organization?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample" style="">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    ProcureClix isn’t just another purchase requisition solution—it’s the key to
+                                    simplifying procurement, improving control, and driving efficiency. Here’s why:
+                                    <ul>
+                                        <li>
+                                            Built for Your Business – Customizable features ensure the software aligns
+                                            with your specific purchasing processes and operational needs.
+                                        </li>
+                                        <li>
+                                            Effortless User Experience – A modern, intuitive interface makes adoption
+                                            easy, minimizing training time and maximizing productivity.
+                                        </li>
+                                        <li>Seamless Integration – Connect effortlessly with existing procurement and
+                                            financial systems to streamline data flow and automation.</li>
+                                        <li>Scalable & Future-Ready – Whether you're a small team or a growing
+                                            enterprise, ProcureClix evolves with your business.</li>
+                                        <li>Expert Support Every Step of the Way – Gain access to training,
+                                            troubleshooting, and industry best practices to ensure success.</li>
+                                        <li>Cost-Effective & Smart Investment – Lower your total cost of ownership with
+                                            transparent pricing and reduced operational overhead.</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- end Accordian -->
+            </div>
+            <!-- end Row 2 -->
+        </div>
+    </section>
+    <div class="spacer_60"></div>
+
     <!-- footer -->
 
-    <footer class="linear_gradient_blue footer_style ">
+    <footer class="linear_gradient_blue footer_style " data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000"
+        data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
         <!-- first footer -->
         <div class="footer_bg_image">
             <div class="spacer_60"></div>
@@ -314,31 +1355,36 @@
                         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
                             <div>
                                 <div>
-                                    <img src="../assets/images/footer_logo.png" class="footer_logo"
+                                    <img loading="lazy" src="../assets/images/footer_logo.png" class="footer_logo"
                                         alt="ProcureClix Logo">
                                 </div>
                                 <!-- Phone -->
                                 <div class="d-flex gap-3 mt-4">
-                                    <div><img src="../assets/icons/phone_icon.png" alt="Phone Icon"></div>
+                                    <div><img loading="lazy" src="../assets/icons/phone_icon.png" alt="Phone Icon">
+                                    </div>
                                     <div class="d-flex flex-column gap-2">
                                         <span class="fs_16_fw_600_c_1313">Phone:</span>
-                                        <a href="tel:+1 (800) 906-8161" class="footer_link fs_16_fw_400_c_1313">+1 (800) 906-8161</a>
+                                        <a href="tel:+1 (800) 906-8161" class="footer_link fs_16_fw_400_c_1313">+1 (800)
+                                            906-8161</a>
                                     </div>
                                 </div>
                                 <!-- Location -->
                                 <div class="d-flex gap-3 mt-4">
-                                    <div><img src="../assets/icons/map_marker.png" alt="Location Icon"></div>
+                                    <div><img loading="lazy" src="../assets/icons/map_marker.png" alt="Location Icon">
+                                    </div>
                                     <div class="d-flex flex-column gap-2">
                                         <span class="fs_16_fw_600_c_1313">Global Presence:</span>
                                         <div class="">
                                             <span class="fs_16_fw_700_c_1313">North America:</span>
                                             <div>
-                                                <img src="../assets/icons/country_icon/usa.png" alt="" class="w_25">
+                                                <img loading="lazy" src="../assets/icons/country_icon/usa.png" alt=""
+                                                    class="w_25">
                                                 <span class="fs_16_fw_400_c_1313">USA</span>
                                             </div>
 
                                             <div>
-                                                <img src="../assets/icons/country_icon/canada.png" alt="" class="w_25">
+                                                <img loading="lazy" src="../assets/icons/country_icon/canada.png" alt=""
+                                                    class="w_25">
                                                 <span class="fs_16_fw_400_c_1313">Canada</span>
                                             </div>
                                         </div>
@@ -347,28 +1393,32 @@
                                         <div>
                                             <span class="fs_16_fw_700_c_1313">Asia:</span>
                                             <div>
-                                                <img src="../assets/icons/country_icon/india.png" alt="" class="w_25">
+                                                <img loading="lazy" src="../assets/icons/country_icon/india.png" alt=""
+                                                    class="w_25">
                                                 <span class="fs_16_fw_400_c_1313">India</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Schedule Demo Button -->
-                                <div class="mt-3">
+                                <div class="mt-5">
                                     <a type="button" href="../ComingSoon/index.html"
                                         class="btn btn_primary mt-3">Schedule a Demo</a>
+                                    <a type="button" href="../ComingSoon/index.html"
+                                        class="btn btn-light linear-border border_white_bg_btn mt-3"><span>Contact
+                                            Us</span></a>
                                 </div>
                                 <div class="mt-3">
-                                    <a type="button" href="../ComingSoon/index.html"
-                                        class="btn btn-light linear-border border_white_bg_btn"><span>Contact
-                                            Us</span></a>
                                     <div class="d-flex gap-3 flex-wrap mt-3">
                                         <a href="../ComingSoon/index.html" class="footer_link footer_share_icon"><img
-                                                src="../assets/icons/facebook_icon.png" alt="Facebook"></a>
+                                                loading="lazy" src="../assets/icons/facebook_icon.png"
+                                                alt="Facebook"></a>
                                         <a href="../ComingSoon/index.html" class="footer_link footer_share_icon"><img
-                                                src="../assets/icons/linkdin_icon.png" alt="LinkedIn"></a>
+                                                loading="lazy" src="../assets/icons/linkdin_icon.png"
+                                                alt="LinkedIn"></a>
                                         <a href="../ComingSoon/index.html" class="footer_link footer_share_icon"><img
-                                                src="../assets/icons/x-mas_icon.png" alt="X (Twitter)"></a>
+                                                loading="lazy" src="../assets/icons/x-mas_icon.png"
+                                                alt="X (Twitter)"></a>
                                     </div>
                                 </div>
                             </div>
@@ -394,12 +1444,15 @@
                                         <div>
                                             <span class="fs_18_fw_700_c_1313">Services</span>
                                         </div>
-                                        <a href="../services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
+                                        <a href="../services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX |
+                                            RFQ
                                             | RFP</a>
                                         <div class="d-flex flex-column gap-2 mt-2">
-                                            <a href="../services/managed_reverse_auctions.html" class="footer_link">Managed
+                                            <a href="../services/managed_reverse_auctions.html"
+                                                class="footer_link">Managed
                                                 Reverse Auctions</a>
-                                            <a href="../services/spend_analysis.html" class="footer_link">Spend Analysis</a>
+                                            <a href="../services/spend_analysis.html" class="footer_link">Spend
+                                                Analysis</a>
                                         </div>
                                     </div>
                                 </div>
@@ -410,11 +1463,13 @@
                                         <span class="fs_18_fw_700_c_1313">Solutions</span>
                                     </div>
                                     <div class="d-flex flex-column gap-2 mt-2">
-                                        <a href="../solutions/purchase_requisition.html" class="footer_link">Purchase
+                                        <a href="../solutions/purchase_requisition.html"
+                                            class="footer_link active">Purchase
                                             Requisition</a>
                                         <a href="../solutions/reverse_auction.html" class="footer_link">Reverse
                                             Auction</a>
-                                        <a href="../solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
+                                        <a href="../solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI |
+                                            RFQ</a>
                                         <a href="../solutions/contract_management.html" class="footer_link">Contract
                                             Management</a>
                                         <a href="../solutions/procure_to_pay.html"
@@ -455,7 +1510,7 @@
                                     <div class="d-flex flex-wrap justify-content-between"> -->
                                 <!-- Services Section -->
                                 <div class="col-12 col-sm-6 col-md-4">
-                                    
+
                                 </div>
 
 
@@ -464,8 +1519,8 @@
                                     <div>
                                         <!-- <span class="fs_18_fw_700_c_linear">Hosted On</span> -->
                                         <div class="mt-4">
-                                            <img src="../assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
-                                                class="microsoft_azure">
+                                            <img loading="lazy" src="../assets/images/micrisoft_azure_2.png"
+                                                alt="Microsoft Azure" class="microsoft_azure">
                                         </div>
                                     </div>
                                 </div>
@@ -492,8 +1547,41 @@
         </div>
     </footer>
     <!-- footer end -->
+
+    <script>
+
+        // ✅ Accordian This script will automatically change the icon to + or - based on the collapse state
+        document.querySelectorAll(".accordion-item").forEach(function (item) {
+            // Whenever an accordion is shown
+            item.addEventListener("show.bs.collapse", function () {
+                // Reset all icons to "+"
+                document.querySelectorAll(".icon").forEach(function (icon) {
+                    icon.textContent = "+";
+                });
+                // Change the current icon to "-"
+                item.querySelector(".icon").textContent = "-";
+            });
+
+            // Whenever an accordion is hidden
+            item.addEventListener("hide.bs.collapse", function () {
+                item.querySelector(".icon").textContent = "+";
+            });
+        });
+
+        // accordian end
+    </script>
     <script src="../assets/js-files/comman_js.js"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false, // allow animations to repeat
+            offset: 0,
+            duration: 1000,
+        });
+
+    </script>
 </body>
 
 </html>
