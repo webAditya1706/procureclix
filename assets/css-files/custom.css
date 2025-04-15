@@ -1,0 +1,22 @@
+/* unorder list with check icon */
+
+.check_list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .check_list li {
+    position: relative;
+    padding-left: 24px;
+  }
+  .check_list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    background-image: url('../images/servises_rfp/check_box_icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  

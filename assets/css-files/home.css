@@ -9,11 +9,15 @@
 }
 
 .industry_stats_bg {
-  background-image: url("../images/industry-stats_bg.png");
+  /* background-image: url("../images/industry-stats_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  object-fit: cover;
+  object-fit: cover; */
+  border-radius: 8px;
+background: #EEFAFF;
+position: relative;
+overflow: hidden;
 }
 
 .custom_numbering {

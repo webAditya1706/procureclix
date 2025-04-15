@@ -15,6 +15,36 @@
 * {
   font-family: Poppins;
 }
+/* rings style */
+
+.benifit_signal_ring {
+  width: 135px;
+  position: absolute;
+  bottom: -28px;
+  right: -20px;
+  z-index: 0;
+}
+
+.benifit_dubble_ring {
+  position: absolute;
+  top: -52px;
+  left: -62px;
+  width: 135px;
+  z-index: 0;
+}
+
+
+.ring_bg_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
 
 .reverse_sec_pading {
   padding: 30px 40px;
@@ -1068,6 +1098,8 @@ h6 {
 }
 
 .arrow_120_bg {
+  width: 30px;
+  height: 30px;
   display: inline-flex;
   padding: 8px;
   justify-content: center;

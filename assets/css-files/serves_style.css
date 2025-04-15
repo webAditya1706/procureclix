@@ -25,17 +25,6 @@
 
 /* benifit */
 
-.ring_bg_img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  max-width: 100%;
-  width: 600px;
-  height: auto;
-  transform: translate(-50%, -50%);
-  z-index: 0;
-}
-
 .benifit_column {
   flex-shrink: 0;
   border-radius: 8px;
@@ -43,22 +32,6 @@
   padding: 15px;
   width: 190px;
   hyphens: 190px;
-}
-
-.benifit_signal_ring {
-  width: 135px;
-  position: absolute;
-  bottom: -28px;
-  right: -20px;
-  z-index: 0;
-}
-
-.benifit_dubble_ring {
-  position: absolute;
-  top: -52px;
-  left: -62px;
-  width: 135px;
-  z-index: 0;
 }
 
 .integration_img {
