@@ -3,7 +3,7 @@ let HeaderHTML = `
     <nav class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container">
             <a class="navbar-brand" href="/index.html">
-                <img src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
+                <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
             </a>
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav justify-content-center gap-2 w-100 mb-2 mb-lg-0" id="navbarNav">
@@ -122,7 +122,7 @@ let HeaderHTML = `
     <div class="container-fluid d-block d-lg-none">
         <div class="d-flex justify-content-between align-items-center py-2">
             <a class="navbar-brand" href="/index.html">
-                <img src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
+                <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
             </a>
             <!-- Replace the button with an image -->
             <i class="bi bi-three-dots-vertical drawer_icon" class="navbar-toggler-icon" data-bs-toggle="offcanvas"
@@ -261,7 +261,6 @@ let HeaderHTML = `
 
 </div>`;
 
-
 let FooterHTML = `
  <footer class="linear_gradient_blue footer_style ">
         <!-- first footer -->
@@ -276,25 +275,25 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="./comingSoon/index.html" class="footer_link">Home</a>
-                                    <a href="./comingSoon/index.html" class="footer_link">About ProcureClix</a>
-                                    <a href="./comingSoon/index.html" class="footer_link">Contact Us</a>
-                                    <a href="./comingSoon/index.html" class="footer_link">Pricing</a>
+                                    <a href="/comingsoon/index.html" class="footer_link">Home</a>
+                                    <a href="/comingsoon/index.html" class="footer_link">About ProcureClix</a>
+                                    <a href="/comingsoon/index.html" class="footer_link">Contact Us</a>
+                                    <a href="/comingsoon/index.html" class="footer_link">Pricing</a>
                                 </div>
                             </div>
                             <div class="mt-5">
-                                <img src="./assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
+                                <img src="/assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
                                     class="microsoft_azure">
                             </div>
                             <div class="d-flex gap-3 flex-wrap mt-2">
-                                <a href="./comingSoon/index.html" class="footer_link footer_share_icon">
-                                    <img src="./assets/icons/facebook_icon.png" alt="Facebook">
+                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <img src="/assets/icons/facebook_icon.png" alt="Facebook">
                                 </a>
-                                <a href="./comingSoon/index.html" class="footer_link footer_share_icon">
-                                    <img src="./assets/icons/linkdin_icon.png" alt="LinkedIn">
+                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                 </a>
-                                <a href="./comingSoon/index.html" class="footer_link footer_share_icon">
-                                    <img src="./assets/icons/x-mas_icon.png" alt="X (Twitter)">
+                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                 </a>
                             </div>
                         </div>
@@ -304,11 +303,11 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Services</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="./services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
+                                    <a href="/services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
                                         | RFP</a>
-                                    <a href="./services/managed_reverse_auctions.html" class="footer_link">Managed
+                                    <a href="/services/managed_reverse_auctions.html" class="footer_link">Managed
                                         Reverse Auctions</a>
-                                    <a href="./services/spend_analysis.html" class="footer_link">Spend Analysis</a>
+                                    <a href="/services/spend_analysis.html" class="footer_link">Spend Analysis</a>
                                 </div>
                             </div>
                         </div>
@@ -335,17 +334,17 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Solutions</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="./solutions/purchase_requisition.html" class="footer_link">Purchase
+                                    <a href="/solutions/purchase_requisition.html" class="footer_link">Purchase
                                         Requisition</a>
-                                    <a href="./solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
-                                    <a href="./solutions/contract_management.html" class="footer_link">Contract
+                                    <a href="/solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
+                                    <a href="/solutions/contract_management.html" class="footer_link">Contract
                                         Management</a>
-                                    <a href="./solutions/reverse_auction.html" class="footer_link">Reverse Auction</a>
-                                    <a href="./solutions/supplier_management.html" class="footer_link">Supplier
+                                    <a href="/solutions/reverse_auction.html" class="footer_link">Reverse Auction</a>
+                                    <a href="/solutions/supplier_management.html" class="footer_link">Supplier
                                         Management</a>
-                                    <a href="./solutions/spend_analysis.html" class="footer_link">Spend Analysis</a>
-                                    <a href="./solutions/procure_to_pay.html" class="footer_link">Procure-To-Pay</a>
-                                    <a href="./solutions/custom_solutions.html" class="footer_link">Custom Solutions</a>
+                                    <a href="/solutions/spend_analysis.html" class="footer_link">Spend Analysis</a>
+                                    <a href="/solutions/procure_to_pay.html" class="footer_link">Procure-To-Pay</a>
+                                    <a href="/solutions/custom_solutions.html" class="footer_link">Custom Solutions</a>
                                 </div>
                             </div>
                         </div>
@@ -355,16 +354,16 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="./resources/blog.html" class="footer_link">Blog</a>
-                                    <a href="./resources/insights.html" class="footer_link">Insights</a>
-                                    <a href="./resources/case_studies.html" class="footer_link">Case Studies</a>
-                                    <a href="./resources/whitepapers.html" class="footer_link">Whitepapers</a>
-                                    <a href="./resources/analyst_reports.html" class="footer_link">Analyst Reports</a>
-                                    <a href="./resources/procurement_guide.html" class="footer_link">Procurement
+                                    <a href="/resources/blog.html" class="footer_link">Blog</a>
+                                    <a href="/resources/insights.html" class="footer_link">Insights</a>
+                                    <a href="/resources/case_studies.html" class="footer_link">Case Studies</a>
+                                    <a href="/resources/whitepapers.html" class="footer_link">Whitepapers</a>
+                                    <a href="/resources/analyst_reports.html" class="footer_link">Analyst Reports</a>
+                                    <a href="/resources/procurement_guide.html" class="footer_link">Procurement
                                         Guide</a>
-                                    <a href="./resources/procurement_glossary.html" class="footer_link">Procurement
+                                    <a href="/resources/procurement_glossary.html" class="footer_link">Procurement
                                         Glossary</a>
-                                    <a href="./resources/procurement_conferences.html" class="footer_link">Procurement
+                                    <a href="/resources/procurement_conferences.html" class="footer_link">Procurement
                                         Conferences</a>
                                     <a href="#" class="footer_link">Integration</a>
                                 </div>
@@ -381,7 +380,7 @@ let FooterHTML = `
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
-                                    <img src="./assets/icons/white_phone.png" style="width: 16px; height: 24px;"
+                                    <img src="/assets/icons/white_phone.png" style="width: 16px; height: 24px;"
                                         loading="lazy" alt="white_phone">
                                 </div>
                                 <a href="tel:+18009068161" class="footer_link fs_16_fw_400_c_1313">+1 800
@@ -393,7 +392,7 @@ let FooterHTML = `
                             <!-- MAil id -->
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
-                                    <img src="./assets/icons/white_mail_box.png" loading="lazy" alt="white_phone"
+                                    <img src="/assets/icons/white_mail_box.png" loading="lazy" alt="white_phone"
                                         style="width: 22px; height: 18px;">
                                 </div>
                                 <a href="mailto:sales@procureclix.com"
@@ -405,7 +404,7 @@ let FooterHTML = `
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
-                                    <img src="./assets/icons/white_map_marker.png" loading="lazy" alt="white_phone"
+                                    <img src="/assets/icons/white_map_marker.png" loading="lazy" alt="white_phone"
                                         style="width: 18px; height: 24px;">
                                 </div>
                                 <span class="footer_link fs_16_fw_400_c_1313">8 The Green, Suite 21729 Dover, DE
@@ -417,7 +416,7 @@ let FooterHTML = `
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
-                                    <img src="./assets/icons/white_glob.png" loading="lazy" alt="white_phone"
+                                    <img src="/assets/icons/white_glob.png" loading="lazy" alt="white_phone"
                                         style="width: 24px; height: 24px;">
 
 
@@ -426,17 +425,17 @@ let FooterHTML = `
                                 <div class="d-flex justify-content-center gap-3">
                                     <a type="button" data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-title="USA">
-                                        <img loading="lazy" src="./assets/icons/country_icon/usa.png" alt="USA"
+                                        <img loading="lazy" src="/assets/icons/country_icon/usa.png" alt="USA"
                                             class="w_25">
                                     </a>
                                     <a type="button" data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-title="Canada">
-                                        <img loading="lazy" src="./assets/icons/country_icon/canada.png" alt="Canada"
+                                        <img loading="lazy" src="/assets/icons/country_icon/canada.png" alt="Canada"
                                             class="w_25">
                                     </a>
                                     <a type="button" data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-bs-title="India">
-                                        <img loading="lazy" src="./assets/icons/country_icon/india.png" alt="India"
+                                        <img loading="lazy" src="/assets/icons/country_icon/india.png" alt="India"
                                             class="w_25">
                                     </a>
                                 </div>
@@ -452,46 +451,63 @@ let FooterHTML = `
                 </div>
             </div>
         </div>
-
-
     </footer>
-`
-document.addEventListener('DOMContentLoaded', function () {
+`;
+document.addEventListener("DOMContentLoaded", function () {
+  const headerContainer = document.getElementById("header-placeholder");
+  const footerContainer = document.getElementById("footer_wrapper");
 
-    const headerContainer = document.getElementById('header-placeholder');
-    if (headerContainer) {
-      headerContainer.innerHTML = HeaderHTML;
+  if (headerContainer) {
+    headerContainer.innerHTML = HeaderHTML;
+    highlightActiveLink(); // Call after header is loaded
+  }
+
+  if (footerContainer) {
+    footerContainer.innerHTML = FooterHTML;
+    highlightActiveLink(); // Optional, if footer has nav
+  }
+
+  function highlightActiveLink() {
+    const currentPath = window.location.pathname;
+    console.log("✌️currentPath --->", currentPath);
+
+    // Highlight nav-links
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href && currentPath.includes(href)) {
+        link.classList.add("active");
+
+        const dropdown = link.closest(".dropdown");
+        if (dropdown) dropdown.classList.add("active");
+
+        const navItem = link.closest(".nav-item");
+        if (navItem) navItem.classList.add("active");
+      }
+    });
+
+    // Highlight dropdown-items
+    document.querySelectorAll(".dropdown-item").forEach((item) => {
+      const href = item.getAttribute("href");
+      if (href && currentPath.includes(href)) {
+        item.classList.add("active");
+
+        const dropdown = item.closest(".dropdown");
+        if (dropdown) dropdown.classList.add("active");
+
+        const navItem = item.closest(".nav-item");
+        if (navItem) navItem.classList.add("active");
+      }
+    });
+
+     // Highlight dropdown-items
+     document.querySelectorAll(".footer_link").forEach((item) => {
+        const href = item.getAttribute("href");
+        console.log("✌️href --->", href);
+        if (href && currentPath.includes(href)) {
+          item.classList.add("active");
   
-      // 💡 Ensure this runs AFTER header is inserted
-      highlightActiveLink();
-    }
-  
-    function highlightActiveLink() {
-      const currentPath = location.pathname.replace(/\/+$/, '');
-  
-      // Normal nav links
-      document.querySelectorAll('.nav-link[href]').forEach(link => {
-        const linkPath = new URL(link.href, location.origin).pathname.replace(/\/+$/, '');
-        if (linkPath === currentPath) {
-          link.classList.add('active');
         }
       });
-  
-      // Dropdown items and their parent
-      document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
-        const itemPath = new URL(item.href, location.origin).pathname.replace(/\/+$/, '');
-        if (itemPath === currentPath) {
-          item.classList.add('active');
-  
-          const dropdownParent = item.closest('.dropdown');
-          if (dropdownParent) {
-            const toggleLink = dropdownParent.querySelector('.dropdown-toggle');
-            toggleLink?.classList.add('active');
-            dropdownParent.classList.add('active'); // highlight whole block
-          }
-        }
-      });
-    }
-  });
-  
-  
+
+  }
+});
