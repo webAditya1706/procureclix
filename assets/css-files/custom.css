@@ -1,37 +1,76 @@
 /* unorder list with check icon */
 
 .check_list {
-    list-style: none;
-    padding-left: 0;
-  }
-  .check_list li {
-    position: relative;
-    padding-left: 24px;
-  }
-  .check_list li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 4px;
-    width: 14px;
-    height: 14px;
-    background-image: url('../images/servises_rfp/check_box_icon.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
+  list-style: none;
+  padding-left: 0;
+}
+.check_list li {
+  position: relative;
+  padding-left: 24px;
+}
+.check_list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/servises_rfp/check_box_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 
-  .active_hr{
-    background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+.active_hr {
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+  width: 100%;
+  height: 1px;
+  opacity: 1;
+  margin: 0px;
+  border: 0px;
+}
+
+/* tool tip */
+
+.tooltip-inner {
+}
+
+.white_card {
     width: 100%;
-    height: 2px;
-    opacity: 1;
-    margin: 0px;
-    border: 0px;
-  }
-
-  /* tool tip */
-
-  .tooltip-inner{
-
+    height: auto;
+    min-height: 100%;
+    border-radius: 8px;
+    background: var(--White, #fff);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px 20px;
+  
+    /* Add this line for transition */
+    transition: all 0.2s ease-in;
   }
   
+  .white_card:hover {
+    border: 2px solid var(--primary_bg_color);
+    /* box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); */
+  }
+
+  .book_demo_bg {
+    background-image: url(../images/book_demo_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 0px 30px;
+}
+  
+
+
+.home_faq .accordion-body {
+    padding-top: 0px;
+  }
+  
+  .home_faq .accordion-button:not(.collapsed){
+    background-color: unset;
+    box-shadow: none;
+  }

@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contract management</title>
+    <title>Procurement Spend Analysis Software for Smarter Spending | ProcureClix</title>
+    <meta name="description"
+        content="Optimize your spend strategy with ProcureClix, the AI-powered Procurement Spend Analysis Software. Gain real-time visibility, reduce maverick spend, and 20-45% cost savings. Book a demo today!">
+
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css-files/main_file.css">
-    <link rel="stylesheet" href="../assets/css-files/home.css">
+    <link rel="stylesheet" href="../assets/css-files/serves_style.css">
+    <link rel="stylesheet" href="../assets/css-files/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,15 +20,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+    <!-- AOS style link -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <!-- header start -->
     <div class="position-sticky top-0 w-100 primary_bg z-3">
         <nav class="navbar navbar-expand-lg d-none d-lg-block py-4">
             <div class="container-fluid section_contaier">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
+                    <img loading="lazy" src="../assets/images/Logo_ProcureClix.png" class="w_150"
+                        alt="ProcureClix Logo">
                 </a>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                     <ul class="navbar-nav justify-content-center gap-2 w-100 mb-2 mb-lg-0" id="navbarNav">
@@ -32,7 +41,7 @@
                             <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item position-relative">
-                            <div class="dropdown active ">
+                            <div class="dropdown active">
                                 <a class="nav-link dropdown-toggle " data-bs-toggle="dropdown">Solutions</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="../solutions/purchase_requisition.html">Purchase
@@ -55,9 +64,8 @@
                             </div>
                         </li>
                         <li class="nav-item position-relative">
-                            <div class="dropdown">
-                                <a class="nav-link dropdown-toggle" href="../services/index.html"
-                                    data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown ">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="../services/managed_rfx_rfq_rfp.html" class="dropdown-item">Managed RFX
@@ -88,7 +96,8 @@
                                     <li><a class="dropdown-item"
                                             href="../industries/construction_real_estate.html">Construction & Real
                                             Estate</a></li>
-                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers and
+                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers
+                                            and
                                             Suppliers</a></li>
                                     <li><a class="dropdown-item" href="../industries/biotech_pharma.html">BioTech and
                                             Pharma</a></li>
@@ -143,7 +152,7 @@
         <div class="container-fluid d-block d-lg-none">
             <div class="d-flex justify-content-between align-items-center py-2">
                 <a class="navbar-brand" href="./index.html">
-                    <img src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
+                    <img loading="lazy" src="../assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
                 </a>
                 <!-- Replace the button with an image -->
                 <i class="bi bi-list drawer_icon" class="navbar-toggler-icon" data-bs-toggle="offcanvas"
@@ -227,7 +236,8 @@
                                     <li><a class="dropdown-item"
                                             href="../industries/construction_real_estate.html">Construction & Real
                                             Estate</a></li>
-                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers and
+                                    <li><a class="dropdown-item" href="../industries/energy_brokers.html">Energy Brokers
+                                            and
                                             Suppliers</a></li>
                                     <li><a class="dropdown-item" href="../industries/biotech_pharma.html">BioTech and
                                             Pharma</a></li>
@@ -285,24 +295,811 @@
 
     <!-- header End -->
 
-    <!-- comming soon section -->
-    <section>
+    <!-- Banner section -->
+    <section class="position-relative linear_gradient_blue" data-aos="slide-left" data-aos-delay="200"
+        data-aos-duration="1000" data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
         <div class="container-fluid section_contaier">
             <!-- <div class="row comingSoon_bg_image"> -->
-            <div class="comingSoon_container">
-                <div class="row position-relative comming_soon_Logo_ProcureClix">
-                    <img src="../assets/images/Coming_Soon_bg.jpg" class="w-100" alt="">
-                    <div class="comingSoon_text comingSoon_parent">
-                        <span class="">COMING SOON</span>
+            <div class="row align-items-center" style="height: auto; min-height: 100vh;">
+                <div class="col-12 col-md-6 py-5">
+                    <div class="col-12 col-md-10">
+                        <p class="fs_32_fw_700_c_1313 mb-1">Best Procurement Spend Analysis Software – AI-Powered
+                            Insights, Smarter Decisions</p>
+                    </div>
+                    <p class="fs_15_fw_400img_rfq_event_c_1313 mb-4">Transform Procurement Intelligence & Save 20-45%
+                        With the Most Advanced and AI-Integrated Spend Analysis Platform</p>
+                    <div class="row row-gap-2 mb-3">
+                        <div class="col-6 mb-2 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Unparalleled Analytical Power</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Prevent Overspending</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Clear Visibility Across Operations</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">Identify spend per location, categories,vendor</span>
+                        </div>
+                        <div class="col-6 mb-3 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="../assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <span class="fs_14_fw_400_c_1313">And more..</span>
+                        </div>
+
+                    </div>
+                    <p class="fs_14_fw_600_c_linear">See ProcureClix in Action</p>
+                    <a type="button" href="../comingsoon/index.html" class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
+                        Demo Today!</a type="button" href="../comingsoon/index.html">
+
+                </div>
+                <div class="col-12 col-md-6 rfq_ban_img">
+                    <div class="text-center">
+                        <img loading="lazy" src="../assets/images/services/spand_analysis_banner.jpg"
+                            class="img_rfq_event" alt="">
+                        <img loading="lazy" src="../assets/images/servises_rfp/slid_img.png" class="bg_slid" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Challenges section -->
+    <div class="spacer_80"></div>
+    <section data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
+        <div class="container-fluid section_contaier position-relative">
+            <div class="red_gb position-relative overflow-hidden">
+                <img loading="lazy" src="../assets/images/services/red_dubble_round_circle.png"
+                    class="benifit_dubble_ring" alt="" data-aos="fade-right" data-aos-delay="200"
+                    data-aos-duration="1000" data-aos-offset="200">
+                <img loading="lazy" src="../assets/images/services/red_solid_cirdle.png" class="benifit_signal_ring"
+                    alt="" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+                <div class="spacer_40"></div>
+                <div class="position-relative my-2 px-4 px-sm-5">
+                    <img loading="lazy" src="../assets/images/services/orange_bg_ring.png" class="ring_bg_img" alt=""
+                        style="width: 416px; max-width: 100% ;">
+                    <div class="row z-1">
+                        <div class="d-flex justify-content-center align-items-center gap-2 z-1">
+                            <img loading="lazy" src="../assets/images/services/puzzel.png" class="w_16_h_16"
+                                alt="puzzel">
+                            <span class="fs_20_fw_500_c_red_linear">Challenges</span>
+                        </div>
+                        <div class="challenges_bg w-100">
+                            <div class="text-center">
+                                <p class="fs_24_fw_700_c_1313 mb-1">Tired of a Broken Spend Analysis Process Holding You
+                                    Back?
+                                </p>
+                                <p class="fs_15_fw_400_c_1313">Facing difficulty in navigating complex compliance
+                                    landscapes with confidence while gaining unprecedented insights into your spending
+                                    patterns? Without an efficient spend analysis software, your business will continue
+                                    dealing with:</p>
+                            </div>
+                            <div class="row justify-content-between gx-4 row-gap-3">
+                                <!-- one -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Struggling to consolidate data from multiple
+                                                systems and formats.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- two -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Watching savings opportunities slip away due
+                                                to poor spend visibility.</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- three -->
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Dealing with frustrated stakeholders who
+                                                can't access meaningful insights.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- four -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Missing out on savings because of incomplete
+                                                category classification.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- fifth -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Fighting to identify maverick spending,
+                                                contract leakage, and supplier consolidation opportunities.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sixth -->
+                                <div class="col-12 col-md-4">
+                                    <div class="d-flex gap-2">
+                                        <img loading="lazy" src="../assets/images/services/cross_red_bg.png"
+                                            class="w_14_h_14 mt-1" alt="">
+                                        <div>
+                                            <p class="fs_14_fw_400_c_1313">Tired of a Broken Spend Analysis Process
+                                                Holding You Back?</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer_40"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- benifit section -->
+    <section class="section_contaier" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"
+        data-aos-offset="200">
+        <!-- spacer -->
+        <div class="spacer_100"></div>
+        <div class="container-fluid services_benifit_container px-2 px-sm-5">
+            <img loading="lazy" src="../assets/images/servises_rfp/dubble_ring.png" alt="" class="benifit_dubble_ring"
+                data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+            <img loading="lazy" src="../assets/images/services/managment_blur_solid_ring.png"
+                class="benifit_signal_ring" alt="" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"
+                data-aos-offset="200">
+            <img loading="lazy" src="../assets/images/services/blue_bg_ring.png" class="ring_bg_img" alt="">
+            <div class="row g-4 mb-5 z-1 position-relative">
+                <div class="text-center mb-3 mt-5">
+                    <div class="d-flex align-items-center justify-content-center gap-2">
+                        <img loading="lazy" src="../assets/images/services/managment_benifit.png" class="w_16_h_16"
+                            alt="" srcset="">
+                        <span class="fs_20_fw_500_c_linear">Benefits</span>
+                    </div>
+                    <p class="fs_18_fw_700_c_1313 mt-4 mb-2">Control Spend Data to Drive Maximum Business Outcomes</p>
+                    <p class="fs_24_fw_700_c_1313">Struggling to consolidate data from multiple systems and formats.</p>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Data Profiling</p>
+                        <p class="fs_15_fw_400_c_1313">
+                            Stay compliant and informed with ProcureClix’s AI-powered spend analytics. Spend Analysis
+                            Software helps in categorizing spend data to provide insights across divisions, locations,
+                            suppliers, and categories, enabling understanding of spending patterns and identifying
+                            cost-saving opportunities. Profiling data enables an organization to make informed decisions
+                            while also optimizing and aligning financial strategies.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Strategic Spend Intelligence</p>
+                        <p class="fs_15_fw_400_c_1313">
+                            Transform raw data into strategic insights with ProcureClix's holistic spend visibility
+                            across all departments, suppliers, and categories in a unified platform. Our predictive
+                            spend modeling leverages advanced algorithms to identify potential opportunities for
+                            optimizing spending.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Precision Spend Optimization</p>
+                        <p class="fs_15_fw_400_c_1313">
+                            Uncover hidden value by analyzing spending patterns within specific categories to identify
+                            outliers and renegotiation opportunities. Determine which areas of spend are addressable
+                            versus non-addressable, allowing teams to develop strategic sourcing approaches and
+                            re-negotiate terms for addressable spending segments. </p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-md-6">
+                    <div class="p-4 rounded-3 shadow-sm h-100 bg-white">
+                        <p class="fs_18_fw_700_c_1313 mb-2">Global Data Integration</p>
+                        <p class="fs_15_fw_400_c_1313">
+                            Connect and analyze procurement data across borders, languages, and systems with our
+                            cross-border spend analysis capabilities. Compare procurement costs and supplier performance
+                            across different regions while our multi-system data harmonization collects raw data from
+                            any source that can be consolidated into a single database for analysis.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- feacture section -->
+    <section>
+        <!-- spacer -->
+        <div class="spacer_100"></div>
+        <div class="container-fluid section_contaier">
+            <div class="row gx-4">
+                <div class="img_outer_shadow">
+                    <img loading="lazy" src="../assets/images/services/glob_on_hand.png" class="w-100" alt=""
+                        alt="service_full_width_img" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000"
+                        data-aos-offset="200">
+                    <!-- <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/service_full_width_img.png" class="w-100" > -->
+                </div>
+                <div class="text-center mb-3 mt-5" data-aos="slide-left" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-offset="200">
+                    <div class="d-flex gap-2 justify-content-center align-items-center mb-2">
+                        <img loading="lazy" src="../assets/icons/problem_icon.png" class="w_16_h_16" alt="">
+                        <span class="fs_20_fw_500_c_linear">Features</span>
+                    </div>
+                    <p class="fs_20_fw_700_c_1313 mb-2">EVERYTHING YOU NEED</p>
+                    <div class="col-12 col-md-6 m-auto mb-2">
+                        <p class="fs_24_fw_700_c_1313">A Powerful Spend Analysis Application for Strategic Sourcing</p>
+                    </div>
+
+                    <div class="col-12 col-md-9 m-auto">
+                        <p>Streamline your source-to-pay processes with ProcureClix—an AI-powered, cloud-based
+                            procurement solution designed for both direct and indirect spend. Experience efficiency,
+                            control, and cost savings like never before.</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row gx-5 gy-4" data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000"
+                data-aos-offset="200">
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Analyze Spend</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Seamlessly aggregate spend data from AP vouchers, invoices, P-Cards (Purchase Cards),
+                            travel, and more.
+                            Analyze spend patterns across all sources while ensuring smooth spend management by
+                            importing spend
+                            in native formats for comprehensive insights.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Data Cleansing And Categorization</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            ProcureClix’s AI-integrated spend analytics software transforms procurement chaos into
+                            clarity
+                            by seamlessly collecting, purifying, and standardizing financial data across your entire
+                            organization.
+                            Say goodbye to fragmented insights and manual reconciliation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Graphical Spend Summaries</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Transform complex spending data into clear, actionable insights. Our dynamic graphs and
+                            charts instantly
+                            display critical metrics like spend by category, supplier, department, and time period for
+                            at-a-glance
+                            decision-making. The spend data can be sliced and diced real-time on screen for analysis.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Unified Spend Dashboard</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Access a complete view of all procurement activities in one place. Our comprehensive unified
+                            dashboard
+                            provides a single source for all spent data, ensuring complete visibility and
+                            accountability.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Classify Data On-Demand</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Instantly import and classify procurement data with ease. Leverage standard or custom spend
+                            taxonomies
+                            to ensure accurate categorization. Refine classification rules in real-time and refresh data
+                            instantly
+                            for up-to-date insights.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="position-relative problem_benifit_column">
+                        <span class="fs_16_fw_600_background">Spend Classification Visibility</span>
+                        <div class="fs_14_fw_400_c_1313 mt-2">
+                            Gain complete control and visibility over classification rules with ProcureClix’s advanced
+                            spend analysis
+                            application. Easily add and refine classification rules using a comprehensive toolkit and
+                            intuitive UI
+                            for accurate and efficient spend management.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="text-center" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000"
+                data-aos-offset="200">
+                <a type="button" href="../comingsoon/index.html" class="btn_primary_2 fs_16_fw_500_c_fff mt-5">Explore
+                    All Features</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Supplier Management -->
+    <div class="spacer_150"></div>
+    <section class="linear_gradient_blue">
+        <div class="container-fluid section_contaier" data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000"
+            data-aos-offset="200">
+            <div class="row align-items-stretch g-4">
+                <h5 class="text-center">One Platform, Endless Procurement Possibilities</h5>
+                <h4 class="text-center m-0">Why ProcureClix Supplier Management Software?</h4>
+                <div class="text-center fs_14_fw_400_c_1313 mt-2 mb-3 text-center">Experience the power of modern spend
+                    intelligence where data transforms into strategic advantage.</div>
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 my-2">
+                    <div class="d-flex gap-2 align-items-center">
+                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                            alt="">
+                        <span class="fs_14_fw_400_c_1313">Easy to Use</span>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                            alt="">
+                        <span class="fs_14_fw_400_c_1313">Quick Implementation</span>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center">
+                        <img loading="lazy" src="../assets/images/servises_rfp/check_box_icon.png" class="w_14_h_14"
+                            alt="">
+                        <span class="fs_14_fw_400_c_1313">Phenomenal Support</span>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <!-- CARD 1 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="white_card">
+                            <img loading="lazy" src="../assets/images/services/settings.png" class="mb-2"
+                                style="width: 40px;" alt="">
+                            <p class="fw-bold mb-3">Resolve Common Spend Analytics Challenges</p>
+
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Fragmented data sources create blind spots in your procurement
+                                    landscape.</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Manual classification leads to inconsistent categorization and
+                                    reporting inaccuracies.</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Limited visibility into spend data impacts negotiation leverage.
+                                </p>
+                            </div>
+                            <div class="d-flex">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Decentralized procurement processes result in compliance gaps and
+                                    maverick spending.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="white_card">
+                            <img loading="lazy" src="../assets/images/services/settings.png" class="mb-2"
+                                style="width: 40px;" alt="">
+                            <p class="fw-bold mb-3">Overcome The Risk Of Not Having An Efficient Procurement Process</p>
+
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Undetected cost overruns and budget variances erode profitability.
+                                </p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Missed consolidation opportunities leave potential savings on the
+                                    table.</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Inability to forecast spending patterns hinders strategic
+                                    planning.</p>
+                            </div>
+                            <div class="d-flex">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Compliance violations expose your organization to regulatory
+                                    penalties.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="white_card">
+                            <img loading="lazy" src="../assets/images/services/settings.png" class="mb-2"
+                                style="width: 40px;" alt="">
+                            <p class="fw-bold mb-3">Benefits Of Getting A Powerful Spend Analysis Procurement Software
+                            </p>
+
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">99.8% classification accuracy through machine learning algorithms.
+                                </p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Supplier data enrichment industry classifications.</p>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">ISO 27001 certified, with role-based access, approval workflows,
+                                    and full audit trails for compliance.</p>
+                            </div>
+                            <div class="d-flex">
+                                <img loading="lazy" src="../assets/images/services/copy_bullet.png"
+                                    class="w_14_h_14 me-2 mt-1" alt="">
+                                <p class="mb-0 small">Multi-entity, multi-currency support for global operations,
+                                    flexible deployment options (cloud or hybrid).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="spacer_100"></div>
+
+    </section>
+
+    <!-- Integration -->
+    <div class="spacer_100"></div>
+    <section>
+        <div class="container-fluid section_contaier">
+            <div class="d-flex flex-wrap gap-2 justify-content-center align-items-center mb-5 aos-init aos-animate"
+                data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
+                <img loading="lazy" loading="lazy" src="../assets/icons/bulb_icon.png" class="w_12h_16" alt="">
+                <span class="fs_20_fw_500_c_linear">Integration</span>
+            </div>
+
+            <div class="row aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"
+                data-aos-offset="200">
+                <div class="col-12">
+                    <div class="bg_white_shadow px-3 px-md-5 text-center">
+                        <div class="col-12 col-md-9 mx-auto">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/big_star_bg.png"
+                                class="w_65 mb-4" alt="">
+                            <h2 class="fs_24_fw_700_c_1313">Seamlessly Connect Your Procurement Ecosystem</h2>
+                            <p class="fs_15_fw_400_c_1313 mb-5">ProcureClix streamlines procurement with AI assisted
+                                decision making, customized workflow along with effortless integrations. Automate
+                                Fetching of the Account Payable data, payment voucher, credit card and even connect
+                                third party softwares like QuickBooks, SAP, Xero, Bill.com, Zoho Books for the account
+                                payable data.</p>
+                            <a type="button" href="../comingsoon/index.html"
+                                class="btn_primary_2 fs_16_fw_500_c_fff mb-5">See All Integrations!</a>
+                        </div>
+
+                        <div class="d-flex flex-wrap justify-content-between align-items-center text-center gap-5 aos-init aos-animate"
+                            data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"
+                            data-aos-easing="ease-out-cubic" data-aos-once="false">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/plue_abler.png"
+                                class="w_180" alt="">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/oracle_img.png"
+                                class="w_180" alt="">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/syspro.png"
+                                class="w_180" alt="">
+                            <img loading="lazy" loading="lazy"
+                                src="../assets/images/servises_rfp/Dynamics-365-Logo-PNG5 1.png" class="w_180" alt="">
+                            <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/intuit_img.png"
+                                class="w_180" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Book a demo call -->
+    <section>
+        <div class="spacer_100"></div>
+        <div class="container-fluid section_contaier">
+            <div class="book_demo_bg book_Demo_container aos-init aos-animate" data-aos="slide-right"
+                data-aos-delay="100" data-aos-duration="1000" data-aos-offset="0" data-aos-easing="ease-out-cubic"
+                data-aos-once="false">
+                <div class="row">
+                    <div class="col-12 col-md-6"></div>
+                    <div class="col-12 col-md-6 my-5 aos-init aos-animate" data-aos="fade-left" data-aos-delay="500"
+                        data-aos-duration="1000" data-aos-offset="200">
+                        <div class="d-flex align-items-center gap-2">
+                            <img loading="lazy" loading="lazy" src="../assets/icons/date_picker_icon.png" alt="">
+                            <span class="fs_20_fw_500_background">Book A Demo Call</span>
+                        </div>
+                        <div class=" col-md-10 col-12 text-left my-3">
+                            <h2 class="fs_24_fw_700_c_1313" style="text-align: left;">Transform Your Supplier
+                                Relationships Today</h2>
+                        </div>
+                        <div>
+                            <p class="fs_15_fw_400_c_1313">
+                                From streamlined onboarding to strategic performance optimization, our solution provides
+                                the tools and insights you need to build stronger, more valuable supplier relationships.
+                                Stop letting fragmented supplier information and manual processes limit your procurement
+                                potential. Start transforming your supplier management today.
+                            </p>
+                        </div>
+                        <a type="button" href="./comingSoon/index.html" class="btn btn_primary mt-3">Book a Demo</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <div class="spacer_100"></div>
+    <section class="" data-aos="slide-left" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"
+        data-aos-easing="ease-out-cubic" data-aos-once="false">
+        <div class="container-fluid section_contaier">
+            <!-- row 1 -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center mb-4">
+                    <div class="d-flex gap-2 justify-content-center mb-2">
+                        <img loading="lazy" src="../assets/icons/question_mark_icon.png" class="w_18_h_18" alt="">
+                        <span class="fs_20_fw_500_background">FAQs</span>
+                    </div>
+                    <h2 class="fs_24_fw_700_c_1313">FAQs About Spend Analysis Software</h2>
+                </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="row home_faq p-0">
+                <div class="accordion p-0 accordion-flush d-flex flex-column row-gap-2"
+                    id="accordionFlushSpendVisibility">
+
+                    <!-- Accordion Item #1 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendOne"
+                                    aria-expanded="false" aria-controls="flush-spendOne">
+                                    1. What is spend analysis software?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Spend analysis software is a specialized application that aggregates, cleanses, and
+                                    analyzes spend data across your organization to provide visibility into spending
+                                    patterns, identify savings opportunities, and support strategic decision-making.
+                                    ProcureClix's AI Integrated spend analytics software transforms complex spend data
+                                    from actionable intelligence that helps your procurement team make better decisions.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #2 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendTwo"
+                                    aria-expanded="false" aria-controls="flush-spendTwo">
+                                    2. What data do I need for a thorough spend analysis?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    For a comprehensive spend analysis, you'll need transaction-level spend data
+                                    including purchase orders, invoices, payment information, supplier details, and
+                                    category (taxonomy) classifications. This detailed spend information creates a
+                                    complete spend profile that ProcureClix can transform into actionable insights.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #3 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendThree"
+                                    aria-expanded="false" aria-controls="flush-spendThree">
+                                    3. What are the four stages of spend analysis?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    The four key stages of the spend analysis process are:
+                                     <br />  <br />
+                                    1) Data collection and
+                                    consolidation from multiple sources
+                                    <br/>
+                                     2) Data cleansing and normalization to ensure
+                                    accuracy
+                                    <br/>
+                                     3) Data categorization and enrichment to create meaningful insights
+                                     <br />
+                                    4) Analysis and visualization to drive procurement operations improvements and
+                                    strategic action.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #4 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendFour"
+                                    aria-expanded="false" aria-controls="flush-spendFour">
+                                    4. What are the standout features of ProcureClix Spend Analysis software?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    With over 22 years of experience working in this domain, ProcureClix offers advanced
+                                    analytics with AI-driven data classification, automated supplier enrichment,
+                                    customizable dashboards, real-time spend alerts, predictive analytics for future
+                                    spending patterns, and seamless integration capabilities that provide
+                                    enterprise-level spend visibility across your organization.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #5 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendFive"
+                                    aria-expanded="false" aria-controls="flush-spendFive">
+                                    5. How can I ensure data accuracy and quality in ProcureClix?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    ProcureClix employs multiple data analysis validation techniques including pattern
+                                    recognition, outlier detection, and cross-referencing. Our system flags potential
+                                    inconsistencies for review and continuously learns from corrections to improve
+                                    classification accuracy, ensuring your detailed spend information is reliable.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #6 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendSix"
+                                    aria-expanded="false" aria-controls="flush-spendSix">
+                                    6. In what ways can ProcureClix assist in supplier management?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendSix" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    ProcureClix provides comprehensive supplier analytics including performance metrics,
+                                    consolidation opportunities, risk assessments, and compliance monitoring. These
+                                    insights help your procurement team optimize their procurement decisions by
+                                    identifying top and underperforming suppliers, tracking diversity spending, and
+                                    monitoring contract compliance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item #7 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-spendSeven"
+                                    aria-expanded="false" aria-controls="flush-spendSeven">
+                                    7. How can I measure the ROI of implementing ProcureClix?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-spendSeven" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushSpendVisibility">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Most organizations measure ROI in three key areas: direct cost savings (typically
+                                    3-7% of addressable spend), process efficiency gains (40-60% reduction in manual
+                                    analysis time), and risk mitigation benefits. Our spend analysis platform includes
+                                    ROI tracking dashboards that help measure how effectively you optimize procurement
+                                    processes.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- end Accordian -->
+            </div>
+            <!-- end Row 2 -->
+        </div>
+    </section>
+    <div class="spacer_60"></div>
+
     <!-- footer -->
 
-    <footer class="linear_gradient_blue footer_style ">
+    <footer class="linear_gradient_blue footer_style " data-aos="slide-up" data-aos-delay="200" data-aos-duration="1000"
+        data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
         <!-- first footer -->
         <div class="footer_bg_image">
             <div class="spacer_60"></div>
@@ -314,31 +1111,36 @@
                         <div class="col-12 col-sm-12 col-md-4 col-lg-3">
                             <div>
                                 <div>
-                                    <img src="../assets/images/footer_logo.png" class="footer_logo"
+                                    <img loading="lazy" src="../assets/images/footer_logo.png" class="footer_logo"
                                         alt="ProcureClix Logo">
                                 </div>
                                 <!-- Phone -->
                                 <div class="d-flex gap-3 mt-4">
-                                    <div><img src="../assets/icons/phone_icon.png" alt="Phone Icon"></div>
+                                    <div><img loading="lazy" src="../assets/icons/phone_icon.png" alt="Phone Icon">
+                                    </div>
                                     <div class="d-flex flex-column gap-2">
                                         <span class="fs_16_fw_600_c_1313">Phone:</span>
-                                        <a href="tel:+1 (800) 906-8161" class="footer_link fs_16_fw_400_c_1313">+1 (800) 906-8161</a>
+                                        <a href="tel:+1 (800) 906-8161" class="footer_link fs_16_fw_400_c_1313">+1 (800)
+                                            906-8161</a>
                                     </div>
                                 </div>
                                 <!-- Location -->
                                 <div class="d-flex gap-3 mt-4">
-                                    <div><img src="../assets/icons/map_marker.png" alt="Location Icon"></div>
+                                    <div><img loading="lazy" src="../assets/icons/map_marker.png" alt="Location Icon">
+                                    </div>
                                     <div class="d-flex flex-column gap-2">
                                         <span class="fs_16_fw_600_c_1313">Global Presence:</span>
                                         <div class="">
                                             <span class="fs_16_fw_700_c_1313">North America:</span>
                                             <div>
-                                                <img src="../assets/icons/country_icon/usa.png" alt="" class="w_25">
+                                                <img loading="lazy" src="../assets/icons/country_icon/usa.png" alt=""
+                                                    class="w_25">
                                                 <span class="fs_16_fw_400_c_1313">USA</span>
                                             </div>
 
                                             <div>
-                                                <img src="../assets/icons/country_icon/canada.png" alt="" class="w_25">
+                                                <img loading="lazy" src="../assets/icons/country_icon/canada.png" alt=""
+                                                    class="w_25">
                                                 <span class="fs_16_fw_400_c_1313">Canada</span>
                                             </div>
                                         </div>
@@ -347,28 +1149,32 @@
                                         <div>
                                             <span class="fs_16_fw_700_c_1313">Asia:</span>
                                             <div>
-                                                <img src="../assets/icons/country_icon/india.png" alt="" class="w_25">
+                                                <img loading="lazy" src="../assets/icons/country_icon/india.png" alt=""
+                                                    class="w_25">
                                                 <span class="fs_16_fw_400_c_1313">India</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Schedule Demo Button -->
-                                <div class="mt-3">
+                                <div class="mt-5">
                                     <a type="button" href="../ComingSoon/index.html"
                                         class="btn btn_primary mt-3">Schedule a Demo</a>
+                                    <a type="button" href="../ComingSoon/index.html"
+                                        class="btn btn-light linear-border border_white_bg_btn mt-3"><span>Contact
+                                            Us</span></a>
                                 </div>
                                 <div class="mt-3">
-                                    <a type="button" href="../ComingSoon/index.html"
-                                        class="btn btn-light linear-border border_white_bg_btn"><span>Contact
-                                            Us</span></a>
                                     <div class="d-flex gap-3 flex-wrap mt-3">
                                         <a href="../ComingSoon/index.html" class="footer_link footer_share_icon"><img
-                                                src="../assets/icons/facebook_icon.png" alt="Facebook"></a>
+                                                loading="lazy" src="../assets/icons/facebook_icon.png"
+                                                alt="Facebook"></a>
                                         <a href="../ComingSoon/index.html" class="footer_link footer_share_icon"><img
-                                                src="../assets/icons/linkdin_icon.png" alt="LinkedIn"></a>
+                                                loading="lazy" src="../assets/icons/linkdin_icon.png"
+                                                alt="LinkedIn"></a>
                                         <a href="../ComingSoon/index.html" class="footer_link footer_share_icon"><img
-                                                src="../assets/icons/x-mas_icon.png" alt="X (Twitter)"></a>
+                                                loading="lazy" src="../assets/icons/x-mas_icon.png"
+                                                alt="X (Twitter)"></a>
                                     </div>
                                 </div>
                             </div>
@@ -394,12 +1200,15 @@
                                         <div>
                                             <span class="fs_18_fw_700_c_1313">Services</span>
                                         </div>
-                                        <a href="../services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
+                                        <a href="../services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX |
+                                            RFQ
                                             | RFP</a>
                                         <div class="d-flex flex-column gap-2 mt-2">
-                                            <a href="../services/managed_reverse_auctions.html" class="footer_link">Managed
+                                            <a href="../services/managed_reverse_auctions.html"
+                                                class="footer_link">Managed
                                                 Reverse Auctions</a>
-                                            <a href="../services/spend_analysis.html" class="footer_link">Spend Analysis</a>
+                                            <a href="../services/spend_analysis.html" class="footer_link">Spend
+                                                Analysis</a>
                                         </div>
                                     </div>
                                 </div>
@@ -414,14 +1223,16 @@
                                             Requisition</a>
                                         <a href="../solutions/reverse_auction.html" class="footer_link">Reverse
                                             Auction</a>
-                                        <a href="../solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
+                                        <a href="../solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI |
+                                            RFQ</a>
                                         <a href="../solutions/contract_management.html" class="footer_link">Contract
                                             Management</a>
                                         <a href="../solutions/procure_to_pay.html"
                                             class="footer_link">Procure-To-Pay</a>
                                         <a href="../solutions/spend_analysis.html" class="footer_link">Spend
                                             Analysis</a>
-                                        <a href="../solutions/supplier_management.html" class="footer_link">Supplier
+                                        <a href="../solutions/supplier_management.html" class="footer_link"
+                                            active>Supplier
                                             Management</a>
                                         <a href="../solutions/custom_solutions.html" class="footer_link">Custom
                                             Solutions</a>
@@ -455,7 +1266,7 @@
                                     <div class="d-flex flex-wrap justify-content-between"> -->
                                 <!-- Services Section -->
                                 <div class="col-12 col-sm-6 col-md-4">
-                                    
+
                                 </div>
 
 
@@ -464,8 +1275,8 @@
                                     <div>
                                         <!-- <span class="fs_18_fw_700_c_linear">Hosted On</span> -->
                                         <div class="mt-4">
-                                            <img src="../assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
-                                                class="microsoft_azure">
+                                            <img loading="lazy" src="../assets/images/micrisoft_azure_2.png"
+                                                alt="Microsoft Azure" class="microsoft_azure">
                                         </div>
                                     </div>
                                 </div>
@@ -492,8 +1303,41 @@
         </div>
     </footer>
     <!-- footer end -->
+
+    <script>
+
+        // ✅ Accordian This script will automatically change the icon to + or - based on the collapse state
+        document.querySelectorAll(".accordion-item").forEach(function (item) {
+            // Whenever an accordion is shown
+            item.addEventListener("show.bs.collapse", function () {
+                // Reset all icons to "+"
+                document.querySelectorAll(".icon").forEach(function (icon) {
+                    icon.textContent = "+";
+                });
+                // Change the current icon to "-"
+                item.querySelector(".icon").textContent = "-";
+            });
+
+            // Whenever an accordion is hidden
+            item.addEventListener("hide.bs.collapse", function () {
+                item.querySelector(".icon").textContent = "+";
+            });
+        });
+
+        // accordian end
+    </script>
     <script src="../assets/js-files/comman_js.js"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false, // allow animations to repeat
+            offset: 0,
+            duration: 1000,
+        });
+
+    </script>
 </body>
 
 </html>

@@ -82,7 +82,11 @@
   position: relative;
 }
 
-.nav-item .nav-link.active::after {
+.dropdown{
+  cursor: pointer;
+}
+
+/* .nav-item .nav-link.active::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -95,7 +99,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-}
+} */
 
 .nav-item .active {
   cursor: pointer;
