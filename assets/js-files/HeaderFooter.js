@@ -18,19 +18,19 @@ let HeaderHTML = `
                                 data-bs-toggle="dropdown">Solutions</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
-                                        Requisition</a></li>
-                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
-                                        Auction</a></li>
+                                        Requisition</a></li>                              
                                 <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI |
                                         RFQ</a></li>
                                 <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
                                         Management</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/solutions/procure_to_pay.html">Procure-To-Pay</a></li>
-                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
-                                        Analysis</a></li>
+                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
+                                        Auction</a></li>                                
                                 <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
                                         Management</a></li>
+                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
+                                        Analysis</a></li>
+                                <li><a class="dropdown-item"
+                                        href="/solutions/procure_to_pay.html">Procure-To-Pay</a></li>                           
                                 <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
                                         Solutions</a></li>
                             </ul>
@@ -98,6 +98,9 @@ let HeaderHTML = `
                                         href="/resources/procurement_glossary.html">Procurement Glossary</a></li>
                                 <li><a class="dropdown-item"
                                         href="/resources/procurement_conferences.html">Procurement Conferences</a>
+                                </li>
+                                 <li><a class="dropdown-item"
+                                        href="/resources/integration.html">Integration</a>
                                 </li>
                             </ul>
                         </div>
@@ -278,7 +281,7 @@ let FooterHTML = `
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <a href="/index.html" class="footer_link">Home</a>
-                                    <a href="/comingsoon/index.html" class="footer_link">About ProcureClix</a>
+                                    <a href="/comingsoon/index.html" class="footer_link">About Us</a>
                                     <a href="/comingsoon/index.html" class="footer_link">Contact Us</a>
                                     <a href="/comingsoon/index.html" class="footer_link">Pricing</a>
                                 </div>
@@ -319,14 +322,14 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Industries</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="#" class="footer_link">Manufacturing</a>
-                                    <a href="#" class="footer_link">Automotive</a>
-                                    <a href="#" class="footer_link">Healthcare</a>
-                                    <a href="#" class="footer_link">Construction & Real Estate</a>
-                                    <a href="#" class="footer_link">Energy Brokers & Suppliers</a>
-                                    <a href="#" class="footer_link">Bio Tech And Pharma</a>
-                                    <a href="#" class="footer_link">Food & Beverage</a>
-                                    <a href="#" class="footer_link">Logistics</a>
+                                    <a href="/industries/manufacturing.html" class="footer_link">Manufacturing</a>
+                                    <a href="/industries/automotive.html" class="footer_link">Automotive</a>
+                                    <a href="/industries/healthcare.html" class="footer_link">Healthcare</a>
+                                    <a href="/industries/construction_real_estate.html" class="footer_link">Construction & Real Estate</a>
+                                    <a href="/industries/energy_brokers.html" class="footer_link">Energy Brokers & Suppliers</a>
+                                    <a href="/industries/biotech_pharma.html" class="footer_link">Bio Tech And Pharma</a>
+                                    <a href="/industries/food_beverage.html" class="footer_link">Food & Beverage</a>
+                                    <a href="/industries/logistics.html" class="footer_link">Logistics</a>
                                 </div>
                             </div>
                         </div>
@@ -367,7 +370,7 @@ let FooterHTML = `
                                         Glossary</a>
                                     <a href="/resources/procurement_conferences.html" class="footer_link">Procurement
                                         Conferences</a>
-                                    <a href="#" class="footer_link">Integration</a>
+                                    <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                 </div>
                             </div>
                         </div>
@@ -474,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log("✌️currentPath --->", currentPath);
 
     // Highlight nav-links
-    document.querySelectorAll(".nav-link",).forEach((link) => {
+    document.querySelectorAll(".nav-link").forEach((link) => {
       const href = link.getAttribute("href");
       if (href && href === currentPath) {
         link.classList.add("active");
@@ -484,7 +487,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const navItem = link.closest(".nav-item");
         if (navItem) navItem.classList.add("active");
-        
       }
     });
 
@@ -502,15 +504,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-     // Highlight dropdown-items
-     document.querySelectorAll(".footer_link").forEach((item) => {
-        const href = item.getAttribute("href");
-        console.log("✌️href --->", href);
-        if (href && currentPath.includes(href)) {
-          item.classList.add("active");
-  
-        }
-      });
-
+    // Highlight dropdown-items
+    document.querySelectorAll(".footer_link").forEach((item) => {
+      const href = item.getAttribute("href");
+      console.log("✌️href --->", href);
+      if (href && currentPath.includes(href)) {
+        item.classList.add("active");
+      }
+    });
   }
 });
