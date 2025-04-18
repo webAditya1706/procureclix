@@ -15,6 +15,11 @@
 * {
   font-family: Poppins;
 }
+
+#header-placeholder{
+  height: auto;
+  min-height: 70px;
+}
 /* rings style */
 
 .benifit_signal_ring {
@@ -1223,7 +1228,7 @@ h6 {
 }
 
 .footer_style {
-  border-top: 1px solid #e0e0e0;
+  /* border-top: 1px solid #e0e0e0; */
   background: linear-gradient(180deg, #fff 0%, #eefeff 100%);
   flex-shrink: 0;
 }

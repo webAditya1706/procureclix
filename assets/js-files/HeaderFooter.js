@@ -8,7 +8,9 @@ let HeaderHTML = `
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav justify-content-center gap-2 w-100 mb-2 mb-lg-0" id="navbarNav">
                     <li class="nav-item">
+                        <div class="dropdown">
                         <a class="nav-link" href="/index.html">Home</a>
+                        </div>
                     </li>
                     <li class="nav-item position-relative">
                         <div class="dropdown">
@@ -275,7 +277,7 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/comingsoon/index.html" class="footer_link">Home</a>
+                                    <a href="/index.html" class="footer_link">Home</a>
                                     <a href="/comingsoon/index.html" class="footer_link">About ProcureClix</a>
                                     <a href="/comingsoon/index.html" class="footer_link">Contact Us</a>
                                     <a href="/comingsoon/index.html" class="footer_link">Pricing</a>
@@ -469,12 +471,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function highlightActiveLink() {
     const currentPath = window.location.pathname;
-    console.log("✌️currentPath --->", currentPath);
+    // console.log("✌️currentPath --->", currentPath);
 
     // Highlight nav-links
-    document.querySelectorAll(".nav-link").forEach((link) => {
+    document.querySelectorAll(".nav-link",).forEach((link) => {
       const href = link.getAttribute("href");
-      if (href && currentPath.includes(href)) {
+      if (href && href === currentPath) {
         link.classList.add("active");
 
         const dropdown = link.closest(".dropdown");
@@ -482,6 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const navItem = link.closest(".nav-item");
         if (navItem) navItem.classList.add("active");
+        
       }
     });
 
