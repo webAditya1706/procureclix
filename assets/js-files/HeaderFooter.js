@@ -12,36 +12,15 @@ let HeaderHTML = `
                         <a class="nav-link" href="/index.html">Home</a>
                         </div>
                     </li>
-                    <li class="nav-item position-relative">
-                        <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="/solutions/index.html"
-                                data-bs-toggle="dropdown">Solutions</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
-                                        Requisition</a></li>                              
-                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI |
-                                        RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
-                                        Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
-                                        Auction</a></li>                                
-                                <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
-                                        Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
-                                        Analysis</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/solutions/procure_to_pay.html">Procure-To-Pay</a></li>                           
-                                <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
-                                        Solutions</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="/services/index.html"
                                 data-bs-toggle="dropdown">Services</a>
                             <ul class="dropdown-menu">
                                 <li>
+                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend
+                                        Analysis</a></li>
                                     <a href="/services/managed_rfx_rfq_rfp.html" class="dropdown-item">Managed RFX |
                                         RFQ | RFP</a>
                                 </li>
@@ -50,8 +29,6 @@ let HeaderHTML = `
                                         href="/services/managed_reverse_auctions.html">Managed Reverse
                                         Auctions</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend
-                                        Analysis</a></li>
                             </ul>
                         </div>
                     </li>
@@ -60,47 +37,66 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/industries/index.html"
                                 data-bs-toggle="dropdown">Industries</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                        href="/industries/manufacturing.html">Manufacturing</a></li>
-                                <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
                                 <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a>
                                 </li>
+                                <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/industries/construction_real_estate.html">Construction & Real
-                                        Estate</a></li>
-                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
-                                        Suppliers</a></li>
-                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
-                                        Pharma</a></li>
+                                        href="/industries/manufacturing.html">Manufacturing</a></li>                                
                                 <li><a class="dropdown-item" href="/industries/food_beverage.html">Food and
                                         Beverage</a></li>
-                                <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
+                                        Pharma</a></li>
+                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
+                                                Suppliers</a></li>
+                                <li><a class="dropdown-item"
+                                href="/industries/construction_real_estate.html">Construction & Real
+                                Estate</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="/resources/index.html"
-                                data-bs-toggle="dropdown">Resources</a>
+                            <a class="nav-link dropdown-toggle" href="/solutions/index.html" data-bs-toggle="dropdown">Solutions</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI |
+                                        RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
+                                        Analysis</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procure_to_pay.html">Procure-To-Pay</a></li>
+                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
+                                        Auction</a></li>
+                                <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
+                                        Solutions</a></li>
+
+                                <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
+                                        Requisition</a></li>
+                                <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
+                                        Management</a></li>
+                                <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
+                                        Management</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="/resources/index.html" data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/resources/blog.html">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
-                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a>
+                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a>
                                 </li>
                                 <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a>
                                 </li>
                                 <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst
                                         Reports</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
                                         Guide</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/resources/procurement_glossary.html">Procurement Glossary</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/resources/procurement_conferences.html">Procurement Conferences</a>
-                                </li>
-                                 <li><a class="dropdown-item"
-                                        href="/resources/integration.html">Integration</a>
+                                <li><a class="dropdown-item" href="/resources/procurement_glossary.html">Procurement Glossary</a></li>
+                                <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement Conferences</a>
                                 </li>
                             </ul>
                         </div>
@@ -281,9 +277,9 @@ let FooterHTML = `
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <a href="/index.html" class="footer_link">Home</a>
-                                    <a href="/comingsoon/index.html" class="footer_link">About Us</a>
-                                    <a href="/comingsoon/index.html" class="footer_link">Contact Us</a>
-                                    <a href="/comingsoon/index.html" class="footer_link">Pricing</a>
+                                    <a href="/about_us.html" class="footer_link">About Us</a>
+                                    <a href="/pricing.html" class="footer_link">Pricing</a>
+                                    <a href="/contact_us.html" class="footer_link">Contact Us</a>
                                 </div>
                             </div>
                             <div class="mt-5">
@@ -308,11 +304,11 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Services</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
+                                    <a href="/services/spend_analysis.html" class="footer_link">Spend Analysis</a>
                                     <a href="/services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
                                         | RFP</a>
                                     <a href="/services/managed_reverse_auctions.html" class="footer_link">Managed
                                         Reverse Auctions</a>
-                                    <a href="/services/spend_analysis.html" class="footer_link">Spend Analysis</a>
                                 </div>
                             </div>
                         </div>
@@ -322,14 +318,14 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Industries</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/industries/manufacturing.html" class="footer_link">Manufacturing</a>
-                                    <a href="/industries/automotive.html" class="footer_link">Automotive</a>
-                                    <a href="/industries/healthcare.html" class="footer_link">Healthcare</a>
-                                    <a href="/industries/construction_real_estate.html" class="footer_link">Construction & Real Estate</a>
-                                    <a href="/industries/energy_brokers.html" class="footer_link">Energy Brokers & Suppliers</a>
-                                    <a href="/industries/biotech_pharma.html" class="footer_link">Bio Tech And Pharma</a>
-                                    <a href="/industries/food_beverage.html" class="footer_link">Food & Beverage</a>
                                     <a href="/industries/logistics.html" class="footer_link">Logistics</a>
+                                    <a href="/industries/healthcare.html" class="footer_link">Healthcare</a>
+                                    <a href="/industries/automotive.html" class="footer_link">Automotive</a>
+                                    <a href="/industries/manufacturing.html" class="footer_link">Manufacturing</a>
+                                    <a href="/industries/food_beverage.html" class="footer_link">Food & Beverage</a>
+                                    <a href="/industries/biotech_pharma.html" class="footer_link">Bio Tech And Pharma</a>
+                                    <a href="/industries/energy_brokers.html" class="footer_link">Energy Brokers & Suppliers</a>
+                                    <a href="/industries/construction_real_estate.html" class="footer_link">Construction & Real Estate</a>
                                 </div>
                             </div>
                         </div>
@@ -339,17 +335,17 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Solutions</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
+                                <a href="/solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
+                                <a href="/solutions/spend_analysis.html" class="footer_link">Spend Analysis</a>
+                                <a href="/solutions/procure_to_pay.html" class="footer_link">Procure-To-Pay</a>
+                                <a href="/solutions/reverse_auction.html" class="footer_link">Reverse Auction</a>
+                                <a href="/solutions/custom_solutions.html" class="footer_link">Custom Solutions</a>
                                     <a href="/solutions/purchase_requisition.html" class="footer_link">Purchase
                                         Requisition</a>
-                                    <a href="/solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
+                                        <a href="/solutions/supplier_management.html" class="footer_link">Supplier
+                                            Management</a>
                                     <a href="/solutions/contract_management.html" class="footer_link">Contract
                                         Management</a>
-                                    <a href="/solutions/reverse_auction.html" class="footer_link">Reverse Auction</a>
-                                    <a href="/solutions/supplier_management.html" class="footer_link">Supplier
-                                        Management</a>
-                                    <a href="/solutions/spend_analysis.html" class="footer_link">Spend Analysis</a>
-                                    <a href="/solutions/procure_to_pay.html" class="footer_link">Procure-To-Pay</a>
-                                    <a href="/solutions/custom_solutions.html" class="footer_link">Custom Solutions</a>
                                 </div>
                             </div>
                         </div>
@@ -361,8 +357,9 @@ let FooterHTML = `
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <a href="/resources/blog.html" class="footer_link">Blog</a>
                                     <a href="/resources/insights.html" class="footer_link">Insights</a>
-                                    <a href="/resources/case_studies.html" class="footer_link">Case Studies</a>
+                                    <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/whitepapers.html" class="footer_link">Whitepapers</a>
+                                    <a href="/resources/case_studies.html" class="footer_link">Case Studies</a>
                                     <a href="/resources/analyst_reports.html" class="footer_link">Analyst Reports</a>
                                     <a href="/resources/procurement_guide.html" class="footer_link">Procurement
                                         Guide</a>
@@ -370,7 +367,6 @@ let FooterHTML = `
                                         Glossary</a>
                                     <a href="/resources/procurement_conferences.html" class="footer_link">Procurement
                                         Conferences</a>
-                                    <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                 </div>
                             </div>
                         </div>
@@ -458,6 +454,7 @@ let FooterHTML = `
         </div>
     </footer>
 `;
+
 document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-placeholder");
   const footerContainer = document.getElementById("footer_wrapper");
@@ -474,7 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function highlightActiveLink() {
     const currentPath = window.location.pathname;
-    // console.log("✌️currentPath --->", currentPath);
+    console.log("✌️currentPath --->", currentPath);
 
     // Highlight nav-links
     document.querySelectorAll(".nav-link").forEach((link) => {
@@ -508,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".footer_link").forEach((item) => {
       const href = item.getAttribute("href");
       console.log("✌️href --->", href);
-      if (href && currentPath.includes(href)) {
+      if (href && currentPath === href) {
         item.classList.add("active");
       }
     });

@@ -12,11 +12,17 @@
   --incomplete-bar: #f00;
 }
 
-* {
+body {
   font-family: Poppins;
 }
 
-#header-placeholder{
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--primary_bg_color);
+  color: #fff !important;
+}
+
+#header-placeholder {
   height: auto;
   min-height: 70px;
 }
@@ -87,7 +93,7 @@
   position: relative;
 }
 
-.dropdown{
+.dropdown {
   cursor: pointer;
 }
 
@@ -1215,12 +1221,18 @@ h6 {
 }
 
 .footer_link.active {
-  color: var(--Primary, #1b5b7e) !important;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   line-height: 16px; /* 100% */
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer_link:hover {
@@ -1291,8 +1303,8 @@ h6 {
   );
 }
 
-.copy_write_text{
-  color: rgba(19, 19, 19, 0.60);
+.copy_write_text {
+  color: rgba(19, 19, 19, 0.6);
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -1379,7 +1391,7 @@ h6 {
   font-size: 80px;
   font-style: normal;
   font-weight: 700;
-  line-height: 90px; /* 112.5% */
+  line-height: 90px; 
   background: var(
     --Gradient-2,
     linear-gradient(180deg, #1b5b7e 0%, #105479 104.16%)
@@ -1388,6 +1400,12 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.section_container .comingSoon_container .comingSoon_text span {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
 
 .comingSoon_bg_image {
   background-image: url("../images/comming_soon_Logo_ProcureClix.jpg");
