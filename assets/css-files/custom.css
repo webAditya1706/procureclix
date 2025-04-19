@@ -74,3 +74,23 @@
     background-color: unset;
     box-shadow: none;
   }
+
+  
+.problem_benifit_column {
+  padding-left: 13px;
+}
+
+.problem_benifit_column::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 24px;
+  height: 4px;
+  transform: rotate(90deg);
+  flex-shrink: 0;
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+}
