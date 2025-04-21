@@ -896,6 +896,7 @@ p {
   font-weight: 400;
   line-height: 22px; /* 157.143% */
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .p2 {
@@ -925,10 +926,10 @@ h2 {
   line-height: 28px; /* 100% */
 }
 
-li::marker {
+/* li::marker {
   color: red;
   margin-right: 0px 10px;
-}
+} */
 
 h3 {
   color: var(--Black, #131313);
