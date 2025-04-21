@@ -43,7 +43,7 @@ let HeaderHTML = `
                                 <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
                                 <li><a class="dropdown-item"
                                         href="/industries/manufacturing.html">Manufacturing</a></li>                                
-                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food and
+                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food &
                                         Beverage</a></li>
                                 <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
                                         Pharma</a></li>

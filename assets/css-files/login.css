@@ -88,6 +88,7 @@
 }
 
 .sign_in_btn {
+  border: 0px;
   background-color: aquamarine;
   display: flex;
   height: 44px;
@@ -121,6 +122,8 @@
 }
 
 .lenguage_select {
+  border: 0px;
+  height: 35px;
   background-color: #eefaff;
   border-radius: 8px;
   max-width: 200px;
@@ -204,7 +207,6 @@
   flex-shrink: 0;
   border-radius: 15px;
   border: 1px solid var(--Grey, #afafaf);
-  background: var(--White, #fff);
   padding: 3px 10px;
   color: var(--Secondary, #102c3a);
   font-family: Poppins;
@@ -239,6 +241,20 @@ font-style: normal;
 font-weight: 500;
 line-height: 12px; /* 100% */
 }
+
+.login_phase2_bottom{
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  left: 0px;
+}
+
+.pahe2_select_wrapper{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 22px 0px;
+}
+
 /* media query */
 
 @media (max-width: 992px) {
@@ -248,5 +264,9 @@ line-height: 12px; /* 100% */
   .p2_event_col {
     border-radius: 10px;
     margin-top: 40px;
+  }
+  .login_phase2_bottom{
+    position: relative;
+    bottom: 0px;
   }
 }

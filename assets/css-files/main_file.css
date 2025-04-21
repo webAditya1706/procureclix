@@ -967,6 +967,17 @@ h6 {
   line-height: 25px; /* 100% */
 }
 
+.fs_12_fw_400_c_58748F{
+  color: var(--Label-text, #58748F);
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 12px; /* 100% */
+text-transform: capitalize;
+}
+
+
 .fs_17_fw_400_c_1B3A4B {
   color: #1b3a4b;
   text-align: center;
@@ -1357,7 +1368,7 @@ h6 {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 10px 40px;
+  margin: 12px 40px;
 }
 
 .divider::before,
