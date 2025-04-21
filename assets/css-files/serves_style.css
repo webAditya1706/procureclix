@@ -75,6 +75,15 @@
   right: 0;
 }
 
+.circle_as_bg { 
+  background-image: url(/assets/images/servises_rfp/circle_as_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  padding: 100px 0px;
+}
+
 /* Media query  */
 
 @media (max-width: 1000px) {
