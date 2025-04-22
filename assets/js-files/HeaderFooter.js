@@ -63,7 +63,6 @@ let HeaderHTML = `
                                         RFQ</a></li>
                                 <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
                                         Analysis</a></li>
-                                <li><a class="dropdown-item" href="/solutions/procure_to_pay.html">Procure-To-Pay</a></li>
                                 <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
                                         Auction</a></li>
                                 <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
@@ -337,7 +336,6 @@ let FooterHTML = `
                                 <div class="d-flex flex-column gap-2 mt-2">
                                 <a href="/solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
                                 <a href="/solutions/spend_analysis.html" class="footer_link">Spend Analysis</a>
-                                <a href="/solutions/procure_to_pay.html" class="footer_link">Procure-To-Pay</a>
                                 <a href="/solutions/reverse_auction.html" class="footer_link">Reverse Auction</a>
                                 <a href="/solutions/custom_solutions.html" class="footer_link">Custom Solutions</a>
                                     <a href="/solutions/purchase_requisition.html" class="footer_link">Purchase
