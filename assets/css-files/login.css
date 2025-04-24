@@ -216,6 +216,15 @@
   text-transform: capitalize;
 }
 
+.events_select.form-select {
+  --bs-form-select-bg-img: url('../icons/custom_select_dropdown.png');
+  background-image: var(--bs-form-select-bg-img);
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 10px 5px;
+  padding-right: 2.5rem; /* Make space for the icon */
+}
+
 .left_red_border_card {
   border-radius: 5px;
   border: 1px dashed var(--Grey, #afafaf);
@@ -265,6 +274,15 @@ line-height: 12px; /* 100% */
   width: 5px;
   height: 8px;
   cursor: pointer;
+}
+
+.privecy_bottm{
+  position: absolute;
+  text-align: center;
+  bottom: 25px;
+  flex: column;
+  transform: translate(-50%, 0%);
+  left: 50%;
 }
 
 /* media query */

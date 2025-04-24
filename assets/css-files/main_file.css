@@ -25,6 +25,13 @@ body {
 #header-placeholder {
   height: auto;
   min-height: 70px;
+  background-color: var(--primary_bg_color);
+  display: flex;
+  justify-content: center;
+  /* align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 22;   */
 }
 /* rings style */
 
@@ -1457,9 +1464,15 @@ text-transform: capitalize;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .comming_soon_Logo_ProcureClix {
   position: relative;
 }
+
+.mb_12{
+  margin-bottom: 12px;
+}
+
 /* .comming_soon_Logo_ProcureClix::after {
   content: "Coming Soon";
   position: absolute;

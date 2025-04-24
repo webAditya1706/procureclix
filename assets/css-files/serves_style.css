@@ -67,6 +67,9 @@
 
 .left_border {
   border-right: 1px solid #e0e0e0;
+  word-break: break-word; /* Prevents long text from breaking layout */
+    overflow-wrap: break-word;
+    max-width: 100%; 
 }
 
 .blue_managment_signal_ring {
@@ -107,6 +110,9 @@
     text-align: center;
     transform: translateY(0%);
   }
+  .fs_40_fw_700_linear{
+    font-size: 19px;
+  }
 }
 
 
@@ -134,7 +140,6 @@
   position: absolute;
 }
 
-
 .services_benifit_container {
   border-radius: 10px;
   background: #eefaff;
@@ -142,3 +147,11 @@
   position: relative;
   overflow: hidden;
 }
+
+  .integration_ul {
+    list-style-position: inside; /* This moves the bullet inside the li box */
+    text-align: center;
+    padding-left: 0; /* Optional: removes default indentation */
+    margin: 0 auto; /* Center the list if needed */
+}
+
