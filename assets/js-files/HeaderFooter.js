@@ -1,5 +1,6 @@
 let HeaderHTML = `
 <div class="position-sticky top-0 w-100 primary_bg z-3">
+    <!-- Desktop Navbar -->
     <nav class="navbar navbar-expand-lg d-none d-lg-block">
         <div class="container">
             <a class="navbar-brand" href="/index.html">
@@ -9,257 +10,216 @@ let HeaderHTML = `
                 <ul class="navbar-nav justify-content-center gap-2 w-100 mb-2 mb-lg-0" id="navbarNav">
                     <li class="nav-item">
                         <div class="dropdown">
-                        <a class="nav-link" href="/index.html">Home</a>
+                            <a class="nav-link" href="/index.html">Home</a>
                         </div>
                     </li>
-                    
+
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="/services/index.html"
                                 data-bs-toggle="dropdown">Services</a>
                             <ul class="dropdown-menu">
-                                <li>
-                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend
-                                        Analysis</a></li>
-                                    <a href="/services/managed_rfx_rfq_rfp.html" class="dropdown-item">Managed RFX |
-                                        RFQ | RFP</a>
+                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend Analysis</a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item"
-                                        href="/services/managed_reverse_auctions.html">Managed Reverse
-                                        Auctions</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/services/managed_rfx_rfq_rfp.html">Managed RFX | RFQ
+                                        | RFP</a></li>
+                                <li><a class="dropdown-item" href="/services/managed_reverse_auctions.html">Managed
+                                        Reverse Auctions</a></li>
                             </ul>
                         </div>
                     </li>
+
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="/industries/index.html"
                                 data-bs-toggle="dropdown">Industries</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
-                                <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a></li>
                                 <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/industries/manufacturing.html">Manufacturing</a></li>                                
-                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food &
-                                        Beverage</a></li>
+                                <li><a class="dropdown-item" href="/industries/manufacturing.html">Manufacturing</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food & Beverage</a>
+                                </li>
                                 <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
                                         Pharma</a></li>
                                 <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
-                                                Suppliers</a></li>
+                                        Suppliers</a></li>
                                 <li><a class="dropdown-item"
-                                href="/industries/construction_real_estate.html">Construction & Real
-                                Estate</a></li>
+                                        href="/industries/construction_real_estate.html">Construction & Real Estate</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
+
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="/solutions/index.html" data-bs-toggle="dropdown">Solutions</a>
+                            <a class="nav-link dropdown-toggle" href="/solutions/index.html"
+                                data-bs-toggle="dropdown">Solutions</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI |
-                                        RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
-                                        Analysis</a></li>
-                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
-                                        Auction</a></li>
+                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI | RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend Analysis</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse Auction</a>
+                                </li>
                                 <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
                                         Solutions</a></li>
-
                                 <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
                                         Requisition</a></li>
                                 <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
                                         Management</a></li>
                                 <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
                                         Management</a></li>
-
                             </ul>
                         </div>
                     </li>
+
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="/resources/index.html" data-bs-toggle="dropdown">Resources</a>
+                            <a class="nav-link dropdown-toggle" href="/resources/index.html"
+                                data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/resources/blog.html">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
-                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a>
+                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
+                                <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
+                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a></li>
+                                <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst Reports</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst
-                                        Reports</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
                                         Guide</a></li>
-                                <li><a class="dropdown-item" href="/resources/procurement_glossary.html">Procurement Glossary</a></li>
-                                <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement Conferences</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/resources/procurement_glossary.html">Procurement
+                                        Glossary</a></li>
+                                <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement
+                                        Conferences</a></li>
                             </ul>
                         </div>
                     </li>
-
                 </ul>
 
                 <div class="d-flex gap-3">
-                    <a type="button" href="/comingsoon/index.html"
-                        class="btn btn-outline-light wite_border_btn"><span>Contact
+                    <a href="/comingsoon/index.html" class="btn btn-outline-light wite_border_btn"><span>Contact
                             Us</span></a>
                     <div class="col-auto">
-                        <a type="button" href="/comingsoon/index.html"
-                            class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
+                        <a href="/comingsoon/index.html" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
                                 Demo</span></a>
-
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-
+    <!-- Mobile Navbar -->
     <div class="container-fluid d-block d-lg-none">
         <div class="d-flex justify-content-between align-items-center py-2">
             <a class="navbar-brand" href="/index.html">
-                <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="" srcset="">
+                <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="">
             </a>
-            <!-- Replace the button with an image -->
-            <i class="bi bi-three-dots-vertical drawer_icon" class="navbar-toggler-icon" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                aria-label="Toggle navigation"></i>
+            <i class="bi bi-three-dots-vertical drawer_icon" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"></i>
         </div>
         <div class="offcanvas offcanvas-end drawer_menu" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
-            <!-- <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div> -->
             <div class="offcanvas-body">
-                <!-- <ul class="navbar-nav justify-content-evenly w-100 mb-2 mb-lg-0"> -->
                 <ul class="navbar-nav justify-content-evenly w-100 mb-2 mb-lg-0" id="navbarNav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
 
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Solutions
-                            </button>
+                            <button class="nav-link dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">Services</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
-                                        Requisition</a></li>
-                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse
-                                        Auction</a></li>
-                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI |
-                                        RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
-                                        Management</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/solutions/procure_to_pay.html">Procure-To-Pay</a></li>
-                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend
-                                        Analysis</a></li>
-                                <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
-                                        Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
-                                        Solutions</a></li>
+                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend Analysis</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/services/managed_rfx_rfq_rfp.html">Managed RFX | RFQ
+                                        | RFP</a></li>
+                                <li><a class="dropdown-item" href="/services/managed_reverse_auctions.html">Managed
+                                        Reverse Auctions</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Services
-                            </button>
+                            <button class="nav-link dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">Industries</button>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a href="/services/managed_rfx_rfq_rfp.html" class="dropdown-item">Managed RFX |
-                                        RFQ | RFP</a>
+                                <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
+                                <li><a class="dropdown-item" href="/industries/manufacturing.html">Manufacturing</a>
                                 </li>
-                                <li><a class="dropdown-item"
-                                        href="/services/managed_reverse_auctions.html">Managed Reverse
-                                        Auctions</a></li>
-                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend
-                                        Analysis</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item position-relative">
-                        <div class="dropdown">
-                            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Industries
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                        href="/industries/manufacturing.html">Manufacturing</a></li>
-                                <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a>
+                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food and Beverage</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="/industries/construction_real_estate.html">Construction & Real
-                                        Estate</a></li>
-                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
-                                        Suppliers</a></li>
                                 <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
                                         Pharma</a></li>
-                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food and
-                                        Beverage</a></li>
-                                <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
+                                        Suppliers</a></li>
+                                <li><a class="dropdown-item"
+                                        href="/industries/construction_real_estate.html">Construction & Real Estate</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Resources
-                            </button>
+                            <button class="nav-link dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">Solutions</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI | RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend Analysis</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse Auction</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
+                                        Solutions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
+                                        Requisition</a></li>
+                                <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
+                                        Management</a></li>
+                                <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
+                                        Management</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item position-relative">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">Resources</button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/resources/blog.html">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
-                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a>
+                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
+                                <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
+                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a></li>
+                                <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst Reports</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst
-                                        Reports</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
                                         Guide</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/resources/procurement_glossary.html">Procurement Glossary</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/resources/procurement_conferences.html">Procurement Conferences</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/resources/procurement_glossary.html">Procurement
+                                        Glossary</a></li>
+                                <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement
+                                        Conferences</a></li>
                             </ul>
                         </div>
                     </li>
                 </ul>
 
                 <div class="d-flex flex-column gap-3">
-                    <a type="button" href="/comingsoon/index.html"
-                        class="btn btn-outline-light wite_border_btn"><span>Contact
+                    <a href="/comingsoon/index.html" class="btn btn-outline-light wite_border_btn"><span>Contact
                             Us</span></a>
-                    <div class="">
-                        <a type="button" href="/comingsoon/index.html"
-                            class="btn btn-light white_bg_btn demo_btn w-100"><span>Schedule a
-                                Demo</span></a>
-
+                    <div>
+                        <a href="/comingsoon/index.html"
+                            class="btn btn-light white_bg_btn demo_btn w-100"><span>Schedule a Demo</span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-</div>`;
+</div>
+`
 
 let FooterHTML = `
  <footer class="linear_gradient_blue footer_style ">
