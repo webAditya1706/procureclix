@@ -14,6 +14,13 @@
 
 body {
   font-family: Poppins;
+  overflow-x: hidden !important;
+}
+
+
+body section{
+  font-family: Poppins;
+  overflow-x: hidden !important;
 }
 
 .dropdown-item.active,
@@ -24,21 +31,23 @@ body {
 
 #header-placeholder {
   height: auto;
-  min-height: 70px;
+  /* min-height: 70px; */
   background-color: var(--primary_bg_color);
   display: flex;
   justify-content: center;
-  /* align-items: center;
+  width: 100%;
+  position: relative;
+  align-items: center;
   position: sticky;
   top: 0px;
-  z-index: 22;   */
+  z-index: 22;  
 }
 /* rings style */
 
 .benifit_signal_ring {
   width: 135px;
   position: absolute;
-  bottom: -28px;
+  bottom: -20px;
   right: -20px;
   z-index: 0;
 }
@@ -1502,11 +1511,17 @@ text-transform: capitalize;
   .section_contaier {
     padding: 0 20px;
   }
+  body{
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width: 1024px) {
   .section_contaier {
     padding: 0 30px;
+  }
+  body{
+    overflow-x: hidden;
   }
 }
 
@@ -1514,17 +1529,26 @@ text-transform: capitalize;
   .section_contaier {
     padding: 0 50px;
   }
+  body{
+    overflow-x: hidden;
+  }
 }
 
 @media (min-width: 1920px) {
   .section_contaier {
     padding: 0 100px;
   }
+  body{
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 991.98px) {
   .nav-item .dropdown.active::after{
     display: none;
+  }
+  body{
+    overflow-x: hidden;
   }
 }
 

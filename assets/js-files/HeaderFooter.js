@@ -1,8 +1,8 @@
 let HeaderHTML = `
-<div class="position-sticky top-0 w-100 primary_bg z-3">
+<div class="w-100 primary_bg z-3">
     <!-- Desktop Navbar -->
     <nav class="navbar navbar-expand-lg d-none d-lg-block">
-        <div class="container">
+        <div class="container-fluid section_contaier">
             <a class="navbar-brand" href="/index.html">
                 <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
             </a>

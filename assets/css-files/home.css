@@ -189,7 +189,8 @@ overflow: hidden;
   background-size: 9px 10px;
   position: absolute;
   top: 18px;
-  left: 60%;
+  /* left: 60%; */
+  right: 30%;
   z-index: 2;
 }
 
@@ -200,7 +201,7 @@ overflow: hidden;
   height: 1px;
   background-color: #131313;
   position: absolute;
-  right: 0;
+  left: 50px;
   top: 25px;
   z-index: 0;
 }
@@ -352,6 +353,19 @@ overflow: hidden;
     margin-top: 300px;
   }
 }
+
+@media (max-width: 1024px) {
+  .black_hori_arrow::before {
+    right: 15%;
+  }
+}
+
+@media (max-width: 991.5px) {
+  .black_hori_arrow::before {
+    right: 30%;
+  }
+}
+
 
 /* For screens larger than 1500px */
 @media (min-width: 1200px) {
