@@ -217,7 +217,7 @@
   text-transform: capitalize;
 }
 
-.events_select:hover{
+.form-select:hover{
   cursor: pointer;
 }
 
@@ -288,6 +288,16 @@ line-height: 12px; /* 100% */
   flex: column;
   transform: translate(-50%, 0%);
   left: 50%;
+}
+
+.p2_log_arrow{
+  width: 15px;
+  height: auto;
+  padding: 3px;
+}
+
+.p2_log_arrow:hover{
+  cursor: pointer;
 }
 
 /* media query */

@@ -41,9 +41,9 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/industries/food_beverage.html">Food & Beverage</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
+                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech &
                                         Pharma</a></li>
-                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
+                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers &
                                         Suppliers</a></li>
                                 <li><a class="dropdown-item"
                                         href="/industries/construction_real_estate.html">Construction & Real Estate</a>
@@ -149,11 +149,11 @@ let HeaderHTML = `
                                 <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
                                 <li><a class="dropdown-item" href="/industries/manufacturing.html">Manufacturing</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food and Beverage</a>
+                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food & Beverage</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech and
+                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech &
                                         Pharma</a></li>
-                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers and
+                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers &
                                         Suppliers</a></li>
                                 <li><a class="dropdown-item"
                                         href="/industries/construction_real_estate.html">Construction & Real Estate</a>
@@ -241,20 +241,22 @@ let FooterHTML = `
                                     <a href="/contact_us.html" class="footer_link">Contact Us</a>
                                 </div>
                             </div>
-                            <div class="mt-5">
-                                <img src="/assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
-                                    class="microsoft_azure">
-                            </div>
-                            <div class="d-flex gap-3 flex-wrap mt-2">
-                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
-                                    <img src="/assets/icons/facebook_icon.png" alt="Facebook">
-                                </a>
-                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
-                                    <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
-                                </a>
-                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
-                                    <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
-                                </a>
+                            <div class="d-none d-xl-block">
+                                <div class="mt-5">
+                                        <img src="/assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
+                                            class="microsoft_azure">
+                                    </div>
+                                <div class="d-flex gap-3 flex-wrap mt-2">
+                                    <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                        <img src="/assets/icons/facebook_icon.png" alt="Facebook">
+                                    </a>
+                                    <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                        <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
+                                    </a>
+                                    <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                        <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -282,7 +284,7 @@ let FooterHTML = `
                                     <a href="/industries/automotive.html" class="footer_link">Automotive</a>
                                     <a href="/industries/manufacturing.html" class="footer_link">Manufacturing</a>
                                     <a href="/industries/food_beverage.html" class="footer_link">Food & Beverage</a>
-                                    <a href="/industries/biotech_pharma.html" class="footer_link">Bio Tech And Pharma</a>
+                                    <a href="/industries/biotech_pharma.html" class="footer_link">Bio Tech & Pharma</a>
                                     <a href="/industries/energy_brokers.html" class="footer_link">Energy Brokers & Suppliers</a>
                                     <a href="/industries/construction_real_estate.html" class="footer_link">Construction & Real Estate</a>
                                 </div>
@@ -326,6 +328,24 @@ let FooterHTML = `
                                     <a href="/resources/procurement_conferences.html" class="footer_link">Procurement
                                         Conferences</a>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="col-auto d-xl-none">
+                            <div class="">
+                                <img src="/assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
+                                    class="microsoft_azure">
+                            </div>
+                            <div class="d-flex flex-row gap-3 flex-wrap mt-2">
+                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <img src="/assets/icons/facebook_icon.png" alt="Facebook">
+                                </a>
+                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
+                                </a>
+                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -469,3 +489,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+console.log(`Width: ${window.innerWidth}px, Height: ${window.innerHeight}px`);
