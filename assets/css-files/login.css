@@ -217,6 +217,10 @@
   text-transform: capitalize;
 }
 
+.events_select:hover{
+  cursor: pointer;
+}
+
 .events_select.form-select {
   --bs-form-select-bg-img: url('../icons/custom_select_dropdown.png');
   background-image: var(--bs-form-select-bg-img);
