@@ -14,14 +14,12 @@
 
 body {
   font-family: Poppins;
-  overflow-x: hidden !important;
-  
+  overflow-x: hidden !important;  
 }
 
-.services_benifit_container{
+html {
   overflow-x: hidden;
 }
-
 
 .dropdown-item.active,
 .dropdown-item:active {
@@ -36,12 +34,13 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  position: relative;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0px;
   z-index: 22;  
 }
+
+
 /* rings style */
 
 .benifit_signal_ring {
@@ -1180,12 +1179,20 @@ text-transform: capitalize;
   height: 120px;
 }
 
+.top_sec_spacer{
+  height: 70px;
+}
+
 .spacer_100 {
   height: 100px;
 }
 
 .spacer_80 {
   height: 80px;
+}
+
+.spacer_70{
+  height: 70px;
 }
 
 .spacer_60 {
@@ -1513,44 +1520,37 @@ text-transform: capitalize;
   .section_contaier {
     padding: 0 20px;
   }
-  body{
-    overflow-x: hidden;
-  }
+  
 }
 
 @media (min-width: 1024px) {
   .section_contaier {
     padding: 0 30px;
   }
-  body{
-    overflow-x: hidden;
-  }
+  
 }
 
 @media (min-width: 1440px) {
   .section_contaier {
     padding: 0 50px;
   }
-  body{
-    overflow-x: hidden;
-  }
+  
 }
 
 @media (min-width: 1920px) {
   .section_contaier {
     padding: 0 100px;
   }
-  body{
-    overflow-x: hidden;
-  }
+  
 }
 
 @media (max-width: 991.98px) {
   .nav-item .dropdown.active::after{
     display: none;
   }
-  body{
-    overflow-x: hidden;
+  .top_sec_spacer{
+    height: 60px;
   }
+  
 }
 
