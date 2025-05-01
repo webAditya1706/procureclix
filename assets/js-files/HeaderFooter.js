@@ -19,11 +19,11 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/services/index.html"
                                 data-bs-toggle="dropdown">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/services/procurement-spend-analysis-services.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/services/managed_rfx_rfq_rfp.html">Managed RFX | RFQ
+                                <li><a class="dropdown-item" href="/services/rfp-managed-services.html">Managed RFX | RFQ
                                         | RFP</a></li>
-                                <li><a class="dropdown-item" href="/services/managed_best-reverse-auction-softwares.html">Managed
+                                <li><a class="dropdown-item" href="/services/managed-reverse-auction-software-services.html">Managed
                                         Reverse Auctions</a></li>
                             </ul>
                         </div>
@@ -129,11 +129,11 @@ let HeaderHTML = `
                             <button class="nav-link dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown">Services</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/services/spend_analysis.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/services/procurement-spend-analysis-services.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/services/managed_rfx_rfq_rfp.html">Managed RFX | RFQ
+                                <li><a class="dropdown-item" href="/services/rfp-managed-services.html">Managed RFX | RFQ
                                         | RFP</a></li>
-                                <li><a class="dropdown-item" href="/services/managed_best-reverse-auction-softwares.html">Managed
+                                <li><a class="dropdown-item" href="/services/managed-reverse-auction-software-services.html">Managed
                                         Reverse Auctions</a></li>
                             </ul>
                         </div>
@@ -236,8 +236,8 @@ let FooterHTML = `
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <a href="/index.html" class="footer_link">Home</a>
-                                    <a href="/about_us.html" class="footer_link">About Us</a>
-                                    <a href="/pricing.html" class="footer_link">Pricing</a>
+                                    <a href="/about-us.html" class="footer_link">About Us</a>
+                                    <a href="/procurement-software-pricing.html" class="footer_link">Pricing</a>
                                     <a href="/contact_us.html" class="footer_link">Contact Us</a>
                                 </div>
                             </div>
@@ -265,10 +265,10 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Services</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/services/spend_analysis.html" class="footer_link">Spend Analysis</a>
-                                    <a href="/services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
+                                    <a href="/services/procurement-spend-analysis-services.html" class="footer_link">Spend Analysis</a>
+                                    <a href="/services/rfp-managed-services.html" class="footer_link">Managed RFX | RFQ
                                         | RFP</a>
-                                    <a href="/services/managed_best-reverse-auction-softwares.html" class="footer_link">Managed
+                                    <a href="/services/managed-reverse-auction-software-services.html" class="footer_link">Managed
                                         Reverse Auctions</a>
                                 </div>
                             </div>

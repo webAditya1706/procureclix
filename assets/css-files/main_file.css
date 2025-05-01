@@ -648,7 +648,7 @@ a {
 .fs_32_fw_700_c_1313 {
   color: var(--Black, #131313);
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: 42px; /* 100% */
@@ -940,7 +940,7 @@ p {
 h1 {
   color: var(--Black, #131313);
   font-family: Poppins;
-  font-size: 32;
+  font-size: 36;
   font-style: normal;
   font-weight: 700;
   line-height: 42px; /* 100% */
