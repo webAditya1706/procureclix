@@ -23,7 +23,7 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/services/managed_rfx_rfq_rfp.html">Managed RFX | RFQ
                                         | RFP</a></li>
-                                <li><a class="dropdown-item" href="/services/managed_reverse_auctions.html">Managed
+                                <li><a class="dropdown-item" href="/services/managed_best-reverse-auction-softwares.html">Managed
                                         Reverse Auctions</a></li>
                             </ul>
                         </div>
@@ -34,19 +34,19 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/industries/index.html"
                                 data-bs-toggle="dropdown">Industries</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
-                                <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a></li>
-                                <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
-                                <li><a class="dropdown-item" href="/industries/manufacturing.html">Manufacturing</a>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-transport-logistics-industry.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-healthcare-industry.html">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-automotive-companies.html">Automotive</a></li>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-manufacturing-industry.html">Manufacturing</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food & Beverage</a>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-food-beverage-industry.html">Food & Beverage</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech &
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-biotech-pharma.html">BioTech &
                                         Pharma</a></li>
-                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers &
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-energy-brokers-suppliers.html">Energy Brokers &
                                         Suppliers</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/industries/construction_real_estate.html">Construction & Real Estate</a>
+                                        href="/industries/construction-&-real-estate-procurement-software.html">Construction & Real Estate</a>
                                 </li>
                             </ul>
                         </div>
@@ -57,18 +57,18 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/solutions/index.html"
                                 data-bs-toggle="dropdown">Solutions</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI | RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html">RFP | RFI | RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procurement-spend-analysis-software.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse Auction</a>
+                                <li><a class="dropdown-item" href="/solutions/best-reverse-auction-software.html">Reverse Auction</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
+                                <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
                                         Solutions</a></li>
-                                <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
+                                <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
                                         Requisition</a></li>
-                                <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
+                                <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
                                         Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
+                                <li><a class="dropdown-item" href="/solutions/procurement-contract-management-software.html">Contract
                                         Management</a></li>
                             </ul>
                         </div>
@@ -133,7 +133,7 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/services/managed_rfx_rfq_rfp.html">Managed RFX | RFQ
                                         | RFP</a></li>
-                                <li><a class="dropdown-item" href="/services/managed_reverse_auctions.html">Managed
+                                <li><a class="dropdown-item" href="/services/managed_best-reverse-auction-softwares.html">Managed
                                         Reverse Auctions</a></li>
                             </ul>
                         </div>
@@ -144,19 +144,19 @@ let HeaderHTML = `
                             <button class="nav-link dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown">Industries</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/industries/logistics.html">Logistics</a></li>
-                                <li><a class="dropdown-item" href="/industries/healthcare.html">Healthcare</a></li>
-                                <li><a class="dropdown-item" href="/industries/automotive.html">Automotive</a></li>
-                                <li><a class="dropdown-item" href="/industries/manufacturing.html">Manufacturing</a>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-transport-logistics-industry.html">Logistics</a></li>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-healthcare-industry.html">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-automotive-companies.html">Automotive</a></li>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-manufacturing-industry.html">Manufacturing</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/food_beverage.html">Food & Beverage</a>
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-food-beverage-industry.html">Food & Beverage</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/industries/biotech_pharma.html">BioTech &
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-biotech-pharma.html">BioTech &
                                         Pharma</a></li>
-                                <li><a class="dropdown-item" href="/industries/energy_brokers.html">Energy Brokers &
+                                <li><a class="dropdown-item" href="/industries/procurement-software-for-energy-brokers-suppliers.html">Energy Brokers &
                                         Suppliers</a></li>
                                 <li><a class="dropdown-item"
-                                        href="/industries/construction_real_estate.html">Construction & Real Estate</a>
+                                        href="/industries/construction-&-real-estate-procurement-software.html">Construction & Real Estate</a>
                                 </li>
                             </ul>
                         </div>
@@ -167,18 +167,18 @@ let HeaderHTML = `
                             <button class="nav-link dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown">Solutions</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/rfp_rfi_rfq.html">RFP | RFI | RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/spend_analysis.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html">RFP | RFI | RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procurement-spend-analysis-software.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/solutions/reverse_auction.html">Reverse Auction</a>
+                                <li><a class="dropdown-item" href="/solutions/best-reverse-auction-software.html">Reverse Auction</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/solutions/custom_solutions.html">Custom
+                                <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
                                         Solutions</a></li>
-                                <li><a class="dropdown-item" href="/solutions/purchase_requisition.html">Purchase
+                                <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
                                         Requisition</a></li>
-                                <li><a class="dropdown-item" href="/solutions/supplier_management.html">Supplier
+                                <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
                                         Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/contract_management.html">Contract
+                                <li><a class="dropdown-item" href="/solutions/procurement-contract-management-software.html">Contract
                                         Management</a></li>
                             </ul>
                         </div>
@@ -268,7 +268,7 @@ let FooterHTML = `
                                     <a href="/services/spend_analysis.html" class="footer_link">Spend Analysis</a>
                                     <a href="/services/managed_rfx_rfq_rfp.html" class="footer_link">Managed RFX | RFQ
                                         | RFP</a>
-                                    <a href="/services/managed_reverse_auctions.html" class="footer_link">Managed
+                                    <a href="/services/managed_best-reverse-auction-softwares.html" class="footer_link">Managed
                                         Reverse Auctions</a>
                                 </div>
                             </div>
@@ -279,14 +279,14 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Industries</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/industries/logistics.html" class="footer_link">Logistics</a>
-                                    <a href="/industries/healthcare.html" class="footer_link">Healthcare</a>
-                                    <a href="/industries/automotive.html" class="footer_link">Automotive</a>
-                                    <a href="/industries/manufacturing.html" class="footer_link">Manufacturing</a>
-                                    <a href="/industries/food_beverage.html" class="footer_link">Food & Beverage</a>
-                                    <a href="/industries/biotech_pharma.html" class="footer_link">Bio Tech & Pharma</a>
-                                    <a href="/industries/energy_brokers.html" class="footer_link">Energy Brokers & Suppliers</a>
-                                    <a href="/industries/construction_real_estate.html" class="footer_link">Construction & Real Estate</a>
+                                    <a href="/industries/procurement-software-for-transport-logistics-industry.html" class="footer_link">Logistics</a>
+                                    <a href="/industries/procurement-software-for-healthcare-industry.html" class="footer_link">Healthcare</a>
+                                    <a href="/industries/procurement-software-for-automotive-companies.html" class="footer_link">Automotive</a>
+                                    <a href="/industries/procurement-software-for-manufacturing-industry.html" class="footer_link">Manufacturing</a>
+                                    <a href="/industries/procurement-software-for-food-beverage-industry.html" class="footer_link">Food & Beverage</a>
+                                    <a href="/industries/procurement-software-for-biotech-pharma.html" class="footer_link">Bio Tech & Pharma</a>
+                                    <a href="/industries/procurement-software-for-energy-brokers-suppliers.html" class="footer_link">Energy Brokers & Suppliers</a>
+                                    <a href="/industries/construction-&-real-estate-procurement-software.html" class="footer_link">Construction & Real Estate</a>
                                 </div>
                             </div>
                         </div>
@@ -296,15 +296,15 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Solutions</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                <a href="/solutions/rfp_rfi_rfq.html" class="footer_link">RFP | RFI | RFQ</a>
-                                <a href="/solutions/spend_analysis.html" class="footer_link">Spend Analysis</a>
-                                <a href="/solutions/reverse_auction.html" class="footer_link">Reverse Auction</a>
-                                <a href="/solutions/custom_solutions.html" class="footer_link">Custom Solutions</a>
-                                    <a href="/solutions/purchase_requisition.html" class="footer_link">Purchase
+                                <a href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html" class="footer_link">RFP | RFI | RFQ</a>
+                                <a href="/solutions/procurement-spend-analysis-software.html" class="footer_link">Spend Analysis</a>
+                                <a href="/solutions/best-reverse-auction-software.html" class="footer_link">Reverse Auction</a>
+                                <a href="/solutions/custom-auction-procurement-software.html" class="footer_link">Custom Solutions</a>
+                                    <a href="/solutions/purchase-requisition-software.html" class="footer_link">Purchase
                                         Requisition</a>
-                                        <a href="/solutions/supplier_management.html" class="footer_link">Supplier
+                                        <a href="/solutions/best-supplier-management-software.html" class="footer_link">Supplier
                                             Management</a>
-                                    <a href="/solutions/contract_management.html" class="footer_link">Contract
+                                    <a href="/solutions/procurement-contract-management-software.html" class="footer_link">Contract
                                         Management</a>
                                 </div>
                             </div>
