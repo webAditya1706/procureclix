@@ -238,7 +238,7 @@ let FooterHTML = `
                                     <a href="/index.html" class="footer_link">Home</a>
                                     <a href="/about-us.html" class="footer_link">About Us</a>
                                     <a href="/procurement-software-pricing.html" class="footer_link">Pricing</a>
-                                    <a href="/contact_us.html" class="footer_link">Contact Us</a>
+                                    <a href="/contact-us.html" class="footer_link">Contact Us</a>
                                 </div>
                             </div>
                             <div class="d-none d-xl-block">
