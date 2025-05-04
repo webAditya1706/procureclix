@@ -58,7 +58,7 @@
   .book_demo_bg {
     background-image: url(../images/book_demo_bg.png);
     background-repeat: no-repeat;
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
     border-radius: 8px;
     padding: 0px 30px;
