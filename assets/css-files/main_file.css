@@ -960,15 +960,6 @@ h2 {
   margin-right: 0px 10px;
 } */
 
-h3 {
-  color: var(--Black, #131313);
-  font-family: Poppins;
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px; /* 100% */
-}
-
 h4 {
   color: #131313;
   font-family: Poppins;
