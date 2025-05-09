@@ -219,7 +219,7 @@ let HeaderHTML = `
         </div>
     </div>
 </div>
-`
+`;
 
 let FooterHTML = `
  <footer class="linear_gradient_blue footer_style ">
@@ -436,10 +436,14 @@ let FooterHTML = `
 document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-placeholder");
   const footerContainer = document.getElementById("footer_wrapper");
+  const loaderElement = document.getElementById("loader");
+  //   document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
 
   if (headerContainer) {
     headerContainer.innerHTML = HeaderHTML;
     highlightActiveLink(); // Call after header is loaded
+    
   }
 
   if (footerContainer) {
@@ -487,8 +491,13 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("active");
       }
     });
+
+    setTimeout(() => {
+        loaderElement.classList.add("d-none");
+        //   document.body.style.display = "block";
+        document.documentElement.style.overflow = "auto";
+      }, 1500);
   }
 });
-
 
 console.log(`Width: ${window.innerWidth}px, Height: ${window.innerHeight}px`);

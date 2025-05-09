@@ -12,9 +12,24 @@
   --incomplete-bar: #f00;
 }
 
+.loader_conrainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+
 body {
   font-family: Poppins;
-  overflow-x: hidden !important;  
+  overflow-x: hidden !important;
 }
 
 html {
@@ -37,9 +52,8 @@ html {
   align-items: center;
   position: fixed;
   top: 0px;
-  z-index: 22;  
+  z-index: 22;
 }
-
 
 /* rings style */
 
@@ -48,7 +62,7 @@ html {
   position: absolute;
   bottom: -20px;
   right: -20px;
-  z-index: 1  ;
+  z-index: 1;
 }
 
 .benifit_dubble_ring {
@@ -59,7 +73,7 @@ html {
   z-index: 1;
 }
 
-.blue_ring_bg_img{
+.blue_ring_bg_img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -513,7 +527,7 @@ a {
   font-weight: 400;
   line-height: 20px; /* 140% */
   white-space: normal; /* 👈 Force text to break to next line */
-  word-wrap: break-word;  
+  word-wrap: break-word;
 }
 
 .fs_12_fw_400_c_1313 {
@@ -987,16 +1001,15 @@ h6 {
   line-height: 25px; /* 100% */
 }
 
-.fs_12_fw_400_c_58748F{
-  color: var(--Label-text, #58748F);
-font-family: Poppins;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: 12px; /* 100% */
-text-transform: capitalize;
+.fs_12_fw_400_c_58748F {
+  color: var(--Label-text, #58748f);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  text-transform: capitalize;
 }
-
 
 .fs_17_fw_400_c_1B3A4B {
   color: #1b3a4b;
@@ -1170,7 +1183,7 @@ text-transform: capitalize;
   height: 120px;
 }
 
-.top_sec_spacer{
+.top_sec_spacer {
   height: 70px;
 }
 
@@ -1182,7 +1195,7 @@ text-transform: capitalize;
   height: 80px;
 }
 
-.spacer_70{
+.spacer_70 {
   height: 70px;
 }
 
@@ -1479,7 +1492,7 @@ text-transform: capitalize;
   position: relative;
 }
 
-.mb_12{
+.mb_12 {
   margin-bottom: 12px;
 }
 
@@ -1511,37 +1524,31 @@ text-transform: capitalize;
   .section_contaier {
     padding: 0 20px;
   }
-  
 }
 
 @media (min-width: 1024px) {
   .section_contaier {
     padding: 0 30px;
   }
-  
 }
 
 @media (min-width: 1440px) {
   .section_contaier {
     padding: 0 50px;
   }
-  
 }
 
 @media (min-width: 1920px) {
   .section_contaier {
     padding: 0 100px;
   }
-  
 }
 
 @media (max-width: 991.98px) {
-  .nav-item .dropdown.active::after{
+  .nav-item .dropdown.active::after {
     display: none;
   }
-  .top_sec_spacer{
+  .top_sec_spacer {
     height: 60px;
   }
-  
 }
-

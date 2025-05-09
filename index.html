@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    
-  <!-- Google Analytics tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-ZRRX8XDNQP');
-  </script>
-  <!-- Canonical link -->
+    <!-- Google Analytics tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZRRX8XDNQP');
+    </script>
+    <!-- Canonical link -->
     <link rel="canonical" href="https://procureclix.com/" />
-    
+
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css-files/main_file.css">
     <link rel="stylesheet" href="./assets/css-files/home.css">
@@ -35,11 +35,17 @@
     <!-- AOS style link -->
     <link rel="stylesheet" href="/assets/css-files/AOS.css">
 
-    
+
 
 </head>
 
 <body>
+    <div id="loader" class="loader_conrainer">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <div id="header-placeholder"></div>
 
     <section class="position-relative w-100 page_banner">
@@ -122,7 +128,8 @@
                             <b>18%-40%</b> cost
                             savings on procurement spend | <b>80%</b> reduction in procurement cycle time |
                             <b>25,000+</b> procurement
-                            professionals trust our platform.</p>
+                            professionals trust our platform.
+                        </p>
                     </div>
                 </div>
                 <div class="spacer_30"></div>
