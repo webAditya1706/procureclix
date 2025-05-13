@@ -27,6 +27,11 @@
   background-color: #fff;
 }
 
+.spinner-border{
+  --bs-spinner-width: 5rem;
+  --bs-spinner-height: 5rem;
+}
+
 body {
   font-family: Poppins;
   overflow-x: hidden !important;
@@ -547,6 +552,16 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 157.143% */
+  word-wrap: break-word;
+}
+
+.fs_14_fw_500_c_1313{
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 157.143% */
   word-wrap: break-word;
 }
 
