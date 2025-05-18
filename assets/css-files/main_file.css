@@ -27,7 +27,7 @@
   background-color: #fff;
 }
 
-.spinner-border{
+.spinner-border {
   --bs-spinner-width: 5rem;
   --bs-spinner-height: 5rem;
 }
@@ -45,6 +45,10 @@ html {
 .dropdown-item:active {
   background-color: var(--primary_bg_color);
   color: #fff !important;
+}
+
+.text-light {
+  color: #fff;
 }
 
 #header-placeholder {
@@ -100,6 +104,17 @@ html {
   z-index: 0;
 }
 
+.ring_bg_img_2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
 .reverse_sec_pading {
   padding: 30px 40px;
 }
@@ -116,10 +131,33 @@ html {
   background: #fee;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.13);
 }
+
+.bg_blue {
+  background-color: #eefeff;
+}
+
 .bg-white {
   background-color: #fff;
   position: relative;
   z-index: 1;
+}
+
+.managed_rfp {
+  background-image: url("/assets/images/services/managed_rfp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+}
+
+.managed_rfp::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(17px);
 }
 
 .bg_white_shadow {
@@ -189,6 +227,23 @@ html {
 
 .linear_gradient_blue {
   background: linear-gradient(180deg, #fff 0%, #eefeff 100%);
+}
+
+.banner_gradient {
+  width: 50%;
+  min-width: 50%;
+  /* max-width: 100%; */
+  height: 100%;
+  background-color: #edfbff;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -60%;
+  left: 50%;
+  /* right: 10%; */
+  transform: translateX(-50%);
+  /* filter: blur(100px); */
+  filter: blur(212px);
 }
 
 .bg_004263 {
@@ -555,7 +610,7 @@ a {
   word-wrap: break-word;
 }
 
-.fs_14_fw_500_c_1313{
+.fs_14_fw_500_c_1313 {
   color: var(--Black, #131313);
   font-family: Poppins;
   font-size: 14px;
@@ -581,6 +636,15 @@ a {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
+  line-height: 26px; /* 173.333% */
+}
+
+.fs_15_fw_600_c_1313 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
   line-height: 26px; /* 173.333% */
 }
 
@@ -727,7 +791,23 @@ a {
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 15px; /* 100% */
+  line-height: 20px; /* 100% */
+  text-transform: capitalize;
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fs_16_fw_600_c_linear {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 100% */
   text-transform: capitalize;
   background: var(
     --Gradient,
@@ -925,7 +1005,7 @@ a {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 16px; /* 100% */
+  line-height: 18px; /* 100% */
 
   background: var(
     --Gradient,
@@ -973,6 +1053,15 @@ h1 {
   font-style: normal;
   font-weight: 700;
   line-height: 42px; /* 100% */
+}
+
+h3 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 32;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 100% */
 }
 
 h2 {
@@ -1220,6 +1309,14 @@ h6 {
 
 .spacer_40 {
   height: 40px;
+}
+
+.spacer_20 {
+  height: 20px;
+}
+
+.spacer_15 {
+  height: 15px;
 }
 
 .spacer_20 {
@@ -1503,12 +1600,38 @@ h6 {
   background-repeat: no-repeat;
 }
 
+.rfp_system_img {
+  position: absolute;
+  bottom: 25px;
+  left: 50px;
+  z-index: 1;
+  width: 356px;
+  height: 486px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.rfp_system_right_img{
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+  z-index: 1;
+  width: 356px;
+  height: 486px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
 .comming_soon_Logo_ProcureClix {
   position: relative;
 }
 
 .mb_12 {
   margin-bottom: 12px;
+}
+
+.services_spacer{
+  height: 150px;
 }
 
 /* .comming_soon_Logo_ProcureClix::after {
@@ -1544,18 +1667,38 @@ h6 {
 @media (min-width: 1024px) {
   .section_contaier {
     padding: 0 30px;
-  }
+  } 
 }
 
 @media (min-width: 1440px) {
   .section_contaier {
     padding: 0 50px;
   }
+   .rfp_system_img{
+    left: 75px;
+  }
+  .rfp_system_right_img{
+    right: 75px;
+  }
+}
+
+
+
+@media (min-width: 1690px) {
+  .services_spacer{
+    height: 240px;
+  }
 }
 
 @media (min-width: 1920px) {
   .section_contaier {
     padding: 0 100px;
+  }
+  .rfp_system_img{
+    left: 125px;
+  }
+  .rfp_system_right_img{
+    right: 125px;
   }
 }
 
