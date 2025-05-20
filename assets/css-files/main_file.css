@@ -570,6 +570,16 @@ a {
   text-transform: capitalize;
 }
 
+.fs_14_fw_500_c_B5B8B8 {
+  color: var(--Stroke, #b5b8b8) !important;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
+  text-transform: capitalize;
+}
+
 .fs_13_fw_400_c_5656 {
   color: var(--Light-text, #565656);
   font-family: Poppins;
@@ -987,6 +997,23 @@ a {
 .fs_20_fw_500_background {
   font-family: Poppins;
   font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 100% */
+
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.fs_16_fw_500_background {
+  font-family: Poppins;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px; /* 100% */
