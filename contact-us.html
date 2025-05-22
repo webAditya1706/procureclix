@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css-files/main_file.css">
-    <link rel="stylesheet" href="./assets/css-files/home.css">
+    <link rel="stylesheet" href="./assets/css-files/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,19 +48,143 @@
     <!-- header End -->
 
     <!-- comming soon section -->
+    <section class="resorse_banner_bg">
+        <!-- <div class="spacer_120"></div> -->
+
+
+    </section>
+
     <section>
         <div class="container-fluid section_contaier">
-            <!-- <div class="row comingSoon_bg_image"> -->
-            <div class="comingSoon_container">
-                <div class="row position-relative comming_soon_Logo_ProcureClix">
-                    <img src="./assets/images/Coming_Soon_bg.jpg" class="w-100" alt="">
-                    <div class="comingSoon_text comingSoon_parent">
-                        <span class="">COMING SOON</span>
+            <div class="row align-items-stretch">
+                <div class="col-lg-6 col-xl-8 p-0 d-flex">
+                    <div class="contact_us_card w-100 d-flex flex-column">
+                        <div class="w-100">
+                            <h1>Talk To Our <span class="experts">Experts</span></h1>
+                            <p>Have Questions about pricing, plans or ProcureClix? Fill out the form and our expert will
+                                be
+                                in touch directly.</p>
+
+                            <form class="contact_us_form">
+                                <div class="row gy-3">
+                                    <div class="col-sm-6">
+                                        <label for="fullName" class="form-label">Full Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="fullName" placeholder="Full Name"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="workEmail" class="form-label">Work Email<span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="workEmail" placeholder="Work Email"
+                                            required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="companyName" class="form-label">Company Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="companyName"
+                                            placeholder="Company Name" required>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="phoneNumber" class="form-label">Phone Number<span
+                                                class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <img src="https://flagcdn.com/us.svg" width="15" height="20"
+                                                    class="flag_icon" alt="US Flag" loading="lazy">
+                                                <img src="/assets/icons/drop_down.png" alt="drop_down" loading="lazy"
+                                                    class="drop_arrow">
+                                            </span>
+                                            <input type="tel" class="form-control" id="phoneNumber"
+                                                placeholder="Phone Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 mb-2 fs_15_fw_500_c_1313 mb-3">Which module are you interested in?
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="rfp" checked>
+                                            <label class="form-check-label" for="rfp">RFP | RFI | RFQ</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="customSolutions">
+                                            <label class="form-check-label" for="customSolutions">Custom
+                                                Solutions</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="contractManagement">
+                                            <label class="form-check-label" for="contractManagement">Contract
+                                                Management</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="spendAnalysis">
+                                            <label class="form-check-label" for="spendAnalysis">Spend Analysis</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="purchaseRequisition">
+                                            <label class="form-check-label" for="purchaseRequisition">Purchase
+                                                Requisition</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="reverseAuction">
+                                            <label class="form-check-label" for="reverseAuction">Reverse Auction</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 col-xl-4">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="supplierManagement">
+                                            <label class="form-check-label" for="supplierManagement">Supplier
+                                                Management</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-1">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="8"
+                                        placeholder="Type Here"></textarea>
+                                </div>
+
+                                <div class="text-center mt-5">
+                                    <button type="submit" class="btn submit_btn">Submit</button>
+                                </div>
+                            </form>
+
+                        </div>
                     </div>
                 </div>
+                <div class="col-lg-6 col-xl-4 p-0">
+                    <div class="contat_us_bg d-none d-lg-block">
+                        <div class="spacer_120"></div>
+                    </div>
+                    <img src="/assets/images/conatact_us_img.png" class="w-100 d-block d-lg-none"
+                        alt="contact_us_img">
+                </div>
             </div>
+
         </div>
+        
     </section>
+    <div class="spacer_80"></div>
 
     <!-- footer -->
     <div id="footer_wrapper"></div>

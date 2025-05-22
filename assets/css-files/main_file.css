@@ -649,6 +649,15 @@ a {
   line-height: 26px; /* 173.333% */
 }
 
+.fs_15_fw_500_c_1313 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 173.333% */
+}
+
 .fs_15_fw_600_c_1313 {
   color: var(--Black, #131313);
   font-family: Poppins;
