@@ -1073,6 +1073,24 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
+.fs_16_fw_600_background_underline{
+  background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 16px;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
+
 .text_stroke {
   -webkit-text-stroke: 0.5px #004263;
 }
@@ -1689,6 +1707,10 @@ h6 {
 
 .services_spacer{
   height: 150px;
+}
+
+.radious_10{
+  border-radius: 10px;
 }
 
 /* .comming_soon_Logo_ProcureClix::after {

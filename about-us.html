@@ -4,69 +4,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Best Online Procurement Software Solution | ProcureClix</title>
+    <meta name="description"
+        content="Optimize procurement with ProcureClix—an online procurement software that streamlines sourcing, spend analytics, and supplier management for smarter purchasing.">
+
     <!-- Google Analytics tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-ZRRX8XDNQP');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZRRX8XDNQP');
     </script>
     <!-- Canonical link -->
-    <link rel="canonical" href="https://procureclix.com/about-us.html" />
-  
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css-files/main_file.css">
-    <link rel="stylesheet" href="./assets/css-files/home.css">
+    <link rel="canonical" href="https://procureclix.com/services/about-us.html" />
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css-files/main_file.css">
+    <link rel="stylesheet" href="/assets/css-files/serves_style.css">
+    <link rel="stylesheet" href="/assets/css-files/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="./assets/images/favicon_3.png" type="image/png">
+    <link rel="icon" href="/assets/images/favicon_3.png" type="image/png">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-        
+
+    <!-- AOS style link -->
+    <link rel="stylesheet" href="/assets/css-files/AOS.css">
+    <link rel="stylesheet" href="/assets/css-files/loader.css">
+
+
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <!-- header start -->
-    <div id="loader" class="loader_conrainer">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+    <div id="preloader" class="" style="display: block;">
+        <div class="ctn-preloader" id="ctn-preloader">
+            <div class="round_spinner">
+                <div class="spinner"></div>
+                <div class="text">
+                    <!-- <img src="https://docy-jekyll-theme.netlify.app/img/spinner_logo.png" alt=""> -->
+                    <img src="https://procureclix.com/assets/images/favicon_3.png" style="width: 50px; height: auto;" />
+                    <h4>
+                        <span>ProcureClix</span>
+                    </h4>
+                </div>
+            </div>
+
         </div>
     </div>
+
     <div id="header-placeholder"></div>
     <div class="top_sec_spacer"></div>
 
-      
+
     <!-- header End -->
 
-    <!-- comming soon section -->
-    <section>
+    <!-- Banner section -->
+    <section class="position-relative overflow-hidden">
+        <div class="banner_gradient"></div>
         <div class="container-fluid section_contaier">
             <!-- <div class="row comingSoon_bg_image"> -->
-            <div class="comingSoon_container">
-                <div class="row position-relative comming_soon_Logo_ProcureClix">
-                    <img src="./assets/images/Coming_Soon_bg.jpg" class="w-100" alt="">
-                        <div class="comingSoon_text comingSoon_parent">
-                            <span class="">COMING SOON</span>
+            <div class="row align-items-center" style="height: auto; min-height: 100vh;">
+                <div class="col-12 col-md-6 py-5">
+                    <div class="col-12 col-md-10 mb-3">
+                        <h1 class="fs_32_fw_700_c_1313 mb-1  text-capitalize">Online Procurement Software - Best Procurement Software
+                            Solution</h1>
+                    </div>
+                    <p class="fs_16_fw_600_c_1313 mb-1">
+                        About ProcureClix - <span class="fs_16_fw_600_background under_line">22+ Years</span> of e-Procurement Excellence
+                    </p>
+                    <p class="fs_15_fw_400_c_1313 mb-4">At ProcureClix, we transform how organizations approach spend
+                        management,
+                        supplier relationships, and strategic sourcing. Smart Procurement Starts Here.</p>
+                    <div class="row row-gap-2 mb-3">
+                        <div class="col-12 col-sm-6 mb-2 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="/assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <p class="fs_14_fw_500_c_1313 text-capitalize">Fixed Approval Hierarchical Pathway</p>
                         </div>
+                        <div class="col-12 col-sm-6 mb-2 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="/assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <p class="fs_14_fw_500_c_1313 text-capitalize">Dashboard for Real-time KPIs
+                                & performance analytics</p>
+                        </div>
+                        <div class="col-12 col-sm-6 mb-2 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="/assets/images/servises_rfp/orange_rotete.png"
+                                alt="">
+                            <p class="fs_14_fw_500_c_1313 text-capitalize">See ROI within the couple of
+                                sourcing events</p>
+                        </div>
+
+                        <div class="col-12 col-sm-6 mb-2 d-flex align-items-center gap-2">
+                            <img loading="lazy" class="w_25_h_25" src="/assets/images/servises_rfp/blue_rotate.png"
+                                alt="">
+                            <p class="fs_14_fw_500_c_1313 text-capitalize">Seamless collaboration across
+                                the global supply chain</p>
+                        </div>
+
+                    </div>
+                    <p class="fs_14_fw_600_c_linear  mb-3">See ProcureClix in Action</p>
+                    <a type="button" class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
+                        Demo Today!</a type="button" href="/comingsoon/index.html">
+
+                </div>
+                <div class="col-12 col-md-6 rfq_ban_img pb-5">
+                    <div class="text-center">
+                        <img loading="lazy" src="/assets/images/services/requisitions_img.png" class="img_rfq_event"
+                            alt="">
+                        <img loading="lazy" src="/assets/images/servises_rfp/slid_img.png" class="bg_slid" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- feacture section -->
+    <section>
+        <!-- spacer -->
+        <div class="spacer_60"></div>
+        <div class="container-fluid section_contaier">
+            <div class="row gx-5 align-items-center">
+                <div class="col-md-6">
+                    <img src="/assets/images/services/solid_procurement_risk.png" class="w-100"
+                        alt="solid_procurement_risk" srcset="">
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-capitalize">We believe in</h4>
+                    <h5 class="fs_18_fw_700_c_linear text-capitalize">The Power of Precision</h5>
+                    <div class="spacer_20"></div>
+                    <p>At ProcureClix, we believe that precision drives performance. In a world of complex procurement
+                        systems, our straightforward and intuitive procurement process creates clarity from chaos. We've
+                        built our platform on the conviction that procurement excellence comes from targeted
+                        intelligence, and not overwhelming features.
+                        <br /> <br />
+                        Organizations are streamlining and redefining their business operations globally with our
+                        no-code/low-code customization to adapt seamlessly to evolving business needs. Our technology,
+                        methodology, and unwavering focus on results have established us as the best procurement
+                        management software.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Valuse -->
+    <section class="footer_style">
+        <div class="spacer_60 d-xxl-none"></div>
+        <div class="spacer_120 d-none d-xl-block"></div>
+        <div class="container-fluid section_contaier">
+            <div class="row gx-5 align-items-center">
+                <div class="col-12 mx-auto col-md-8 text-center mb-3" data-aos="slide-left" data-aos-delay="200"
+                    data-aos-duration="1000" data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
+                    <div class="d-flex gap-2 justify-content-center">
+                        <img src="./assets/icons/building_icon.png" class="w_12h_16" alt="">
+                        <h4 class="fs_20_fw_500_background">Values</h4>
+                    </div>
+                    <h2 class="fs_24_fw_700_c_1313 mt-2">Our Core Values</h2>
+                    <div class="mt-4 text-capitalize mb-4">
+                        <p>At ProcureClix, our values aren't just statements on a wall—they're the driving force behind every interaction, innovation, and implementation we deliver.
+</p>
+                    </div>
+                </div>
+            </div>
+            <!-- row 1 -->
+
+            <div class="row g-5" data-aos="slide-bottom" data-aos-delay="200" data-aos-duration="1000"
+                data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
+                <div class="col-md-6">
+                    <div class="py-3 bg_fff_shadow px-3 h-100 d-flex flex-column">
+                        <h5 class="mb-3">Integrity</h5>
+                        <p>We conduct ourselves with complete transparency and ethical standards in every interaction.
+                            Our straightforward approach ensures honest communication, fair business practices, and
+                            reliable partnerships that stand the test of time.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="py-3 bg_fff_shadow px-3 h-100 d-flex flex-column">
+                        <h5 class="mb-3">Innovation</h5>
+                        <p>By harnessing emerging technologies and reimagining established procurement processes, we
+                            create intelligent solutions that anticipate tomorrow’s challenges. Our platform evolves
+                            continuously with user-driven features tailored to your unique business needs.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="py-3 bg_fff_shadow px-3 h-100 d-flex flex-column">
+                        <h5 class="mb-3">Result-Oriented</h5>
+                        <p>We take complete responsibility for delivering measurable outcomes. Our team remains focused
+                            on achieving tangible improvements in your procurement processes, with unwavering commitment
+                            to meeting and exceeding your organizational objectives.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="py-3 bg_fff_shadow px-3 h-100 d-flex flex-column">
+                        <h5 class="mb-3">Customer-Centric</h5>
+                        <p>We place your organization's success at the center of everything we do. Our dedicated team
+                            designs customized solutions that address your specific procurement challenges, delivering
+                            unparalleled service and support throughout your transformation journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer_80"></div>
+
+    </section>
+
+    <section class="position-relative">
+        <!-- <div class="spacer_80 d-none d-xl-block"></div> -->
+        <div class="container-fluid section_contaier position-relative">
+            <!-- <img src="/assets/images/services/about_glob.png" class="rfp_system_right_img d-none d-xl-block" alt=""
+                srcset="" style="height: auto;"> -->
+
+            <div class="spacer_40"></div>
+            <div class="footer_style px-4 py-5">
+                <div class="row gx-5 align-items-xl-center align-items-xxl-end">
+                    <div class="col-12 col-sm-6 col-lg-7">
+
+                        <h4 class="mb-2 text-capitalize">Global Impact</h4>
+                        <p>Today, ProcureClix powers the entire procurement transformation for organizations across more
+                            than 12 countries worldwide. By deploying advanced strategic sourcing tools as part of our
+                            comprehensive procurement solution and maintaining a flexible approach to client-specific
+                            needs, ProcureClix continues to expand its reach, helping businesses around the world
+                            enhance their procurement efforts and achieve measurable financial benefits.</p>
+                            <div class="spacer_40"></div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-5 text-end">
+                        <img src="/assets/images/services/about_glob.png" class="w-100" alt="" srcset="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="spacer_80"></div>
+
+    <!-- Book a Demo Call -->
+    <section>
+        <div class="container book_demo_bg book_Demo_container" data-aos="slide-left" data-aos-delay="200"
+            data-aos-duration="1000" data-aos-offset="0" data-aos-easing="ease-out-cubic" data-aos-once="false">
+            <div class="row">
+                <div class="col-12 col-md-6"></div>
+                <div class="col-12 col-md-6 my-5">
+                    <div class="d-flex align-items-center gap-2">
+                        <img src="./assets/icons/date_picker_icon.png" alt="">
+                        <span class="fs_20_fw_500_background">Book A Demo Call</span>
+                    </div>
+                    <div class=" text-left my-3">
+                        <h2 class="fs_26_fw_700_c_1313" style="text-align: left;">Transform Your Procurement Performance
+                        </h2>
+                    </div>
+                    <div class="my-4">
+                        <p class="fs_16_fw_400_c_1313 text-capitalize" style="line-height: normal;">
+                            Discover how our smarter procurement platform delivers strategic advantage through
+                            comprehensive spend visibility, streamlined workflows, and data-driven insights. Experience
+                            the future of procurement with ProcureClix and unlock unparalleled value across cost
+                            savings, operational efficiency, supplier collaboration, risk mitigation, and business
+                            agility.
+                        </p>
+                    </div>
+                    <a type="button" href="./comingSoon/index.html" class="btn btn_primary mt-3">Schedule a Demo</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <div class="spacer_100"></div>
+    <section class="" data-aos="slide-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="0"
+        data-aos-easing="ease-out-cubic" data-aos-once="false">
+        <div class="container-fluid section_contaier">
+            <!-- row 1 -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 text-center mb-4">
+                    <div class="d-flex gap-2 justify-content-center mb-2">
+                        <img loading="lazy" src="/assets/icons/question_mark_icon.png" class="w_18_h_18" alt="">
+                        <span class="fs_20_fw_500_background">FAQs</span>
+                    </div>
+                    <h2 class="fs_24_fw_700_c_1313">FAQs about Procurement Management Software FAQs</h2>
+                </div>
+            </div>
+
+            <!-- row 2 -->
+            <div class="row home_faq p-0">
+                <div class="accordion p-0 accordion-flush d-flex flex-column row-gap-2" id="accordionFlushProcureClix">
+
+                    <!-- Accordion Item 1 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1"
+                                    aria-expanded="false" aria-controls="flush-collapse1">
+                                    1. What exactly does ProcureClix do?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse1" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    ProcureClix is a comprehensive e-procurement software platform that helps
+                                    organizations automate and streamline their entire purchasing process. Our digital
+                                    procurement solution combines strategic sourcing, spend analytics, and supplier
+                                    management meant to streamline your overall operations with powerful automation
+                                    capabilities.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2"
+                                    aria-expanded="false" aria-controls="flush-collapse2">
+                                    2. In which countries does ProcureClix operate?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse2" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    ProcureClix drives procurement transformation for organizations in over 12 countries
+                                    globally, with implementations that cater to manufacturing, healthcare, financial
+                                    services, and the public sector.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3"
+                                    aria-expanded="false" aria-controls="flush-collapse3">
+                                    3. What procurement risks does ProcureClix help mitigate?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse3" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    ProcureClix assists organizations to tackle serious procurement risks such as
+                                    unauthorized expenditure, non-compliance by suppliers, contract leakage, payment
+                                    fraud, and non-compliance with regulations. Our entire procurement lifecycle
+                                    visibility facilitates proactive risk management and monitoring of compliance.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4"
+                                    aria-expanded="false" aria-controls="flush-collapse4">
+                                    4. How does ProcureClix improve the approval process for purchases?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse4" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Our easy-to-use workflow engine for requisitions enables you to set up multi-level
+                                    approval hierarchies with conditional logic, delegation, and mobile approvals. This
+                                    simplifies the approval process while still maintaining proper controls and
+                                    documentation for audit.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 5 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5"
+                                    aria-expanded="false" aria-controls="flush-collapse5">
+                                    5. Can ProcureClix automate purchase order creation and management?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse5" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Yes, ProcureClix automates the complete purchase order lifecycle. The system can
+                                    generate POs automatically from approved requisitions, route them to suppliers,
+                                    track acknowledgments, manage changes, and link POs to receiving and invoice records
+                                    for three-way matching.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 6 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6"
+                                    aria-expanded="false" aria-controls="flush-collapse6">
+                                    6. How does the contract management module work within ProcureClix?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse6" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Our contract management functions offer a central repository for every procurement
+                                    agreement with automated tracking of milestones, renewal reminders, and compliance
+                                    checks. The system integrates with e-signature tools such as DocuSign and SignNow to
+                                    process faster execution and has a real-time dashboard of the total contracted
+                                    amount by categories, locations, and departments.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 7 -->
+                    <div class="accordian_container">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button fs_16_fw_600_c_1313 collapsed d-flex justify-content-between align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7"
+                                    aria-expanded="false" aria-controls="flush-collapse7">
+                                    7. How does ProcureClix enhance spend visibility?
+                                    <span class="icon ms-auto">+</span>
+                                </button>
+                            </h2>
+                            <div id="flush-collapse7" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushProcureClix">
+                                <div class="accordion-body fs_15_fw_400_c_1313">
+                                    Our AI-powered spend analytics engine aggregates data from multiple sources,
+                                    performs thorough cleansing, and creates detailed categorization using UNSPSC or
+                                    custom taxonomy. This provides 100% visibility into spend patterns, supplier
+                                    performance, and savings opportunities across your organization.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- end Accordian -->
+            </div>
+            <!-- end Row 2 -->
+        </div>
+    </section>
+    <div class="spacer_60"></div>
+
     <!-- footer -->
+
     <div id="footer_wrapper"></div>
 
     <!-- footer end -->
-    <script src="./assets/js-files/comman_js.js"></script>
-<script src="./assets/js-files/HeaderFooter.js"></script>
-    
-    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        // ✅ Accordian This script will automatically change the icon to + or - based on the collapse state
+        document.querySelectorAll(".accordion-item").forEach(function (item) {
+            // Whenever an accordion is shown
+            item.addEventListener("show.bs.collapse", function () {
+                // Reset all icons to "+"
+                document.querySelectorAll(".icon").forEach(function (icon) {
+                    icon.textContent = "+";
+                });
+                // Change the current icon to "-"
+                item.querySelector(".icon").textContent = "-";
+            });
+
+            // Whenever an accordion is hidden
+            item.addEventListener("hide.bs.collapse", function () {
+                item.querySelector(".icon").textContent = "+";
+            });
+        });
+
+        // accordian end
+    </script>
+    <script src="/assets/js-files/comman_js.js"></script>
+    <script src="/assets/js-files/HeaderFooter.js"></script>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS script -->
+    <script src="/assets/js-files/AOS.js"></script>
+    <script>
+        AOS.init({
+            once: false, // allow animations to repeat
+            offset: 0,
+            duration: 1000,
+        });
+
+    </script>
 </body>
 
 </html>

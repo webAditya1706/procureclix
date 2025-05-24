@@ -88,7 +88,7 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
                                         Guide</a></li>
-                                <li><a class="dropdown-item" href="/resources/procurement_glossary.html">Procurement
+                                <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
                                         Glossary</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement
                                         Conferences</a></li>
@@ -198,7 +198,7 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
                                         Guide</a></li>
-                                <li><a class="dropdown-item" href="/resources/procurement_glossary.html">Procurement
+                                <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
                                         Glossary</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement
                                         Conferences</a></li>
@@ -323,7 +323,7 @@ let FooterHTML = `
                                     <a href="/resources/analyst_reports.html" class="footer_link">Analyst Reports</a>
                                     <a href="/resources/procurement_guide.html" class="footer_link">Procurement
                                         Guide</a>
-                                    <a href="/resources/procurement_glossary.html" class="footer_link">Procurement
+                                    <a href="/resources/glossary.html" class="footer_link">Procurement
                                         Glossary</a>
                                     <a href="/resources/procurement_conferences.html" class="footer_link">Procurement
                                         Conferences</a>
@@ -436,7 +436,8 @@ let FooterHTML = `
 document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-placeholder");
   const footerContainer = document.getElementById("footer_wrapper");
-  const loaderElement = document.getElementById("loader");
+//   const loaderElement = document.getElementById("loader");
+  const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
   //   document.body.style.overflow = "hidden";
   document.documentElement.style.overflow = "hidden";
 
