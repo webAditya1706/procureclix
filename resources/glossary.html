@@ -38,11 +38,22 @@
 
 <body>
     <!-- header start -->
-    <div id="loader" class="loader_conrainer">
-        <div class="spinner-border text-primary" role="status">
-            <span class="visually-hidden">Loading...</span>
+    <div id="preloader" class="" style="display: block;">
+        <div class="ctn-preloader" id="ctn-preloader">
+            <div class="round_spinner">
+                <div class="spinner"></div>
+                <div class="text">
+                    <!-- <img src="https://docy-jekyll-theme.netlify.app/img/spinner_logo.png" alt=""> -->
+                    <img src="https://procureclix.com/assets/images/favicon_3.png" style="width: 50px; height: auto;" />
+                    <h4>
+                        <span>ProcureClix</span>
+                    </h4>
+                </div>
+            </div>
+
         </div>
     </div>
+
     <div id="header-placeholder"></div>
     <div class="top_sec_spacer"></div>
 
@@ -53,10 +64,10 @@
     <section class="resorse_banner_bg">
         <div class="container-fluid resourses_container">
             <div class="row text-center justify-content-center align-items-center">
-                <div class="spacer_120"></div>
-                <h3 class="text-light mb-3">ProcureClix Procurement Glossary</h3>
+                <h3 class="text-light mb-2">ProcureClix Procurement Glossary</h3>
                 <p class="text-light">Enhance your procurement knowledge with our comprehensive glossary. Browse
                     alphabetically or search for key terms.</p>
+                <div class="spacer_80"></div>
             </div>
 
         </div>
@@ -68,7 +79,7 @@
     <section class="">
         <div class="container-fluid resourses_container">
             <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 ">
                     <div>
                         <img src="/assets/images/resourses/grossary_book.png" alt="" class="w_20">
                         <span class="fs_20_fw_500_c_linear">Glossary</span>
@@ -78,7 +89,6 @@
                 <div class="col-12 col-lg-6">
                     <div>
                         <div class="position-relative">
-                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
                             <input type="search" class="form-control search_field" id="exampleFormControlInput1"
                                 placeholder="What are you looking for?">
                             <img src="/assets/images/resourses/form_search.png" class="w_12h_12 form_search_icon" alt=""
@@ -90,6 +100,7 @@
             </div>
             <!-- row 1 end -->
             <div class="spacer_40"></div>
+            <!-- letter row -->
             <div class="row ">
                 <div class="letter_graph">
                     <div class="primery_bg_box">#</div>
@@ -128,19 +139,65 @@
             <div class="spacer_40"></div>
 
             <!-- row 2 end -->
+            <!-- A row -->
+            <div class="row resources_white_card position-relative mb-4 ">
+                <div class=" col-md-2">
+                    <div class="bg_letter card_text" data-letter="A">
+                        <span class=" text_style">A</span>
+                    </div>
+                    <div class="spacer_80"></div>
+                </div>
+                <div class="col-md-10">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between g-2 align-items-center w-100 mb-2">
+                            <h4 class="mb-0 fs_18_fw_600_background under_line">Addressable Spend</h4>
+                            <div class="arrow_120_bg"><img src="/assets/icons/arrow_120.png" alt="Go">
+                            </div>
+                        </div>
+                        <p>Addressable spend refers to the portion of a company's total spend that can be influenced or
+                            controlled by the procurement function. This is the spend that procurement teams can
+                            actively manage, negotiate, and optimize through sourcing strategies, supplier management,
+                            and contracts...</p>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-between g-2 align-items-center w-100 mb-2">
+                            <h4 class="mb-0 fs_18_fw_600_background under_line">Auction Software</h4>
+                            <div class="arrow_120_bg"><img src="/assets/icons/arrow_120.png" alt="Go">
+                            </div>
+                        </div>
+                        <p>Auction software is a digital tool that enables buyers and suppliers to participate in online
+                            bidding events—most commonly reverse auctions—to drive competitive pricing and improve
+                            sourcing efficiency...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- row 3 end -->
 
             <div class="row resources_white_card position-relative">
                 <div class=" col-md-2">
-                    <div class="a_letter card_text">
-                        <span class=" text_style">A</span>
+                    <div class="bg_letter card_text" data-letter="C">
+                        <span class=" text_style">C</span>
                     </div>
-
+                    <div class="spacer_80"></div>
                 </div>
                 <div class="col-md-10">
-                    <div class="d-flex justify-content-between g-2 align-items-center w-100">
-                        <h4 class="mb-0">Addressable Spend</h4>
-                        <div class="arrow_120_bg"><img src="/assets/icons/arrow_120.png" alt="Go">
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between g-2 align-items-center w-100 mb-2">
+                            <h4 class="mb-0 fs_18_fw_600_background under_line">Category Spend</h4>
+                            <div class="arrow_120_bg"><img src="/assets/icons/arrow_120.png" alt="Go">
+                            </div>
                         </div>
+                        <p>Category Spend, also known as Category Management Spend, refers to the allocation of a
+                            company's procurement budget across specific categories of goods or services. It in...</p>
+                    </div>
+                    <div>
+                        <div class="d-flex justify-content-between g-2 align-items-center w-100 mb-2">
+                            <h4 class="mb-0 fs_18_fw_600_background under_line">Contract Management</h4>
+                            <div class="arrow_120_bg"><img src="/assets/icons/arrow_120.png" alt="Go">
+                            </div>
+                        </div>
+                        <p>Contract Management is a critical business process that involves the creation, negotiation,
+                            execution, and ongoing monitoring of contracts between an organization and its...</p>
                     </div>
                 </div>
             </div>

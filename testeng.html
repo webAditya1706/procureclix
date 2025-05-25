@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .a_letter {
+  position: relative;
+  min-height: 150px;
+  display: block;
+}
+
+.a_letter::before {
+  content: attr(data-letter); /* Dynamic value */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: Poppins, sans-serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: #1b5b7e;
+  opacity: 0.2;
+  z-index: 0;
+  line-height: 1;
+  pointer-events: none;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="col-md-2">
+        <div class="a_letter card_text w-100" data-letter="A">
+            <span class="text_style">A</span>
+        </div>
+        <div class="spacer_80"></div>
+    </div>
+
+</body>
+
+</html>

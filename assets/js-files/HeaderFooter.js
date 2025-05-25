@@ -86,7 +86,7 @@ let HeaderHTML = `
                                 <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a></li>
                                 <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst Reports</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
+                                <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
                                 <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
                                         Glossary</a></li>
@@ -98,7 +98,7 @@ let HeaderHTML = `
                 </ul>
 
                 <div class="d-flex gap-3">
-                    <a href="/comingsoon/index.html" class="btn btn-outline-light wite_border_btn"><span>Contact
+                    <a href="/contact-us.html" class="btn btn-outline-light wite_border_btn"><span>Contact
                             Us</span></a>
                     <div class="col-auto">
                         <a href="/comingsoon/index.html" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
@@ -196,7 +196,7 @@ let HeaderHTML = `
                                 <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a></li>
                                 <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst Reports</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/resources/procurement_guide.html">Procurement
+                                <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
                                 <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
                                         Glossary</a></li>
@@ -321,7 +321,7 @@ let FooterHTML = `
                                     <a href="/resources/whitepapers.html" class="footer_link">Whitepapers</a>
                                     <a href="/resources/case_studies.html" class="footer_link">Case Studies</a>
                                     <a href="/resources/analyst_reports.html" class="footer_link">Analyst Reports</a>
-                                    <a href="/resources/procurement_guide.html" class="footer_link">Procurement
+                                    <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
                                     <a href="/resources/glossary.html" class="footer_link">Procurement
                                         Glossary</a>

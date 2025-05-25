@@ -420,6 +420,7 @@
 
 .contact_form_sec {
   margin-top: -200px;
+  background-color: #fff;
 }
 
 .resorse_banner_bg {
@@ -453,13 +454,22 @@
   min-height: 50vh;
 }
 
+.contact_us_form {
+  background-color: #fff;
+}
+
 .contact_us_form input[type="text"],
 .contact_us_form input[type="email"],
 .contact_us_form input[type="tel"] {
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
+  background-color: #fff;
+}
+
+.contact_us_form .form-control{
   border: 1px solid var(--Stroke, #b5b8b8);
+
 }
 
 .contact_us_form .input-group-text {
@@ -489,7 +499,6 @@
   width: 20.001px;
   height: 16px;
   flex-shrink: 0;
-  border-radius: 5px;
 }
 
 .contact_us_form .form-check-input {
@@ -499,7 +508,7 @@
   aspect-ratio: 1/1;
   border-radius: 2px;
   margin-right: 10px;
-  border: 1px solid var(--Primary, #1b5b7e);
+  border: 1px solid #B5B8B8;
 }
 
 .contact_us_form .form-check-label {
@@ -527,6 +536,7 @@
 
 .contact_us_form textarea {
   border-radius: 5px;
+  padding-top: 15px;
   background: #fff;
   box-shadow: 0px 4px 48px 4px rgba(0, 0, 0, 0.06);
   background-color: #fff;
@@ -594,6 +604,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 15px; /* 100% */
+  border: 0px;
 }
 
 

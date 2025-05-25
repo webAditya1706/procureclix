@@ -1024,6 +1024,27 @@ a {
   text-transform: capitalize;
 }
 
+.fs_18_fw_600_background{
+  text-align: center;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 111.111% */
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+text-transform: capitalize;
+
+background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
 .fs_20_fw_500_background {
   font-family: Poppins;
   font-size: 20px;
