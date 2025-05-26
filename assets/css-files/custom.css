@@ -420,16 +420,17 @@
 /* contact us */
 
 .contact_form_sec {
-  margin-top: -200px;
+  margin-top: -300px;
 }
 
-.resorse_banner_bg {
+.contatc_banner_bg {
   width: 100%;
-  min-height: 300px;
+  min-height: 400px;
   background-image: url(/assets/images/resourses/resourses_banner_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  background-position: bottom center;
 }
 
 .contact_us_card {
