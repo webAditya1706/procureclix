@@ -742,6 +742,16 @@ a {
   font-weight: 700;
   line-height: 25px; /* 150% */
 }
+
+.fs_22_fw_700_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px; /* 150% */
+}
+
 .fs_24_fw_700_c_1B3A4B {
   color: #1b3a4b;
   text-align: center;
