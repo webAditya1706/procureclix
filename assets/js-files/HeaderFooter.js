@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-placeholder");
   const footerContainer = document.getElementById("footer_wrapper");
 //   const loaderElement = document.getElementById("loader");
-  const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
+//   const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
   //   document.body.style.overflow = "hidden";
   document.documentElement.style.overflow = "hidden";
 
@@ -494,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     setTimeout(() => {
-        loaderElement.classList.add("d-none");
+        // loaderElement.classList.add("d-none");
         //   document.body.style.display = "block";
         document.documentElement.style.overflow = "auto";
       }, 1500);

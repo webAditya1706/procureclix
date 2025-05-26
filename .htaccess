@@ -1,3 +1,17 @@
+# Industries URLs
+Redirect 301 /industries/automotive.html https://procureclix.com/industries/procurement-software-for-automotive-companies.html
+Redirect 301 /industries/food_beverage.html https://procureclix.com/industries/procurement-software-for-food-beverage-industry.html
+Redirect 301 /industries/healthcare.html https://procureclix.com/industries/procurement-software-for-healthcare-industry.html
+Redirect 301 /industries/manufacturing.html https://procureclix.com/industries/procurement-software-for-manufacturing-industry.html
+Redirect 301 /industries/logistics.html https://procureclix.com/industries/procurement-software-for-transport-logistics-industry.html
+
+#Solutions URLs
+Redirect 301 /solutions/reverse_auction.html https://procureclix.com/solutions/best-reverse-auction-software.html
+Redirect 301 /solutions/supplier_management.html https://procureclix.com/solutions/best-supplier-management-software.html
+Redirect 301 /solutions/custom_solutions.html https://procureclix.com/solutions/custom-auction-procurement-software.html
+Redirect 301 /solutions/contract_management.html https://procureclix.com/solutions/procurement-contract-management-software.html
+Redirect 301 /solutions/spend_analysis.html https://procureclix.com/solutions/procurement-spend-analysis-software.html
+Redirect 301 /solutions/purchase_requisition.html https://procureclix.com/solutions/purchase-requisition-software.html
 # Enable Rewrite Engine
 RewriteEngine On
 
@@ -32,6 +46,7 @@ RewriteRule ^industries/procurement-software-for-biotech-pharma/?$ industries/pr
 RewriteRule ^industries/procurement-software-for-energy-brokers-suppliers/?$ industries/procurement-software-for-energy-brokers-suppliers.html [L]
 RewriteRule ^industries/construction-&-real-estate-procurement-software/?$ industries/construction-&-real-estate-procurement-software.html [L]
 
+
 #Solutions URLs
 RewriteRule ^solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix/?$ solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html [L]
 RewriteRule ^solutions/procurement-spend-analysis-software/?$ solutions/procurement-spend-analysis-software.html [L]
@@ -40,5 +55,8 @@ RewriteRule ^solutions/custom-auction-procurement-software/?$ solutions/custom-a
 RewriteRule ^solutions/purchase-requisition-software/?$ solutions/purchase-requisition-software.html [L]
 RewriteRule ^solutions/best-supplier-management-software/?$ solutions/best-supplier-management-software.html [L]
 RewriteRule ^solutions/procurement-contract-management-software/?$ solutions/procurement-contract-management-software.html [L]
+
+
+
 
 #Resourses URLs   
