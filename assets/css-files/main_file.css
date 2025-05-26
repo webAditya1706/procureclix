@@ -1767,13 +1767,13 @@ h6 {
 
 @media (min-width: 1024px) {
   .section_contaier {
-    padding: 0 30px;
+    padding: 0 50px;
   } 
 }
 
 @media (min-width: 1440px) {
   .section_contaier {
-    padding: 0 50px;
+    padding: 0 90px;
   }
    .rfp_system_img{
     left: 75px;
@@ -1793,7 +1793,7 @@ h6 {
 
 @media (min-width: 1920px) {
   .section_contaier {
-    padding: 0 100px;
+    padding: 0 150px;
   }
   .rfp_system_img{
     left: 125px;
