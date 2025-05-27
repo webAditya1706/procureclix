@@ -98,10 +98,10 @@ let HeaderHTML = `
                 </ul>
 
                 <div class="d-flex gap-3">
-                    <a href="/contact-us.html" class="btn btn-outline-light wite_border_btn"><span>Contact
+                    <a href="/contact-us.html" class="btn wite_border_btn"><span>Contact
                             Us</span></a>
                     <div class="col-auto">
-                        <a href="/comingsoon/index.html" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
+                        <a href="/comingsoon/" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
                                 Demo</span></a>
                     </div>
                 </div>

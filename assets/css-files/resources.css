@@ -389,6 +389,7 @@
   bottom: 50%;
   top: 50%;
   right: 5px;
+  border: 0px;
 }
 
 .letter_graph {
@@ -401,6 +402,10 @@
   flex-direction: row;
   align-items: center;
   gap: 8px;
+}
+
+.primery_bg_box:hover{
+  color: #fff;
 }
 
 .primery_bg_box {
