@@ -79,7 +79,7 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/resources/index.html"
                                 data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/resources/blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="/resources/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
                                 <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
@@ -90,7 +90,7 @@ let HeaderHTML = `
                                         Guide</a></li>
                                 <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
                                         Glossary</a></li>
-                                <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement
+                                <li><a class="dropdown-item" href="/resources/procurement-conferences.html">Procurement
                                         Conferences</a></li>
                             </ul>
                         </div>
@@ -189,7 +189,7 @@ let HeaderHTML = `
                             <button class="nav-link dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown">Resources</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/resources/blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="/resources/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
                                 <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
@@ -200,7 +200,7 @@ let HeaderHTML = `
                                         Guide</a></li>
                                 <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
                                         Glossary</a></li>
-                                <li><a class="dropdown-item" href="/resources/procurement_conferences.html">Procurement
+                                <li><a class="dropdown-item" href="/resources/procurement-conferences.html">Procurement
                                         Conferences</a></li>
                             </ul>
                         </div>
@@ -208,10 +208,10 @@ let HeaderHTML = `
                 </ul>
 
                 <div class="d-flex flex-column gap-3">
-                    <a href="/comingsoon/index.html" class="btn btn-outline-light wite_border_btn"><span>Contact
+                    <a href="/comingsoon" class="btn btn-outline-light wite_border_btn"><span>Contact
                             Us</span></a>
                     <div>
-                        <a href="/comingsoon/index.html"
+                        <a href="/comingsoon"
                             class="btn btn-light white_bg_btn demo_btn w-100"><span>Schedule a Demo</span></a>
                     </div>
                 </div>
@@ -231,7 +231,7 @@ let FooterHTML = `
                 <div class="position-relative z-1">
                     <div class="row justify-content-between g-4">
                         <!-- Column 1: Company -->
-                        <div class="col-auto">
+                        <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Company</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
@@ -247,13 +247,13 @@ let FooterHTML = `
                                             class="microsoft_azure">
                                     </div>
                                 <div class="d-flex gap-3 flex-wrap mt-2">
-                                    <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <a href="/comingsoon" class="footer_link footer_share_icon">
                                         <img src="/assets/icons/facebook_icon.png" alt="Facebook">
                                     </a>
-                                    <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <a href="/comingsoon" class="footer_link footer_share_icon">
                                         <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                     </a>
-                                    <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                    <a href="/comingsoon" class="footer_link footer_share_icon">
                                         <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                     </a>
                                 </div>
@@ -261,7 +261,7 @@ let FooterHTML = `
                         </div>
 
                         <!-- Column 2: Services -->
-                        <div class="col-auto">
+                        <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Services</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
@@ -275,7 +275,7 @@ let FooterHTML = `
                         </div>
 
                         <!-- Column 3: Industries -->
-                        <div class="col-auto">
+                        <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Industries</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
@@ -292,7 +292,7 @@ let FooterHTML = `
                         </div>
 
                         <!-- Column 4: Solutions -->
-                        <div class="col-auto">
+                        <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Solutions</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
@@ -311,11 +311,11 @@ let FooterHTML = `
                         </div>
 
                         <!-- Column 5: Resources -->
-                        <div class="col-auto">
+                        <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/resources/blog.html" class="footer_link">Blog</a>
+                                    <a href="/resources/blog" class="footer_link">Blog</a>
                                     <a href="/resources/insights.html" class="footer_link">Insights</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/whitepapers.html" class="footer_link">Whitepapers</a>
@@ -325,7 +325,7 @@ let FooterHTML = `
                                         Guide</a>
                                     <a href="/resources/glossary.html" class="footer_link">Procurement
                                         Glossary</a>
-                                    <a href="/resources/procurement_conferences.html" class="footer_link">Procurement
+                                    <a href="/resources/procurement-conferences.html" class="footer_link">Procurement
                                         Conferences</a>
                                 </div>
                             </div>
@@ -337,13 +337,13 @@ let FooterHTML = `
                                     class="microsoft_azure">
                             </div>
                             <div class="d-flex flex-row gap-3 flex-wrap mt-2">
-                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                <a href="/comingsoon" class="footer_link footer_share_icon">
                                     <img src="/assets/icons/facebook_icon.png" alt="Facebook">
                                 </a>
-                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                <a href="/comingsoon" class="footer_link footer_share_icon">
                                     <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                 </a>
-                                <a href="/comingsoon/index.html" class="footer_link footer_share_icon">
+                                <a href="/comingsoon" class="footer_link footer_share_icon">
                                     <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                 </a>
                             </div>
