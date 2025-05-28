@@ -523,6 +523,11 @@ color: #fff;
   height: auto;
 }
 
+.h_30_w_auto{
+  height: 30px;
+  width: auto;
+}
+
 .w_35_h_35 {
   width: 35px;
   height: 35px;
@@ -1063,6 +1068,19 @@ text-underline-offset: auto;
 text-underline-position: from-font;
 /* text-transform: capitalize; */
 
+background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.fs_14_fw_700_background {
+  font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: 18px; /* 100% */
+text-transform: capitalize;
 background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
 background-clip: text;
 -webkit-background-clip: text;
