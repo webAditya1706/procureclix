@@ -629,6 +629,16 @@ color: #fff;
   line-height: 18px; /* 138.462% */
 }
 
+
+.fs_16_fw_700_c_5656 {
+  color: var(--Light-text, #565656);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 138.462% */
+}
+
 .fs_10_fw_400_c_1313 {
   color: var(--Black, #131313);
   font-family: Poppins;

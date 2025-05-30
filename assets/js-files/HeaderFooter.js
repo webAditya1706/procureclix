@@ -247,13 +247,10 @@ let FooterHTML = `
                                             class="microsoft_azure">
                                     </div>
                                 <div class="d-flex gap-3 flex-wrap mt-2">
-                                    <a href="/comingsoon" class="footer_link footer_share_icon">
-                                        <img src="/assets/icons/facebook_icon.png" alt="Facebook">
-                                    </a>
-                                    <a href="/comingsoon" class="footer_link footer_share_icon">
+                                    <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon">
                                         <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                     </a>
-                                    <a href="/comingsoon" class="footer_link footer_share_icon">
+                                    <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon">
                                         <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                     </a>
                                 </div>
@@ -284,7 +281,7 @@ let FooterHTML = `
                                     <a href="/industries/procurement-software-for-automotive-companies.html" class="footer_link">Automotive</a>
                                     <a href="/industries/procurement-software-for-manufacturing-industry.html" class="footer_link">Manufacturing</a>
                                     <a href="/industries/procurement-software-for-food-beverage-industry.html" class="footer_link">Food & Beverage</a>
-                                    <a href="/industries/procurement-software-for-biotech-pharma.html" class="footer_link">Bio Tech & Pharma</a>
+                                    <a href="/industries/procurement-software-for-biotech-pharma.html" class="footer_link">BioTech & Pharma</a>
                                     <a href="/industries/procurement-software-for-energy-brokers-suppliers.html" class="footer_link">Energy Brokers & Suppliers</a>
                                     <a href="/industries/construction-&-real-estate-procurement-software.html" class="footer_link">Construction & Real Estate</a>
                                 </div>
@@ -336,14 +333,11 @@ let FooterHTML = `
                                 <img src="/assets/images/micrisoft_azure_2.png" alt="Microsoft Azure"
                                     class="microsoft_azure">
                             </div>
-                            <div class="d-flex flex-row gap-3 flex-wrap mt-2">
-                                <a href="/comingsoon" class="footer_link footer_share_icon">
-                                    <img src="/assets/icons/facebook_icon.png" alt="Facebook">
-                                </a>
-                                <a href="/comingsoon" class="footer_link footer_share_icon">
+                            <div class="d-flex flex-row gap-3 flex-wrap mt-2">                                
+                                <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon">
                                     <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                 </a>
-                                <a href="/comingsoon" class="footer_link footer_share_icon">
+                                <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon">
                                     <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                 </a>
                             </div>
