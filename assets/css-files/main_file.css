@@ -503,6 +503,11 @@ color: #fff;
   height: 14px;
 }
 
+
+.w_14{
+  width: 14px;
+}
+
 .w_16_h_16 {
   width: 16px;
   height: 16px;
@@ -629,6 +634,14 @@ color: #fff;
   line-height: 18px; /* 138.462% */
 }
 
+.fs_13_fw_400_c_1313 {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 138.462% */
+}
 
 .fs_16_fw_700_c_5656 {
   color: var(--Light-text, #565656);
@@ -902,7 +915,7 @@ color: #fff;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 18px; /* 100% */
+  line-height: 23px; /* 100% */
 
   background: var(
     --Gradient,
@@ -1029,6 +1042,15 @@ color: #fff;
   color: var(--White, #fff);
   font-family: Poppins;
   font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 145.455% */
+}
+
+.fs_24_fw_700_c_fff {
+  color: var(--White, #fff);
+  font-family: Poppins;
+  font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px; /* 145.455% */
@@ -1788,6 +1810,11 @@ h6 {
 
 .radious_10{
   border-radius: 10px;
+}
+
+
+.radious_30{
+  border-radius: 30px !important;
 }
 
 /* .comming_soon_Logo_ProcureClix::after {
