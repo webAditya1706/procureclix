@@ -81,11 +81,7 @@ let HeaderHTML = `
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/resources/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
-                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
-                                <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
-                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a></li>
-                                <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst Reports</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
                                 <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
@@ -191,11 +187,7 @@ let HeaderHTML = `
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/resources/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
-                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
-                                <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
-                                <li><a class="dropdown-item" href="/resources/case_studies.html">Case Studies</a></li>
-                                <li><a class="dropdown-item" href="/resources/analyst_reports.html">Analyst Reports</a>
-                                </li>
+                                <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
                                 <li><a class="dropdown-item" href="/resources/glossary.html">Procurement
@@ -315,9 +307,7 @@ let FooterHTML = `
                                     <a href="/resources/blog" class="footer_link">Blog</a>
                                     <a href="/resources/insights.html" class="footer_link">Insights</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
-                                    <a href="/resources/whitepapers.html" class="footer_link">Whitepapers</a>
                                     <a href="/resources/case_studies.html" class="footer_link">Case Studies</a>
-                                    <a href="/resources/analyst_reports.html" class="footer_link">Analyst Reports</a>
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
                                     <a href="/resources/glossary.html" class="footer_link">Procurement

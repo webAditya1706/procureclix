@@ -643,3 +643,21 @@
   }
 }
 /* contact us  style end*/
+
+
+
+
+/* purvi css */
+/*.contact_us_form input[type="tel"] {
+  border-left: 0px;
+}*/
+
+.contact_us_form .error {
+      color: red;
+      font-size: 12px;
+      /* margin-bottom: 10px; */
+    }
+
+.contact_us_form .iti {
+  width: 100% !important;
+}
