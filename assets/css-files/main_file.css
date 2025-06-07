@@ -365,6 +365,17 @@ color: #fff;
 /* padding: 10px 30px; */
 }
 
+.header_con_btn {
+  color: #fff;
+}
+
+.header_con_btn.active{
+background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+border: 0px;
+color: #fff;  
+}
+ 
+
 .wite_border_btn_2 {
   display: flex;
   height: 44px;

@@ -750,6 +750,7 @@
   align-items: center;
   width: 100%;
   gap: 10px;
+  border-width: 0px;
   border-radius: 10px;
   background: var(
     --Gradient,
@@ -763,17 +764,22 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  transition: all 0.3s ease;
+}
+
+.pricing_sales_btn:hover {
+  color: #fff;
 }
 
 .pricing_table {
   border-collapse: separate;
   border-spacing: 12px; /* adds spacing between cells */
-  background-color: #EEFAFF;
+  background-color: #eefaff;
   padding: 30px;
   border-radius: 30px;
 }
 
-.pricing_div{
+.pricing_div {
   display: flex;
   align-items: center;
   width: 100%;
@@ -783,19 +789,19 @@
 }
 /* Optional: styling the inner divs for column titles */
 .white_td_gb {
-   background-color: #fff;
+  background-color: #fff;
   padding: 10px 20px;
   justify-content: center;
 }
 
-.white_bg_top_radious{
+.white_bg_top_radious {
   background-color: #fff;
   border-radius: 30px 30px 0px 0px;
   padding: 20px;
   justify-content: center;
 }
 
-.white_bg_bottom_radious{
+.white_bg_bottom_radious {
   background-color: #fff;
   border-radius: 0px 0px 30px 30px;
   padding: 20px;

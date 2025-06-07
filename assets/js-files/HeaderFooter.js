@@ -7,7 +7,7 @@ let HeaderHTML = `
                 <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="ProcureClix Logo">
             </a>
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                <ul class="navbar-nav justify-content-center gap-2 w-100 mb-2 mb-lg-0" id="navbarNav">
+                <ul class="navbar-nav justify-content-center gap-xl-2 w-100 mb-2 mb-lg-0" id="navbarNav">
                     <li class="nav-item">
                         <div class="dropdown">
                             <a class="nav-link" href="/index.html">Home</a>
@@ -79,7 +79,7 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/resources/index.html"
                                 data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/resources/blog">Blog</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="/resources/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
@@ -94,8 +94,9 @@ let HeaderHTML = `
                 </ul>
 
                 <div class="d-flex gap-3">
-                    <a href="/contact-us.html" class="btn wite_border_btn"><span>Contact
-                            Us</span></a>
+                    <a href="/contact-us.html" class="btn wite_border_btn header_con_btn"><span>Contact
+                            Us</span>
+                    </a>
                     <div class="col-auto">
                         <a href="/comingsoon/" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
                                 Demo</span></a>
@@ -307,7 +308,6 @@ let FooterHTML = `
                                     <a href="/resources/blog" class="footer_link">Blog</a>
                                     <a href="/resources/insights.html" class="footer_link">Insights</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
-                                    <a href="/resources/case_studies.html" class="footer_link">Case Studies</a>
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
                                     <a href="/resources/glossary.html" class="footer_link">Procurement
@@ -423,17 +423,20 @@ document.addEventListener("DOMContentLoaded", function () {
 //   const loaderElement = document.getElementById("loader");
 //   const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
   //   document.body.style.overflow = "hidden";
-  document.documentElement.style.overflow = "hidden";
+
+
+
+//   document.documentElement.style.overflow = "hidden";
 
   if (headerContainer) {
     headerContainer.innerHTML = HeaderHTML;
-    highlightActiveLink(); // Call after header is loaded
+    highlightActiveLink();
     
   }
 
   if (footerContainer) {
     footerContainer.innerHTML = FooterHTML;
-    highlightActiveLink(); // Optional, if footer has nav
+    highlightActiveLink();
   }
 
   function highlightActiveLink() {
@@ -470,6 +473,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Highlight dropdown-items
     document.querySelectorAll(".footer_link").forEach((item) => {
+      const href = item.getAttribute("href");
+      console.log("✌️href --->", href);
+      if (href && currentPath === href) {
+        item.classList.add("active");
+      }
+    });
+
+     // Highlight Contact-us-btn
+    document.querySelectorAll(".header_con_btn").forEach((item) => {
       const href = item.getAttribute("href");
       console.log("✌️href --->", href);
       if (href && currentPath === href) {
