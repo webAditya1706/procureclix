@@ -115,3 +115,7 @@ body {
   color: white;
   border-color: #007bff;
 }
+
+.blog_detail img{
+  width: 100%;
+}
