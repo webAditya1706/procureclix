@@ -1788,7 +1788,7 @@ h6 {
 .rfp_system_img {
   position: absolute;
   bottom: 25px;
-  left: 50px;
+  left: 25px;
   z-index: 1;
   width: 356px;
   height: 486px;
@@ -1799,7 +1799,7 @@ h6 {
 .rfp_system_right_img{
   position: absolute;
   bottom: 25px;
-  right: 50px;
+  right: 25px;
   z-index: 1;
   width: 356px;
   height: 486px;
@@ -1868,12 +1868,12 @@ h6 {
   .section_contaier {
     padding: 0 90px;
   }
-   .rfp_system_img{
+   /* .rfp_system_img{
     left: 75px;
-  }
-  .rfp_system_right_img{
+  } */
+  /* .rfp_system_right_img{
     right: 75px;
-  }
+  } */
 }
 
 
@@ -1888,12 +1888,12 @@ h6 {
   .section_contaier {
     padding: 0 150px;
   }
-  .rfp_system_img{
+  /* .rfp_system_img{
     left: 125px;
-  }
-  .rfp_system_right_img{
-    right: 125px;
-  }
+  } */
+  /* .rfp_system_right_img{
+    right: 125px; 
+  }*/
 }
 
 @media (max-width: 991.98px) {

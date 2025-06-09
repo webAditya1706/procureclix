@@ -305,7 +305,7 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/resources/blog" class="footer_link">Blog</a>
+                                    <a href="/resources/blog/" class="footer_link">Blog</a>
                                     <a href="/resources/insights.html" class="footer_link">Insights</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/guide.html" class="footer_link">Procurement
@@ -420,18 +420,15 @@ let FooterHTML = `
 document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-placeholder");
   const footerContainer = document.getElementById("footer_wrapper");
-//   const loaderElement = document.getElementById("loader");
-//   const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
+  //   const loaderElement = document.getElementById("loader");
+  //   const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
   //   document.body.style.overflow = "hidden";
 
-
-
-//   document.documentElement.style.overflow = "hidden";
+  //   document.documentElement.style.overflow = "hidden";
 
   if (headerContainer) {
     headerContainer.innerHTML = HeaderHTML;
     highlightActiveLink();
-    
   }
 
   if (footerContainer) {
@@ -474,13 +471,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight dropdown-items
     document.querySelectorAll(".footer_link").forEach((item) => {
       const href = item.getAttribute("href");
-      console.log("✌️href --->", href);
-      if (href && currentPath === href) {
+      const currentPath = window.location.pathname;
+
+      // Match base blog path for detail pages
+      if (href && currentPath.startsWith(href)) {
         item.classList.add("active");
+        return;
       }
     });
 
-     // Highlight Contact-us-btn
+    // Highlight Contact-us-btn
     document.querySelectorAll(".header_con_btn").forEach((item) => {
       const href = item.getAttribute("href");
       console.log("✌️href --->", href);
@@ -490,10 +490,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     setTimeout(() => {
-        // loaderElement.classList.add("d-none");
-        //   document.body.style.display = "block";
-        document.documentElement.style.overflow = "auto";
-      }, 1500);
+      // loaderElement.classList.add("d-none");
+      //   document.body.style.display = "block";
+      document.documentElement.style.overflow = "auto";
+    }, 1500);
   }
 });
 
