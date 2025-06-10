@@ -384,7 +384,7 @@
 /* For screens larger than 1500px */
 @media (min-width: 1400px) {
   .hero_img_style {
-    bottom: -300px;
+    bottom: -400px;
   }
 
   .margin_top_350 {

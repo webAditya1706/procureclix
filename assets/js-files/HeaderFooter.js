@@ -98,7 +98,7 @@ let HeaderHTML = `
                             Us</span>
                     </a>
                     <div class="col-auto">
-                        <a href="/comingsoon/" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
+                        <a href="/contact-us.html" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
                                 Demo</span></a>
                     </div>
                 </div>
@@ -201,10 +201,10 @@ let HeaderHTML = `
                 </ul>
 
                 <div class="d-flex flex-column gap-3">
-                    <a href="/comingsoon" class="btn btn-outline-light wite_border_btn"><span>Contact
+                    <a href="/contact-us.html" class="btn btn-outline-light wite_border_btn"><span>Contact
                             Us</span></a>
                     <div>
-                        <a href="/comingsoon"
+                        <a href="/contact-us.html"
                             class="btn btn-light white_bg_btn demo_btn w-100"><span>Schedule a Demo</span></a>
                     </div>
                 </div>

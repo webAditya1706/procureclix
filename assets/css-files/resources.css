@@ -686,7 +686,9 @@
   border-radius: 5px 5px 0px 0px;
   background: var(--red, linear-gradient(180deg, #630000 0%, #c90000 100%));
 }
-
+.con_register:hover{
+  color: #fff;
+}
 .con_register {
   display: inline-flex;
   padding: 10px 40px;
