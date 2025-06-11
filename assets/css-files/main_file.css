@@ -1593,11 +1593,7 @@ h6 {
 }
 
 .footer_link.active {
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
   font-weight: 500 !important;
-  line-height: 16px; /* 100% */
   background: var(
     --Gradient,
     linear-gradient(180deg, #004263 0%, #0086c9 100%)

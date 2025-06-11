@@ -13,7 +13,7 @@
 
 .img_rfq_event {
   position: absolute;
-  right: -20px;
+  right: 0px;
   top: 50px;
   bottom: 50px;
   z-index: 1;
@@ -114,7 +114,7 @@
 
 /* Media query  */
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .img_rfq_event {
     right: -20px;
   }
@@ -194,3 +194,5 @@
   height: 1px;
   background-color: #1b5b7e;
 }
+
+

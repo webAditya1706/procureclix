@@ -305,7 +305,8 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/resources/blog/" class="footer_link">Blog</a>
+                                    <!-- <a href="/resources/blog/" class="footer_link">Blog</a> -->
+                                    <a href="/resources/blog" class="footer_link">Blog</a>
                                     <a href="/resources/insights.html" class="footer_link">Insights</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/guide.html" class="footer_link">Procurement

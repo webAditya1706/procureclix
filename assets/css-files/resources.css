@@ -817,11 +817,5 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .section_contaier {
-    padding: 0 30px;
-  }
-}
-
 @media (min-width: 1440px) {
 }
