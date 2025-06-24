@@ -686,7 +686,7 @@
   border-radius: 5px 5px 0px 0px;
   background: var(--red, linear-gradient(180deg, #630000 0%, #c90000 100%));
 }
-.con_register:hover{
+.con_register:hover {
   color: #fff;
 }
 .con_register {
@@ -781,6 +781,10 @@
   border-radius: 30px;
 }
 
+.pricing_table .row {
+  flex-wrap: nowrap;
+}
+
 .pricing_div {
   display: flex;
   align-items: center;
@@ -794,12 +798,13 @@
   background-color: #fff;
   padding: 10px 20px;
   justify-content: center;
+  /* min-width: 150px; */
 }
 
 .white_bg_top_radious {
   background-color: #fff;
   border-radius: 30px 30px 0px 0px;
-  padding: 20px;
+  padding: 20px 0px;
   justify-content: center;
 }
 
@@ -810,11 +815,56 @@
   justify-content: center;
 }
 
+.res_contact_sales {
+  display: none;
+}
+
+.border_bottom_rounded{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.scroll-x-wrapper{
+  overflow-x: auto;
+}
+
 @media (max-width: 1024px) {
   .resourses_container {
     padding-left: 20px;
     padding-right: 20px;
   }
+   .pricing_table .fs_20_fw_700_c_1313 {
+    font-size: 14px;
+  }
+  .pricing_table .fs_18_fw_700_c_linear{
+    font-size: 14px;
+  }
+  .pricing_table .fs_15_fw_500_c_1313{
+    font-size: 12px;
+  }
+  .pricing_table .pricing_sales_btn{
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 765px) {
+  .pricing_table .fs_20_fw_700_c_1313 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 991.5px) {
+  .res_contact_sales {
+    display: block;
+    display: flex;
+    flex-direction: row;
+  }
+  
+.border_bottom_rounded{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 }
 
 @media (min-width: 1440px) {
