@@ -21,7 +21,7 @@ $(document).ready(() => {
           const blogHTML = `
             <div class="col-md-6 col-xl-4">
               <div class="blog__card" data-id="${post.id}">
-                <img src="${imageUrl}" alt="Blog Image" />
+                <img src="${imageUrl}" alt="Blog Image" class="mt-0" />
                 <div class="blog__card-content">
                   <div class="blog__card-title">${post.title.rendered}</div>
                   <div class="blog__card-text">${post.excerpt.rendered}</div>

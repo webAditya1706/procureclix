@@ -79,8 +79,7 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/resources/index.html"
                                 data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" target="_blank" href="/resources/blog">Blog</a></li>
-                                <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="/resources/blog" target="_blank">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
@@ -186,8 +185,7 @@ let HeaderHTML = `
                             <button class="nav-link dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown">Resources</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/resources/blog">Blog</a></li>
-                                <li><a class="dropdown-item" href="/resources/insights.html">Insights</a></li>
+                                <li><a class="dropdown-item" href="/resources/blog" target="_blank">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
@@ -306,8 +304,7 @@ let FooterHTML = `
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <!-- <a href="/resources/blog/" class="footer_link">Blog</a> -->
-                                    <a href="/resources/blog" class="footer_link">Blog</a>
-                                    <a href="/resources/insights.html" class="footer_link">Insights</a>
+                                    <a href="/resources/blog" class="footer_link" target="_blank">Blog</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
