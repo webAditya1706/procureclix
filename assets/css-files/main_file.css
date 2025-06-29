@@ -1207,30 +1207,10 @@ text-underline-position: from-font;
   font-weight: 400 !important;
 }
 
-p {
-  color: var(--Black, #131313);
-  font-family: Poppins;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px; /* 157.143% */
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.p2 {
-  color: var(--Black, #131313);
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20spx; /* 157.143% */
-}
-
 h1 {
   color: var(--Black, #131313);
   font-family: Poppins;
-  font-size: 36;
+  font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 42px; /* 100% */
@@ -1284,6 +1264,26 @@ h6 {
   font-style: normal;
   font-weight: 700;
   line-height: 25px; /* 100% */
+}
+
+p {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.p2 {
+  color: var(--Black, #131313);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20spx; /* 157.143% */
 }
 
 .fs_12_fw_400_c_58748F {

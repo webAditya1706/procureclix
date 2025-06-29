@@ -3,7 +3,7 @@ $(document).ready(() => {
   const POSTS_PER_PAGE = 3;
 
   function fetchBlogs(page = 1) {
-    showLoader();
+    // showLoader();
     $.ajax({
       url: API_URL,
       method: "GET",
@@ -12,15 +12,18 @@ $(document).ready(() => {
         page: page,
       },
       success: function (data, textStatus, request) {
-        hideLoader();
+        // hideLoader();
         $("#blog-container").empty();
 
         data.forEach((post) => {
+          console.log(post,"=========post");
+          
           const imageUrl = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || "https://via.placeholder.com/300x180";
 
           const blogHTML = `
             <div class="col-md-6 col-xl-4">
-              <div class="blog__card" data-id="${post.id}">
+             <!-- <div class="blog__card" data-id="${post.id}"> --!>
+              <div class="blog__card" data-id="${post.link}">
                 <img src="${imageUrl}" alt="Blog Image" class="mt-0" />
                 <div class="blog__card-content">
                   <div class="blog__card-title">${post.title.rendered}</div>
@@ -36,7 +39,7 @@ $(document).ready(() => {
       },
       error: function (err) {
         console.error("Error loading blogs:", err);
-        hideLoader();
+        // hideLoader();
       },
     });
   }
@@ -65,7 +68,10 @@ $(document).ready(() => {
 
   // Handle card click
   $(document).on("click", ".blog__card", function () {
+    
     const blogId = $(this).data("id");
+    console.log(blogId,"============$(this).data");
+
     if (blogId) {
       window.location.href = `blog-detail.html?id=${blogId}`;
     }

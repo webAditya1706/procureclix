@@ -26,13 +26,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+    html, body {
+  overflow: auto;
+  scrollbar-width: none !important; /* Firefox */
+}
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari, Edge */
+}
+
+</style>
     
 </head>
 
 <body>
     <!-- loader -->
-    <div id="preloader">
+    <div id="preloader" class="d-none">
         <div class="ctn-preloader" id="ctn-preloader">
             <div class="round_spinner">
                 <div class="spinner"></div>
@@ -51,38 +62,13 @@
     <div id="header-placeholder"></div>
     <div class="top_sec_spacer"></div>
 
-    <!-- <div class="spacer_60"></div> -->
-
-    <!-- <section class="blog_banner_bg mb-5">
-        <div class="container-fluid resourses_container">
-            <div class="row text-center justify-content-center align-items-center">
-                <div class="col-md-8">
-                    <h3 class="text-light mb-1">In-Depth Insights That Matter</h3>
-                    <p class="text-light">You're reading one of our expert-written articles designed to keep you
-                        informed, inspired, and ahead of industry trends. At ProcureClix, we believe that great
-                        decisions start with great insights.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <div class="spacer_80"></div>
-
     <!-- blog detail -->
-    <section class="blog_detail">
-        <div class="container">
-            <div class="row">
-                <div class="col-12" id="blog_detail"></div>
-            </div>
-        </div>
-    </section>
+    <div class="col-12" id="blog_detail"></div>
 
 
     <div class="spacer_100"></div>
     <!-- footer -->
     <div id="footer_wrapper"></div>
-    <!-- footer end -->
-    <!-- jquery -->
-    <!-- jQuery MUST come first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 

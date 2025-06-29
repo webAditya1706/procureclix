@@ -173,3 +173,16 @@ h3{
 img{
   margin-top: 5px;
 }
+
+.iframe_doc_detail {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  overflow: auto;               /* Enable scroll if needed */
+  border: none;                 /* No border */
+  scrollbar-width: none;        /* Hide scrollbar in Firefox */
+}
+
+.iframe_doc_detail::-webkit-scrollbar {
+  display: none;                /* Hide scrollbar in Chrome/Safari */
+}
+
