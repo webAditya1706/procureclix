@@ -4,7 +4,26 @@ $(document).ready(() => {
 
   const iframeWrapper = $("#blog_detail");
 
+//   iframeWrapper.append(`
+//   <div class="col-12">
+//     <div class="book_loader">
+//       <img src="/assets/images/ProcureClix-unscreen.gif" alt="ProcureClix-unscreen" srcset="/assets/images/ProcureClix-unscreen.gif">    
+//     </div>
+//   </div>
+// `);
+
   if (blogId) {
+
+    const canonicalUrl = `https://procureclix.com/resources/blog/${blogId}`;
+    
+    let $canonicalLink = $('link[rel="canonical"]');
+
+    if ($canonicalLink.length) {
+      $canonicalLink.attr('href', canonicalUrl);
+    } else {
+      $('head').append(`<link rel="canonical" href="${canonicalUrl}" />`);
+    }
+
     showLoader();
 
     //   $.ajax({
@@ -48,12 +67,15 @@ $(document).ready(() => {
             src="https://procureclix.com/blog/${blogId}"
             frameborder="0"
             class="iframe_doc_detail"
-            onload="hideLoader()"
+            onload="hideBookLoader()"
           ></iframe>
         `);
-
-    iframeWrapper.append(iframe);
+    setTimeout(() => {
+      iframeWrapper.empty();
+      iframeWrapper.append(iframe);
+    },3000)
   } else {
+    hideBookLoader()
     iframeWrapper.html("<p>No blog ID provided in URL.</p>");
   }
 
@@ -61,9 +83,22 @@ $(document).ready(() => {
     $("#preloader").fadeIn();
   }
 
+  function hideBookLoader(){
+    $('.book_loader_cntner').addClass("d-none")
+  }
+
   window.hideLoader = function () {
     setTimeout(() => {
       $("#preloader").fadeOut();
     }, 500);
   };
+
+   window.hideBookLoader = function () {
+    $('.book_loader_cntner').addClass("d-none")   
+  };
+
+  
+  // function hideBookLoader(){
+  //   $('.book_loader_cntner').addClass("d-none")
+  // }
 });

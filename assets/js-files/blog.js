@@ -1,7 +1,14 @@
 $(document).ready(() => {
   const API_URL = "https://procureclix.com/blog/wp-json/wp/v2/posts?_embed";
   const POSTS_PER_PAGE = 3;
-
+  $("#blog-container").empty();
+  $("#blog-container").append(`
+  <div class="col-12">
+    <div class="book_loader">
+      <img src="/assets/images/ProcureClix-unscreen.gif" alt="ProcureClix-unscreen" srcset="/assets/images/ProcureClix-unscreen.gif">    
+    </div>
+  </div>
+`);
   function fetchBlogs(page = 1) {
     // showLoader();
     $.ajax({
@@ -116,9 +123,12 @@ $(document).ready(() => {
       slidesToShow: 3,
       slidesToScroll: 1,
       dots: false,
-      arrows: true,
+      arrows: false,
       prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
       nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+      // auto play
+      autoplay: true,
+      autoplaySpeed: 2000,
 
       responsive: [
         {
