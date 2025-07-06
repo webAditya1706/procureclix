@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -10,16 +10,15 @@ body {
 }
 
 .blog_banner_bg {
-    width: 100%;
-    min-height: 400px;
-    background-image: url(/assets/images/resourses/resourses_banner_bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    background-position: bottom center;
-    display: flex
-;
-    align-items: center;
+  width: 100%;
+  min-height: 400px;
+  background-image: url(/assets/images/resourses/resourses_banner_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: bottom center;
+  display: flex;
+  align-items: center;
 }
 
 .blog__card {
@@ -67,12 +66,9 @@ body {
   -webkit-box-orient: vertical;
 }
 
-
-
-
 /* blog pagination */
 
- .pagination {
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,28 +78,28 @@ body {
 }
 
 .pagination a.disabled {
-    pointer-events: none;
-    opacity: 0.4;
-    border: 1px solid #ddd;
-    padding: 8px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    color: #999;
+  pointer-events: none;
+  opacity: 0.4;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #999;
 }
 
 .pagination a.active {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
 }
 
 .pagination a {
-    padding: 5px 12px;
-    margin: 0 4px;
-    text-decoration: none;
-    color: #007bff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 5px 12px;
+  margin: 0 4px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .pagination a:hover {
@@ -118,12 +114,12 @@ body {
   border-color: #007bff;
 }
 
-.blog_detail img{
+.blog_detail img {
   width: 100%;
 }
 
 li {
-   color: var(--Black, #131313);
+  color: var(--Black, #131313);
   font-family: Poppins;
   font-size: 15px;
   font-style: normal;
@@ -133,9 +129,8 @@ li {
   margin-bottom: 10px;
 }
 
-
 li strong {
-   color: var(--Black, #131313);
+  color: var(--Black, #131313);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -145,49 +140,51 @@ li strong {
   margin-bottom: 10px;
 }
 
-p{
+p {
   margin-bottom: 10px !important;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   /* margin-bottom: 10px !important; */
 }
 
-h4{
+h4 {
   font-size: 20px !important;
   line-height: 27px !important;
 }
 
-h2{
+h2 {
   font-size: 30px !important;
   line-height: 37px !important;
   margin-bottom: 15px !important;
 }
 
-
-h3{
+h3 {
   font-size: 25px !important;
   line-height: 32px !important;
   margin-bottom: 15px !important;
 }
 
-img{
+img {
   margin-top: 5px;
 }
 
 .iframe_doc_detail {
   width: 100%;
   min-height: calc(100vh - 60px);
-  overflow: auto;               /* Enable scroll if needed */
-  border: none;                 /* No border */
-  scrollbar-width: none;        /* Hide scrollbar in Firefox */
+  overflow: auto; /* Enable scroll if needed */
+  border: none; /* No border */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
 }
 
 .iframe_doc_detail::-webkit-scrollbar {
-  display: none;                /* Hide scrollbar in Chrome/Safari */
+  display: none; /* Hide scrollbar in Chrome/Safari */
 }
-
-
 
 /* carosal css */
 
@@ -203,22 +200,29 @@ img{
   z-index: 5;
   width: 35px;
   height: 35px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slick-prev {
-  left: -30px; /* Adjust as needed */
+/* .slick-prev {
+  left: -30px;
 }
 
 .slick-next {
-  right: -30px; /* Adjust as needed */
-}
+  right: -30px;
+} */
 
 .slick-prev:hover,
 .slick-next:hover {
-  background: #e0e0e0;
+  background: #1b5b7e;
 }
 
-
+.glider-prev:hover,
+.glider-next:hover {
+  color: #fff !important;
+  opacity: 1;
+}

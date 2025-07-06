@@ -7,7 +7,7 @@
     <title>ProcureClix Blog Card</title>
     <meta name="description" content="ProcureClix Blog">
     <link rel="icon" href="/assets/images/favicon_3.png" type="image/png">
-  <link rel="canonical" href="https://procureclix.com/resources/blog" />
+    <link rel="canonical" href="https://procureclix.com/resources/blog" />
 
     <!-- Google Analytics tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
@@ -27,7 +27,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/slick/slick.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="/slick/slick.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+
 
     <style>
         html,
@@ -59,7 +61,8 @@
     <div id="preloader" class="d-none">
         <div class="ctn-preloader" id="ctn-preloader">
             <div class="round_spinner">
-                <img src="/assets/images/ProcureClix_loader.gif" alt="ProcureClix_loader" srcset="/assets/images/ProcureClix_loader.gif">
+                <img src="/assets/images/ProcureClix_loader.gif" alt="ProcureClix_loader"
+                    srcset="/assets/images/ProcureClix_loader.gif">
                 <!-- <div class="spinner"></div>
                 <div class="text">
                     <img src="https://procureclix.com/assets/images/favicon_3.png" style="width: 50px; height: auto;" />
@@ -97,8 +100,13 @@
 
     <!-- blog card -->
     <section>
-        <div class="container">
-            <div class="row d-flex g-2 blog_carosal" id="blog-container">
+        <div class="glider-contain container">
+            <div class="glider" id="blog-container">
+            </div>
+            <div class="position-relative d-flex justify-content-center gap-4 mt-5">
+                <button class="glider-prev position-static slick-prev">«</button>
+                <button class="glider-next position-static slick-next">»</button>
+
             </div>
             <!-- <div class="pagination mt-4" id="pagination">
             </div> -->
@@ -117,7 +125,8 @@
     <!-- jQuery MUST come first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/slick/slick.min.js"></script>
+    <!-- <script src="/slick/slick.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 
     <script src="/assets/js-files/blog.js"></script>
     <script src="/assets/js-files/HeaderFooter.js"></script>

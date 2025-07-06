@@ -9,6 +9,7 @@ $(document).ready(() => {
     </div>
   </div>
 `);
+
   function fetchBlogs(page = 1) {
     // showLoader();
     $.ajax({
@@ -40,11 +41,11 @@ $(document).ready(() => {
                 </div>
               </div>
             </div>`;
-          $(".blog_carosal").append(blogHTML);
+          $("#blog-container").append(blogHTML);
         });
-        if ($(".blog_carosal").hasClass("slick-initialized")) {
-          $(".blog_carosal").slick("unslick");
-        }
+        // if ($(".blog_carosal").hasClass("slick-initialized")) {
+        //   $(".blog_carosal").slick("unslick");
+        // }
         loadCarosalSlider();
         // const totalPages = parseInt(request.getResponseHeader("X-WP-TotalPages")) || 1;
         // setupPagination(totalPages, page);
@@ -117,33 +118,68 @@ $(document).ready(() => {
   // Initial Load
   fetchBlogs(1);
 
-  const loadCarosalSlider = () => {
-    $(".blog_carosal").slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      dots: false,
-      arrows: false,
-      prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-      nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-      // auto play
-      autoplay: true,
-      autoplaySpeed: 2000,
+  // const loadCarosalSlider = () => {
+  //   $(".blog_carosal").slick({
+  //     infinite: true,
+  //     slidesToShow: 3,
+  //     slidesToScroll: 5,
+  //     dots: false,
+  //     arrows: false,
+  //     prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+  //     nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
+  //     // auto play
+  //     autoplay: true,
+  //     autoplaySpeed: 2000,
 
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    });
-  };
+  //     responsive: [
+  //       {
+  //         breakpoint: 992,
+  //         settings: {
+  //           slidesToShow: 2,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 576,
+  //         settings: {
+  //           slidesToShow: 1,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // };
+
+  const loadCarosalSlider = () => {
+  new Glider(document.querySelector('.glider'), {
+    slidesToShow: 4,
+    draggable: true,
+    scrollLock: true,
+    rewind: true,
+    arrows: {
+      prev: '.glider-prev',
+      next: '.glider-next'
+    },
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+};
+
+
 });
