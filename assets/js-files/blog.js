@@ -61,23 +61,20 @@ $(document).ready(() => {
     let paginationHTML = "";
 
     if (currentPage > 1) {
-      paginationHTML += `<a href="#" class="page-link" data-page="${
-        currentPage - 1
-      }">&laquo;</a>`;
+      paginationHTML += `<a href="#" class="page-link" data-page="${currentPage - 1
+        }">&laquo;</a>`;
     } else {
       paginationHTML += `<a href="#" class="disabled">&laquo;</a>`;
     }
 
     for (let i = 1; i <= totalPages; i++) {
-      paginationHTML += `<a href="#" class="page-link ${
-        i === currentPage ? "active" : ""
-      }" data-page="${i}">${i}</a>`;
+      paginationHTML += `<a href="#" class="page-link ${i === currentPage ? "active" : ""
+        }" data-page="${i}">${i}</a>`;
     }
 
     if (currentPage < totalPages) {
-      paginationHTML += `<a href="#" class="page-link" data-page="${
-        currentPage + 1
-      }">&raquo;</a>`;
+      paginationHTML += `<a href="#" class="page-link" data-page="${currentPage + 1
+        }">&raquo;</a>`;
     } else {
       paginationHTML += `<a href="#" class="disabled">&raquo;</a>`;
     }
@@ -118,67 +115,51 @@ $(document).ready(() => {
   // Initial Load
   fetchBlogs(1);
 
-  // const loadCarosalSlider = () => {
-  //   $(".blog_carosal").slick({
-  //     infinite: true,
-  //     slidesToShow: 3,
-  //     slidesToScroll: 5,
-  //     dots: false,
-  //     arrows: false,
-  //     prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
-  //     nextArrow: '<button type="button" class="slick-next">&#10095;</button>',
-  //     // auto play
-  //     autoplay: true,
-  //     autoplaySpeed: 2000,
-
-  //     responsive: [
-  //       {
-  //         breakpoint: 992,
-  //         settings: {
-  //           slidesToShow: 2,
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 576,
-  //         settings: {
-  //           slidesToShow: 1,
-  //         },
-  //       },
-  //     ],
-  //   });
-  // };
-
   const loadCarosalSlider = () => {
-  new Glider(document.querySelector('.glider'), {
+  const gliderElement = document.querySelector('.glider');
+  const prevButton = document.querySelector('.glider-prev');
+  const nextButton = document.querySelector('.glider-next');
+
+  const glider = new Glider(gliderElement, {
     slidesToShow: 4,
     draggable: true,
     scrollLock: true,
-    rewind: true,
     arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
+      prev: prevButton,
+      next: nextButton
     },
     responsive: [
       {
         breakpoint: 1400,
-        settings: {
-          slidesToShow: 3
-        }
+        settings: { slidesToShow: 3 }
       },
       {
         breakpoint: 992,
-        settings: {
-          slidesToShow: 2
-        }
+        settings: { slidesToShow: 2 }
       },
       {
         breakpoint: 576,
-        settings: {
-          slidesToShow: 1
-        }
+        settings: { slidesToShow: 1 }
       }
     ]
   });
+
+  const updateButtonState = () => {
+    const scrollLeft = glider.scrollLeft;
+    const maxScrollLeft = glider.maxScrollLeft;
+
+    // Enable/Disable based on actual scroll position
+    prevButton.disabled = scrollLeft <= 0;
+    nextButton.disabled = scrollLeft >= maxScrollLeft;
+  };
+
+  // Listen for Glider events to update button states
+  gliderElement.addEventListener('glider-animated', updateButtonState);
+  gliderElement.addEventListener('glider-loaded', updateButtonState);
+  gliderElement.addEventListener('glider-refresh', updateButtonState);
+
+  // Initial check after DOM is ready
+  setTimeout(updateButtonState, 100);
 };
 
 

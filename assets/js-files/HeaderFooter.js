@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight dropdown-items
     document.querySelectorAll(".dropdown-item").forEach((item) => {
       const href = item.getAttribute("href");
-      if (href && currentPath.includes(href)) {
+      if (href && currentPath ===href) {
         item.classList.add("active");
 
         const dropdown = item.closest(".dropdown");
