@@ -225,3 +225,8 @@ img {
   color: #fff !important;
   opacity: 1;
 }
+
+.glider-track{
+  display: flex;
+  gap: 15px;
+}

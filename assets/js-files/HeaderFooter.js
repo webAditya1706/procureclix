@@ -307,7 +307,7 @@ let FooterHTML = `
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <!-- <a href="/resources/blog/" class="footer_link">Blog</a> -->
-                                    <a href="/resources/blog" class="footer_link" target="_blank">Blog</a>
+                                    <a href="/resources/blog/" class="footer_link" target="_blank">Blog</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight dropdown-items
     document.querySelectorAll(".dropdown-item").forEach((item) => {
       const href = item.getAttribute("href");
-      if (href && currentPath ===href) {
+      if (href && currentPath.startsWith(href)) {
         item.classList.add("active");
 
         const dropdown = item.closest(".dropdown");
@@ -475,7 +475,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentPath = window.location.pathname;
 
       // Match base blog path for detail pages
-      if (href && currentPath.startsWith(href)) {
+      if (href && currentPath === href) {
         item.classList.add("active");
         return;
       }

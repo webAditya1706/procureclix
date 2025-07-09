@@ -1,4 +1,7 @@
 $(document).ready(() => {
+  $("#pagination_contener").empty();
+
+
   const API_URL = "https://procureclix.com/blog/wp-json/wp/v2/posts?_embed";
   const POSTS_PER_PAGE = 3;
   $("#blog-container").empty();
@@ -30,17 +33,17 @@ $(document).ready(() => {
             post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
             "https://via.placeholder.com/300x180";
 
-          const blogHTML = `
-            <div class="col-md-6 col-xl-4 mx-2">
-             <!-- <div class="blog__card" data-id="${post.id}"> --!>
-              <div class="blog__card" data-id="${post.slug}">
-                <img src="${imageUrl}" alt="Blog Image" class="mt-0" />
-                <div class="blog__card-content">
-                  <div class="blog__card-title">${post.title.rendered}</div>
-                  <div class="blog__card-text">${post.excerpt.rendered}</div>
-                </div>
-              </div>
-            </div>`;
+        const blogHTML = `
+  <div class="blog__card" data-id="${post.slug}">
+    <img src="${imageUrl}" alt="Blog Image" class="mt-0" />
+    <div class="blog__card-content">
+      <div class="blog__card-title">${post.title.rendered}</div>
+      <div class="blog__card-text">${post.excerpt.rendered}</div>
+    </div>
+  </div>
+`;
+
+
           $("#blog-container").append(blogHTML);
         });
         // if ($(".blog_carosal").hasClass("slick-initialized")) {
@@ -116,51 +119,68 @@ $(document).ready(() => {
   fetchBlogs(1);
 
   const loadCarosalSlider = () => {
-  const gliderElement = document.querySelector('.glider');
-  const prevButton = document.querySelector('.glider-prev');
-  const nextButton = document.querySelector('.glider-next');
+    $("#pagination_contener").append(
+      `
+             <button class="glider-prev position-static slick-prev"><div  class"mb-3">«</div></button>
+             <button class="glider-next position-static slick-next"><div class"mb-3">»</div></button>
+            `
+    );
+    const gliderElement = document.querySelector('.glider');
+    const prevButton = document.querySelector('.glider-prev');
+    const nextButton = document.querySelector('.glider-next');
 
-  const glider = new Glider(gliderElement, {
-    slidesToShow: 4,
-    draggable: true,
-    scrollLock: true,
-    arrows: {
-      prev: prevButton,
-      next: nextButton
-    },
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: { slidesToShow: 3 }
+    const glider = new Glider(document.querySelector('.glider'), {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      draggable: true,
+      dots: '#dots',
+      arrows: {
+        prev: '.glider-prev',
+        next: '.glider-next'
       },
-      {
-        breakpoint: 992,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 576,
-        settings: { slidesToShow: 1 }
-      }
-    ]
-  });
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
 
-  const updateButtonState = () => {
-    const scrollLeft = glider.scrollLeft;
-    const maxScrollLeft = glider.maxScrollLeft;
+    const updateButtonState = () => {
+      const scrollLeft = glider.scrollLeft;
+      const maxScrollLeft = glider.maxScrollLeft;
 
-    // Enable/Disable based on actual scroll position
-    prevButton.disabled = scrollLeft <= 0;
-    nextButton.disabled = scrollLeft >= maxScrollLeft;
+      // Enable/Disable based on actual scroll position
+      prevButton.disabled = scrollLeft <= 0;
+      nextButton.disabled = scrollLeft >= maxScrollLeft;
+    };
+
+    // Listen for Glider events to update button states
+    gliderElement.addEventListener('glider-animated', updateButtonState);
+    gliderElement.addEventListener('glider-loaded', updateButtonState);
+    gliderElement.addEventListener('glider-refresh', updateButtonState);
+
+    // Initial check after DOM is ready
+    setTimeout(updateButtonState, 100);
+
   };
-
-  // Listen for Glider events to update button states
-  gliderElement.addEventListener('glider-animated', updateButtonState);
-  gliderElement.addEventListener('glider-loaded', updateButtonState);
-  gliderElement.addEventListener('glider-refresh', updateButtonState);
-
-  // Initial check after DOM is ready
-  setTimeout(updateButtonState, 100);
-};
 
 
 });
