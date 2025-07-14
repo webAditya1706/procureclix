@@ -12,6 +12,18 @@ Redirect 301 /solutions/custom_solutions.html https://procureclix.com/solutions/
 Redirect 301 /solutions/contract_management.html https://procureclix.com/solutions/procurement-contract-management-software.html
 Redirect 301 /solutions/spend_analysis.html https://procureclix.com/solutions/procurement-spend-analysis-software.html
 Redirect 301 /solutions/purchase_requisition.html https://procureclix.com/solutions/purchase-requisition-software.html
+
+#services
+Redirect 301 /services/about-us.html https://procureclix.com/about-us.html
+
+
+
+# Redirect comingsoon (case-insensitive) to contact page
+Redirect 301 /comingsoon/index.html https://procureclix.com/contact-us.html
+Redirect 301 /comingSoon/index.html https://procureclix.com/contact-us.html
+RedirectMatch 301 (?i)^/comingsoon/index\.html$ https://procureclix.com/contact-us.html
+
+
 # Enable Rewrite Engine
 RewriteEngine On
 
@@ -27,14 +39,19 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 ErrorDocument 404 /404.html
 
 # Clean URLs for root-level pages
-RewriteRule ^about/?$ about.html [L]
+RewriteRule ^about/?$ about-us.html [L]
 RewriteRule ^services/?$ services.html [L]
 RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect both /comingsoon/index.html and /comingSoon/index.html (case-insensitive)
+RewriteRule ^comingsoon/index\.html$ https://procureclix.com/contact-us.html [R=301,NC,L]
 
 # Services URLs
 RewriteRule ^services/procurement-spend-analysis-services/?$ services/procurement-spend-analysis-services.html [L]
 RewriteRule ^services/rfp-managed-services/?$ services/rfp-managed-services.html [L]
 RewriteRule ^services/managed-reverse-auction-software-services/?$ services/managed-reverse-auction-software-services.html [L]
+RewriteRule ^services/about-us\.html$ /about-us.html [R=301,L]
 
 # Industries URLs
 RewriteRule ^industries/procurement-software-for-transport-logistics-industry/?$ industries/procurement-software-for-transport-logistics-industry.html [L]
@@ -55,6 +72,7 @@ RewriteRule ^solutions/custom-auction-procurement-software/?$ solutions/custom-a
 RewriteRule ^solutions/purchase-requisition-software/?$ solutions/purchase-requisition-software.html [L]
 RewriteRule ^solutions/best-supplier-management-software/?$ solutions/best-supplier-management-software.html [L]
 RewriteRule ^solutions/procurement-contract-management-software/?$ solutions/procurement-contract-management-software.html [L]
+
 
 
 
