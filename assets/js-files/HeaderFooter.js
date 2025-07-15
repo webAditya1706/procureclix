@@ -241,10 +241,10 @@ let FooterHTML = `
                                             class="microsoft_azure">
                                     </div>
                                 <div class="d-flex gap-3 flex-wrap mt-2">
-                                    <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon">
+                                    <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon mt-0">
                                         <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                     </a>
-                                    <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon">
+                                    <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon mt-0">
                                         <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                     </a>
                                 </div>
@@ -325,10 +325,10 @@ let FooterHTML = `
                                     class="microsoft_azure">
                             </div>
                             <div class="d-flex flex-row gap-3 flex-wrap mt-2">                                
-                                <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon">
+                                <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon mt-0">
                                     <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
                                 </a>
-                                <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon">
+                                <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon mt-0">
                                     <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
                                 </a>
                             </div>
