@@ -242,10 +242,10 @@ let FooterHTML = `
                                     </div>
                                 <div class="d-flex gap-3 flex-wrap mt-2">
                                     <a href="https://www.linkedin.com/company/procureclix/" target="_blank" class="footer_link footer_share_icon mt-0">
-                                        <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn">
+                                        <img src="/assets/icons/linkdin_icon.png" alt="LinkedIn" class="mt-0">
                                     </a>
                                     <a href="https://x.com/ProcureClix" target="_blank" class="footer_link footer_share_icon mt-0">
-                                        <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)">
+                                        <img src="/assets/icons/x-mas_icon.png" alt="X (Twitter)" class="mt-0">
                                     </a>
                                 </div>
                             </div>
@@ -479,6 +479,10 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("active");
         return;
       }
+       if(href.toLocaleLowerCase() === "/resources/blog/" && currentPath === "/resources/blog/blog-detail/"){
+        item.classList.add("active");
+        return;
+      }
     });
 
     // Highlight Contact-us-btn
@@ -487,6 +491,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("✌️href --->", href);
       if (href && currentPath === href) {
         item.classList.add("active");
+        return;
+      }
+      if(href.toLocaleLowerCase() === "/resources/blog/" && currentPath === "/resources/blog/blog-detail/"){
+        item.classList.add("active");
+        return;
       }
     });
 

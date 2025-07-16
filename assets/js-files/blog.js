@@ -2,17 +2,17 @@ $(document).ready(() => {
   $("#pagination_contener").empty();
 
 
-  const API_URL = "https://procureclix.com/blog/wp-json/wp/v2/posts?_embed";
   const POSTS_PER_PAGE = 3;
   $("#blog-container").empty();
   $("#blog-container").append(`
-  <div class="col-12">
+    <div class="col-12">
     <div class="book_loader">
-      <img src="/assets/images/ProcureClix-unscreen.gif" alt="ProcureClix-unscreen" srcset="/assets/images/ProcureClix-unscreen.gif">    
+    <img src="/assets/images/ProcureClix-unscreen.gif" alt="ProcureClix-unscreen" srcset="/assets/images/ProcureClix-unscreen.gif">    
     </div>
-  </div>
-`);
-
+    </div>
+    `);
+    
+    const API_URL = "https://procureclix.com/blog/wp-json/wp/v2/posts?_embed";
   function fetchBlogs(page = 1) {
     // showLoader();
     $.ajax({
@@ -38,7 +38,7 @@ $(document).ready(() => {
     <img src="${imageUrl}" alt="Blog Image" class="mt-0" />
     <div class="blog__card-content">
       <div class="blog__card-title">${post.title.rendered}</div>
-      <div class="blog__card-text">${post.excerpt.rendered}</div>
+      <div class="blog__card-text">${post.excerpt.rendered.substring(3, 300)}</div>
     </div>
   </div>
 `;
@@ -121,8 +121,8 @@ $(document).ready(() => {
   const loadCarosalSlider = () => {
     $("#pagination_contener").append(
       `
-             <button class="glider-prev position-static slick-prev"><div  class"mb-3">«</div></button>
-             <button class="glider-next position-static slick-next"><div class"mb-3">»</div></button>
+             <div type="button" class="glider-prev position-static slick-prev"><div  class"my-3">«</div></div>
+             <div type="button" class="glider-next position-static slick-next"><div class"my-3">»</div></div>
             `
     );
     const gliderElement = document.querySelector('.glider');

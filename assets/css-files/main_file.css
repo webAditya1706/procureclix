@@ -1365,6 +1365,16 @@ p {
   line-height: normal;
 }
 
+
+.dropdown .dropdown-menu .dropdown-item {
+  color: #131313;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .dropdown .dropdown-item:hover {
   color: #131313;
 }
