@@ -602,6 +602,21 @@ a {
   font-family: Poppins;
 }
 
+.text_primery__2 {
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  font-family: Poppins;
+}
+
 .active_text_click {
   text-decoration: none;
   background: var(
