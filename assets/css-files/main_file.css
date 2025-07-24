@@ -95,6 +95,27 @@ html {
   z-index: 1;
 }
 
+.ebbok_bootom_ring {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  z-index: 1;
+}
+
+.ebbok_bootom_right_ring {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.ebbok_top_right_ring {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  z-index: 1;
+}
+
 .benifit_dubble_ring {
   position: absolute;
   top: -52px;
@@ -1380,7 +1401,6 @@ p {
   line-height: normal;
 }
 
-
 .dropdown .dropdown-menu .dropdown-item {
   color: #131313;
   font-family: Poppins;
@@ -1928,11 +1948,10 @@ p {
 @media (max-width: 991.98px) {
   .nav-item .dropdown.active::after {
     /* display: none; */
-     width: 90px;
-        height: 10px;
+    width: 90px;
+    height: 10px;
   }
 
-  
   /* .nav-item .dropdown {
     text-align: center;
     display: flex;
@@ -2115,7 +2134,7 @@ p {
 /* loader css end */
 
 @media (max-width: 576px) {
-      /* .nav-item .dropdown.active::before {
+  /* .nav-item .dropdown.active::before {
         content: "";
         position: absolute;
         width: 56px;
@@ -2127,5 +2146,4 @@ p {
         background-position: center;
         background-size: contain;
     } */
-
 }
