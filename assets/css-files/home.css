@@ -59,6 +59,7 @@
   position: absolute;
   top: 0px;
   left: 0;
+  z-index: 1;
 }
 
 .services_ring_2 {
@@ -220,12 +221,21 @@
 
 .annual_report_img {
   /* max-width: 350px; */
-  height: 482px;
+  /* height: 550px; */
   width: 100%;
   flex-shrink: 0;
-  aspect-ratio: 171/241;
-  border-radius: 5px;
-  background: lightgray -118.286px -46.272px / 169.173% 120% no-repeat;
+  /* aspect-ratio: 171/241; */
+  /* border-radius: 5px; */
+  /* background: lightgray -118.286px -46.272px / 169.173% 120% no-repeat; */
+}
+
+.annual_report_img_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100% !important;
+  border-radius: 8px;
+background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
 }
 
 .book_Demo_container {
