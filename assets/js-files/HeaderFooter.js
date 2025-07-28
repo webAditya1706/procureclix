@@ -439,7 +439,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function highlightActiveLink() {
     const currentPath = window.location.pathname;
-    console.log("✌️currentPath --->", currentPath);
 
     // Highlight nav-links
     document.querySelectorAll(".nav-link").forEach((link) => {
@@ -466,6 +465,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const navItem = item.closest(".nav-item");
         if (navItem) navItem.classList.add("active");
+        return;
+      }
+
+     if(href?.toLowerCase() === "/resources/glossary.html" && currentPath.toLowerCase().includes("/resources/glossary/")){        
+        item.classList.add("active");
+
+        const dropdown = item.closest(".dropdown");
+        if (dropdown) dropdown.classList.add("active");
+
+        const navItem = item.closest(".nav-item");
+        if (navItem) navItem.classList.add("active");
+        return;
       }
     });
 
@@ -479,7 +490,16 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("active");
         return;
       }
-       if(href.toLocaleLowerCase() === "/resources/blog/" && currentPath === "/resources/blog/blog-detail/"){
+    //    if(href?.toLowerCase() === "/resources/glossary.html" && currentPath.toLowerCase().includes("/resources/glossary/")){
+    //     console.log("=================> glossary");
+        
+    //     item.classList.add("active");
+    //     return;
+    //   }
+
+      if(href?.toLowerCase() === "/resources/glossary.html" && currentPath.toLowerCase().includes("/resources/glossary/")){
+        console.log("=================> glossary");
+        
         item.classList.add("active");
         return;
       }
@@ -488,20 +508,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight Contact-us-btn
     document.querySelectorAll(".header_con_btn").forEach((item) => {
       const href = item.getAttribute("href");
-      console.log("✌️href --->", href);
       if (href && currentPath === href) {
         item.classList.add("active");
         return;
       }
-      if(href.toLocaleLowerCase() === "/resources/blog/" && currentPath === "/resources/blog/blog-detail/"){
-        item.classList.add("active");
-        return;
-      }
+    //   if(href.toLowerCase() === "/resources/blog/" && currentPath === "/resources/blog/blog-detail/"){
+    //     item.classList.add("active");
+    //     return;
+    //   }
     });
 
     setTimeout(() => {
-      // loaderElement.classList.add("d-none");
-      //   document.body.style.display = "block";
       document.documentElement.style.overflow = "auto";
     }, 1500);
   }
