@@ -69,8 +69,10 @@
             font-weight: 600;
         }
 
-        li {
-            margin-top: 10px;
+        .ul_list_style {
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
         }
     </style>
 </head>
@@ -137,7 +139,7 @@
                     <br />
 
                     <h6>Key Characteristics of an RFQ:</h6>
-                    <ul>
+                    <ul class="ul_list_style">
                         <li><strong>Price-Focused:</strong> The primary goal is to obtain competitive pricing.</li>
                         <li><strong>Specific Requirements:</strong> The goods or services are well-defined, with
                             detailed specifications, quantities, and delivery requirements.</li>
@@ -148,7 +150,7 @@
                     </ul>
 
                     <h6>When to Use an RFQ:</h6>
-                    <ul>
+                    <ul class="ul_list_style">
                         <li>When the specifications are clear and unambiguous.</li>
                         <li>When price is the main or only deciding factor.</li>
                         <li>For commodities, standard products, or repeat purchases.</li>

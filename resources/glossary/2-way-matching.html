@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-        RFP (Request For Proposal)
+        2 Way Matching
     </title>
     <meta name="description" content="e-Procurement" />
 
@@ -68,10 +68,9 @@
         strong {
             font-weight: 600;
         }
- .ul_list_style {
-           display: flex;
-           flex-direction: column;
-           gap: 10px;
+
+        .ul_list_style li {            
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -100,7 +99,7 @@
     <section class="resorse_banner_bg">
         <div class="container-fluid resourses_container">
             <div class="row text-center justify-content-center align-items-center">
-                <h3 class="text-light mb-2">RFP (Request For Proposal)</h3>
+                <h3 class="text-light mb-2">2 Way Matching</h3>
                 <a href="../glossary.html" class="d-flex flex-wrap gap-2 justify-content-center align-items-center">
                     <img src="/assets/images/resourses/back_arrow.png" alt="" srcset="" style="width: 14px" />
                     <p class="text-light">Back to Glossry</p>
@@ -115,50 +114,88 @@
         <div class="container-fluid resourses_container">
             <div class="row resources_white_card position-relative mb-4" id="letter_a">
                 <div class="col-md-1">
-                    <div class="bg_letter card_text" data-letter="R">
-                        <span class="text_style">R</span>
+                    <div class="bg_letter card_text" data-letter="T">
+                        <span class="text_style">T</span>
                     </div>
                     <div class="spacer_80"></div>
                 </div>
                 <div class="col-md-11">
                     <div class="spacer_30"></div>
                     <h5 class="fs_22_fw_700_c_1313 text-capitalize mb-4">
-                        RFP (Request For Proposal)
+                        2 Way Matching
                     </h5>
                     <p class="glossary_des_para">
-                        An <strong>RFP (Request for Proposal)</strong> in procurement is a formal document issued by an
-                        organization to solicit <strong>detailed proposals</strong> from suppliers or vendors for a
-                        <strong>specific project, product, or service</strong>. It is typically used when the
-                        organization has <strong>defined needs or requirements</strong>, but wants vendors to propose
-                        <strong>how</strong> they would meet those needs — including technical solutions, pricing,
-                        timelines, and qualifications.
+                        <strong>2-Way Matching</strong> in procurement refers to the process of comparing two key
+                        documents—usually the <strong>purchase order (PO)</strong> and the <strong>invoice</strong>—to
+                        ensure that the information aligns before making a payment to a supplier.
+                        This is one of the simplest and most common methods of invoice matching in procurement, helping
+                        organizations verify that the goods or services billed by the supplier match what was originally
+                        ordered.
                     </p>
-
 
                     <br />
 
-                    <h6>Key Characteristics of an RFP:</h6>
+                    <h6>The Two Documents in 2-Way Matching:</h6>
+                    <ol class="ul_list_style">
+                        <li><strong>Purchase Order (PO):</strong> This document is created by the buyer and outlines the
+                            details of the order, including quantities, prices, and delivery instructions. It is issued
+                            to the supplier before the goods or services are delivered.</li>
+                        <li><strong>Invoice:</strong> This document is submitted by the supplier after the goods or
+                            services are delivered, and it provides a request for payment based on the terms outlined in
+                            the purchase order.</li>
+                    </ol>
+
+                    <h6>The Matching Process:</h6>
                     <ul class="ul_list_style">
-                        <li><strong>Detailed Requirements</strong>: Describes the scope of work, specifications,
-                            evaluation criteria, and submission guidelines.</li>
-                        <li><strong>Competitive Process</strong>: Multiple vendors respond, and proposals are evaluated
-                            to select the best fit.</li>
-                        <li><strong>Binding Responses</strong>: Responses to RFPs are often legally binding once
-                            accepted.</li>
-                        <li><strong>Evaluation Criteria</strong>: Includes cost, technical approach, experience,
-                            delivery time, and value-added services.</li>
+                        <li>
+                            When the invoice is received, the accounts payable team will compare it to the purchase
+                            order to ensure that:
+                            <ol class="ul_list_style">
+                                <li><strong>The goods/services billed</strong> match what was ordered (the correct
+                                    items, quantities, and descriptions).</li>
+                                <li><strong>The prices</strong> on the invoice align with the prices specified in the
+                                    purchase order.</li>
+                                <li><strong>The total amount</strong> on the invoice is in line with the agreed-upon
+                                    price.</li>
+                            </ol>
+                        </li>
                     </ul>
 
-                    <h6>When to Use an RFP:</h6>
+                    <p class="mb-3">If the details in the PO and the invoice match, the payment can be processed. If there are
+                        discrepancies, such as incorrect pricing, quantities, or items, the issue will need to be
+                        resolved before payment is made.</p>
+
+                    <h6>Advantages of 2-Way Matching:</h6>
                     <ul class="ul_list_style">
-                        <li>When the project is complex or requires a customized solution.</li>
-                        <li>When qualitative factors (not just price) are important.</li>
-                        <li>When collaboration or long-term service is needed.</li>
+                        <li><strong>Simplicity:</strong> 2-way matching is straightforward and easy to implement, making
+                            it suitable for businesses with straightforward procurement processes.</li>
+                        <li><strong>Cost Control:</strong> By ensuring that suppliers are paid only for the goods and
+                            services ordered, this process helps prevent overpayment.</li>
+                        <li><strong>Prevents Fraud:</strong> 2-way matching can help detect fraudulent invoices or
+                            errors, ensuring that payment is made only for legitimate and correctly priced orders.</li>
+                        <li><strong>Efficiency:</strong> It speeds up the payment process by providing a clear reference
+                            between the purchase order and the supplier’s invoice.</li>
                     </ul>
+
+                    <h6>Limitations of 2-Way Matching:</h6>
+                    <ul class="ul_list_style">
+                        <li><strong>Doesn’t Account for Delivery:</strong> 2-way matching only checks the PO against the
+                            invoice and does not take into account whether the goods were actually delivered or received
+                            in good condition. This could be addressed by adding a third document (the receipt) for
+                            <strong>3-Way Matching</strong>.</li>
+                        <li><strong>Manual Errors:</strong> If the purchase order or the invoice is incorrect, there may
+                            be delays in the payment process as discrepancies need to be resolved.</li>
+                    </ul>
+
+                    <p>In summary, <strong>2-Way Matching</strong> is an essential part of the procurement process that
+                        ensures the company pays for exactly what was ordered, helping to maintain accuracy, control
+                        costs, and prevent errors or fraud in the accounts payable process.</p>
+
 
                 </div>
             </div>
         </div>
+
     </section>
 
     <div class="spacer_100"></div>

@@ -321,6 +321,10 @@
 
 /* loader end */
 
+.ul_list_style li {
+  margin-top: 10px;
+}
+
 .resorse_banner_bg {
   width: 100%;
   min-height: 400px;
@@ -819,12 +823,12 @@
   display: none;
 }
 
-.border_bottom_rounded{
+.border_bottom_rounded {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.scroll-x-wrapper{
+.scroll-x-wrapper {
   overflow-x: auto;
 }
 
@@ -833,16 +837,16 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-   .pricing_table .fs_20_fw_700_c_1313 {
+  .pricing_table .fs_20_fw_700_c_1313 {
     font-size: 14px;
   }
-  .pricing_table .fs_18_fw_700_c_linear{
+  .pricing_table .fs_18_fw_700_c_linear {
     font-size: 14px;
   }
-  .pricing_table .fs_15_fw_500_c_1313{
+  .pricing_table .fs_15_fw_500_c_1313 {
     font-size: 12px;
   }
-  .pricing_table .pricing_sales_btn{
+  .pricing_table .pricing_sales_btn {
     font-size: 12px;
     padding: 10px;
   }
@@ -860,11 +864,11 @@
     display: flex;
     flex-direction: row;
   }
-  
-.border_bottom_rounded{
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
+
+  .border_bottom_rounded {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }
 
 @media (min-width: 1440px) {
