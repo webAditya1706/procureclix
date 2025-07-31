@@ -133,7 +133,7 @@
       <!-- letter row -->
       <div class="row">
         <div class="letter_graph d-flex flex-wrap gap-2">
-          <button class="btn primery_bg_box border-0" onclick="scrollToSection('letter_hash')">
+          <button class="btn white_bg_box primery_bg_box" onclick="scrollToSection('letter_hash')">
             #
           </button>
           <button class="btn white_bg_box" onclick="scrollToSection('letter_a')">
@@ -763,7 +763,7 @@
               <h4 class="mb-0 fs_18_fw_600_background under_line">
                 Sourcing
               </h4>
-              <a type="button" href="/comingsoon/" class="arrow_120_bg"><img src="/assets/icons/arrow_120.png"
+              <a type="button" href="./glossary/sourcing.html" class="arrow_120_bg"><img src="/assets/icons/arrow_120.png"
                   alt="Go" />
               </a>
             </div>
@@ -938,22 +938,37 @@
   <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    function scrollToSection(sectionId, offset = 80) {
-      const target = document.getElementById(sectionId);
-      if (target) {
-        const elementPosition =
-          target.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - offset;
+  function scrollToSection(sectionId, offset = 80) {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      const elementPosition = target.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      } else {
-        console.warn(`Element with ID '${sectionId}' not found.`);
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      // Highlight the clicked button
+      const buttons = document.querySelectorAll(".letter_graph .btn");
+      buttons.forEach((btn) => btn.classList.remove("primery_bg_box"));
+
+      // Add class to the active button
+      const activeButton = Array.from(buttons).find(btn =>
+        btn.getAttribute("onclick")?.includes(`'${sectionId}'`)
+      );
+      if (activeButton) {
+        activeButton.classList.add("primery_bg_box");
       }
+
+      // Log clicked section ID (optional)
+      console.log("Navigated to:", sectionId);
+    } else {
+      console.warn(`Element with ID '${sectionId}' not found.`);
     }
-  </script>
+  }
+</script>
+
 </body>
 
 </html>

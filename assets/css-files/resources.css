@@ -408,16 +408,12 @@
   gap: 8px;
 }
 
-.primery_bg_box:hover {
-  color: #fff;
-}
-
 .primery_bg_box {
   border-radius: 2px;
   background: var(
     --Gradient,
     linear-gradient(180deg, #004263 0%, #0086c9 100%)
-  );
+  ) !important;
   width: 25px;
   height: 25px;
   flex-shrink: 0;
@@ -427,7 +423,7 @@
   align-items: center;
 
   /* text style */
-  color: var(--White, #fff);
+  color: var(--White, #fff) !important;
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
