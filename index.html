@@ -50,6 +50,7 @@
 
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css-files/main_file.css">
+    <link rel="stylesheet" href="./assets/css-files/client_say.css">
     <link rel="stylesheet" href="./assets/css-files/home.css">
     <link rel="stylesheet" href="./assets/css-files/custom.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -65,7 +66,8 @@
     <!-- AOS style link -->
     <link rel="stylesheet" href="/assets/css-files/AOS.css">
 
-
+    <!-- silk slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 </head>
 
@@ -2054,6 +2056,92 @@
         </div>
     </section>
 
+    <!-- some of our client -->
+    <div class="spacer_80"></div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="d-flex gap-2 justify-content-center">
+                    <img src="./assets/icons/building_icon.png" class="w_12h_16" alt="">
+                    <h4 class="fs_20_fw_500_background">Some of our clients</h4>
+                </div>
+                <div class="spacer_40"></div>
+                <div class="col-12">
+                    <div class="client_carosal" id="client_carosal">
+                        <div class="d-flex justify-content-center align-content-center">
+                            <img src="/assets/images/home/image_30.png" alt="" class="fst_img">
+                        </div>
+                        <div class="d-flex justify-content-center align-content-center">
+                            <img src="/assets/images/home/image_31.png" alt="" class="scnd_img">
+                        </div>
+                        <div class="d-flex justify-content-center align-content-center">
+                            <img src="/assets/images/home/image_32.png" class="thrd_img" alt="">
+                        </div>
+
+                        <div class="d-flex justify-content-center align-content-center">
+                            <img src="/assets/images/home/image_35.png" alt="" class="frth_img">
+                        </div>
+                        <div class="d-flex justify-content-center align-content-center">
+                            <img src="/assets/images/home/image_34.png" alt="" class="fvth_img">
+                        </div>
+                        <div class="d-flex justify-content-center align-content-center">
+                            <img src="/assets/images/home/image_31.png" alt="" class="sixth_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer_90"></div>
+
+                <h2 class="client_say_heading">“ What our clients say about us “</h2>
+                <div class="spacer_50"></div>
+                <div class="col-12">
+
+                    <div class="testimonial-slider">
+                        <div class="testimonial-card">
+                            <div class="position-relative">
+                                <div class="quote-icon-left">
+                                    <img src="./assets/images/home/Vector.png" alt="" srcset="">
+                                    <img src="./assets/images/home/Vector.png" alt="" srcset="">
+                                </div>
+                                <p class="testimonial-text">
+                                    ProcureClix molds to your procurement workflow, not the other way around.<br>
+                                    ProcureClix molds to your procurement workflow, not the other way around.<br>
+                                    ProcureClix molds to your procurement...
+                                </p>
+                                <div class="quote-icon-right">
+                                    <img src="./assets/images/home/Vector_(1).png" alt="" srcset="">
+                                    <img src="./assets/images/home/Vector_(1).png" alt="" srcset="">
+                                </div>
+                                <div class="testimonial-name">Callum Elizabeth</div>
+                                <div class="testimonial-company">~ XYZ Company</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="quote-icon-left">
+                                <img src="./assets/images/home/Vector.png" alt="" srcset="">
+                                <img src="./assets/images/home/Vector.png" alt="" srcset="">
+                            </div>
+                            <p class="testimonial-text">
+                                ProcureClix molds to your procurement workflow, not the other way around.<br>
+                                ProcureClix molds to your procurement workflow, not the other way around.<br>
+                                ProcureClix molds to your procurement...
+                            </p>
+                            <div class="quote-icon-right">
+                                <img src="./assets/images/home/Vector_(1).png" alt="" srcset="">
+                                <img src="./assets/images/home/Vector_(1).png" alt="" srcset="">
+
+                            </div>
+                            <div class="testimonial-name">Callum Elizabeth</div>
+                            <div class="testimonial-company">~ XYZ Company</div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- spacer -->
     <div class="spacer_60"></div>
 
@@ -2267,6 +2355,8 @@
     <script src="./assets/js-files/HeaderFooter.js"></script>
     <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js-files/comman_js.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- AOS script -->
     <script src="/assets/js-files/AOS.js"></script>
@@ -2278,6 +2368,59 @@
         });
 
     </script>
+
+    <script>
+        $('.client_carosal').slick({
+            arrows: false,         // Disable arrows
+            dots: false,           // Disable dots
+            infinite: true,        // Enable infinite loop
+            speed: 500,            // Transition speed
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,        // Enable autoplay
+            autoplaySpeed: 2000,   // Delay between slides (in ms)
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+
+    </script>
+
+
+    <script>
+        $('.testimonial-slider').slick({
+            arrows: false,
+            dots: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 600,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true
+        });
+    </script>
+
 </body>
 
 </html>
