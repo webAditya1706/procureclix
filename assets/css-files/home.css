@@ -4,8 +4,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
-  min-height: 80vh;
-  padding-bottom: 250px;
+  /* min-height: 80vh; */
+  height: auto;
+  padding-bottom: 350px;
 }
 
 .industry_stats_bg {
@@ -235,7 +236,10 @@
   align-items: center;
   height: 100% !important;
   border-radius: 8px;
-background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #004263 0%, #0086c9 100%)
+  );
 }
 
 .book_Demo_container {
@@ -351,7 +355,14 @@ background: var(--Gradient, linear-gradient(180deg, #004263 0%, #0086C9 100%));
   }
 }
 /* For screens larger than 1500px */
-@media (min-width: 768px) {
+
+@media (max-width: 767.5px) {
+   .banner_bg_img {
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 768px) { 
+
   .hero_img_style {
     bottom: -50px;
   }

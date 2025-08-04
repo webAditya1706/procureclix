@@ -339,7 +339,7 @@ let FooterHTML = `
                         <hr class="active_hr">
                     </div>
 
-                    <div class="row pb-5">
+                    <div class="row pb-5 g-5">
                         <!-- mobile no. -->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
