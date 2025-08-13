@@ -1,3 +1,8 @@
+php_value upload_max_filesize 512M
+php_value post_max_size 512M
+php_value max_execution_time 600
+php_value max_input_time 600
+
 # Industries URLs
 Redirect 301 /industries/automotive.html https://procureclix.com/industries/procurement-software-for-automotive-companies.html
 Redirect 301 /industries/food_beverage.html https://procureclix.com/industries/procurement-software-for-food-beverage-industry.html
@@ -43,9 +48,12 @@ RewriteRule ^about/?$ about-us.html [L]
 RewriteRule ^services/?$ services.html [L]
 RewriteRule ^contact/?$ contact.html [L]
 RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^comingsoon/$ / [R=301,NC,L]
 
 # Redirect both /comingsoon/index.html and /comingSoon/index.html (case-insensitive)
 RewriteRule ^comingsoon/index\.html$ https://procureclix.com/contact-us.html [R=301,NC,L]
+
+
 
 # Services URLs
 RewriteRule ^services/procurement-spend-analysis-services/?$ services/procurement-spend-analysis-services.html [L]
