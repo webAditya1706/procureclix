@@ -606,6 +606,10 @@ a {
 .w_20 {
   width: 20px;
 }
+
+.h_20{
+  height: 20px;
+}
 /* font size */
 .text_primery {
   background: var(
