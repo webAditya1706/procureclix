@@ -79,7 +79,7 @@ let HeaderHTML = `
                             <a class="nav-link dropdown-toggle" href="/resources/index.html"
                                 data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/blog/">Blog</a></li>
+                                <li><a class="dropdown-item" href="/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
@@ -188,7 +188,7 @@ let HeaderHTML = `
                             <button class="nav-link dropdown-toggle" type="button"
                                 data-bs-toggle="dropdown">Resources</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/blog/">Blog</a></li>
+                                <li><a class="dropdown-item" href="/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>                               
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
@@ -306,8 +306,9 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Resources</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <!-- <a href="https://procureclix.com/blog/" class="footer_link">Blog</a> -->
-                                    <a href="/blog/" class="footer_link">Blog</a>
+                                    <!-- <a href="/blog/" class="footer_link">Blog</a> -->
+                                    <a href="/blog/" class="footer_link" 
+                                           >Blog</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>                                   
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
@@ -371,7 +372,7 @@ let FooterHTML = `
                                     <img src="/assets/icons/white_map_marker.png" loading="lazy" alt="white_phone"
                                         style="width: 18px; height: 24px;">
                                 </div>
-                                <span class="footer_link fs_16_fw_400_c_1313">199 Jericho Turnpike, Floral Park, NY
+                                <span class="footer_link fs_16_fw_400_c_1313">199 Jericho Turnpike, Suite # 201, Floral Park, NY
                                     11001</span>
                             </div>
                         </div>
@@ -512,6 +513,10 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.add("active");
         return;
       }
+    //   if(href.toLowerCase() === "/blog/    " && currentPath === "/blog/    blog-detail/"){
+    //     item.classList.add("active");
+    //     return;
+    //   }
     });
 
     setTimeout(() => {
