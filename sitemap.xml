@@ -18,6 +18,13 @@
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
+   
+<url>
+      <loc>https://procureclix.com/blog</loc>
+      <lastmod>2025-05-02</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
 <url>
       <loc>https://procureclix.com/about-us.html</loc>
       <lastmod>2025-05-02</lastmod>
@@ -122,6 +129,21 @@
 </url>
 <url>
   <loc>https://procureclix.com/resources/integration.html</loc>
+  <lastmod>2025-08-21T08:11:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://procureclix.com/resources/guide.html</loc>
+  <lastmod>2025-08-21T08:11:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://procureclix.com/resources/glossary.html</loc>
+  <lastmod>2025-08-21T08:11:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://procureclix.com/resources/procurement-conferences.html</loc>
   <lastmod>2025-08-21T08:11:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
