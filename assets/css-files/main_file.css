@@ -334,9 +334,9 @@ a {
 }
 
 .img_outer_shadow {
-  border-radius: 10px;
+  border-radius: 15px;
   background: #d9d9d9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); */
   width: 100%;
   margin: 0;
   padding: 0;
@@ -1588,6 +1588,10 @@ p {
   /* font-weight: bold; */
 }
 
+.img_round_10{
+  border-radius: 10px;
+}
+
 /* Change the icon to minus when expanded */
 .accordion-button:not(.collapsed) .icon {
   content: "-";
@@ -1882,6 +1886,14 @@ p {
 
 .radious_10 {
   border-radius: 10px;
+}
+
+.radious_12 {
+  border-radius: 12px;
+}
+
+.radious_15 {
+  border-radius: 15px;
 }
 
 .radious_30 {
