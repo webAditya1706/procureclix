@@ -109,7 +109,7 @@ let HeaderHTML = `
     <div class="container-fluid d-block d-lg-none">
         <div class="d-flex justify-content-between align-items-center py-2">
             <a class="navbar-brand" href="/index.html">
-                <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="">
+                <img src="/assets/images/Logo_ProcureClix.png" class="w_150" alt="Logo_ProcureClix">
             </a>
             <i class="bi bi-three-dots-vertical drawer_icon" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"></i>
