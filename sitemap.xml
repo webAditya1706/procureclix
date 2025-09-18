@@ -6,6 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
 <url>
   <loc>https://procureclix.com/</loc>
   <lastmod>2025-08-21T08:04:07+00:00</lastmod>
@@ -128,16 +129,6 @@
 </url>
 <url>
   <loc>https://procureclix.com/resources/integration.html</loc>
-  <lastmod>2025-08-21T08:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://procureclix.com/resources/guide.html</loc>
-  <lastmod>2025-08-21T08:11:45+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://procureclix.com/resources/glossary.html</loc>
   <lastmod>2025-08-21T08:11:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>

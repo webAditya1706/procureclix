@@ -1,3 +1,7 @@
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
 php_value upload_max_filesize 512M
 php_value post_max_size 512M
 php_value max_execution_time 600
@@ -49,6 +53,10 @@ RewriteRule ^services/?$ services.html [L]
 RewriteRule ^contact/?$ contact.html [L]
 RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^comingsoon/$ / [R=301,NC,L]
+
+# Redirect from procureclick.com to procureclix.com
+RewriteCond %{HTTP_HOST} ^procureclick\.com$ [NC]
+RewriteRule ^(.*)$ https://procureclix.com/$1 [L,R=301]
 
 # Redirect both /comingsoon/index.html and /comingSoon/index.html (case-insensitive)
 RewriteRule ^comingsoon/index\.html$ https://procureclix.com/contact-us.html [R=301,NC,L]

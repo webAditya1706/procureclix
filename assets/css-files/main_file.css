@@ -1896,6 +1896,10 @@ p {
   border-radius: 15px;
 }
 
+.long_img_radious{
+  border-radius: 18px;
+}
+
 .radious_30 {
   border-radius: 30px !important;
 }
