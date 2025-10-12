@@ -416,9 +416,83 @@ let FooterHTML = `
                 </div>
             </div>
         </div>
-    </footer>
+    </footer><input type="hidden" id="externalSource" name="externalSource"/>
 `;
+window.addEventListener("load", function() {
 
+    const pageMap = {
+  "/": "Homepage",
+  "/index.html": "Homepage",
+  "/services/procurement-spend-analysis-services.html": "Spend Analysis",
+  "/services/rfp-managed-services.html": "Managed RFX | RFQ | RFP",
+  "/services/managed-reverse-auction-software-services.html": "Managed Reverse Auctions",
+  "/industries/procurement-software-for-transport-logistics-industry.html": "Logistics",
+  "/industries/procurement-software-for-healthcare-industry.html": "Healthcare",
+  "/industries/procurement-software-for-automotive-companies.html": "Automotive",
+  "/industries/procurement-software-for-manufacturing-industry.html": "Manufacturing",
+  "/industries/procurement-software-for-food-beverage-industry.html": "Food & Beverage",
+  "/industries/procurement-software-for-biotech-pharma.html": "BioTech & Pharma",
+  "/industries/procurement-software-for-energy-brokers-suppliers.html": "Energy Brokers & Suppliers",
+  "/industries/construction-&-real-estate-procurement-software.html": "Construction & Real Estate",
+  "/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html": "RFP | RFI | RFQ",
+  "/solutions/procurement-spend-analysis-software.html" : "Solutions | Spend Analysis",
+  "/solutions/best-reverse-auction-software.html" : "Reverse Auction",
+  "/solutions/custom-auction-procurement-software.html" : "Custom Solutions",
+  "/solutions/purchase-requisition-software.html" : "Purchase Requisition",
+  "/solutions/best-supplier-management-software.html" : "Supplier Management",
+  "/solutions/procurement-contract-management-software.html" : "Contract Management",
+  "/blog/" : "Blog",
+  "/resources/integration.html" : "Integration",
+  "/resources/guide.html" : "Procurement Guide",
+  "/resources/glossary.html" : "Procurement Glossary",
+  "/resources/procurement-conferences.html":"Procurement Conferences",
+  "/about-us.html":"About Us",
+  "/procurement-software-pricing.html":"Pricing",
+  "/contact-us.html":"Direct"
+  
+};
+ 
+    var externalSource = sessionStorage.getItem("externalSource") || "";
+
+  // Agar pehle se stored nahi hai, tab check karo
+  if (!externalSource) {
+    var ref = document.referrer || "";
+
+    if (ref) {
+      try {
+        const url = new URL(ref);
+        const path = url.pathname;
+        const host = url.hostname;
+
+        const isInternal = host.includes("procureclix.com");
+        const inPageMap = !!pageMap[path];
+
+        if (!isInternal || (!inPageMap && path !== "/")) {
+          if (ref.includes("t.co")) externalSource = "Twitter";
+          else if (ref.includes("linkedin.com")) externalSource = "LinkedIn";
+          else if (ref.includes("facebook.com")) externalSource = "Facebook";
+          else if (ref.includes("google.")) externalSource = "Google";
+          else externalSource = ref;
+        } else {
+          externalSource = "";
+        }
+      } catch (e) {
+        externalSource = "";
+      }
+    } else {
+      externalSource = "";
+    }
+
+    // First visit se sessionStorage me store kar do
+    sessionStorage.setItem("externalSource", externalSource);
+  }
+console.log("externalSource="+externalSource);
+  // Input field me set kar do
+  var field = document.getElementById("externalSource");
+  if (field) field.value = externalSource;
+
+ // alert("Detected source: " + externalSource);
+});
 document.addEventListener("DOMContentLoaded", function () {
   const headerContainer = document.getElementById("header-placeholder");
   const footerContainer = document.getElementById("footer_wrapper");
