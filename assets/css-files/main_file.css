@@ -1145,7 +1145,7 @@ a {
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  line-height: 20px; /* 111.111% */
+  line-height: 25px; /* 111.111% */
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
