@@ -64,6 +64,7 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
                                         Solutions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a></li>
                                 <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
                                         Requisition</a></li>
                                 <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
@@ -174,6 +175,7 @@ let HeaderHTML = `
                                 </li>
                                 <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
                                         Solutions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a></li>
                                 <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
                                         Requisition</a></li>
                                 <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
@@ -293,6 +295,8 @@ let FooterHTML = `
                                 <a href="/solutions/procurement-spend-analysis-software.html" class="footer_link">Spend Analysis</a>
                                 <a href="/solutions/best-reverse-auction-software.html" class="footer_link">Reverse Auction</a>
                                 <a href="/solutions/custom-auction-procurement-software.html" class="footer_link">Custom Solutions</a>
+                                <a class="footer_link" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a>
+
                                     <a href="/solutions/purchase-requisition-software.html" class="footer_link">Purchase
                                         Requisition</a>
                                         <a href="/solutions/best-supplier-management-software.html" class="footer_link">Supplier
