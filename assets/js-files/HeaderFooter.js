@@ -510,6 +510,7 @@ window.addEventListener("load", function () {
 
     // alert("Detected source: " + externalSource);
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const headerContainer = document.getElementById("header-placeholder");
     const footerContainer = document.getElementById("footer_wrapper");
@@ -573,6 +574,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (navItem) navItem.classList.add("active");
                 return;
             }
+
+             if (
+                href?.toLowerCase() === "/resources/whitepapers.html" &&
+                currentPath.toLowerCase().includes("/resources/whitepapers/")
+            ) {
+                item.classList.add("active");
+
+                const dropdown = item.closest(".dropdown");
+                if (dropdown) dropdown.classList.add("active");
+
+                const navItem = item.closest(".nav-item");
+                if (navItem) navItem.classList.add("active");
+                return;
+            }
         });
 
         // Highlight dropdown-items
@@ -585,19 +600,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.classList.add("active");
                 return;
             }
-            //    if(href?.toLowerCase() === "/resources/glossary.html" && currentPath.toLowerCase().includes("/resources/glossary/")){
-            //     console.log("=================> glossary");
-
-            //     item.classList.add("active");
-            //     return;
-            //   }
 
             if (
                 href?.toLowerCase() === "/resources/glossary.html" &&
                 currentPath.toLowerCase().includes("/resources/glossary/")
             ) {
-                console.log("=================> glossary");
-
+                item.classList.add("active");
+                return;
+            }
+            if (
+                href?.toLowerCase() === "/resources/whitepapers.html" &&
+                currentPath.toLowerCase().includes("/resources/whitepapers/")
+            ) {
                 item.classList.add("active");
                 return;
             }
