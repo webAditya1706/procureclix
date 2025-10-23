@@ -828,6 +828,11 @@
   overflow-x: auto;
 }
 
+.img_box_shadow{
+  box-shadow: 0px 4px 40px 1px #00000021;
+
+}
+
 @media (max-width: 1024px) {
   .resourses_container {
     padding-left: 20px;
