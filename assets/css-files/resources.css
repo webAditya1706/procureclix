@@ -851,6 +851,13 @@
 
 }
 
+.row_bg{
+      border-radius: 8px;
+    background: #eefaff;
+    position: relative;
+    overflow: hidden;
+}
+
 @media (max-width: 1024px) {
   .resourses_container {
     padding-left: 20px;
