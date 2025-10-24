@@ -194,7 +194,7 @@ let HeaderHTML = `
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/blog">Blog</a></li>
                                 <li><a class="dropdown-item" href="/resources/integration.html">Integration</a></li>
-                                <li><a class="dropdown-item" href="/resources/casestudies.html">Case Studied</a></li>
+                                <li><a class="dropdown-item" href="/resources/casestudies.html">Case Studies</a></li>
                                 <li><a class="dropdown-item" href="/resources/whitepapers.html">Whitepapers</a></li>
                                 <li><a class="dropdown-item" href="/resources/guide.html">Procurement
                                         Guide</a></li>
@@ -318,7 +318,7 @@ let FooterHTML = `
                                     <a href="/blog/" class="footer_link" 
                                            >Blog</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>
-                                    <a href="/resources/casestudies.html" class="footer_link">Case Studied</a>
+                                    <a href="/resources/casestudies.html" class="footer_link">Case Studies</a>
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
                                     <a href="/resources/glossary.html" class="footer_link">Procurement
