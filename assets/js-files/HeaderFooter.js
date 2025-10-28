@@ -563,6 +563,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            // active glossary
             if (
                 href?.toLowerCase() === "/resources/glossary.html" &&
                 currentPath.toLowerCase().includes("/resources/glossary/")
@@ -577,7 +578,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-             if (
+             // active glossary
+            if (
+                href?.toLowerCase() === "/resources/casestudies.html" &&
+                currentPath.toLowerCase().includes("/resources/casestudies/")
+            ) {
+                item.classList.add("active");
+
+                const dropdown = item.closest(".dropdown");
+                if (dropdown) dropdown.classList.add("active");
+
+                const navItem = item.closest(".nav-item");
+                if (navItem) navItem.classList.add("active");
+                return;
+            }
+            
+            // active whitepapers
+            if (
                 href?.toLowerCase() === "/resources/whitepapers.html" &&
                 currentPath.toLowerCase().includes("/resources/whitepapers/")
             ) {
@@ -602,7 +619,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.classList.add("active");
                 return;
             }
-
+            // active glossary
             if (
                 href?.toLowerCase() === "/resources/glossary.html" &&
                 currentPath.toLowerCase().includes("/resources/glossary/")
@@ -610,6 +627,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.classList.add("active");
                 return;
             }
+
+            // active casestudies
+            if (
+                href?.toLowerCase() === "/resources/casestudies.html" &&
+                currentPath.toLowerCase().includes("/resources/casestudies/")
+            ) {
+                item.classList.add("active");
+                return;
+            }
+            // active whitepapers
             if (
                 href?.toLowerCase() === "/resources/whitepapers.html" &&
                 currentPath.toLowerCase().includes("/resources/whitepapers/")
@@ -617,6 +644,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.classList.add("active");
                 return;
             }
+
         });
 
         // Highlight Contact-us-btn
