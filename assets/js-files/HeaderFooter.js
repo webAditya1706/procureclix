@@ -351,7 +351,7 @@ let FooterHTML = `
 
                     <div class="row pb-5 g-5">
                         <!-- mobile no. -->
-                        <div class="col-12 col-sm-6 col-md-3">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
                                     <img src="/assets/icons/white_phone.png" style="width: 16px; height: 24px;"
@@ -362,7 +362,7 @@ let FooterHTML = `
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-6 col-md-3">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <!-- MAil id -->
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
@@ -374,7 +374,7 @@ let FooterHTML = `
                             </div>
                         </div>
 
-                        <!-- Address -->
+                        <!-- Address 
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
@@ -385,9 +385,9 @@ let FooterHTML = `
                                     11001</span>
                             </div>
                         </div>
-
+-->
                         <!-- available country -->
-                        <div class="col-12 col-sm-6 col-md-3">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <div class="d-flex flex-column justify-content-center gap-2 text-center">
                                 <div class="footer_gradientt_circle m-auto">
                                     <img src="/assets/icons/white_glob.png" loading="lazy" alt="white_phone"
