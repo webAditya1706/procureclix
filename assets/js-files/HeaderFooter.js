@@ -319,6 +319,7 @@ let FooterHTML = `
                                            >Blog</a>
                                     <a href="/resources/integration.html" class="footer_link">Integration</a>
                                     <a href="/resources/casestudies.html" class="footer_link">Case Studies</a>
+                                    <a href="/resources/whitepapers.html" class="footer_link">Whitepapers</a>
                                     <a href="/resources/guide.html" class="footer_link">Procurement
                                         Guide</a>
                                     <a href="/resources/glossary.html" class="footer_link">Procurement
