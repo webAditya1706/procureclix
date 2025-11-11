@@ -14,17 +14,25 @@ let HeaderHTML = `
                         </div>
                     </li>
 
-                    <li class="nav-item position-relative">
+                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="/services/index.html"
-                                data-bs-toggle="dropdown">Services</a>
+                            <a class="nav-link dropdown-toggle" href="/solutions/index.html"
+                                data-bs-toggle="dropdown">Solutions</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/services/procurement-spend-analysis-services.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html">RFP | RFI | RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procurement-spend-analysis-software.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/services/rfp-managed-services.html">Managed RFX | RFQ
-                                        | RFP</a></li>
-                                <li><a class="dropdown-item" href="/services/managed-reverse-auction-software-services.html">Managed
-                                        Reverse Auctions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-reverse-auction-software.html">Reverse Auction</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
+                                        Solutions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a></li>
+                                <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
+                                        Requisition</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
+                                        Management</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procurement-contract-management-software.html">Contract
+                                        Management</a></li>
                             </ul>
                         </div>
                     </li>
@@ -54,27 +62,19 @@ let HeaderHTML = `
 
                     <li class="nav-item position-relative">
                         <div class="dropdown">
-                            <a class="nav-link dropdown-toggle" href="/solutions/index.html"
-                                data-bs-toggle="dropdown">Solutions</a>
+                            <a class="nav-link dropdown-toggle" href="/services/index.html"
+                                data-bs-toggle="dropdown">Services</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html">RFP | RFI | RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/procurement-spend-analysis-software.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/services/procurement-spend-analysis-services.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/solutions/best-reverse-auction-software.html">Reverse Auction</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
-                                        Solutions</a></li>
-                                <li><a class="dropdown-item" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a></li>
-                                <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
-                                        Requisition</a></li>
-                                <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
-                                        Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/procurement-contract-management-software.html">Contract
-                                        Management</a></li>
+                                <li><a class="dropdown-item" href="/services/rfp-managed-services.html">Managed RFX | RFQ
+                                        | RFP</a></li>
+                                <li><a class="dropdown-item" href="/services/managed-reverse-auction-software-services.html">Managed
+                                        Reverse Auctions</a></li>
                             </ul>
                         </div>
-                    </li>
-
+                    </li>                    
+                   
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <a class="nav-link dropdown-toggle" href="/resources/index.html"
@@ -126,20 +126,30 @@ let HeaderHTML = `
                             <a class="nav-link" href="/">Home</a>
                         </div>
                     </li>
+
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <button class="nav-link dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown">Services</button>
+                                data-bs-toggle="dropdown">Solutions</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/services/procurement-spend-analysis-services.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html">RFP | RFI | RFQ</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procurement-spend-analysis-software.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/services/rfp-managed-services.html">Managed RFX | RFQ
-                                        | RFP</a></li>
-                                <li><a class="dropdown-item" href="/services/managed-reverse-auction-software-services.html">Managed
-                                        Reverse Auctions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-reverse-auction-software.html">Reverse Auction</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
+                                        Solutions</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a></li>
+                                <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
+                                        Requisition</a></li>
+                                <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
+                                        Management</a></li>
+                                <li><a class="dropdown-item" href="/solutions/procurement-contract-management-software.html">Contract
+                                        Management</a></li>
                             </ul>
                         </div>
                     </li>
+
 
                     <li class="nav-item position-relative">
                         <div class="dropdown">
@@ -164,28 +174,22 @@ let HeaderHTML = `
                         </div>
                     </li>
 
+                    
                     <li class="nav-item position-relative">
                         <div class="dropdown">
                             <button class="nav-link dropdown-toggle" type="button"
-                                data-bs-toggle="dropdown">Solutions</button>
+                                data-bs-toggle="dropdown">Services</button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html">RFP | RFI | RFQ</a></li>
-                                <li><a class="dropdown-item" href="/solutions/procurement-spend-analysis-software.html">Spend Analysis</a>
+                                <li><a class="dropdown-item" href="/services/procurement-spend-analysis-services.html">Spend Analysis</a>
                                 </li>
-                                <li><a class="dropdown-item" href="/solutions/best-reverse-auction-software.html">Reverse Auction</a>
-                                </li>
-                                <li><a class="dropdown-item" href="/solutions/custom-auction-procurement-software.html">Custom
-                                        Solutions</a></li>
-                                <li><a class="dropdown-item" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a></li>
-                                <li><a class="dropdown-item" href="/solutions/purchase-requisition-software.html">Purchase
-                                        Requisition</a></li>
-                                <li><a class="dropdown-item" href="/solutions/best-supplier-management-software.html">Supplier
-                                        Management</a></li>
-                                <li><a class="dropdown-item" href="/solutions/procurement-contract-management-software.html">Contract
-                                        Management</a></li>
+                                <li><a class="dropdown-item" href="/services/rfp-managed-services.html">Managed RFX | RFQ
+                                        | RFP</a></li>
+                                <li><a class="dropdown-item" href="/services/managed-reverse-auction-software-services.html">Managed
+                                        Reverse Auctions</a></li>
                             </ul>
                         </div>
                     </li>
+
 
                     <li class="nav-item position-relative">
                         <div class="dropdown">
@@ -257,16 +261,23 @@ let FooterHTML = `
                             </div>
                         </div>
 
-                        <!-- Column 2: Services -->
+                        <!-- Column 4: Solutions -->
                         <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
-                                <span class="footer_menu_title">Services</span>
+                                <span class="footer_menu_title">Solutions</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/services/procurement-spend-analysis-services.html" class="footer_link">Spend Analysis</a>
-                                    <a href="/services/rfp-managed-services.html" class="footer_link">Managed RFX | RFQ
-                                        | RFP</a>
-                                    <a href="/services/managed-reverse-auction-software-services.html" class="footer_link">Managed
-                                        Reverse Auctions</a>
+                                <a href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html" class="footer_link">RFP | RFI | RFQ</a>
+                                <a href="/solutions/procurement-spend-analysis-software.html" class="footer_link">Spend Analysis</a>
+                                <a href="/solutions/best-reverse-auction-software.html" class="footer_link">Reverse Auction</a>
+                                <a href="/solutions/custom-auction-procurement-software.html" class="footer_link">Custom Solutions</a>
+                                <a class="footer_link" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a>
+
+                                    <a href="/solutions/purchase-requisition-software.html" class="footer_link">Purchase
+                                        Requisition</a>
+                                        <a href="/solutions/best-supplier-management-software.html" class="footer_link">Supplier
+                                            Management</a>
+                                    <a href="/solutions/procurement-contract-management-software.html" class="footer_link">Contract
+                                        Management</a>
                                 </div>
                             </div>
                         </div>
@@ -288,23 +299,16 @@ let FooterHTML = `
                             </div>
                         </div>
 
-                        <!-- Column 4: Solutions -->
+                        <!-- Column 2: Services -->
                         <div class="col-12 col-sm-auto">
                             <div class="footer_menu">
-                                <span class="footer_menu_title">Solutions</span>
+                                <span class="footer_menu_title">Services</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                <a href="/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html" class="footer_link">RFP | RFI | RFQ</a>
-                                <a href="/solutions/procurement-spend-analysis-software.html" class="footer_link">Spend Analysis</a>
-                                <a href="/solutions/best-reverse-auction-software.html" class="footer_link">Reverse Auction</a>
-                                <a href="/solutions/custom-auction-procurement-software.html" class="footer_link">Custom Solutions</a>
-                                <a class="footer_link" href="/solutions/best-procure-to-pay-software-solutions.html">Procure To Pay</a>
-
-                                    <a href="/solutions/purchase-requisition-software.html" class="footer_link">Purchase
-                                        Requisition</a>
-                                        <a href="/solutions/best-supplier-management-software.html" class="footer_link">Supplier
-                                            Management</a>
-                                    <a href="/solutions/procurement-contract-management-software.html" class="footer_link">Contract
-                                        Management</a>
+                                    <a href="/services/procurement-spend-analysis-services.html" class="footer_link">Spend Analysis</a>
+                                    <a href="/services/rfp-managed-services.html" class="footer_link">Managed RFX | RFQ
+                                        | RFP</a>
+                                    <a href="/services/managed-reverse-auction-software-services.html" class="footer_link">Managed
+                                        Reverse Auctions</a>
                                 </div>
                             </div>
                         </div>
@@ -428,6 +432,8 @@ let FooterHTML = `
         </div>
     </footer><input type="hidden" id="externalSource" name="externalSource"/>
 `;
+
+
 window.addEventListener("load", function () {
     const pageMap = {
         "/": "Homepage",
