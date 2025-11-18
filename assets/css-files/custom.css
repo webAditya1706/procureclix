@@ -543,15 +543,17 @@
 
 .whitepaper_email{
     position: absolute !important;
-    right: 1015px;
-    top: 550px;
-    transform: translateY(-50%);
+    right: 10px;
+    bottom: 6px;
     font-size: 15px;
     font-weight: bolder;
     pointer-events: none;
     white-space: nowrap;
 }
 
+.whitepaper_email i{
+  cursor: pointer;
+}
 .whitepaper_casestudy{
     position: absolute !important;
     right: 1020px;
