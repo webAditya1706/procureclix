@@ -34,7 +34,11 @@
         ]
       }
     </script>
-    <!-- Google Analytics tag -->
+    	<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+o.onload=function(){window.trackingFunctions.onLoad({appId:"691c5555985e730021baf3b0"})},
+document.head.appendChild(o)}initApollo();</script>
+<!-- Google Analytics tag -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -52,12 +56,16 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link href="../../assets/images/favicon_3.png" rel="icon" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
         rel="stylesheet" />
 
     </meta>
     </meta>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+    <script src="../../assets/js-files/leadSourceMap.js"></script>
 </head>
 
 <body>
@@ -91,49 +99,53 @@
                             <!-- <div class="w-100"> -->
                             <h1 style="color: #565656;">Download <span class="experts">Whitepaper</span></h1>
                             <p class="mb-3">Please fill in the details below to download our free whitepaper</p>
-                            <form class="contact_us_form">
-                                <div class="row gy-3">
+                            <form class="contact_us_form" action="insertforwhitepapers.php" method="post">
+
+                            <input type="hidden" id="timezone" name="timezone">
+                            <input type="hidden" id="leadSource" name="leadSource">
+                            <input type="hidden" id="whitePaperLogID" name="whitePaperLogID">
+                            <input type="hidden" id="emailVerifyStatus" name="emailVerifyStatus">
+                            
+                            <div class="row gy-3">
                                     <div class="col-12">
                                         <label class="form-label" for="firstNme">First Name<span
                                                 class="text-danger">*</span></label>
-                                        <input class="form-control" id="firstNme" placeholder="First Name"
-                                            type="text" />
+                                       <input type="text" class="form-control"  name="firstName" id="firstName" placeholder="First Name"  maxlength="50"/>
+                                    <div class="error" id="firstNameError"></div>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label" for="LastNme">Last Name<span
                                                 class="text-danger">*</span></label>
-                                        <input class="form-control" id="LastNme" placeholder="Last Name" type="text" />
+                                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" />
+                                    <div class="error" id="lastNameError"></div>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label" for="workEmail">Work Email<span
                                                 class="text-danger">*</span></label>
-                                        <input class="form-control" id="workEmail" placeholder="Work Email"
-                                            type="email" />
+                                        <input class="form-control" name="email" id="email" placeholder="Work Email" type="email" />
+                                     <div id="emailVerifyErrorID" class="whitepaper_email"></div>
+                                    <div class="error" id="emailError"></div>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label" for="companyName">Company Name<span
                                                 class="text-danger">*</span></label>
-                                        <input class="form-control" id="companyName" placeholder="Company Name"
-                                            type="text" />
+                                        <input type="text" class="form-control" name="companyName" id="companyName" placeholder="Company Name" maxlength="100"/>
+                                    <div class="error" id="companyError"></div>
                                     </div>
                                     <div class="col-12">
                                         <label class="form-label" for="phoneNumber">Phone Number<span
                                                 class="text-danger">*</span></label>
                                         <div class="input-group">
-                                            <span class="input-group-text">
-                                                <img alt="US Flag" class="flag_icon" loading="lazy"
-                                                    src="/assets/images/uk_flag.png" />
-                                                <img alt="drop_down" class="drop_arrow" loading="lazy"
-                                                    src="/assets/icons/drop_down.png" />
-                                            </span>
-                                            <input class="form-control" id="phoneNumber" placeholder="Phone Number"
-                                                type="tel" />
+                                             <input type="hidden" name="phoneCountryCode" id="phoneCountryCode" />
+                                               <input type="tel" class="form-control" name="phone" id="phone" maxlength="15"  placeholder="Phone Number" />    <!--style="width: 519.33px;" -->
+                                            
                                         </div>
+                                        <div class="error" id="phoneError"></div>
                                     </div>
                                 </div>
 
                                 <div class="text-center mt-5">
-                                    <button class="btn submit_btn" type="submit">Submit</button>
+                                    <button class="btn submit_btn" id="submitBtnID" type="button" onclick="submitForm();" value="submit">Submit</button>
                                 </div>
                             </form>
                             <!-- </div> -->
@@ -154,17 +166,373 @@
     <!-- footer -->
     <div id="footer_wrapper"></div>
     <!-- footer end -->
+
+            <script>
+        window.addEventListener("load", function() {
+            var leadSource = "";
+
+            var externalSource = sessionStorage.getItem("externalSource") || document.getElementById("externalSource").value || "";
+            if (externalSource) {
+            leadSource = externalSource;
+            }
+            else
+            {
+            // Query parameter check
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("source") === "direct") {
+            leadSource = "Direct";
+            } else {
+            // Referrer check
+            var ref = document.referrer;
+            if (ref) {
+                var path = new URL(ref).pathname;
+                leadSource = pageMap[path] || path; // direct access possible
+            }
+            }
+        }
+        // alert(leadSource);
+            // Hidden field me set karo
+            var field = document.getElementById("leadSource");
+            if (field) {
+            field.value = leadSource;
+            }
+        });
+        </script>
+
+            <script>
+
+
+
+
+            const emailField = document.getElementById('email');
+            const phoneField = document.getElementById('phone');
+
+        emailField.addEventListener('input', () => {
+        document.getElementById('emailVerifyErrorID').innerHTML='';
+        const email = emailField.value.trim();
+        if (email !== "") {
+            const errorMsg = validateEmail(email);
+            document.getElementById('emailError').innerHTML = errorMsg;
+        } else {
+            document.getElementById('emailError').innerHTML = "";
+            document.getElementById('emailVerifyErrorID').innerHTML='';
+        }
+        });
+
+        emailField.addEventListener('blur', () => {
+        
+        document.getElementById('emailError').innerHTML = "";
+        document.getElementById('emailVerifyErrorID').innerHTML = '';
+        const submitBtn = document.getElementById("submitBtnID");
+        submitBtn.disabled = true;
+        const email = emailField.value.trim();
+        verifyEmail().then(isEmailValid => {
+            //alert("emailVerifyStatus-->"+emailVerifyStatus);
+            document.getElementById('emailVerifyStatus').value=emailVerifyStatus;
+            document.getElementById('emailError').innerHTML = "";
+            document.getElementById('emailError').innerHTML = "";
+            const emailErrorDiv = document.getElementById('emailError');
+            if (!isEmailValid && email !== "") {
+                emailErrorDiv.innerHTML = "Email address is not valid";
+                document.getElementById('emailVerifyErrorID').innerHTML = '<i class="fa-solid fa-xmark text-danger"></i>';
+            
+            }else if(isEmailValid && email !== ""){
+                document.getElementById('emailVerifyErrorID').innerHTML = '<i class="fa-solid fa-check text-success"></i>';
+                submitBtn.disabled = false;
+            
+            }else{
+                document.getElementById('emailVerifyErrorID').innerHTML = '';
+                submitBtn.disabled = false;
+            }
+        });
+        });
+
+
+        phoneField.addEventListener('input', () => {
+        const phone = phoneField.value.trim();
+
+        const numericOnly = phone.replace(/\D/g, '');
+        phoneField.value = numericOnly;
+
+        if (numericOnly !== "") {
+            const errorMsg = validatePhone(numericOnly);
+            document.getElementById('phoneError').innerHTML = errorMsg;
+        } else {
+            document.getElementById('phoneError').innerHTML = "";
+        }
+        });
+        var whitePaperId = 0;
+        function submitForm()
+        {
+            if(validateForm())
+            {
+                const formData = {
+                    firstName: document.getElementById('firstName').value || '',
+                    lastName: document.getElementById('lastName').value || '',
+                    email: document.getElementById('email').value || '',
+                    phone: document.getElementById('phone').value || '',
+                    companyName: document.getElementById('companyName').value || '',
+                    leadSource: document.getElementById('leadSource').value || '',
+                    timezone: document.getElementById('timezone').value || '',
+                    heading: whitepaper_heading || '',
+                    fileName: whitepaper_fileName || '',
+                    emailVerifyStatus: document.getElementById('emailVerifyStatus').value.trim() || '',
+                    phoneCountryCode: document.getElementById('phoneCountryCode').value.trim() || ''
+                };
+
+                fetch('/whitepaperdownloadinsert.php', {
+                    method: 'POST',
+                    body: new URLSearchParams(formData)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.status === 'success'){
+
+                        const paperId = data.data.customerID;
+                        const downloadLink = document.createElement('a');
+                        downloadLink.href = `/downloadWhitepaper.php?id=${paperId}`;
+                        downloadLink.download = '';
+                        document.body.appendChild(downloadLink);
+                        downloadLink.click();
+                        document.body.removeChild(downloadLink);
+
+                        setTimeout(() => {
+                            window.location.href = `/resources/whitepapers.html?status=success`;
+                        }, 1000); 
+                        
+                    } else {
+                        console.log(data.message);
+                        console.error(data.response);
+                    }
+                    
+                });
+
+            }
+        }
+
+        function validateForm() {
+            let valid = true;
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const companyName = document.getElementById('companyName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+            const digitOnlyPattern = /^\d+$/;
+
+            document.getElementById('firstNameError').innerHTML = "";
+            document.getElementById('lastNameError').innerHTML = "";
+            document.getElementById('companyError').innerHTML = "";
+            document.getElementById('emailError').innerHTML = "";
+            document.getElementById('phoneError').innerHTML = "";
+
+            if (firstName === "") {
+                document.getElementById('firstNameError').innerHTML = "First Name is required.";
+                valid = false;
+            }
+
+            if (lastName === "") {
+                document.getElementById('lastNameError').innerHTML = "Last Name is required.";
+                valid = false;
+            }
+
+            if (companyName === "") {
+                document.getElementById('companyError').innerHTML = "Company Name is required.";
+                valid = false;
+            }
+
+            const emailError = validateEmail(email);
+            if (emailError !== "") {
+            document.getElementById('emailError').innerHTML = emailError;
+            valid = false;
+            }
+
+            const phoneErrorMsg = validatePhone(phone);
+            if (phoneErrorMsg !== "") {
+            document.getElementById('phoneError').innerHTML = phoneErrorMsg;
+            valid = false;
+            }
+
+            if(emailError === ""){
+            
+            if(!emailValid){
+                document.getElementById('emailError').innerHTML ="Email address is not valid."
+                document.getElementById('emailVerifyErrorID').innerHTML = '<i class="fa-solid fa-xmark text-danger"></i>';
+                valid = false;
+            }else{
+                document.getElementById('emailVerifyErrorID').innerHTML = '<i class="fa-solid fa-check text-success"></i>';
+            }
+            }
+
+        return valid;
+        }
+
+        let emailValid = false;
+        let emailVerifyStatus = "";
+
+        function verifyEmail() {
+        const email = document.getElementById("email").value.trim();
+        const statusDiv = document.getElementById("emailError");
+        const emailVerifyError = document.getElementById("emailVerifyErrorID");
+
+        if (!email) {
+            emailValid = false;
+            emailVerifyStatus = "";
+            return Promise.resolve(false);
+        }
+
+        emailVerifyError.innerHTML = '<i class="fas fa-circle-notch fa-spin" style="color:#1b5b7e;"></i>';
+
+        const domain = email.substring(email.lastIndexOf("@") + 1).toLowerCase();
+        // ✅ If not .com, skip API call 
+        if (!domain.endsWith(".com")) {
+            return new Promise(resolve => {
+            setTimeout(() => {
+                emailValid = true; 
+                emailVerifyStatus = "skipped";
+                resolve(true);
+            }, 2000); // 2 sec ka fake verification delay
+            });
+        }
+
+        return fetch("/verifyEmail.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: "email=" + encodeURIComponent(email)
+        })
+            .then(res => res.json())
+            .then(data => {
+            if (data.success && data.status === "valid") {
+                emailValid = true;
+                emailVerifyStatus = "valid";
+                return true;
+            } else {
+                emailValid = false;
+                emailVerifyStatus = "invalid";
+                return false;
+            }
+            })
+            .catch(err => {
+            console.error("Error verifying email:", err);
+            emailValid = false;
+            emailVerifyStatus = "";
+            return false;
+            });
+        }
+
+        const validateEmail = (email) => {
+        if (email === "") {
+            return "Work Email is required.";
+        }
+        if (!email.includes('@')) {
+            return "Work Email must include '@'.";
+        }
+
+        const parts = email.split('@');
+        if (parts.length !== 2) {
+            return "Work Email format is incorrect.";
+        }
+
+        const [local, domain] = parts;
+
+        if (local.length === 0) {
+            return "Work Email must have characters before '@'.";
+        }
+
+        if (domain.length === 0) {
+            return "Work Email must have a domain name after '@'.";
+        }
+
+        if (!domain.includes('.')) {
+            return "Domain must contain a '.' (dot) like '.com', '.org'.";
+        }
+
+        const domainParts = domain.split('.');
+        if (domainParts.some(part => part.trim() === "")) {
+            return "Domain name is incomplete or invalid.";
+        }
+
+        return ""; 
+        };
+
+        function validatePhone(phone) {
+        if (phone === "") {
+            return "Phone Number is required.";
+        }
+        if (!/^\d+$/.test(phone)) {
+            return "Phone Number should contain digits only.";
+        }
+        if (phone.length < 10) {
+            return "Phone Number must be at least 10 digits.";
+        }
+        if (phone.length > 15) {
+            return "Phone Number must not exceed 15 digits.";
+        }
+        return ""; // valid
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            
+        const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            document.getElementById("timezone").value = userTimezone;
+        });
+
+
+
+        </script>
+
+
     <script src="../../assets/js-files/comman_js.js"></script>
     <script src="../../assets/js-files/HeaderFooter.js"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Check if 'whitepaper_image' exists in localStorage
-        const imageSrc = localStorage.getItem('whitepaper_image');
-        if (imageSrc) {
-            document.getElementById('whitepaperImage').src = imageSrc;
-        }
-    </script>
+    // Check if 'whitepaper_image' exists in localStorage
+    const imageSrc = localStorage.getItem('whitepaper_image');
+    const whitepaper_heading = localStorage.getItem('whitepaper_heading');
+    const whitepaper_fileName = localStorage.getItem('whitepaper_fileName');
+    if (imageSrc) {
+        document.getElementById('whitepaperImage').src = imageSrc;
+    }
+
+
+
+
+    
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+
+<!-- Utils for number formatting -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
+<script>
+  const input = document.querySelector("#phone");
+
+  const iti = window.intlTelInput(input, {
+    initialCountry: "us",
+    separateDialCode: true,
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
+  });
+
+
+  // Listen for country change event
+  input.addEventListener("countrychange", function () {
+    const dialCode = iti.getSelectedCountryData().dialCode;
+    document.getElementById("phoneCountryCode").value=dialCode;
+    //const currentVal = input.value.replace(/^\+?\d+/, '').trim(); 
+    //input.value ='+'+dialCode+ ' ' +currentVal;
+  });
+
+  // Optional: on initial load if needed
+  window.addEventListener("load", () => {
+    const dialCode = iti.getSelectedCountryData().dialCode;
+    document.getElementById("phoneCountryCode").value=dialCode;
+    //input.value = '+'+dialCode+' ';
+  });
+
+</script>
 
 </body>
 

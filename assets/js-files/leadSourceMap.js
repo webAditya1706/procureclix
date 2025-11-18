@@ -27,8 +27,17 @@ const pageMap = {
   "/about-us.html":"About Us",
   "/procurement-software-pricing.html":"Pricing",
   "/contact-us.html":"Direct",
-   "/resources/whitepapers.html":"Whitepaper Page",
-  "/resources/whitepapers/whitepapers-description.html":"Download Whitepaper"
+  "/resources/whitepapers.html":"Whitepaper Page",
+  "/resources/whitepapers/whitepapers-description.html":"Download Whitepaper",
+  "/resources/casestudies.html":"Case Study",
+  "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html":"Case Study",
+  "/resources/casestudies/view-case-studies-leading-financial.html":"Case Study",
+  "/resources/casestudies/view-case-studies-leading-marketing-services.html":"Case Study",
+  "/resources/casestudies/view-case-studies-leading-pharmacy.html":"Case Study",
+  "/resources/casestudies/view-case-studies-leading-subsea-systems.html":"Case Study",
+  "/resources/casestudies/view-case-studies-leading-services-company.html":"Case Study",
+  "/resources/casestudies/housing-and-urban-development-case-study.html":"Case Study",
+  "/resources/casestudies/contact-us.html":"Case Study"
   
 };
 
