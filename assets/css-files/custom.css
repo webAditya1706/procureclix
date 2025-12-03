@@ -530,39 +530,39 @@
   max-height: 100%;
 }
 
-.otp-timer {
-  position: absolute !important;
-  right: 740px;
-  top: 358px;
-  transform: translateY(-50%);
-  font-size: 15px;
-  font-weight: bolder;
-  pointer-events: none;
-  white-space: nowrap;
+.otp-timer{
+    position: absolute !important;
+    right: 740px;
+    top: 358px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: bolder;
+    pointer-events: none;
+    white-space: nowrap;
 }
 .whitepaper_email {
-  position: absolute !important;
-  right: 10px;
-  bottom: 8px;
-  /* transform: translateY(-50%); */
-  font-size: 15px;
-  font-weight: bolder;
-  pointer-events: none;
-  white-space: nowrap;
+    position: absolute !important;
+    right: 10px;
+    bottom: 8px;
+    /* transform: translateY(-50%); */
+    font-size: 15px;
+    font-weight: bolder;
+    pointer-events: none;
+    white-space: nowrap;
 }
 
 .casestudy_email {
-  position: absolute !important;
-  right: 10px;
-  bottom: 8px;
-  /* transform: translateY(-50%); */
-  font-size: 15px;
-  font-weight: bolder;
-  pointer-events: none;
-  white-space: nowrap;
+    position: absolute !important;
+    right: 10px;
+    bottom: 8px;
+    /* transform: translateY(-50%); */
+    font-size: 15px;
+    font-weight: bolder;
+    pointer-events: none;
+    white-space: nowrap;
 }
 .disabled-link {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
