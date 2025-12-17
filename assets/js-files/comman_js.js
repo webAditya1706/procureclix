@@ -138,3 +138,32 @@ getBrowserSize = function() {
 	}
 	return [bodyWidth, bodyHeight];
 }
+
+
+$(document).ready(function () {
+
+  // Open after 3 seconds
+  setTimeout(function () {
+    $('#staticBackdrop')
+      .addClass('show')
+      .attr('aria-hidden', 'false');
+  }, 3000);
+
+  // Close handlers
+  $('.popup-close').on('click', function () {
+    closePopup();
+  });
+
+  // ESC key close
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closePopup();
+    }
+  });
+
+  function closePopup() {
+    $('#staticBackdrop')
+      .removeClass('show')
+      .attr('aria-hidden', 'true');
+  }
+});
