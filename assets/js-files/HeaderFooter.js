@@ -431,7 +431,127 @@ let FooterHTML = `
             </div>
         </div>
     </footer><input type="hidden" id="externalSource" name="externalSource"/>
+    <div class="popup-bottom-right" id="staticBackdrop" aria-hidden="true">
+  <div class="popup-dialog">
+    <div class="popup-content">
+
+      <div class="popup-header">
+        <h5>Connect with a specialist</h5>
+        <button type="button" class="btn-close popup-close"></button>
+      </div>
+
+      <div class="popup-body">
+        <div class="row gy-3">
+          <div class="col-sm-12">
+            <label class="form-label">First Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="popup_fName" maxlength="100">
+            <div><div style="color:red;font-size:12px;margin-top:2px;" id="popup_fNameError"></div></div>
+          </div>
+
+          <div class="col-sm-12">
+            <label class="form-label">Last Name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" id="popup_lName" maxlength="100">
+            <div><div style="color:red;font-size:12px;margin-top:2px;" id="popup_lNameError"></div></div>
+          </div>
+
+          <div class="col-sm-12">
+            <label class="form-label">Work Email <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" id="popup_email">
+            <div><div style="color:red;font-size:12px;margin-top:2px;" id="popup_emailError"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-footer">
+        <button class="btn btn_primary" onclick="submit_popup();">Save</button>
+        <button class="btn btn_secondary btn_secondary popup-close">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modulesModal" tabindex="-1" aria-labelledby="modulesModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="modulesModalLabel">Modules interested in?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="skipModulesPopup();"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+      <div id="modules_error" class="text-danger mb-3" style="display:none;"></div>
+        <div class="row welcome_popup">
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="RFP | RFI | RFQ" id="rfp">
+              <label class="form-check-label" for="rfp">RFP | RFI | RFQ</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="Spend Analysis" id="spendAnalysis">
+              <label class="form-check-label" for="spendAnalysis">Spend Analysis</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="Reverse Auction" id="reverseAuction">
+              <label class="form-check-label" for="reverseAuction">Reverse Auction</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="Custom Solutions" id="customSolutions">
+              <label class="form-check-label" for="customSolutions">Custom Solutions</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="Purchase Requisition" id="purchaseRequisition">
+              <label class="form-check-label" for="purchaseRequisition">Purchase Requisition</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="Supplier Management" id="supplierManagement">
+              <label class="form-check-label" for="supplierManagement">Supplier Management</label>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" name="modules[]" value="Contract Management" id="contractManagement">
+              <label class="form-check-label" for="contractManagement">Contract Management</label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer">
+        <button class="btn btn_primary" onclick="submitModulesPopup();">Submit</button>
+        <button class="btn btn_secondary btn_secondary popup-close" onclick="skipModulesPopup();">Skip</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<input type="hidden" id="popup_timezone" name="popup_timezone">
 `;
+
+
+
+
 
 
 window.addEventListener("load", function () {
@@ -532,14 +652,12 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+   
+    
+
     const headerContainer = document.getElementById("header-placeholder");
     const footerContainer = document.getElementById("footer_wrapper");
-    //   const loaderElement = document.getElementById("loader");
-    //   const loaderElement = document.getElementById("preloader") || document.getElementById("loader");
-    //   document.body.style.overflow = "hidden";
-
-    //   document.documentElement.style.overflow = "hidden";
-
+   
     if (headerContainer) {
         headerContainer.innerHTML = HeaderHTML;
         highlightActiveLink();
@@ -682,6 +800,248 @@ document.addEventListener("DOMContentLoaded", function () {
             document.documentElement.style.overflow = "auto";
         }, 1500);
     }
+
+    // code start for welcome popup in every page
+
+    // const welcomeContainer = document.getElementById("welcome_popup");
+
+    // if (welcomeContainer) {
+    //     welcomeContainer.innerHTML = welcomeHTML;
+    // }
+
+    // Open after 2 seconds
+    setTimeout(function () {
+
+        const currentPath = window.location.pathname;
+        if (currentPath === "/contact-us.html") {
+            return; 
+        }
+
+        if (sessionStorage.getItem("lead_submitted") === "true") {
+             return; 
+        }
+
+        const popup = document.getElementById("staticBackdrop");
+        if (popup) {
+            popup.classList.add("show");
+            popup.setAttribute("aria-hidden", "false");
+        }
+    }, 1000);
+
+    // Close button click
+    const closeButtons = document.querySelectorAll(".popup-close");
+    closeButtons.forEach(function (btn) {
+        btn.addEventListener("click", closePopup);
+    });
+
+    // ESC key close
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            closePopup();
+        }
+    });
+
+    
+
+    const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    document.getElementById("popup_timezone").value = userTimezone;
+
+     const popup_emailField = document.getElementById('popup_email');
+        popup_emailField.addEventListener('input', () => {
+       
+        const email = popup_emailField.value.trim();
+        if (email !== "") {
+            const errorMsg = validatePopupEmail(email);
+            document.getElementById('popup_emailError').innerHTML = errorMsg;
+        } else {
+            document.getElementById('popup_emailError').innerHTML = "";
+        }
+        });
+
 });
+
+   function closePopup() {
+        const popup = document.getElementById("staticBackdrop");
+        if (popup) {
+            popup.classList.remove("show");
+            popup.setAttribute("aria-hidden", "true");
+        }
+    }  
+    function openModulesPopup() {
+        const modalEl = document.getElementById('modulesModal');
+        const modal = new bootstrap.Modal(modalEl);
+        modal.show();
+    }  
+    function closeModulesPopup() {
+        const modalEl = document.getElementById('modulesModal');
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide();
+    }
+
+    const validatePopupEmail = (email) => {
+        if (email === "") {
+            return "Work Email is required.";
+        }
+        if (!email.includes('@')) {
+            return "Work Email must include '@'.";
+        }
+
+        const parts = email.split('@');
+        if (parts.length !== 2) {
+            return "Work Email format is incorrect.";
+        }
+
+        const [local, domain] = parts;
+
+        if (local.length === 0) {
+            return "Work Email must have characters before '@'.";
+        }
+
+        if (domain.length === 0) {
+            return "Work Email must have a domain name after '@'.";
+        }
+
+        if (!domain.includes('.')) {
+            return "Domain must contain a '.' (dot) like '.com', '.org'.";
+        }
+
+        const domainParts = domain.split('.');
+        if (domainParts.some(part => part.trim() === "")) {
+            return "Domain name is incomplete or invalid.";
+        }
+
+        return ""; 
+        };
+
+        function validatePopupForm() {
+            let valid = true;
+            
+            const popup_fName = document.getElementById('popup_fName').value.trim();
+            const popup_lName = document.getElementById('popup_lName').value.trim();
+            const popup_email = document.getElementById('popup_email').value.trim();
+
+
+            document.getElementById('popup_fNameError').innerHTML = "";
+            document.getElementById('popup_lNameError').innerHTML = "";
+            document.getElementById('popup_emailError').innerHTML = "";
+
+            if (popup_fName === "") {
+                document.getElementById('popup_fNameError').innerHTML = "First Name is required.";
+                valid = false;
+            }
+
+            if (popup_lName === "") {
+                document.getElementById('popup_lNameError').innerHTML = "Last Name is required.";
+                valid = false;
+            }
+
+            
+
+            const popup_emailError = validatePopupEmail(popup_email);
+            if (popup_emailError !== "") {
+            document.getElementById('popup_emailError').innerHTML = popup_emailError;
+            valid = false;
+            }
+
+        return valid;
+        }
+
+         function submit_popup()
+        {
+            if(validatePopupForm())
+            {
+                const formData = {
+                    firstName: document.getElementById('popup_fName').value || '',
+                    lastName: document.getElementById('popup_lName').value || '',
+                    email: document.getElementById('popup_email').value || '',
+                    timezone: document.getElementById('popup_timezone').value || '',
+                };
+                // 🔹 TEMP store (for next popup)
+                sessionStorage.setItem("lead_form_data", JSON.stringify(formData));
+
+
+                // 🔹 First popup close
+                closePopup();
+
+                // 🔹 Open modules popup
+                openModulesPopup();
+               
+
+            }
+        }
+
+        function saveLeadToServer(leadData) {
+
+            const params = new URLSearchParams();
+
+            Object.keys(leadData).forEach(key => {
+                if (Array.isArray(leadData[key])) {
+                    leadData[key].forEach(val => {
+                        params.append(key + "[]", val);
+                    });
+                } else {
+                    params.append(key, leadData[key]);
+                }
+            });
+
+          
+
+            fetch('/PopupFormInsert.php', {
+                method: 'POST',
+                body: params
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showSuccessMessage_NL("Thank you! We’ve received your details and our team will be in touch shortly.");
+                    document.body.style.paddingRight="0px";
+                    sessionStorage.setItem("lead_submitted", "true");
+                    sessionStorage.removeItem("lead_form_data");
+                    
+                }
+            });
+        }
+
+
+        function submitModulesPopup() {
+
+            const checked = document.querySelectorAll('input[name="modules[]"]:checked');
+
+            if (checked.length === 0) {
+                showModulesError("<span class='small'>Please select at least one module you are interested in.</span>");
+                return; 
+            }
+
+            const modules = Array.from(checked).map(c => c.value);
+
+            const leadData = JSON.parse(sessionStorage.getItem("lead_form_data")) || {};
+
+            // PHP expects modules[] as array
+            leadData["modules"] = modules;
+
+            // FINAL SAVE
+            saveLeadToServer(leadData);
+
+            closeModulesPopup();
+        }
+
+        function showModulesError(msg) {
+            const el = document.getElementById("modules_error");
+            el.innerHTML = msg;
+            el.style.display = "block";
+        }
+
+
+        function skipModulesPopup() {
+
+            const leadData = JSON.parse(sessionStorage.getItem("lead_form_data")) || {};
+
+            // 🔹 modules nahi mile, but lead save honi chahiye
+            saveLeadToServer(leadData);
+
+            closeModulesPopup();
+        }
+
+
 
 console.log(`Width: ${window.innerWidth}px, Height: ${window.innerHeight}px`);

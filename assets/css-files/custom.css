@@ -375,7 +375,8 @@
   flex-shrink: 0;
 }
 
-.contact_us_form .form-check-input {
+.contact_us_form .form-check-input,
+.welcome_popup .form-check-input  {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
@@ -386,7 +387,8 @@
   background-color: #fff;
 }
 
-.contact_us_form .form-check-label {
+.contact_us_form .form-check-label,
+.welcome_popup .form-check-label{
   color: var(--Black, #131313);
   font-family: Poppins;
   font-size: 14px;
@@ -480,7 +482,8 @@
   line-height: 15px; /* 100% */
   border: 0px;
 }
-.contact_us_form .form-check-input:checked[type="checkbox"] {
+.contact_us_form .form-check-input:checked[type="checkbox"],
+.welcome_popup .form-check-input:checked[type="checkbox"]  {
   background-image: url("/assets/images/check_box_check.png") !important;
   background-size: 12px 8px !important;
   background-size: contain;
