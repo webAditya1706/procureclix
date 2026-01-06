@@ -2193,7 +2193,16 @@ p {
 
 /* Dialog */
 .popup-dialog {
-  max-width: 400px;
+  max-width: 330px;
+}
+
+.popup-dialog h5{
+  margin-bottom: 0px;
+}
+
+.popup-dialog .btn-close{
+  width: 6px;
+  height: 6px;
 }
 
 /* Content */
