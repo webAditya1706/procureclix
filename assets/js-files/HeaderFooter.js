@@ -441,7 +441,7 @@ let FooterHTML = `
       </div>
 
       <div class="popup-body">
-        <div class="row gy-3">
+        <div class="row gy-2">
           <div class="col-sm-12">
             <label class="form-label">First Name <span class="text-danger">*</span></label>
             <input type="text" class="form-control" id="popup_fName" maxlength="100">
