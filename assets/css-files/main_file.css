@@ -485,10 +485,10 @@ a {
   line-height: normal;
 }
 
-.btn_secondary{
+.btn_secondary {
   background-color: #6c757d;
   color: var(--White, #fff);
-   border-width: 0px;
+  border-width: 0px;
   display: inline-flex;
   padding: 10px 30px;
   justify-content: center;
@@ -500,7 +500,6 @@ a {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
 }
 
 .btn_primary_2 {
@@ -625,7 +624,7 @@ a {
   width: 20px;
 }
 
-.h_20{
+.h_20 {
   height: 20px;
 }
 /* font size */
@@ -1578,7 +1577,6 @@ p {
   height: 40px;
 }
 
-
 .spacer_20 {
   height: 20px;
 }
@@ -1606,7 +1604,7 @@ p {
   /* font-weight: bold; */
 }
 
-.img_round_10{
+.img_round_10 {
   border-radius: 10px;
 }
 
@@ -1914,7 +1912,7 @@ p {
   border-radius: 15px;
 }
 
-.long_img_radious{
+.long_img_radious {
   border-radius: 18px;
 }
 
@@ -2176,12 +2174,12 @@ p {
 
 /* loader css end */
 
-
 /* Base popup container */
+
 .popup-bottom-right {
   position: fixed;
   right: 10px;
-  bottom: 10px;
+  bottom: 100px;
   z-index: 1050;
   display: none;
 }
@@ -2196,11 +2194,11 @@ p {
   max-width: 330px;
 }
 
-.popup-dialog h5{
+.popup-dialog h5 {
   margin-bottom: 0px;
 }
 
-.popup-dialog .btn-close{
+.popup-dialog .btn-close {
   width: 6px;
   height: 6px;
 }
@@ -2209,13 +2207,13 @@ p {
 .popup-content {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.2);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  animation: slideUp .4s ease;
+  animation: slideUp 0.4s ease;
 }
 
 /* Header / Footer */
-.popup-header{
+.popup-header {
   padding: 12px 16px;
   border-bottom: 1px solid #eee;
   display: flex;
@@ -2223,7 +2221,6 @@ p {
   align-items: center;
 }
 .popup-footer {
-
   padding: 12px 16px;
   border-bottom: 1px solid #eee;
   display: flex;
@@ -2258,7 +2255,7 @@ p {
 @media (max-width: 576px) {
   .popup-bottom-right {
     right: 0;
-    bottom: 0;
+    bottom: 100px;
     width: 100%;
   }
 
@@ -2266,7 +2263,64 @@ p {
     max-width: 100%;
   }
 
-  .popup-content {
-    border-radius: 12px 12px 0 0;
-  }
+}
+
+/* floating icon css */
+
+.float_icon_con {
+  position: fixed;
+  z-index: 999;
+  bottom: 10px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1b5b7e;
+  box-shadow: rgba(0, 0, 0, 0.04) 0 0 6px, rgba(0, 0, 0, 0.06) 0 2px 6px,
+    rgba(0, 0, 0, 0.06) 0 10px 20px, rgba(0, 0, 0, 0.2) 0 20px 20px;
+  border: 2px solid #fff;
+}
+
+.float_icon_con {
+  border: 2px solid #fff;
+  background-color: #00549a;
+  width: 80px;
+  height: 80px;  
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon_cotner {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_cotner .float_icon{
+  width: auto;
+  height: 35px;
+
+}
+
+.float_icon_con:focus {
+  outline: #00549a solid 2px !important;
+  border: 2px solid #fff !important;
+  /* outline-offset: 4px; */
+
+}
+
+
+.float_icon {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.icon-hide {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.icon-show {
+    opacity: 1;
+    transform: scale(1);
 }

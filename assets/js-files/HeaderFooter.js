@@ -596,17 +596,17 @@ window.addEventListener("load", function () {
         "/about-us.html": "About Us",
         "/procurement-software-pricing.html": "Pricing",
         "/contact-us.html": "Direct",
-         "/resources/whitepapers.html":"Whitepaper Page",
-  "/resources/whitepapers/whitepapers-description.html":"Download Whitepaper",
-    "/resources/casestudies.html":"Case Study",
-  "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html":"Case Study",
-  "/resources/casestudies/view-case-studies-leading-financial.html":"Case Study",
-  "/resources/casestudies/view-case-studies-leading-marketing-services.html":"Case Study",
-  "/resources/casestudies/view-case-studies-leading-pharmacy.html":"Case Study",
-  "/resources/casestudies/view-case-studies-leading-subsea-systems.html":"Case Study",
-  "/resources/casestudies/view-case-studies-leading-services-company.html":"Case Study",
-  "/resources/casestudies/housing-and-urban-development-case-study.html":"Case Study",
-  "/resources/casestudies/contact-us.html":"Case Study"
+        "/resources/whitepapers.html": "Whitepaper Page",
+        "/resources/whitepapers/whitepapers-description.html": "Download Whitepaper",
+        "/resources/casestudies.html": "Case Study",
+        "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html": "Case Study",
+        "/resources/casestudies/view-case-studies-leading-financial.html": "Case Study",
+        "/resources/casestudies/view-case-studies-leading-marketing-services.html": "Case Study",
+        "/resources/casestudies/view-case-studies-leading-pharmacy.html": "Case Study",
+        "/resources/casestudies/view-case-studies-leading-subsea-systems.html": "Case Study",
+        "/resources/casestudies/view-case-studies-leading-services-company.html": "Case Study",
+        "/resources/casestudies/housing-and-urban-development-case-study.html": "Case Study",
+        "/resources/casestudies/contact-us.html": "Case Study"
     };
 
     var externalSource = sessionStorage.getItem("externalSource") || "";
@@ -652,12 +652,12 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-   
-    
+
+
 
     const headerContainer = document.getElementById("header-placeholder");
     const footerContainer = document.getElementById("footer_wrapper");
-   
+
     if (headerContainer) {
         headerContainer.innerHTML = HeaderHTML;
         highlightActiveLink();
@@ -714,7 +714,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-             // active glossary
+            // active glossary
             if (
                 href?.toLowerCase() === "/resources/casestudies.html" &&
                 currentPath.toLowerCase().includes("/resources/casestudies/")
@@ -728,7 +728,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (navItem) navItem.classList.add("active");
                 return;
             }
-            
+
             // active whitepapers
             if (
                 href?.toLowerCase() === "/resources/whitepapers.html" &&
@@ -814,18 +814,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const currentPath = window.location.pathname;
         if (currentPath === "/contact-us.html") {
-            return; 
+            return;
         }
 
         if (sessionStorage.getItem("lead_submitted") === "true") {
-             return; 
+            return;
         }
 
-        const popup = document.getElementById("staticBackdrop");
-        if (popup) {
-            popup.classList.add("show");
-            popup.setAttribute("aria-hidden", "false");
-        }
+        // const popup = document.getElementById("staticBackdrop");
+        // if (popup) {
+        //     popup.classList.add("show");
+        //     popup.setAttribute("aria-hidden", "false");
+        // }
     }, 1000);
 
     // Close button click
@@ -841,14 +841,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    
+
 
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     document.getElementById("popup_timezone").value = userTimezone;
 
-     const popup_emailField = document.getElementById('popup_email');
-        popup_emailField.addEventListener('input', () => {
-       
+    const popup_emailField = document.getElementById('popup_email');
+    popup_emailField.addEventListener('input', () => {
+
         const email = popup_emailField.value.trim();
         if (email !== "") {
             const errorMsg = validatePopupEmail(email);
@@ -856,191 +856,196 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             document.getElementById('popup_emailError').innerHTML = "";
         }
-        });
+    });
 
 });
 
-   function closePopup() {
-        const popup = document.getElementById("staticBackdrop");
-        if (popup) {
-            popup.classList.remove("show");
-            popup.setAttribute("aria-hidden", "true");
-        }
-    }  
-    function openModulesPopup() {
-        const modalEl = document.getElementById('modulesModal');
-        const modal = new bootstrap.Modal(modalEl);
-        modal.show();
-    }  
-    function closeModulesPopup() {
-        const modalEl = document.getElementById('modulesModal');
-        const modal = bootstrap.Modal.getInstance(modalEl);
-        modal.hide();
+function closePopup() {
+    const popup = document.getElementById("staticBackdrop");
+    const showIcon = document.querySelector(".show_popup");
+    const hideIcon = document.querySelector(".hide_popup");
+
+    if (!popup || !showIcon || !hideIcon) return;
+
+    popup.classList.remove("show");
+    popup.setAttribute("aria-hidden", "true");
+
+    showIcon.style.display = "block";
+    hideIcon.style.display = "none";
+}
+
+
+function openModulesPopup() {
+    const modalEl = document.getElementById('modulesModal');
+    const modal = new bootstrap.Modal(modalEl);
+    modal.show();
+}
+function closeModulesPopup() {
+    const modalEl = document.getElementById('modulesModal');
+    const modal = bootstrap.Modal.getInstance(modalEl);
+    modal.hide();
+}
+
+const validatePopupEmail = (email) => {
+    if (email === "") {
+        return "Work Email is required.";
+    }
+    if (!email.includes('@')) {
+        return "Work Email must include '@'.";
     }
 
-    const validatePopupEmail = (email) => {
-        if (email === "") {
-            return "Work Email is required.";
-        }
-        if (!email.includes('@')) {
-            return "Work Email must include '@'.";
-        }
+    const parts = email.split('@');
+    if (parts.length !== 2) {
+        return "Work Email format is incorrect.";
+    }
 
-        const parts = email.split('@');
-        if (parts.length !== 2) {
-            return "Work Email format is incorrect.";
-        }
+    const [local, domain] = parts;
 
-        const [local, domain] = parts;
+    if (local.length === 0) {
+        return "Work Email must have characters before '@'.";
+    }
 
-        if (local.length === 0) {
-            return "Work Email must have characters before '@'.";
-        }
+    if (domain.length === 0) {
+        return "Work Email must have a domain name after '@'.";
+    }
 
-        if (domain.length === 0) {
-            return "Work Email must have a domain name after '@'.";
-        }
+    if (!domain.includes('.')) {
+        return "Domain must contain a '.' (dot) like '.com', '.org'.";
+    }
 
-        if (!domain.includes('.')) {
-            return "Domain must contain a '.' (dot) like '.com', '.org'.";
-        }
+    const domainParts = domain.split('.');
+    if (domainParts.some(part => part.trim() === "")) {
+        return "Domain name is incomplete or invalid.";
+    }
 
-        const domainParts = domain.split('.');
-        if (domainParts.some(part => part.trim() === "")) {
-            return "Domain name is incomplete or invalid.";
-        }
+    return "";
+};
 
-        return ""; 
+function validatePopupForm() {
+    let valid = true;
+
+    const popup_fName = document.getElementById('popup_fName').value.trim();
+    const popup_lName = document.getElementById('popup_lName').value.trim();
+    const popup_email = document.getElementById('popup_email').value.trim();
+
+
+    document.getElementById('popup_fNameError').innerHTML = "";
+    document.getElementById('popup_lNameError').innerHTML = "";
+    document.getElementById('popup_emailError').innerHTML = "";
+
+    if (popup_fName === "") {
+        document.getElementById('popup_fNameError').innerHTML = "First Name is required.";
+        valid = false;
+    }
+
+    if (popup_lName === "") {
+        document.getElementById('popup_lNameError').innerHTML = "Last Name is required.";
+        valid = false;
+    }
+
+
+
+    const popup_emailError = validatePopupEmail(popup_email);
+    if (popup_emailError !== "") {
+        document.getElementById('popup_emailError').innerHTML = popup_emailError;
+        valid = false;
+    }
+
+    return valid;
+}
+
+function submit_popup() {
+    if (validatePopupForm()) {
+        const formData = {
+            firstName: document.getElementById('popup_fName').value || '',
+            lastName: document.getElementById('popup_lName').value || '',
+            email: document.getElementById('popup_email').value || '',
+            timezone: document.getElementById('popup_timezone').value || '',
         };
-
-        function validatePopupForm() {
-            let valid = true;
-            
-            const popup_fName = document.getElementById('popup_fName').value.trim();
-            const popup_lName = document.getElementById('popup_lName').value.trim();
-            const popup_email = document.getElementById('popup_email').value.trim();
+        // 🔹 TEMP store (for next popup)
+        sessionStorage.setItem("lead_form_data", JSON.stringify(formData));
 
 
-            document.getElementById('popup_fNameError').innerHTML = "";
-            document.getElementById('popup_lNameError').innerHTML = "";
-            document.getElementById('popup_emailError').innerHTML = "";
+        // 🔹 First popup close
+        closePopup();
 
-            if (popup_fName === "") {
-                document.getElementById('popup_fNameError').innerHTML = "First Name is required.";
-                valid = false;
-            }
-
-            if (popup_lName === "") {
-                document.getElementById('popup_lNameError').innerHTML = "Last Name is required.";
-                valid = false;
-            }
-
-            
-
-            const popup_emailError = validatePopupEmail(popup_email);
-            if (popup_emailError !== "") {
-            document.getElementById('popup_emailError').innerHTML = popup_emailError;
-            valid = false;
-            }
-
-        return valid;
-        }
-
-         function submit_popup()
-        {
-            if(validatePopupForm())
-            {
-                const formData = {
-                    firstName: document.getElementById('popup_fName').value || '',
-                    lastName: document.getElementById('popup_lName').value || '',
-                    email: document.getElementById('popup_email').value || '',
-                    timezone: document.getElementById('popup_timezone').value || '',
-                };
-                // 🔹 TEMP store (for next popup)
-                sessionStorage.setItem("lead_form_data", JSON.stringify(formData));
+        // 🔹 Open modules popup
+        openModulesPopup();
 
 
-                // 🔹 First popup close
-                closePopup();
+    }
+}
 
-                // 🔹 Open modules popup
-                openModulesPopup();
-               
+function saveLeadToServer(leadData) {
 
-            }
-        }
+    const params = new URLSearchParams();
 
-        function saveLeadToServer(leadData) {
-
-            const params = new URLSearchParams();
-
-            Object.keys(leadData).forEach(key => {
-                if (Array.isArray(leadData[key])) {
-                    leadData[key].forEach(val => {
-                        params.append(key + "[]", val);
-                    });
-                } else {
-                    params.append(key, leadData[key]);
-                }
+    Object.keys(leadData).forEach(key => {
+        if (Array.isArray(leadData[key])) {
+            leadData[key].forEach(val => {
+                params.append(key + "[]", val);
             });
-
-          
-
-            fetch('/PopupFormInsert.php', {
-                method: 'POST',
-                body: params
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    showSuccessMessage_NL("Thank you! We’ve received your details and our team will be in touch shortly.");
-                    document.body.style.paddingRight="0px";
-                    sessionStorage.setItem("lead_submitted", "true");
-                    sessionStorage.removeItem("lead_form_data");
-                    
-                }
-            });
+        } else {
+            params.append(key, leadData[key]);
         }
+    });
 
 
-        function submitModulesPopup() {
 
-            const checked = document.querySelectorAll('input[name="modules[]"]:checked');
+    fetch('/PopupFormInsert.php', {
+        method: 'POST',
+        body: params
+    })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success') {
+                showSuccessMessage_NL("Thank you! We’ve received your details and our team will be in touch shortly.");
+                document.body.style.paddingRight = "0px";
+                sessionStorage.setItem("lead_submitted", "true");
+                sessionStorage.removeItem("lead_form_data");
 
-            if (checked.length === 0) {
-                showModulesError("<span class='small'>Please select at least one module you are interested in.</span>");
-                return; 
             }
-
-            const modules = Array.from(checked).map(c => c.value);
-
-            const leadData = JSON.parse(sessionStorage.getItem("lead_form_data")) || {};
-
-            // PHP expects modules[] as array
-            leadData["modules"] = modules;
-
-            // FINAL SAVE
-            saveLeadToServer(leadData);
-
-            closeModulesPopup();
-        }
-
-        function showModulesError(msg) {
-            const el = document.getElementById("modules_error");
-            el.innerHTML = msg;
-            el.style.display = "block";
-        }
+        });
+}
 
 
-        function skipModulesPopup() {
+function submitModulesPopup() {
 
-            const leadData = JSON.parse(sessionStorage.getItem("lead_form_data")) || {};
+    const checked = document.querySelectorAll('input[name="modules[]"]:checked');
 
-            // 🔹 modules nahi mile, but lead save honi chahiye
-            saveLeadToServer(leadData);
+    if (checked.length === 0) {
+        showModulesError("<span class='small'>Please select at least one module you are interested in.</span>");
+        return;
+    }
 
-            closeModulesPopup();
-        }
+    const modules = Array.from(checked).map(c => c.value);
+
+    const leadData = JSON.parse(sessionStorage.getItem("lead_form_data")) || {};
+
+    // PHP expects modules[] as array
+    leadData["modules"] = modules;
+
+    // FINAL SAVE
+    saveLeadToServer(leadData);
+
+    closeModulesPopup();
+}
+
+function showModulesError(msg) {
+    const el = document.getElementById("modules_error");
+    el.innerHTML = msg;
+    el.style.display = "block";
+}
+
+
+function skipModulesPopup() {
+    const leadData = JSON.parse(sessionStorage.getItem("lead_form_data")) || {};
+
+    // 🔹 modules nahi mile, but lead save honi chahiye
+    saveLeadToServer(leadData);
+
+    closeModulesPopup();
+}
 
 
 
