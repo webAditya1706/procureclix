@@ -2270,10 +2270,10 @@ p {
 .float_icon_con {
   position: fixed;
   z-index: 999;
-  bottom: 10px;
+  bottom: 3px;
   right: 20px;
-  width: 80px;
-  height: 80px;
+  width: 67px;
+  height: 67px;
   border-radius: 50%;
   background-color: #1b5b7e;
   box-shadow: rgba(0, 0, 0, 0.04) 0 0 6px, rgba(0, 0, 0, 0.06) 0 2px 6px,
@@ -2284,8 +2284,6 @@ p {
 .float_icon_con {
   border: 2px solid #fff;
   background-color: #00549a;
-  width: 80px;
-  height: 80px;  
   border-radius: 50%;
   cursor: pointer;
 }
@@ -2298,7 +2296,7 @@ p {
 
 .icon_cotner .float_icon{
   width: auto;
-  height: 35px;
+  height: 30px;
 
 }
 
