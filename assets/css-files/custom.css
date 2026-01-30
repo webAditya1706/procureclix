@@ -569,3 +569,13 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+body.modal-open {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+.modal-body-fixed {
+  max-height: 65vh;
+  overflow-y: auto;
+}

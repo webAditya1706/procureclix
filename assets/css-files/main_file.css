@@ -502,6 +502,13 @@ a {
   line-height: normal;
 }
 
+
+.btn_secondary:hover{
+  background-color: #6c757d !important;
+  color: var(--White, #fff) !important;
+  
+}
+
 .btn_primary_2 {
   display: inline-flex;
   padding: 10px 30px;
@@ -1068,6 +1075,16 @@ a {
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
+  line-height: 13px; /* 100% */
+}
+
+
+.fs_13_fw_400_c_red {
+  color: var(--White, #fff);
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 13px; /* 100% */
 }
 
@@ -2270,12 +2287,12 @@ p {
 .float_icon_con {
   position: fixed;
   z-index: 999;
-  bottom: 3px;
+  bottom: 5px;
   right: 20px;
-  width: 67px;
-  height: 67px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background-color: #1b5b7e;
+  background-color: var(--primary_bg_color);
   box-shadow: rgba(0, 0, 0, 0.04) 0 0 6px, rgba(0, 0, 0, 0.06) 0 2px 6px,
     rgba(0, 0, 0, 0.06) 0 10px 20px, rgba(0, 0, 0, 0.2) 0 20px 20px;
   border: 2px solid #fff;
@@ -2283,7 +2300,7 @@ p {
 
 .float_icon_con {
   border: 2px solid #fff;
-  background-color: #00549a;
+  background-color: var(--primary_bg_color);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -2301,7 +2318,7 @@ p {
 }
 
 .float_icon_con:focus {
-  outline: #00549a solid 2px !important;
+  outline: var(--primary_bg_color) solid 2px !important;
   border: 2px solid #fff !important;
   /* outline-offset: 4px; */
 
@@ -2321,4 +2338,8 @@ p {
 .icon-show {
     opacity: 1;
     transform: scale(1);
+}
+
+body.modal-open {
+  padding-right: 0 !important;
 }
