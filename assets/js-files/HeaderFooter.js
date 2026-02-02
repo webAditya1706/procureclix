@@ -655,7 +655,7 @@ window.addEventListener("load", function () {
 
 
 function updateCopyrightYear() {
-  const el = document.querySelector(".copy_write_text span");
+  const el = document.querySelector(".copy_write_text");
   if (!el) return;
 
   el.innerHTML = el.innerHTML.replace(/\d{4}/, new Date().getFullYear());
