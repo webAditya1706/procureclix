@@ -1,3 +1,7 @@
+
+
+
+
 let HeaderHTML = `
 <div class="w-100 primary_bg z-3">
     <!-- Desktop Navbar -->
@@ -1059,3 +1063,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 console.log(`Width: ${window.innerWidth}px, Height: ${window.innerHeight}px`);
+
+

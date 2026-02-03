@@ -1,0 +1,7 @@
+URL:
+https://ipqualityscore.com/api/json/ip/Z4CsHxthk3USMyD8lVZcgPJ7bKEuPOej/::1?strictness=1&allow_public_access_points=true
+
+RESPONSE:
+{"success":true,"message":"Success","fraud_score":100,"country_code":"N\/A","region":"N\/A","city":"N\/A","ISP":"Loopback","ASN":0,"organization":"Loopback","is_crawler":false,"timezone":"","mobile":false,"host":"localhost","proxy":true,"vpn":true,"tor":false,"active_vpn":false,"active_tor":false,"recent_abuse":true,"bot_status":true,"connection_type":"Premium required.","abuse_velocity":"Premium required.","zip_code":"N\/A","latitude":0,"longitude":0,"abuse_events":["Enterprise plan required to view abuse events and active proxy networks"],"request_id":"eJ3OYXRRTC"}
+
+-----------------

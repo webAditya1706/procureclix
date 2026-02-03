@@ -502,11 +502,9 @@ a {
   line-height: normal;
 }
 
-
-.btn_secondary:hover{
+.btn_secondary:hover {
   background-color: #6c757d !important;
   color: var(--White, #fff) !important;
-  
 }
 
 .btn_primary_2 {
@@ -1077,7 +1075,6 @@ a {
   font-weight: 700;
   line-height: 13px; /* 100% */
 }
-
 
 .fs_13_fw_400_c_red {
   color: var(--White, #fff);
@@ -1793,7 +1790,9 @@ p {
   border-radius: 10px;
   padding: 2px;
   background: linear-gradient(90deg, #0086c9, #004263);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   pointer-events: none;
@@ -2279,7 +2278,6 @@ p {
   .popup-dialog {
     max-width: 100%;
   }
-
 }
 
 /* floating icon css */
@@ -2293,8 +2291,11 @@ p {
   height: 70px;
   border-radius: 50%;
   background-color: var(--primary_bg_color);
-  box-shadow: rgba(0, 0, 0, 0.04) 0 0 6px, rgba(0, 0, 0, 0.06) 0 2px 6px,
-    rgba(0, 0, 0, 0.06) 0 10px 20px, rgba(0, 0, 0, 0.2) 0 20px 20px;
+  box-shadow:
+    rgba(0, 0, 0, 0.04) 0 0 6px,
+    rgba(0, 0, 0, 0.06) 0 2px 6px,
+    rgba(0, 0, 0, 0.06) 0 10px 20px,
+    rgba(0, 0, 0, 0.2) 0 20px 20px;
   border: 2px solid #fff;
 }
 
@@ -2305,41 +2306,119 @@ p {
   cursor: pointer;
 }
 
-.icon_cotner {  
+.icon_cotner {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.icon_cotner .float_icon{
+.icon_cotner .float_icon {
   width: auto;
   height: 30px;
-
 }
 
 .float_icon_con:focus {
   outline: var(--primary_bg_color) solid 2px !important;
   border: 2px solid #fff !important;
   /* outline-offset: 4px; */
-
 }
 
-
 .float_icon {
-    transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .icon-hide {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
 }
 
 .icon-show {
-    opacity: 1;
-    transform: scale(1);
+  opacity: 1;
+  transform: scale(1);
 }
 
 body.modal-open {
   padding-right: 0 !important;
 }
+
+
+
+/* vpn Style */
+
+.add_theme_bg{
+  background: linear-gradient(180deg, #004263 0%, #0086c9 100%);
+}
+
+.vpn_body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #004263 0%, #0086c9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Card */
+.vpn_card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: clamp(20px, 4vw, 32px);
+  text-align: center;
+  color: #fff;
+}
+
+/* Text */
+.vpn_card p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.6;
+  color: #fff !important;
+}
+
+.vpn_card small {
+  display: block;
+  margin-top: 12px;
+  font-size: clamp(11px, 2vw, 13px);
+  opacity: 0.85;
+}
+
+/* Button */
+.vpn_btn {
+  /* width: 100%; */
+  margin-top: 24px;
+  padding: 12px;
+  border-radius: 24px;
+  border: none;
+  background: #ffffff;
+  color: #004263;
+  font-size: clamp(14px, 2.5vw, 16px);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.vpn_btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.vpn_btn {
+  margin-top: 22px;
+  padding: 10px 26px;
+  border-radius: 20px;
+  border: none;
+  background: #ffffff;
+  color: #004263;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* vpn Style */
+
