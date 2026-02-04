@@ -16,15 +16,15 @@ if (!$ip) {
 }
 
 // ================= LOGGING =================
-file_put_contents(
-    __DIR__ . "/ip_debug.log",
-    "Time: " . date("Y-m-d H:i:s") . PHP_EOL .
-    "HTTP_X_FORWARDED_FOR: " . ($_SERVER['HTTP_X_FORWARDED_FOR'] ?? 'NOT SET') . PHP_EOL .
-    "REMOTE_ADDR: " . ($_SERVER['REMOTE_ADDR'] ?? 'NOT SET') . PHP_EOL .
-    "Client IP: " . $ip . PHP_EOL .
-    "--------------------------" . PHP_EOL,
-    FILE_APPEND
-);
+// file_put_contents(
+//     __DIR__ . "/ip_debug.log",
+//     "Time: " . date("Y-m-d H:i:s") . PHP_EOL .
+//     "HTTP_X_FORWARDED_FOR: " . ($_SERVER['HTTP_X_FORWARDED_FOR'] ?? 'NOT SET') . PHP_EOL .
+//     "REMOTE_ADDR: " . ($_SERVER['REMOTE_ADDR'] ?? 'NOT SET') . PHP_EOL .
+//     "Client IP: " . $ip . PHP_EOL .
+//     "--------------------------" . PHP_EOL,
+//     FILE_APPEND
+// );
 
 // ================= IPQUALITYSCORE API =================
 $apiKey = "Z4CsHxthk3USMyD8lVZcgPJ7bKEuPOej"; // Keep secret
