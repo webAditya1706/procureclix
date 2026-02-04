@@ -143,7 +143,7 @@ getBrowserSize = function () {
 // DOM ready (jQuery replacement)
 document.addEventListener("DOMContentLoaded", function () {
 
-    document.body.insertAdjacentHTML("beforeend", `
+	document.body.insertAdjacentHTML("beforeend", `
         <button class="float_icon_con" onclick="togglePopup()">
             <div class="icon_cotner">
                 <img src="/assets/icons/Chat-Button-Bubbles.png" class="float_icon show_popup" />
@@ -154,27 +154,95 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function togglePopup() {
-    const popup = document.getElementById("staticBackdrop");
-    const showIcon = document.querySelector(".show_popup");
-    const hideIcon = document.querySelector(".hide_popup");
+	const popup = document.getElementById("staticBackdrop");
+	const showIcon = document.querySelector(".show_popup");
+	const hideIcon = document.querySelector(".hide_popup");
 
-    if (!popup || !showIcon || !hideIcon) return;
+	if (!popup || !showIcon || !hideIcon) return;
 
-    if (popup.classList.contains("show")) {
-        // CLOSE popup
-        popup.classList.remove("show");
-        popup.setAttribute("aria-hidden", "true");
+	if (popup.classList.contains("show")) {
+		// CLOSE popup
+		popup.classList.remove("show");
+		popup.setAttribute("aria-hidden", "true");
 
-        showIcon.style.display = "block";
-        hideIcon.style.display = "none";
-    } else {
-        // OPEN popup
-        popup.classList.add("show");
-        popup.setAttribute("aria-hidden", "false");
+		showIcon.style.display = "block";
+		hideIcon.style.display = "none";
+	} else {
+		// OPEN popup
+		popup.classList.add("show");
+		popup.setAttribute("aria-hidden", "false");
 
-        showIcon.style.display = "none";
-        hideIcon.style.display = "block";
-    }
+		showIcon.style.display = "none";
+		hideIcon.style.display = "block";
+	}
 }
 
 
+
+//// track VPN start
+
+if (!window.__vpnChecked) {
+	window.__vpnChecked = true;
+
+	document.addEventListener("DOMContentLoaded", async () => {
+		try {
+			// Step 1: Get the real public IP of the user
+			const ipRes = await fetch("https://api.ipify.org?format=json");
+			const ipData = await ipRes.json();
+			const clientIp = ipData.ip;
+
+			console.log("Client Public IP:", clientIp);
+
+			// Step 2: Send IP to PHP backend
+			const vpnRes = await fetch(`/vpn.php?ip=${clientIp}`);
+			const data = await vpnRes.json();
+
+			console.log("IPQS Data:", data);
+
+			if (data.error) {
+				console.error("Backend error:", data.message);
+				let body = document.getElementsByTagName("body");
+				body[0].classList.remove("d-none");
+				return;
+			}
+
+			// Step 3: VPN/Proxy/Tor detection logic
+			const isVpnUser =
+				data.active_vpn === true ||
+				data.tor === true ||
+				(data.vpn === true && data.fraud_score > 75);
+
+			console.log("Is VPN User:", isVpnUser);
+
+			if (isVpnUser) {
+				// alert("VPN / Proxy detected!");
+				// window.location.href = '/vpn.html'; // optional redirect
+				let body = document.getElementsByTagName("body");
+				body[0].classList.remove("d-none");
+				body[0].innerHTML = `
+                    <div class="vpn_body">
+                        <div class="vpn_card">
+                            <p>
+                                Looks like you are connecting through a VPN, proxy or "unblocker" service.
+                                Please turn off any of these services and try again.
+                            </p>
+                            <button class="vpn_btn" onclick="location.reload()">Retry</button>
+                            <img src="../" alt="" srcset="">
+                        </div>
+                    </div>
+                    `
+
+			} else {
+				let body = document.getElementsByTagName("body");
+				body[0].classList.remove("d-none");
+			}
+
+		} catch (err) {
+			let body = document.getElementsByTagName("body");
+			body[0].classList.remove("d-none");
+			console.error("Fetch error:", err);
+		}
+	});
+}
+
+//// track VPN end

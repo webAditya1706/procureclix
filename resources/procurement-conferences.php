@@ -70,7 +70,7 @@ ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js'); })(document,
 
 </head>
 
-<body>
+<body class="d-none">
 
     <?php
         $events = [];
