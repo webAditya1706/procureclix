@@ -51,6 +51,7 @@ document.head.appendChild(o)}initApollo();</script>
     <!-- Canonical link -->
     <link rel="canonical" href="https://procureclix.com/contact-us.html" />
 
+
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css-files/main_file.css">
     <link rel="stylesheet" href="./assets/css-files/custom.css">
@@ -66,10 +67,10 @@ document.head.appendChild(o)}initApollo();</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.min.css">
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
      <script src="./assets/js-files/leadSourceMap.js"></script>
-  
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcp6VksAAAAAKVvnQEfstGrX4SRVXJoBwzuwHn5"></script>
 </head>
 
-<body class="d-none">
+<body>
     <!-- Start of HubSpot Embed Code 
 
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49679259.js"></script>
@@ -153,11 +154,13 @@ script.src = target;var elem = document.head;elem.appendChild(script);
                                 be
                                 in touch directly.</p>
 
-                            <form class="contact_us_form" action="insert.php" method="post" onsubmit="return validateForm()">
+                            <form id="contact_us_form" class="contact_us_form" action="insert.php" method="post" >
                               <input type="hidden" id="timezone" name="timezone">
                                <input type="hidden" id="leadSource" name="leadSource" >
                                
                                  <input type="hidden" id="emailVerifyStatus" name="emailVerifyStatus">
+                                 <input type="hidden" id="form_loaded_at" name="formLoadedAt">
+                               <input type="hidden" name="recaptcha_token" id="recaptcha_token">
                                 <div class="row gy-3">
                                     <div class="col-sm-6">
                                         <label for="fullName" class="form-label">Full Name<span
@@ -254,7 +257,7 @@ script.src = target;var elem = document.head;elem.appendChild(script);
                                     <textarea class="form-control"  name="notes" id="notes" rows="8"
                                         placeholder="Type Here" maxlength="3000"></textarea>
                                 </div>
-
+ <div id="captchaError" class="fs_13_fw_400_c_red mt-1"></div>
                                 <div class="text-center mt-5">
                                     <button id="submitBtnID" type="submit" value="submit" class="btn submit_btn">Submit</button>
                                 </div>
@@ -295,11 +298,41 @@ script.src = target;var elem = document.head;elem.appendChild(script);
     </div>
   </div>
 </div>
-  
+ <script>
+document.getElementById("contact_us_form").addEventListener("submit", function(e) {
+    e.preventDefault();
+if (!validateForm()) {
+        return; // ab submit ruk gaya
+    }
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lcp6VksAAAAAKVvnQEfstGrX4SRVXJoBwzuwHn5', {action: 'contact_form'}).then(function(token) {
+            document.getElementById("recaptcha_token").value = token;
+            e.target.submit();
+        });
+    });
+});
+</script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const errorDiv = document.getElementById("captchaError");
+
+if (params.get("verify") === "failed") {
+    errorDiv.innerText = "Captcha verification failed.";
+
+    // URL se parameter hata do
+    window.history.replaceState({}, document.title, window.location.pathname);
+}
+
+// user form me type kare to error hata do
+document.querySelectorAll("#contact_us_form input, #contact_us_form textarea, #contact_us_form select")
+    .forEach(el => {
+        el.addEventListener("input", function () {
+            errorDiv.innerText = "";
+        });
+    });
+</script> 
     <script>
-
-
-
 
     const emailField = document.getElementById('email');
     const phoneField = document.getElementById('phone');
@@ -545,7 +578,7 @@ function verifyEmail() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+      document.getElementById("form_loaded_at").value = Date.now();
    const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     document.getElementById("timezone").value = userTimezone;
   
@@ -577,6 +610,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var externalSource = sessionStorage.getItem("externalSource") || document.getElementById("externalSource").value || "";
     if (externalSource) {
        leadSource = externalSource;
+        
     }
     else
     {

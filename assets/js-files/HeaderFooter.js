@@ -1,7 +1,3 @@
-
-
-
-
 let HeaderHTML = `
 <div class="w-100 primary_bg z-3">
     <!-- Desktop Navbar -->
@@ -636,13 +632,15 @@ window.addEventListener("load", function () {
                     else if (ref.includes("google.")) externalSource = "Google";
                     else externalSource = ref;
                 } else {
+                    console.log("4")
                     externalSource = "";
                 }
             } catch (e) {
                 externalSource = "";
             }
         } else {
-            externalSource = "";
+             console.log("5")
+            externalSource = "Direct";
         }
 
         // First visit se sessionStorage me store kar do
@@ -659,7 +657,7 @@ window.addEventListener("load", function () {
 
 
 function updateCopyrightYear() {
-  const el = document.querySelector(".copy_write_text");
+  const el = document.querySelector(".copy_write_text span");
   if (!el) return;
 
   el.innerHTML = el.innerHTML.replace(/\d{4}/, new Date().getFullYear());
@@ -1063,5 +1061,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 console.log(`Width: ${window.innerWidth}px, Height: ${window.innerHeight}px`);
-
-
