@@ -573,3 +573,9 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+/* to handle  */
+.page-hidden {
+    visibility: hidden;
+    opacity: 0;
+}

@@ -23,6 +23,7 @@ if (!window.__vpnChecked) {
 				console.error("Backend error:", data.message);
 				let body = document.getElementsByTagName("body");
 				body[0].classList.remove("d-none");
+				body[0].classList.remove("page-hidden");
 				return;
 			}
 
@@ -39,6 +40,7 @@ if (!window.__vpnChecked) {
 				// window.location.href = '/vpn.html'; // optional redirect
 				let body = document.getElementsByTagName("body");
 				body[0].classList.remove("d-none");
+				body[0].classList.remove("page-hidden");
 				body[0].innerHTML = `
                     <div class="vpn_body">
                         <div class="vpn_card">
@@ -55,23 +57,19 @@ if (!window.__vpnChecked) {
 			} else {
 				let body = document.getElementsByTagName("body");
 				body[0].classList.remove("d-none");
+				body[0].classList.remove("page-hidden");
 			}
 
 		} catch (err) {
 			let body = document.getElementsByTagName("body");
 			body[0].classList.remove("d-none");
+				body[0].classList.remove("page-hidden");
 			console.error("Fetch error:", err);
 		}
 	});
 }
 
 //// track VPN end
-
-
-
-
-
-
 
 
 
