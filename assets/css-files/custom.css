@@ -345,6 +345,10 @@
   color: #000;
 }
 
+/* .contact_us_form .iti input.form-control {
+  padding-left: 74px !important; 
+} */
+
 .contact_us_form .input-group-text {
   height: 40px;
   border: 1px solid var(--Stroke, #b5b8b8);
