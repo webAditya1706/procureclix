@@ -503,6 +503,11 @@ a {
 
 }
 
+.btn_secondary:hover {
+  background-color: #6c757d !important;
+  color: var(--White, #fff) !important;
+}
+
 .btn_primary_2 {
   display: inline-flex;
   padding: 10px 30px;

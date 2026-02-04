@@ -69,7 +69,7 @@ document.head.appendChild(o)}initApollo();</script>
  <script src="https://dash.accessiblyapp.com/widget/0198cb56-5a7e-70c1-84fe-f651ad2211e3/autoload.js"></script>
 </head>
 
-<body>
+<body class="d-none">
 <!-- Start of HubSpot Embed Code -->
 
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49679259.js"></script>
@@ -125,6 +125,10 @@ script.src = target;var elem = document.head;elem.appendChild(script);
             </div>
         </div>
     </section>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Open Modal
+</button>
 
     <section class="mt-4">
         <!-- spacer -->
@@ -233,8 +237,8 @@ script.src = target;var elem = document.head;elem.appendChild(script);
                     </div>
                 </div>
                 <div class="modal-footer"> 
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> 
-                    <button type="button" class="btn btn-primary" onclick="confrence_submit_popup();">Continue</button> 
+                    <button type="button" class="btn btn_secondary" data-bs-dismiss="modal">Close</button> 
+                    <button type="button" class="btn btn_primary" onclick="confrence_submit_popup();">Continue</button> 
                 </div>
             </div>
         </div>
