@@ -579,3 +579,26 @@
     visibility: hidden;
     opacity: 0;
 }
+
+
+.calendly-inline-widget {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    min-height: 350px;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+
+.calendly-inline-widget iframe {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 350px;
+}
+
