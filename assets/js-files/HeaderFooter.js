@@ -100,7 +100,7 @@ let HeaderHTML = `
                             Us</span>
                     </a>
                     <div class="col-auto">
-                        <a href="/contact-us.html" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
+                        <a href="/schedule-a-demo.html" class="btn btn-light white_bg_btn demo_btn"><span>Schedule a
                                 Demo</span></a>
                     </div>
                 </div>
@@ -215,7 +215,7 @@ let HeaderHTML = `
                     <a href="/contact-us.html" class="btn btn-outline-light wite_border_btn"><span>Contact
                             Us</span></a>
                     <div>
-                        <a href="/contact-us.html"
+                        <a href="/schedule-a-demo.html"
                             class="btn btn-light white_bg_btn demo_btn w-100"><span>Schedule a Demo</span></a>
                     </div>
                 </div>
@@ -436,7 +436,7 @@ let FooterHTML = `
     <div class="popup-content">
 
       <div class="popup-header">
-        <h5>Connect with a specialist</h5>
+        <h5>Get Free Consultation</h5>
         <button type="button" class="btn-close popup-close"></button>
       </div>
 
@@ -548,6 +548,8 @@ let FooterHTML = `
 
 <input type="hidden" id="popup_timezone" name="popup_timezone">
 <input type="hidden" id="popup_form_loaded_at" name="formLoadedAt">
+<input type="hidden" id="df_timezone" name="df_timezone">
+<input type="hidden" id="df_loaded_at" name="df_LoadedAt">
 `;
 
 
@@ -861,6 +863,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     document.getElementById("popup_timezone").value = userTimezone;
 
+    document.getElementById("df_timezone").value = userTimezone;
+    document.getElementById("df_loaded_at").value = Date.now();
+
      const popup_emailField = document.getElementById('popup_email');
         popup_emailField.addEventListener('input', () => {
        
@@ -1058,6 +1063,9 @@ document.addEventListener("DOMContentLoaded", function () {
             closeModulesPopup();
         }
 
-
+        // demo form submit work start
+        function testfromcommon(){
+            alert("working");
+        }
 
 console.log(`Width: ${window.innerWidth}px, Height: ${window.innerHeight}px`);

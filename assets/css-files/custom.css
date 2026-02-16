@@ -345,10 +345,6 @@
   color: #000;
 }
 
-/* .contact_us_form .iti input.form-control {
-  padding-left: 74px !important; 
-} */
-
 .contact_us_form .input-group-text {
   height: 40px;
   border: 1px solid var(--Stroke, #b5b8b8);
@@ -573,14 +569,12 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
-
-/* to handle  */
 .page-hidden {
-    visibility: hidden;
-    opacity: 0;
+visibility: hidden !important;
+opacity: 0;
 }
 
-
+/* css for calendly */
 .calendly-inline-widget {
     margin: 0 !important;
     padding: 0 !important;
@@ -592,13 +586,8 @@
 
 
 .calendly-inline-widget iframe {
-    margin-top: 0px;
+    margin-top: -0px;
     margin-bottom: 30px;
     padding: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 350px;
 }
-
+/* css for calendly end*/
