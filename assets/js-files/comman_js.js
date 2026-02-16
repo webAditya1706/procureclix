@@ -254,7 +254,7 @@ const handleScheduleDemo = (el) => {
         redirectDemo = true;
 
     } else {
-        scheduleDemoForm.innerHTML = "";
+        // scheduleDemoForm.innerHTML = "";
         window.location.href = "/schedule-a-demo.html";
     }
 };
