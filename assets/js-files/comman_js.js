@@ -63,7 +63,7 @@ if (!window.__vpnChecked) {
 		} catch (err) {
 			let body = document.getElementsByTagName("body");
 			body[0].classList.remove("d-none");
-				body[0].classList.remove("page-hidden");
+			body[0].classList.remove("page-hidden");
 			console.error("Fetch error:", err);
 		}
 	});
@@ -74,41 +74,41 @@ if (!window.__vpnChecked) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Password eye script start
-  const logPasswordInput = document.getElementById("logInputPassword");
-  const logPassEye = document.getElementById("logPassEye");
+	// Password eye script start
+	const logPasswordInput = document.getElementById("logInputPassword");
+	const logPassEye = document.getElementById("logPassEye");
 
-  if (logPasswordInput && logPassEye) {
-    logPassEye.addEventListener("click", function () {
-      if (logPasswordInput.type === "password") {
-        logPasswordInput.type = "text";
-        logPassEye.classList.remove("bi-eye-fill");
-        logPassEye.classList.add("bi-eye-slash-fill");
-      } else {
-        logPasswordInput.type = "password";
-        logPassEye.classList.remove("bi-eye-slash-fill");
-        logPassEye.classList.add("bi-eye-fill");
-      }
-    });
-  }
-  // Password eye script end
+	if (logPasswordInput && logPassEye) {
+		logPassEye.addEventListener("click", function () {
+			if (logPasswordInput.type === "password") {
+				logPasswordInput.type = "text";
+				logPassEye.classList.remove("bi-eye-fill");
+				logPassEye.classList.add("bi-eye-slash-fill");
+			} else {
+				logPasswordInput.type = "password";
+				logPassEye.classList.remove("bi-eye-slash-fill");
+				logPassEye.classList.add("bi-eye-fill");
+			}
+		});
+	}
+	// Password eye script end
 
-  // Comman header link
-  const navLinks = document.querySelectorAll("#navbarNav .nav-link");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navLinks.forEach((nav) => nav.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
+	// Comman header link
+	const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+	navLinks.forEach((link) => {
+		link.addEventListener("click", function () {
+			navLinks.forEach((nav) => nav.classList.remove("active"));
+			this.classList.add("active");
+		});
+	});
 
-  // Initialize all tooltips on the page
-  const tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  );
-  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-    new bootstrap.Tooltip(tooltipTriggerEl);
-  });
+	// Initialize all tooltips on the page
+	const tooltipTriggerList = [].slice.call(
+		document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	);
+	tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+		new bootstrap.Tooltip(tooltipTriggerEl);
+	});
 });
 
 function showSuccessMessage_NL(message) {
@@ -116,15 +116,15 @@ function showSuccessMessage_NL(message) {
 	if (processSuccessDiv == undefined) {
 		createSuccessDivNL();
 		processSuccessDiv = document.getElementById("flashSuccessMsg_id");
-	}else{
-	addBackdrop();
-}
+	} else {
+		addBackdrop();
+	}
 	document.getElementById("flashSuccessMsgData_id").innerHTML = message;
-	showProcessMessageNL(processSuccessDiv,'successLoaderModal');
+	showProcessMessageNL(processSuccessDiv, 'successLoaderModal');
 }
 
 function createSuccessDivNL() {
-//	var path = imgPath + "successMessage.png";
+	//	var path = imgPath + "successMessage.png";
 	var processSuccessDiv = document.createElement("div");
 	processSuccessDiv.className = "flashSuccessMsg";
 	processSuccessDiv.id = "flashSuccessMsg_id";
@@ -133,21 +133,21 @@ function createSuccessDivNL() {
 	// id=\"flashSuccessMsgData_id\"></DIV>";
 	// align=\"middle\" style=\"float:left; padding-right:5px;\"
 	processSuccessDiv.innerHTML = '<div class="modal fade" id="successLoaderModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"><div class="modal-dialog modal-dialog-centered"><div class="modal-content text-center "><div class="modal-body ">'
-                			+'<div class="row align-items-center"><div class="col-2"><img src="/assets/images/Successful.png" style="width:43px"/></div>'
-                			+'<div class="col-10 fs_15_fw_600_c_1313" style="padding-left: 0px;" id="flashSuccessMsgData_id"></div></div>  </div></div></div></div>';
+		+ '<div class="row align-items-center"><div class="col-2"><img src="/assets/images/Successful.png" style="width:43px"/></div>'
+		+ '<div class="col-10 fs_15_fw_600_c_1313" style="padding-left: 0px;" id="flashSuccessMsgData_id"></div></div>  </div></div></div></div>';
 	document.body.appendChild(processSuccessDiv);
 	var loaderModal = new bootstrap.Modal(document.getElementById('successLoaderModal'), {});
-		//document.querySelector('.modal-backdrop').classList.add('show');
-            loaderModal.show();
+	//document.querySelector('.modal-backdrop').classList.add('show');
+	loaderModal.show();
 }
 
 function addBackdrop() {
-    var backdropDiv = document.createElement('div');
-    backdropDiv.className = 'modal-backdrop fade show'; // Ensure correct Bootstrap classes
-    document.body.appendChild(backdropDiv);
+	var backdropDiv = document.createElement('div');
+	backdropDiv.className = 'modal-backdrop fade show'; // Ensure correct Bootstrap classes
+	document.body.appendChild(backdropDiv);
 }
 
-function showProcessMessageNL(flashMsgDivObj,modalId) {
+function showProcessMessageNL(flashMsgDivObj, modalId) {
 	needToShowNote = false;
 	flashMsg_idObj = flashMsgDivObj;
 
@@ -155,25 +155,25 @@ function showProcessMessageNL(flashMsgDivObj,modalId) {
 	this.flashMsg_idObj.style.position = "absolute";
 	this.flashMsg_idObj.style.alignself = "center";
 
-	 confirm_interval = setTimeout(() => {
-        autoHideConfirmMessageNL(modalId);
-    }, 3500);
+	confirm_interval = setTimeout(() => {
+		autoHideConfirmMessageNL(modalId);
+	}, 3500);
 
 
 	var topOffset = Math.max(document.body.scrollTop,
-			document.documentElement.scrollTop);
+		document.documentElement.scrollTop);
 	var brSize = getBrowserSize();
 	var bodyWidth = brSize[0];
 	var bodyHeight = brSize[1];
-	flashMsg_idObj.style.display="block";
-	var tmpWidth = this.flashMsg_idObj.clientWidth?this.flashMsg_idObj.clientWidth: this.flashMsg_idObj.offsetWidth;
-	var tmpHeight = this.flashMsg_idObj.clientHeight? this.flashMsg_idObj.clientHeight: this.flashMsg_idObj.offsetHeight;
+	flashMsg_idObj.style.display = "block";
+	var tmpWidth = this.flashMsg_idObj.clientWidth ? this.flashMsg_idObj.clientWidth : this.flashMsg_idObj.offsetWidth;
+	var tmpHeight = this.flashMsg_idObj.clientHeight ? this.flashMsg_idObj.clientHeight : this.flashMsg_idObj.offsetHeight;
 	// Setting width and height of left transparent div
 
 	var leftPoint = ((bodyWidth / 2) - (tmpWidth / 2));
 	//alert("leftPoint=" + leftPoint);
 	flashMsg_idObj.style.left = leftPoint + 'px';
-	flashMsg_idObj.style.top = (Math.ceil((bodyHeight - tmpHeight) / 2) + topOffset)+ 'px';
+	flashMsg_idObj.style.top = (Math.ceil((bodyHeight - tmpHeight) / 2) + topOffset) + 'px';
 	flashMsg_idObj.style.display = "block";
 
 }
@@ -181,21 +181,21 @@ function showProcessMessageNL(flashMsgDivObj,modalId) {
 function autoHideConfirmMessageNL(modalId) {
 	needToShowNote = true;
 	flashMsg_idObj.style.display = "none";
-	 var loaderModal = new bootstrap.Modal(document.getElementById(modalId), {});
-  
-	   loaderModal.hide();
-  document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
-setTimeout(() => {
-  document.body.classList.remove('modal-open');
-   if(modalId === "sendLoaderModal"){
-		document.body.style.overflow = 'auto';
-   }
-  //document.body.style.overflow = 'auto';
-}, 300);
+	var loaderModal = new bootstrap.Modal(document.getElementById(modalId), {});
+
+	loaderModal.hide();
+	document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
+	setTimeout(() => {
+		document.body.classList.remove('modal-open');
+		if (modalId === "sendLoaderModal") {
+			document.body.style.overflow = 'auto';
+		}
+		//document.body.style.overflow = 'auto';
+	}, 300);
 	clearInterval(confirm_interval);
 }
 
-getBrowserSize = function() {
+getBrowserSize = function () {
 	// var bodyWidth = document.documentElement.clientWidth;
 	// var bodyHeight = document.documentElement.clientHeight;
 	var bodyWidth, bodyHeight;
@@ -203,7 +203,7 @@ getBrowserSize = function() {
 		bodyWidth = self.innerWidth;
 		bodyHeight = self.innerHeight;
 	} else if (document.documentElement
-			&& document.documentElement.clientHeight) {
+		&& document.documentElement.clientHeight) {
 		// Explorer 6 Strict Mode
 		bodyWidth = document.documentElement.clientWidth;
 		bodyHeight = document.documentElement.clientHeight;
@@ -213,3 +213,48 @@ getBrowserSize = function() {
 	}
 	return [bodyWidth, bodyHeight];
 }
+
+
+
+
+// schedule a demo js
+let redirectDemo = false;
+
+const handleScheduleDemo = (el) => {
+
+    const scheduleDemoForm = el.previousElementSibling;
+
+    // safety check
+    if (!scheduleDemoForm || !scheduleDemoForm.classList.contains("schedule_demo_form")) {
+        console.error("schedule_demo_form not found");
+        return;
+    }
+
+    if (!redirectDemo) {
+
+        scheduleDemoForm.innerHTML = `
+            <div class="row gx-4 gy-2">
+                <div class="col-sm-6 col-xxl-4">
+                    <label>Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+
+                <div class="col-sm-6 col-xxl-4">
+                    <label>Work Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" placeholder="Work Email">
+                </div>
+
+                <div class="col-sm-6 col-xxl-4">
+                    <label>Company Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Company Name">
+                </div>
+            </div>
+        `;
+
+        redirectDemo = true;
+
+    } else {
+        scheduleDemoForm.innerHTML = "";
+        window.location.href = "/schedule-a-demo.html";
+    }
+};
