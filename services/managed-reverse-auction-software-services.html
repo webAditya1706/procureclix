@@ -37,29 +37,31 @@
 
 
 
-    	<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-o.onload=function(){window.trackingFunctions.onLoad({appId:"691c5555985e730021baf3b0"})},
-document.head.appendChild(o)}initApollo();</script>
+    <script>function initApollo() {
+            var n = Math.random().toString(36).substring(7), o = document.createElement("script");
+            o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
+                o.onload = function () { window.trackingFunctions.onLoad({ appId: "691c5555985e730021baf3b0" }) },
+                document.head.appendChild(o)
+        } initApollo();</script>
 
 
 
 
-<!-- Tracking Code -->
-    <script> (function(e, f, g, h, i){
-        $salespanel = window.$salespanel || (window.$salespanel = []);
-        __sp = i;
-        var a=f.createElement(g);
-        a.type="text/javascript";
-        a.async=1;
-        a.src=("https:" == f.location.protocol ? "https://" : "http://") + h;
-        var b = f.getElementsByTagName(g)[0];
-        b.parentNode.insertBefore(a,b);
-    })(window, document, "script", "salespanel.io/src/js/e2d6ea50-0516-4d43-9d5e-1db0f7820581/sp.js", "e2d6ea50-0516-4d43-9d5e-1db0f7820581");
+    <!-- Tracking Code -->
+    <script> (function (e, f, g, h, i) {
+            $salespanel = window.$salespanel || (window.$salespanel = []);
+            __sp = i;
+            var a = f.createElement(g);
+            a.type = "text/javascript";
+            a.async = 1;
+            a.src = ("https:" == f.location.protocol ? "https://" : "http://") + h;
+            var b = f.getElementsByTagName(g)[0];
+            b.parentNode.insertBefore(a, b);
+        })(window, document, "script", "salespanel.io/src/js/e2d6ea50-0516-4d43-9d5e-1db0f7820581/sp.js", "e2d6ea50-0516-4d43-9d5e-1db0f7820581");
     </script>
-<!-- Tracking Code -->
+    <!-- Tracking Code -->
 
-<!-- Google Analytics tag -->
+    <!-- Google Analytics tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -89,33 +91,35 @@ document.head.appendChild(o)}initApollo();</script>
 
 
 
-   
+
 
 </head>
 
 <body class="page-hidden" style="overflow-x: hidden;">
-<!-- Start of HubSpot Embed Code -->
+    <!-- Start of HubSpot Embed Code -->
 
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49679259.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49679259.js"></script>
 
-<!-- End of HubSpot Embed Code -->
-<!--  Clickcease.com tracking-->
+    <!-- End of HubSpot Embed Code -->
+    <!--  Clickcease.com tracking-->
     <script type='text/javascript'>var script = document.createElement('script');
-    script.async = true; script.type = 'text/javascript';
-    var target = 'https://www.clickcease.com/monitor/stat.js';
-    script.src = target;var elem = document.head;elem.appendChild(script);
+        script.async = true; script.type = 'text/javascript';
+        var target = 'https://www.clickcease.com/monitor/stat.js';
+        script.src = target; var elem = document.head; elem.appendChild(script);
     </script>
     <noscript>
-    <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
+        <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx'
+                alt='ClickCease' /></a>
     </noscript>
-<!--  Clickcease.com tracking--> 
+    <!--  Clickcease.com tracking-->
     <!-- header start -->
     <div id="preloader" class="" style="display: none;">
         <div class="ctn-preloader" id="ctn-preloader">
             <div class="round_spinner">
                 <div class="spinner"></div>
                 <div class="text">
-                    <img src="https://procureclix.com/assets/images/favicon_3.png" style="width: 50px; height: auto;" alt="favicon_3 icon" />
+                    <img src="https://procureclix.com/assets/images/favicon_3.png" style="width: 50px; height: auto;"
+                        alt="favicon_3 icon" />
                     <h4>
                         <span>ProcureClix</span>
                     </h4>
@@ -179,16 +183,21 @@ document.head.appendChild(o)}initApollo();</script>
                         </div>
 
                     </div>
-                    <p class="fs_14_fw_600_c_linear  mb-3">See ProcureClix in Action</p>
-                    <a type="button" href="/schedule-a-demo.html" class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
-                        Demo Today!</a>
+
+                    <p class="fs_18_fw_700_c_linear mb-3">Book a 30-Minute Demo</p>
+                    <div class="w-100 schedule_demo_form" id=""></div>
+
+                    <a type="button" onclick="demoForm_submit_popup(this);"
+                        class="btn_primary_2 fs_16_fw_500_c_fff my-4">Book Now</a>
+
 
                 </div>
                 <div class="col-12 col-md-6 rfq_ban_img pb-5">
                     <div class="text-center">
                         <img loading="lazy" src="/assets/images/services/services_auction.png" class="img_rfq_event"
                             alt="services_auction image">
-                        <img loading="lazy" src="/assets/images/servises_rfp/slid_img.png" class="bg_slid" alt="slid background image">
+                        <img loading="lazy" src="/assets/images/servises_rfp/slid_img.png" class="bg_slid"
+                            alt="slid background image">
                     </div>
                 </div>
             </div>
@@ -201,14 +210,15 @@ document.head.appendChild(o)}initApollo();</script>
         <div class="container-fluid section_contaier position-relative">
             <div class="red_gb position-relative overflow-hidden">
                 <img loading="lazy" src="../assets/images/services/red_dubble_round_circle.png"
-                    class="benifit_dubble_ring" alt="red_dubble_round_circle image" data-aos="fade-right" data-aos-delay="200"
-                    data-aos-duration="1000" data-aos-offset="200">
+                    class="benifit_dubble_ring" alt="red_dubble_round_circle image" data-aos="fade-right"
+                    data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
                 <img loading="lazy" src="../assets/images/services/red_solid_cirdle.png" class="benifit_signal_ring"
-                    alt="red_solid_cirdle icon" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
+                    alt="red_solid_cirdle icon" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"
+                    data-aos-offset="200">
                 <div class="spacer_40"></div>
                 <div class="position-relative my-2 px-4 px-sm-5">
-                    <img loading="lazy" src="../assets/images/services/orange_bg_ring.png" class="ring_bg_img" alt="orange_bg_ring image"
-                        style="width: 416px; max-width: 100% ;">
+                    <img loading="lazy" src="../assets/images/services/orange_bg_ring.png" class="ring_bg_img"
+                        alt="orange_bg_ring image" style="width: 416px; max-width: 100% ;">
                     <div class="row z-1">
                         <div class="d-flex justify-content-center align-items-center gap-2 z-1">
                             <img loading="lazy" src="../assets/images/services/puzzel.png" class="w_16_h_16"
@@ -288,11 +298,12 @@ document.head.appendChild(o)}initApollo();</script>
         <!-- spacer -->
         <div class="spacer_100"></div>
         <div class="container-fluid services_benifit_container px-2 px-sm-5">
-            <img loading="lazy" src="../assets/images/servises_rfp/dubble_ring.png" alt="dubble_ring icon" class="benifit_dubble_ring"
-                data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-offset="200">
-            <img loading="lazy" src="../assets/images/services/managment_blur_solid_ring.png"
-                class="benifit_signal_ring" alt="managment_blur_solid_ring" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000"
+            <img loading="lazy" src="../assets/images/servises_rfp/dubble_ring.png" alt="dubble_ring icon"
+                class="benifit_dubble_ring" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000"
                 data-aos-offset="200">
+            <img loading="lazy" src="../assets/images/services/managment_blur_solid_ring.png"
+                class="benifit_signal_ring" alt="managment_blur_solid_ring" data-aos="fade-left" data-aos-delay="200"
+                data-aos-duration="1000" data-aos-offset="200">
             <div class="row g-4 z-1 position-relative">
                 <div class="text-center mb-3 mt-5">
                     <div class="d-flex align-items-center justify-content-center gap-2">
@@ -303,8 +314,8 @@ document.head.appendChild(o)}initApollo();</script>
                 </div>
 
             </div>
-            <img loading="lazy" src="../assets/images/services/blue_bg_ring.png" class="ring_bg_img_2" alt="blue_bg_ring"
-                style="width: 400px;">
+            <img loading="lazy" src="../assets/images/services/blue_bg_ring.png" class="ring_bg_img_2"
+                alt="blue_bg_ring" style="width: 400px;">
 
             <div class="row position-relative pb-5 px-3 pb-md-5">
                 <!-- Card 1 -->
@@ -363,16 +374,16 @@ document.head.appendChild(o)}initApollo();</script>
         <div class="container-fluid section_contaier">
             <div class="row gx-5">
                 <div class="img_outer_shadow">
-                    <img loading="lazy" src="../assets/images/services/auction_helps.jpg" class="w-100 long_img_radious" alt="auction_helps image"
-                        alt="service_full_width_img" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000"
-                        data-aos-offset="200">
+                    <img loading="lazy" src="../assets/images/services/auction_helps.jpg" class="w-100 long_img_radious"
+                        alt="auction_helps image" alt="service_full_width_img" data-aos="fade-right"
+                        data-aos-delay="100" data-aos-duration="1000" data-aos-offset="200">
                     <!-- <img loading="lazy" loading="lazy" src="../assets/images/servises_rfp/service_full_width_img.png" class="w-100" > -->
                 </div>
                 <div class="">
                     <div class="procureclix_help">
                         <div class="d-flex align-items-center justify-content-center gap-2">
-                            <img loading="lazy" src="../assets/images/services/Vector.png" class="w_16_h_16" alt="Vector icon"
-                                srcset="">
+                            <img loading="lazy" src="../assets/images/services/Vector.png" class="w_16_h_16"
+                                alt="Vector icon" srcset="">
                             <span class="fs_20_fw_500_c_linear">How ProcureClix Helps</span>
                         </div>
                         <div class="col-12 col-md-8 mx-auto text-center mb-4">
@@ -575,7 +586,8 @@ document.head.appendChild(o)}initApollo();</script>
                             </div>
                             <!-- end blocks -->
                             <div class="col-12 col-lg-7 mx-auto text-center mt-2">
-                                <p> At <a href="/" class="text_primery__2">ProcureClix</a>, our managed reverse auction service empowers procurement teams to
+                                <p> At <a href="/" class="text_primery__2">ProcureClix</a>, our managed reverse auction
+                                    service empowers procurement teams to
                                     streamline the auction process and get the lowest price possible on your targeted
                                     goods or services, without compromising on quality by engaging highly qualified
                                     suppliers, and maximize cost savings—backed by expert guidance and intuitive
@@ -629,13 +641,13 @@ document.head.appendChild(o)}initApollo();</script>
         <div class="container-fluid section_contaier">
 
             <div class="bg_blue px-4 py-5 position-relative">
-                <img src="/assets/images/services/auction_choose.png" class="rfp_system_img d-none d-xl-block" alt="auction choose"
-                    srcset="">
+                <img src="/assets/images/services/auction_choose.png" class="rfp_system_img d-none d-xl-block"
+                    alt="auction choose" srcset="">
 
                 <div class="row gy-5 align-items-center">
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <img src="/assets/images/services/auction_choose.png" class="w-100 d-lg-block d-xl-none" alt="auction choose img"
-                            srcset="">
+                        <img src="/assets/images/services/auction_choose.png" class="w-100 d-lg-block d-xl-none"
+                            alt="auction choose img" srcset="">
                         <!-- <div class="rfp_system_bg d-none">
                             <h2>
 
@@ -733,8 +745,8 @@ document.head.appendChild(o)}initApollo();</script>
                             real cost savings.</p>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <img src="/assets/images/services/auction_staudy.png" class="w-100 d-lg-block d-xl-none" alt="auction_staudyimage"
-                            srcset="">
+                        <img src="/assets/images/services/auction_staudy.png" class="w-100 d-lg-block d-xl-none"
+                            alt="auction_staudyimage" srcset="">
                     </div>
                 </div>
                 <div class="spacer_40  d-none d-md-block"></div>
@@ -753,7 +765,8 @@ document.head.appendChild(o)}initApollo();</script>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-8 text-center mb-4">
                     <div class="d-flex gap-2 justify-content-center mb-2">
-                        <img loading="lazy" src="/assets/icons/question_mark_icon.png" class="w_18_h_18" alt="question_mark icon">
+                        <img loading="lazy" src="/assets/icons/question_mark_icon.png" class="w_18_h_18"
+                            alt="question_mark icon">
                         <span class="fs_20_fw_500_background">FAQs</span>
                     </div>
                     <h2 class="fs_24_fw_700_c_1313">FAQs About Strategic Sourcing</h2>
@@ -779,7 +792,8 @@ document.head.appendChild(o)}initApollo();</script>
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body fs_15_fw_400_c_1313">
-                                    At <a href="/" class="text_primery__2">ProcureClix</a>, our web-based auction platform simplifies and streamlines the entire
+                                    At <a href="/" class="text_primery__2">ProcureClix</a>, our web-based auction
+                                    platform simplifies and streamlines the entire
                                     bidding process.
                                     It connects buyers and suppliers in real time, making it easier to manage
                                     competitive events without the back-and-forth of traditional negotiations.
@@ -832,7 +846,8 @@ document.head.appendChild(o)}initApollo();</script>
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body fs_15_fw_400_c_1313">
-                                    At <a href="/" class="text_primery__2">ProcureClix</a>, we take data protection seriously.
+                                    At <a href="/" class="text_primery__2">ProcureClix</a>, we take data protection
+                                    seriously.
                                     Our e-sourcing platform is built on ISO 27001-compliant infrastructure and hosted
                                     securely on Microsoft Azure.
                                     We use encryption for all data, both in transit and at rest.
@@ -859,7 +874,8 @@ document.head.appendChild(o)}initApollo();</script>
                             <div id="flush-collapseFour" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body fs_15_fw_400_c_1313">
-                                    <a href="/" class="text_primery__2">ProcureClix</a> was built to simplify even the most complex bidding scenarios.
+                                    <a href="/" class="text_primery__2">ProcureClix</a> was built to simplify even the
+                                    most complex bidding scenarios.
                                     Whether it's multi-round bidding, auto time extensions for last-minute bids, or
                                     applying custom loading factors, we’ve made it all manageable through an intuitive
                                     interface.
