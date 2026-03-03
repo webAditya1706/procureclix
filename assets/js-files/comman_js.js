@@ -120,6 +120,35 @@ document.addEventListener("DOMContentLoaded", function () {
   tooltipTriggerList.forEach(function (tooltipTriggerEl) {
     new bootstrap.Tooltip(tooltipTriggerEl);
   });
+
+  handleScheduleDemo();
+
+  const phoneInputs = document.querySelectorAll(".phone-input");
+
+  if (phoneInputs.length === 0) return; 
+
+  phoneInputs.forEach(function (input) {
+
+    const iti = window.intlTelInput(input, {
+      initialCountry: "us",
+      separateDialCode: true,
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
+    });
+
+    const hiddenId = input.getAttribute("data-country-code-id");
+
+    function setDialCode() {
+      const dialCode = iti.getSelectedCountryData().dialCode;
+      if (hiddenId && document.getElementById(hiddenId)) {
+        document.getElementById(hiddenId).value = dialCode;
+      }
+    }
+
+    input.addEventListener("countrychange", setDialCode);
+
+    setDialCode();
+  });
+
 });
 
 function showSuccessMessage_NL(message) {
@@ -227,19 +256,12 @@ getBrowserSize = function() {
 
 
 // schedule a demo work start from here
-let redirectDemo = false;
-
 const handleScheduleDemo = (el) => {
 
-    const scheduleDemoForm = el.previousElementSibling;
-
-    // safety check
-    if (!scheduleDemoForm || !scheduleDemoForm.classList.contains("schedule_demo_form")) {
-        console.error("schedule_demo_form not found");
-        return;
+    const scheduleDemoForm = document.querySelector('.schedule_demo_form');
+    if (!scheduleDemoForm) {
+        return; 
     }
-
-    if (!redirectDemo) {
 
         scheduleDemoForm.innerHTML = `
             <div class="row gx-4 gy-2">
@@ -257,21 +279,20 @@ const handleScheduleDemo = (el) => {
                 </div>
 
                 <div class="col-sm-6 col-xxl-4">
-                    <label>Company Name <span class="text-danger">*</span></label>
-                    <input type="text" id="df_companyName" class="form-control" placeholder="Company Name">
-                    <div><div style="color:red;font-size:12px;margin-top:2px;" id="df_cNameError"></div></div>
+                    <div class="input-group">
+                        <label>Phone Number <span class="text-danger">*</span></label>
+                        <input type="hidden" id="phoneCountryCode1" name="phoneCountryCode" />
+                        <input type="tel" class="form-control phone-input" data-country-code-id="phoneCountryCode1" oninput="phoneValidation();" id="df_phone" maxLength="15" name="phone" placeholder="Phone Number" />
+                        <div><div style="color:red;font-size:12px;margin-top:2px;" id="df_phoneError"></div></div>
+                    </div>
                 </div>
             </div>
         `;
+        
 
-        redirectDemo = true;
 
-    } else {
-        //scheduleDemoForm.innerHTML = "";
-		    demoForm_submit_popup(scheduleDemoForm);
-        //window.location.href = "/schedule-a-demo.html";
-    }
 };
+
 
  // demo form submit work start
       
@@ -283,9 +304,10 @@ const handleScheduleDemo = (el) => {
                 const formData = {
                     fullName: document.getElementById('df_fullName').value || '',
                     email: document.getElementById('df_Email').value || '',
-                    companyName: document.getElementById('df_companyName').value || '',
+                    phone: document.getElementById('df_phone').value || '',
                     timezone: document.getElementById('df_timezone').value || '',
-                    formLoadedAt: document.getElementById('df_loaded_at').value || ''
+                    formLoadedAt: document.getElementById('df_loaded_at').value || '',
+                    phoneCountryCode: document.getElementById('phoneCountryCode1').value || ''
                     
                 };
                 console.log(formData);
@@ -300,18 +322,17 @@ const handleScheduleDemo = (el) => {
                     }
                 });
 
-                 fetch('/ScheduleDemoFormInsert.php', {
-                    method: 'POST',
-                     body: params
-                 })
-                 .then(res => res.json())
-                 .then(data => {
-                     if (data.status === 'success') {
-                          scheduleDemoForm.innerHTML = "";
-                          redirectDemo = false;
-                          window.location.href = "/schedule-a-demo.html";
-                     }
-                 });
+                  fetch('/ScheduleDemoFormInsert.php', {
+                     method: 'POST',
+                      body: params
+                  })
+                  .then(res => res.json())
+                  .then(data => {
+                      if (data.status === 'success') {
+                           window.location.href = "/schedule-a-demo.html?name="+document.getElementById('df_fullName').value+"&email="+document.getElementById('df_Email').value;
+                           
+                      }
+                  });
                 
 
 
@@ -329,34 +350,33 @@ const handleScheduleDemo = (el) => {
             
             const df_fullName = document.getElementById('df_fullName').value.trim();
             const df_Email = document.getElementById('df_Email').value.trim();
-            const df_companyName = document.getElementById('df_companyName').value.trim();
+            const df_phone = document.getElementById('df_phone').value.trim();
 
 
             document.getElementById('df_fNameError').innerHTML = "";
             document.getElementById('df_emailError').innerHTML = "";
-            document.getElementById('df_cNameError').innerHTML = "";
+            document.getElementById('df_phoneError').innerHTML = "";
 
             if (df_fullName === "") {
                 document.getElementById('df_fNameError').innerHTML = "Full Name is required.";
                 valid = false;
             }
 
-            if (df_companyName === "") {
-                document.getElementById('df_cNameError').innerHTML = "Company Name is required.";
-                valid = false;
-            }
-
             
-
             const df_emailError = validatePopupEmail(df_Email);
             if (df_emailError !== "") {
             document.getElementById('df_emailError').innerHTML = df_emailError;
             valid = false;
             }
 
+            const phoneErrorMsg = validateDemoPhone(df_phone);
+            if (phoneErrorMsg !== "") {
+                document.getElementById('df_phoneError').innerHTML = phoneErrorMsg;
+                valid = false;
+            }
+
         return valid;
         }
-
         function emailBoxValidate()
         {
             const df_emailField = document.getElementById('df_Email');
@@ -368,6 +388,40 @@ const handleScheduleDemo = (el) => {
                 document.getElementById('df_emailError').innerHTML = "";
             }
           
+        }
+
+        function phoneValidation()
+        {
+            const df_phonefield = document.getElementById('df_phone');
+            const phone = df_phonefield.value.trim();
+
+            const numericOnly = phone.replace(/\D/g, '');
+            df_phonefield.value = numericOnly;
+
+            if (numericOnly !== "") {
+                const errorMsg = validateDemoPhone(numericOnly);
+                document.getElementById('df_phoneError').innerHTML = errorMsg;
+            } else {
+                document.getElementById('df_phoneError').innerHTML = "";
+            }
+        }
+
+        function validateDemoPhone(phone) {
+
+            if (phone === "") {
+                return "Phone Number is required.";
+            }
+            if (!/^\d+$/.test(phone)) {
+                return "Phone Number should contain digits only.";
+            }
+            if (phone.length < 10) {
+                return "Phone Number must be at least 10 digits.";
+            }
+            if (phone.length > 15) {
+                return "Phone Number must not exceed 15 digits.";
+            }
+            return ""; 
+
         }
 
 // schedule a demo work End here

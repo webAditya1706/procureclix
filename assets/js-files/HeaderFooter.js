@@ -436,7 +436,7 @@ let FooterHTML = `
     <div class="popup-content">
 
       <div class="popup-header">
-        <h5>Get Free Consultation</h5>
+        <h5>Request More Information</h5>
         <button type="button" class="btn-close popup-close"></button>
       </div>
 
@@ -486,8 +486,8 @@ let FooterHTML = `
         <div class="row welcome_popup">
           <div class="col-sm-6 col-xl-4">
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" name="modules[]" value="RFP | RFI | RFQ" id="rfp">
-              <label class="form-check-label" for="rfp">RFP | RFI | RFQ</label>
+              <input class="form-check-input" type="checkbox" name="modules[]" value="RFX" id="rfp">
+              <label class="form-check-label" for="rfp">RFX</label>
             </div>
           </div>
 
@@ -540,6 +540,31 @@ let FooterHTML = `
       <div class="modal-footer">
         <button class="btn btn_primary" onclick="submitModulesPopup();">Submit</button>
         <button class="btn btn_secondary btn_secondary popup-close" onclick="skipModulesPopup();">Skip</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="popup-bottom-right" id="firstPopup" aria-hidden="true">
+  <div class="popup-dialog" style="max-width:450px;">
+    <div class="popup-content">
+
+      <div class="popup-header">
+        <h5>Request More Information</h5>
+        <button type="button" class="btn-close" onclick="closeFirstPopup();"></button>
+      </div>
+
+      <div class="popup-body">
+        <div class="row gy-2">
+          <div class="col-sm-12" id="popupValueID">
+                We’ll send a brief overview of how ProcureClix supports….. “reverse auctions” or “RFx”
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-footer">
+        <button class="btn btn_primary" id="openMainPopup">Send Me Details</button>
       </div>
 
     </div>
@@ -825,23 +850,24 @@ document.addEventListener("DOMContentLoaded", function () {
     // }
 
     // Open after 2 seconds
-    setTimeout(function () {
+    // setTimeout(function () {
 
-        const currentPath = window.location.pathname;
-        if (currentPath === "/contact-us.html") {
-            return; 
-        }
+    //     const currentPath = window.location.pathname;
+    //     if (currentPath === "/contact-us.html") {
+    //         return; 
+    //     }
 
-        if (sessionStorage.getItem("lead_submitted") === "true") {
-             return; 
-        }
+    //     if (sessionStorage.getItem("lead_submitted") === "true") {
+    //          return; 
+    //     }
 
-        const popup = document.getElementById("staticBackdrop");
-        if (popup) {
-            popup.classList.add("show");
-            popup.setAttribute("aria-hidden", "false");
-        }
-    }, 1000);
+    //     const popup = document.getElementById("staticBackdrop");
+    //     if (popup) {
+    //         popup.classList.add("show");
+    //         popup.setAttribute("aria-hidden", "false");
+    //     }
+    // }, 1000);
+    handlePopupLogic();
 
     // Close button click
     const closeButtons = document.querySelectorAll(".popup-close");
@@ -879,6 +905,131 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 });
+
+     // new work start from here  23-feb-2026
+    function handlePopupLogic() {
+
+        const pageMapForPopup = {
+        "/services/procurement-spend-analysis-services.html": "Spend Analysis",
+        "/services/rfp-managed-services.html": "Managed RFX",
+        "/services/managed-reverse-auction-software-services.html": "Managed Reverse Auctions",
+        "/industries/procurement-software-for-transport-logistics-industry.html": "Logistics Sector",
+        "/industries/procurement-software-for-healthcare-industry.html": "Healthcare Sector",
+        "/industries/procurement-software-for-automotive-companies.html": "Automotive Sector",
+        "/industries/procurement-software-for-manufacturing-industry.html": "Manufacturing Sector",
+        "/industries/procurement-software-for-food-beverage-industry.html": "Food & Beverage Sector",
+        "/industries/procurement-software-for-biotech-pharma.html": "BioTech & Pharma Sector",
+        "/industries/procurement-software-for-energy-brokers-suppliers.html": "Energy Brokers & Suppliers Sector",
+        "/industries/construction-&-real-estate-procurement-software.html": "Construction & Real Estate Sector",
+        "/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html": "RFX",
+        "/solutions/procurement-spend-analysis-software.html" : "Solutions | Spend Analysis",
+        "/solutions/best-reverse-auction-software.html" : "Reverse Auction",
+        "/solutions/custom-auction-procurement-software.html" : "Custom Solutions",
+        "/solutions/purchase-requisition-software.html" : "Purchase Requisition",
+        "/solutions/best-supplier-management-software.html" : "Supplier Management",
+        "/solutions/procurement-contract-management-software.html" : "Contract Management",
+        "/solutions/best-procure-to-pay-software-solutions.html":"Procure To Pay",
+        "/blog/" : "Blog",
+        "/resources/integration.html" : "Integration",
+        "/resources/guide.html" : "Procurement Guide",
+        "/resources/glossary.html" : "Procurement Glossary",
+        "/resources/procurement-conferences.html":"Procurement Conferences",
+        "/resources/whitepapers.html":"Whitepaper Page",
+        "/resources/whitepapers/whitepapers-description.html":"Download Whitepaper",
+        "/resources/casestudies.html":"Case Study",
+        "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-financial.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-marketing-services.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-pharmacy.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-subsea-systems.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-services-company.html":"Case Study",
+        "/resources/casestudies/housing-and-urban-development-case-study.html":"Case Study",
+        "/resources/casestudies/contact-us.html":"Case Study",
+        };
+        const currentPath = window.location.pathname;
+       
+        if (currentPath === "/contact-us.html") {
+            return;
+        }
+       
+        if (sessionStorage.getItem("lead_submitted") === "true") {
+            return;
+        }
+
+        const specialPages = ["/solutions/", "/industries/", "/services/"];
+        const delayedPages = ["/resources/", "/blog", "/blog/"];
+
+
+        if (specialPages.some(path => currentPath.includes(path))) {
+            const currentPath = window.location.pathname;
+            const serviceName = pageMapForPopup[currentPath];
+            setTimeout(function () {
+                showFirstPopup(serviceName);
+            }, 20000);
+            return;
+        }
+
+        if (delayedPages.some(path => currentPath.includes(path))) {
+            setTimeout(showMainPopup, 20000);
+            return;
+        }
+
+     
+        if (currentPath === "/" || currentPath === "/index.html") {
+            document.addEventListener("mouseleave", function (e) {
+                if (e.clientY <= 0) {
+                    showMainPopup();
+                }
+            });
+        }
+
+       
+       // setTimeout(showMainPopup, 1000);
+    }
+
+    function showMainPopup() {
+        const popup = document.getElementById("staticBackdrop");
+        if (popup) {
+            popup.classList.add("show");
+            popup.setAttribute("aria-hidden", "false");
+        }
+    }
+
+    function showFirstPopup(serviceName) {
+        const firstPopup = document.getElementById("firstPopup"); 
+        if(firstPopup){
+            firstPopup.classList.add("show");
+            firstPopup.setAttribute("aria-hidden","false");
+        }
+        document.getElementById("popupValueID").innerHTML = "We’ll send a brief overview of how ProcureClix supports "+serviceName;
+         
+
+        const btn = document.getElementById("openMainPopup");
+        if (btn) {
+            btn.addEventListener("click", function () {
+
+                const popup = document.getElementById("firstPopup");
+                if (popup) {
+                    popup.classList.remove("show");
+                    popup.setAttribute("aria-hidden", "true");
+                }
+
+                setTimeout(function () {
+                    showMainPopup(); 
+                }, 500);
+
+            });
+        }
+    }
+    function closeFirstPopup()
+    {
+        const popup = document.getElementById("firstPopup");
+        if (popup) {
+            popup.classList.remove("show");
+            popup.setAttribute("aria-hidden", "true");
+        }
+    }
+    // new work end here
 
    function closePopup() {
         const popup = document.getElementById("staticBackdrop");

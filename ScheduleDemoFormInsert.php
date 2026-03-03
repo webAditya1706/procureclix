@@ -71,11 +71,13 @@ curl_close($ch);
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $modules = isset($_POST['modules']) ? implode(", ", (array)$_POST['modules']) : "";
+        $phoneCountryCode = $_POST['phoneCountryCode'] ?? '';
+        $phone = trim($phoneCountryCode . ' ' . ($_POST['phone'] ?? ''));
 
     $data = [
         'fullName' =>   $_POST['fullName'] ?? '',
         'email'        => $_POST['email'] ?? '',
-        'companyName'  => $_POST['companyName'] ?? '',
+        'phone'        => $phone,
         'ip_address'   => $ipAddress ?? '',
         'browser_info' => $browser_info ?? '',
         'browserName'  => $browser_name ?? '',

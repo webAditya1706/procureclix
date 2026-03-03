@@ -101,7 +101,7 @@ document.head.appendChild(o)}initApollo();</script>
 
 </head>
 
-<body class="d-none" style="overflow-x: hidden;">
+<body class="page-hidden" style="overflow-x: hidden;">
 <!-- Start of HubSpot Embed Code -->
 
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/49679259.js"></script>
@@ -178,9 +178,10 @@ document.head.appendChild(o)}initApollo();</script>
                         </div>
 
                     </div>
-                    <p class="fs_14_fw_600_c_linear  mb-2">See ProcureClix in Action</p>
-                    <a type="button" href="/schedule-a-demo.html" class="btn_primary_2 fs_16_fw_500_c_fff">Book Your
-                        Demo Today!</a>
+                       <p class="fs_18_fw_700_c_linear mb-3">Book a 30-Minute Demo</p>
+                    <div class="w-100 schedule_demo_form" id=""></div>
+
+                    <a type="button" onclick="demoForm_submit_popup(this);" class="btn_primary_2 fs_16_fw_500_c_fff my-4">Book Now</a>
 
                 </div>
                 <div class="col-12 col-lg-6 rfq_ban_img pb-5">
@@ -1069,6 +1070,9 @@ document.head.appendChild(o)}initApollo();</script>
 
         // accordian end
     </script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
     <script src="../assets/js-files/comman_js.js"></script>
     <script src="../assets/js-files/HeaderFooter.js"></script>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
