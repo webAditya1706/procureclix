@@ -523,7 +523,7 @@
   /* margin-bottom: 10px; */
 }
 
-.contact_us_form .iti {
+.contact_us_form .iti, .schedule_demo_form.iti {
   width: 100% !important;
 }
 
