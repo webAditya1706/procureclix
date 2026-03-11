@@ -3,6 +3,44 @@
 
 
 //// track VPN start
+const pageMapForSource = {
+        "/services/procurement-spend-analysis-services.html": "Spend Analysis",
+        "/services/rfp-managed-services.html": "Managed RFX",
+        "/services/managed-reverse-auction-software-services.html": "Managed Reverse Auctions",
+        "/industries/procurement-software-for-transport-logistics-industry.html": "Logistics Sector",
+        "/industries/procurement-software-for-healthcare-industry.html": "Healthcare Sector",
+        "/industries/procurement-software-for-automotive-companies.html": "Automotive Sector",
+        "/industries/procurement-software-for-manufacturing-industry.html": "Manufacturing Sector",
+        "/industries/procurement-software-for-food-beverage-industry.html": "Food & Beverage Sector",
+        "/industries/procurement-software-for-biotech-pharma.html": "BioTech & Pharma Sector",
+        "/industries/procurement-software-for-energy-brokers-suppliers.html": "Energy Brokers & Suppliers Sector",
+        "/industries/construction-&-real-estate-procurement-software.html": "Construction & Real Estate Sector",
+        "/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html": "RFX",
+        "/solutions/procurement-spend-analysis-software.html" : "Solutions | Spend Analysis",
+        "/solutions/best-reverse-auction-software.html" : "Reverse Auction",
+        "/solutions/custom-auction-procurement-software.html" : "Custom Solutions",
+        "/solutions/purchase-requisition-software.html" : "Purchase Requisition",
+        "/solutions/best-supplier-management-software.html" : "Supplier Management",
+        "/solutions/procurement-contract-management-software.html" : "Contract Management",
+        "/solutions/best-procure-to-pay-software-solutions.html":"Procure To Pay",
+        "/blog/" : "Blog",
+        "/resources/integration.html" : "Integration",
+        "/resources/guide.html" : "Procurement Guide",
+        "/resources/glossary.html" : "Procurement Glossary",
+        "/resources/procurement-conferences.html":"Procurement Conferences",
+        "/resources/whitepapers.html":"Whitepaper Page",
+        "/resources/whitepapers/whitepapers-description.html":"Download Whitepaper",
+        "/resources/casestudies.html":"Case Study",
+        "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-financial.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-marketing-services.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-pharmacy.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-subsea-systems.html":"Case Study",
+        "/resources/casestudies/view-case-studies-leading-services-company.html":"Case Study",
+        "/resources/casestudies/housing-and-urban-development-case-study.html":"Case Study",
+        "/resources/casestudies/contact-us.html":"Case Study",
+        };
+
 
 if (!window.__vpnChecked) {
 	window.__vpnChecked = true;
@@ -301,13 +339,16 @@ const handleScheduleDemo = (el) => {
         {
             if(validateDemoForm())
             {
+                 const currentPath = window.location.pathname;
+                const demoSource = pageMapForSource[currentPath] ?? currentPath;
                 const formData = {
                     fullName: document.getElementById('df_fullName').value || '',
                     email: document.getElementById('df_Email').value || '',
                     phone: document.getElementById('df_phone').value || '',
                     timezone: document.getElementById('df_timezone').value || '',
                     formLoadedAt: document.getElementById('df_loaded_at').value || '',
-                    phoneCountryCode: document.getElementById('phoneCountryCode1').value || ''
+                    phoneCountryCode: document.getElementById('phoneCountryCode1').value || '',
+                      leadSource:demoSource
                     
                 };
                 console.log(formData);

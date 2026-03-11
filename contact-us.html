@@ -22,7 +22,13 @@ o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+
 o.onload=function(){window.trackingFunctions.onLoad({appId:"691c5555985e730021baf3b0"})},
 document.head.appendChild(o)}initApollo();</script>
     
-
+<script>
+window.salespanelSettings = {
+  "sp_automatic_lead_capture": true,
+  "sp_lead_capture_on_submit": true,
+  "sp_track_form_bounces": true
+};
+</script>
 
 
 <!-- Tracking Code -->
@@ -36,6 +42,7 @@ document.head.appendChild(o)}initApollo();</script>
         var b = f.getElementsByTagName(g)[0];
         b.parentNode.insertBefore(a,b);
     })(window, document, "script", "salespanel.io/src/js/e2d6ea50-0516-4d43-9d5e-1db0f7820581/sp.js", "e2d6ea50-0516-4d43-9d5e-1db0f7820581");
+    $salespanel.push(["set", "identify:email", `email`, `source`]);
     </script>
 <!-- Tracking Code -->
 
