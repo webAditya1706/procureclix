@@ -279,7 +279,7 @@
 /* contact us */
 
 .contact_form_sec {
-  margin-top: -300px;
+  margin-top: -240px;
 }
 
 .contatc_banner_bg {
@@ -290,6 +290,9 @@
   background-size: cover;
   object-fit: cover;
   background-position: bottom center;
+
+  display:block;
+  align-items: start;
 }
 
 .contact_us_card {
@@ -591,3 +594,12 @@ opacity: 0;
     padding: 0px;
 }
 /* css for calendly end*/
+
+@media (max-width: 991.5px) {
+  .contact_form_sec{
+    margin-top: 0px;
+  }
+  .contatc_banner_bg{
+    display: flex;
+  }
+}
