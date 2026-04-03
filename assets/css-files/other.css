@@ -1,0 +1,271 @@
+.w_150 {
+  width: 150px;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= TEXT STYLE ================= */
+
+.fs_32_fw_600 {
+  font-family: Poppins;
+  font-size: clamp(22px, 2.5vw, 32px); /* 👈 responsive */
+  font-style: normal;
+  font-weight: 600;
+  line-height: clamp(30px, 3vw, 48px); /* 👈 responsive */  
+}
+
+.fs_20_fw_500 {
+  font-family: Poppins;
+  font-size: clamp(16px, 1.5vw, 20px); /* 👈 responsive */
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  
+}
+
+.fs_16_fw_400 {
+  font-family: Poppins;
+  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  
+}
+
+.fs_18_fw_400 {
+  font-family: Poppins;
+  font-size: clamp(14px, 1vw, 18px); /* 👈 responsive */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.fs_16_fw_600 {
+  font-family: Poppins;
+  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  
+}
+
+.fs_16_fw_500 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.fs_14_fw_400 {
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.italic_text_style {
+  font-family: Poppins;
+  font-size: clamp(12px, 1vw, 14px); /* 👈 responsive */
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ================= COLORS ================= */
+
+.c_secondry {
+  background: var(
+    --New2,
+    linear-gradient(
+      180deg,
+      #02161a 0%,
+      #02161a 15%,
+      #02161a 30%,
+      #01283b 70%,
+      #02344b 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.c_3641 {
+  color: #364153;
+}
+
+.primary_linear_color {
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #1b5b7e 0%, #105479 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= BUTTON STYLE ================= */
+
+.out_line_btn {
+  display: flex;
+  height: clamp(40px, 4vw, 48px); /* 👈 responsive */
+  padding: clamp(10px, 1vw, 12px) clamp(20px, 3vw, 36px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--Primary, #1b5b7e);
+  background: var(--White, #fff);
+
+  color: var(--Primary, #1b5b7e);
+  font-family: Poppins;
+  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.out_line_btn:hover {
+  background: var(--Primary, #1b5b7e);
+  color: var(--White, #fff);
+  transform: translateY(-2px);
+}
+
+.primary_btn {
+  display: flex;
+  padding: clamp(10px, 1vw, 12px) clamp(20px, 3vw, 35px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: var(--Primary, #1b5b7e);
+
+  color: var(--White, #fff);
+  font-family: Poppins;
+  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.primary_btn:hover {
+  border: 1px solid var(--Primary, #1b5b7e);
+  background-color: var(--White, #fff);
+  color: var(--Primary, #1b5b7e);
+  transform: translateY(-2px);
+}
+
+.secondry_btn {
+  display: flex;
+  padding: clamp(10px, 1vw, 12px) clamp(20px, 3vw, 35px);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #fff;
+
+  color: var(--Primary, #1b5b7e);
+  font-family: Poppins;
+  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.secondry_btn:hover {
+  background: #f5f7fa;
+  color: var(--Primary, #1b5b7e);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.bg_blue_light {
+  background: var(--Blue_Light, #ddecff);
+}
+
+.gray_bg {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  background: #f9fafb;
+  border-radius: 7px;
+}
+
+/* other css */
+
+.bg_business_woman {
+  background-image: url("/assets/images/others/bg__business-woman-start-up-small-business.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* 👈 important */
+  background-position: center; /* 👈 better alignment */
+
+  min-height: clamp(280px, 40vw, 430px); /* 👈 responsive height */
+  border-radius: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gary_card {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 25px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease; /* 👈 smooth hover */
+  cursor: pointer;
+}
+
+.gary_card:hover {
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.15),
+    0 6px 6px rgba(0, 0, 0, 0.1);
+
+  transform: translateY(-5px); /* 👈 better than margin */
+}
+
+.gary_card .icon {
+  width: clamp(50px, 6vw, 80px);
+}
+
+.gary_card .title {
+  color: #1b5b7e;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
+.gary_card .description {
+  color: var(--Label-text, #58748f);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.footer_bg {
+  display: flex;
+  padding: clamp(40px, 6vw, 80px) clamp(10px, 2vw, 20px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--Primary, #1b5b7e);
+}
