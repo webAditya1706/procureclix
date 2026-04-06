@@ -2,7 +2,8 @@
   width: 150px;
 }
 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
 
@@ -14,50 +15,47 @@
 
 .fs_32_fw_600 {
   font-family: Poppins;
-  font-size: clamp(22px, 2.5vw, 32px); /* 👈 responsive */
+  font-size: 32px; /* 👈 responsive */
   font-style: normal;
   font-weight: 600;
-  line-height: clamp(30px, 3vw, 48px); /* 👈 responsive */  
+  line-height: 48px; /* 👈 responsive */
 }
 
 .fs_20_fw_500 {
   font-family: Poppins;
-  font-size: clamp(16px, 1.5vw, 20px); /* 👈 responsive */
+  font-size: 20px; /* 👈 responsive */
   font-style: normal;
   font-weight: 500;
   line-height: 1.4;
-  
 }
 
 .fs_16_fw_400 {
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-size: 16px; /* 👈 responsive */
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
-  
+  line-height: 24px;
 }
 
 .fs_18_fw_400 {
   font-family: Poppins;
-  font-size: clamp(14px, 1vw, 18px); /* 👈 responsive */
+  font-size: 18px; /* 👈 responsive */
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 28px;
 }
 
 .fs_16_fw_600 {
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-size: 16px; /* 👈 responsive */
   font-style: normal;
   font-weight: 600;
   line-height: 1.5;
-  
 }
 
 .fs_16_fw_500 {
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px);;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -65,7 +63,7 @@
 
 .fs_14_fw_400 {
   font-family: Poppins;
-  font-size: clamp(12px, 1vw, 14px);;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -73,11 +71,27 @@
 
 .italic_text_style {
   font-family: Poppins;
-  font-size: clamp(12px, 1vw, 14px); /* 👈 responsive */
+  font-size: 14px; /* 👈 responsive */
   font-style: italic;
   font-weight: 300;
+  text-indent: 5px;
 }
 
+.indent_0 {
+  text-indent: 0px !important;
+}
+
+.indent_2 {
+  text-indent: 2px !important;
+}
+
+.indent_5 {
+  text-indent: 5px !important;
+}
+
+.indent_10 {
+  text-indent: 10px !important;
+}
 /* ================= COLORS ================= */
 
 .c_secondry {
@@ -96,8 +110,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .c_3641 {
   color: #364153;
+}
+
+.c_2c2d {
+  color: #2c2d2d !important;
 }
 
 .primary_linear_color {
@@ -124,7 +143,7 @@
 
   color: var(--Primary, #1b5b7e);
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-size: 16px; /* 👈 responsive */
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -145,7 +164,7 @@
 
   color: var(--White, #fff);
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-size: 16px; /* 👈 responsive */
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -167,7 +186,7 @@
 
   color: var(--Primary, #1b5b7e);
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px); /* 👈 responsive */
+  font-size: 16px; /* 👈 responsive */
   font-weight: 500;
   border: 1px solid transparent;
   transition: all 0.3s ease;
@@ -241,10 +260,10 @@
 }
 
 .gary_card .title {
-  color: #1b5b7e;
+  color: #1b5b7e !important;
   text-align: center;
   font-family: Poppins;
-  font-size: clamp(14px, 1.2vw, 16px);
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px; /* 150% */
@@ -254,7 +273,7 @@
   color: var(--Label-text, #58748f);
   text-align: center;
   font-family: Poppins;
-  font-size: clamp(12px, 1vw, 14px);
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
@@ -268,4 +287,50 @@
   align-items: center;
 
   background: var(--Primary, #1b5b7e);
+}
+
+.sec_chip {
+  padding: 4px 16px;
+  gap: 2px;
+  text-align: center;
+  border-radius: 36px;
+  background: rgba(0, 124, 186, 0.1);
+  box-shadow: 0 1px 2px 0 rgba(105, 81, 255, 0.05);
+  /* text style */
+  color: var(--Theme, #007cba);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  /* text-transform: uppercase; */
+}
+
+.px-32 {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+@media (max-width: 576px) {
+  /* Your CSS here */
+}
+
+@media (max-width: 768px) {
+  /* Your CSS here */
+  .px-32 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Your CSS here */
+}
+
+@media (max-width: 992px) {
+  /* Your CSS here */
+  .px-32 {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
