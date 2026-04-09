@@ -42,6 +42,10 @@
   line-height: 24px;
 }
 
+.fw_400{
+  font-weight: 400 !important;
+}
+
 .fs_18_fw_400 {
   font-family: Poppins;
   font-size: 18px;
@@ -53,7 +57,7 @@
 
 .fs_16_fw_600 {
   font-family: Poppins;
-  . font-size: 16px;
+  font-size: 16px;
   /* 👈 responsive */
   font-style: normal;
   font-weight: 600;
@@ -82,7 +86,7 @@
   /* 👈 responsive */
   font-style: italic;
   font-weight: 300;
-  text-indent: 5px;
+  /* text-indent: 2px; */
 }
 
 .indent_0 {
@@ -104,16 +108,28 @@
 /* ================= COLORS ================= */
 
 .c_secondry {
-  background: var(--New2,
-      linear-gradient(180deg,
-        #02161a 0%,
-        #02161a 15%,
-        #02161a 30%,
-        #01283b 70%,
-        #02344b 100%));
+  background: var(
+    --New2,
+    linear-gradient(
+      180deg,
+      #02161a 0%,
+      #02161a 15%,
+      #02161a 30%,
+      #01283b 70%,
+      #02344b 100%
+    )
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.c_1313 {
+  color: #131313 !important;
+}
+
+.c_3614 {
+  color: #364153 !important;
 }
 
 .c_3641 {
@@ -141,13 +157,20 @@
 }
 
 .primary_linear_color {
-  background: var(--Gradient,
-      linear-gradient(180deg, #1b5b7e 0%, #105479 100%));
+  background: var(
+    --Gradient,
+    linear-gradient(180deg, #1b5b7e 0%, #105479 100%)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/*custom height  */
+.h_75 {
+  height: 75px !important;
+  width: auto !important;
+}
 /* ================= BUTTON STYLE ================= */
 
 .out_line_btn {
@@ -196,10 +219,10 @@
   max-width: 100%;
   padding: 12px 32px;
   border-radius: 8px;
-  background: var(--Primary, #1B5B7E);
-  border: 1px solid var(--Primary, #1B5B7E);
+  background: var(--Primary, #1b5b7e);
+  border: 1px solid var(--Primary, #1b5b7e);
 
-  color: var(--White, #FFF);
+  color: var(--White, #fff);
   text-overflow: ellipsis;
   font-family: Poppins;
   font-size: 16px;
@@ -207,16 +230,14 @@
   font-weight: 500;
   line-height: normal;
   transition: all 0.3s ease;
-
 }
 
 .book_btn:hover {
-  border: 1px solid var(--Primary, #1B5B7E);
+  border: 1px solid var(--Primary, #1b5b7e);
   background-color: var(--White, #fff);
-  color: var(--Primary, #1B5B7E);
+  color: var(--Primary, #1b5b7e);
   transform: translateY(-2px);
 }
-
 
 .primary_btn:hover {
   border: 1px solid var(--Primary, #1b5b7e);
@@ -280,7 +301,7 @@
   justify-content: center;
 }
 
-.gary_card {
+.gallery_card {
   width: 100%;
   height: 100%;
   min-height: 200px;
@@ -301,7 +322,30 @@
   cursor: pointer;
 }
 
-.gary_card:hover {
+.border_c_e3e3 {
+  border: 1px solid #e3e3e3 !important;
+}
+.gallery_card.bg_f3f4 {
+  background-color: #fef4ff !important;
+}
+
+.gallery_card.bg_f4f7 {
+  background-color: #f4f7ff !important;
+}
+
+.gallery_card.bg_ffef {
+  background-color: #ffefef !important;
+}
+
+.gallery_card.bg_f3fb {
+  background-color: #f3fbff !important;
+}
+
+.gallery_card.bg_f3ff {
+  background-color: #f3fffb !important;
+}
+
+.gallery_card:hover {
   box-shadow:
     0 10px 20px rgba(0, 0, 0, 0.15),
     0 6px 6px rgba(0, 0, 0, 0.1);
@@ -310,23 +354,24 @@
   /* 👈 better than margin */
 }
 
-.gary_card .icon {
+.gallery_card .icon {
   width: clamp(50px, 6vw, 80px);
 }
 
-.gary_card .title {
-  color: #1b5b7e !important;
+.gallery_card .title {
+  color: #1b5b7e;
   text-align: center;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  text-transform: none;
   /* 150% */
 }
 
-.gary_card .description {
-  color: var(--Label-text, #58748f);
+.gallery_card .description {
+  color: var(--Label-text, #4a5565);
   text-align: center;
   font-family: Poppins;
   font-size: 14px;
@@ -369,12 +414,9 @@
   padding-right: 32px !important;
 }
 
-
-
-
 /* form style */
 .book_demo_form .form-label {
-  color: var(--Black-3, #3C3C3C);
+  color: var(--Black-3, #3c3c3c);
   font-family: Poppins;
   font-size: 12px;
   font-style: normal;
@@ -387,10 +429,10 @@
   padding: 12px 9px 15px 20px;
 
   border-radius: 8px;
-  border: 1px solid var(--Grey, #AFAFAF);
-  background: var(--White, #FFF);
+  border: 1px solid var(--Grey, #afafaf);
+  background: var(--White, #fff);
   /* text style */
-  color: var(--Black-3, #3C3C3C);
+  color: var(--Black-3, #3c3c3c);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -399,7 +441,7 @@
 }
 
 .book_demo_form input::placeholder {
-  color: var(--Black-3, #3C3C3C);
+  color: var(--Black-3, #3c3c3c);
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
@@ -413,9 +455,9 @@
 }
 
 .book_demo_form .iti--separate-dial-code .iti__selected-flag {
-    background-color: #F6F8FA;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+  background-color: #f6f8fa;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .footer_bg .book_demo_form .form-label {
@@ -433,8 +475,8 @@
   padding: 12px 9px 15px 20px;
 
   border-radius: 8px;
-  border: 1px solid var(--Screen-background, #F6F8FA);
-  background: rgba(255, 255, 255, 0.40);
+  border: 1px solid var(--Screen-background, #f6f8fa);
+  background: rgba(255, 255, 255, 0.4);
   /* text style */
   color: var(--Black-3, #fff);
   font-family: Poppins;
@@ -455,11 +497,10 @@
 }
 
 .footer_bg .book_demo_form .iti--separate-dial-code .iti__selected-flag {
-  background: rgba(246, 248, 250, 0.40);
+  background: rgba(246, 248, 250, 0.4);
   border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px; 
+  border-bottom-left-radius: 8px;
 }
-
 
 .footer_bg .book_btn {
   min-width: 220px;
@@ -469,7 +510,7 @@
   background: var(--Primary, #fff);
   border: 1px solid var(--Primary, #fff);
 
-  color: var(--White, #1B5B7E);
+  color: var(--White, #1b5b7e);
   text-overflow: ellipsis;
   font-family: Poppins;
   font-size: 16px;
@@ -477,17 +518,11 @@
   font-weight: 500;
   line-height: normal;
   transition: all 0.3s ease;
-
 }
 
 .iti {
   width: 100%;
 }
-
-
-
-
-
 
 /* media responsive style */
 @media (max-width: 576px) {
@@ -495,7 +530,6 @@
 }
 
 @media (max-width: 768px) {
-
   /* Your CSS here */
   .px-32 {
     padding-left: 0px;
@@ -508,7 +542,6 @@
 }
 
 @media (max-width: 992px) {
-
   /* Your CSS here */
   .px-32 {
     padding-left: 22px;

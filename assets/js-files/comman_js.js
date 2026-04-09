@@ -4,85 +4,85 @@
 
 //// track VPN start
 const pageMapForSource = {
-        "/services/procurement-spend-analysis-services.html": "Spend Analysis",
-        "/services/rfp-managed-services.html": "Managed RFX",
-        "/services/managed-reverse-auction-software-services.html": "Managed Reverse Auctions",
-        "/industries/procurement-software-for-transport-logistics-industry.html": "Logistics Sector",
-        "/industries/procurement-software-for-healthcare-industry.html": "Healthcare Sector",
-        "/industries/procurement-software-for-automotive-companies.html": "Automotive Sector",
-        "/industries/procurement-software-for-manufacturing-industry.html": "Manufacturing Sector",
-        "/industries/procurement-software-for-food-beverage-industry.html": "Food & Beverage Sector",
-        "/industries/procurement-software-for-biotech-pharma.html": "BioTech & Pharma Sector",
-        "/industries/procurement-software-for-energy-brokers-suppliers.html": "Energy Brokers & Suppliers Sector",
-        "/industries/construction-&-real-estate-procurement-software.html": "Construction & Real Estate Sector",
-        "/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html": "RFX",
-        "/solutions/procurement-spend-analysis-software.html" : "Solutions | Spend Analysis",
-        "/solutions/best-reverse-auction-software.html" : "Reverse Auction",
-        "/solutions/custom-auction-procurement-software.html" : "Custom Solutions",
-        "/solutions/purchase-requisition-software.html" : "Purchase Requisition",
-        "/solutions/best-supplier-management-software.html" : "Supplier Management",
-        "/solutions/procurement-contract-management-software.html" : "Contract Management",
-        "/solutions/best-procure-to-pay-software-solutions.html":"Procure To Pay",
-        "/blog/" : "Blog",
-        "/resources/integration.html" : "Integration",
-        "/resources/guide.html" : "Procurement Guide",
-        "/resources/glossary.html" : "Procurement Glossary",
-        "/resources/procurement-conferences.html":"Procurement Conferences",
-        "/resources/whitepapers.html":"Whitepaper Page",
-        "/resources/whitepapers/whitepapers-description.html":"Download Whitepaper",
-        "/resources/casestudies.html":"Case Study",
-        "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html":"Case Study",
-        "/resources/casestudies/view-case-studies-leading-financial.html":"Case Study",
-        "/resources/casestudies/view-case-studies-leading-marketing-services.html":"Case Study",
-        "/resources/casestudies/view-case-studies-leading-pharmacy.html":"Case Study",
-        "/resources/casestudies/view-case-studies-leading-subsea-systems.html":"Case Study",
-        "/resources/casestudies/view-case-studies-leading-services-company.html":"Case Study",
-        "/resources/casestudies/housing-and-urban-development-case-study.html":"Case Study",
-        "/resources/casestudies/contact-us.html":"Case Study",
-        };
+    "/services/procurement-spend-analysis-services.html": "Spend Analysis",
+    "/services/rfp-managed-services.html": "Managed RFX",
+    "/services/managed-reverse-auction-software-services.html": "Managed Reverse Auctions",
+    "/industries/procurement-software-for-transport-logistics-industry.html": "Logistics Sector",
+    "/industries/procurement-software-for-healthcare-industry.html": "Healthcare Sector",
+    "/industries/procurement-software-for-automotive-companies.html": "Automotive Sector",
+    "/industries/procurement-software-for-manufacturing-industry.html": "Manufacturing Sector",
+    "/industries/procurement-software-for-food-beverage-industry.html": "Food & Beverage Sector",
+    "/industries/procurement-software-for-biotech-pharma.html": "BioTech & Pharma Sector",
+    "/industries/procurement-software-for-energy-brokers-suppliers.html": "Energy Brokers & Suppliers Sector",
+    "/industries/construction-&-real-estate-procurement-software.html": "Construction & Real Estate Sector",
+    "/solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html": "RFX",
+    "/solutions/procurement-spend-analysis-software.html": "Solutions | Spend Analysis",
+    "/solutions/best-reverse-auction-software.html": "Reverse Auction",
+    "/solutions/custom-auction-procurement-software.html": "Custom Solutions",
+    "/solutions/purchase-requisition-software.html": "Purchase Requisition",
+    "/solutions/best-supplier-management-software.html": "Supplier Management",
+    "/solutions/procurement-contract-management-software.html": "Contract Management",
+    "/solutions/best-procure-to-pay-software-solutions.html": "Procure To Pay",
+    "/blog/": "Blog",
+    "/resources/integration.html": "Integration",
+    "/resources/guide.html": "Procurement Guide",
+    "/resources/glossary.html": "Procurement Glossary",
+    "/resources/procurement-conferences.html": "Procurement Conferences",
+    "/resources/whitepapers.html": "Whitepaper Page",
+    "/resources/whitepapers/whitepapers-description.html": "Download Whitepaper",
+    "/resources/casestudies.html": "Case Study",
+    "/resources/casestudies/view-case-studies-medical-university-of-south-carolina-MUSC.html": "Case Study",
+    "/resources/casestudies/view-case-studies-leading-financial.html": "Case Study",
+    "/resources/casestudies/view-case-studies-leading-marketing-services.html": "Case Study",
+    "/resources/casestudies/view-case-studies-leading-pharmacy.html": "Case Study",
+    "/resources/casestudies/view-case-studies-leading-subsea-systems.html": "Case Study",
+    "/resources/casestudies/view-case-studies-leading-services-company.html": "Case Study",
+    "/resources/casestudies/housing-and-urban-development-case-study.html": "Case Study",
+    "/resources/casestudies/contact-us.html": "Case Study",
+};
 
 
 if (!window.__vpnChecked) {
-	window.__vpnChecked = true;
+    window.__vpnChecked = true;
 
-	document.addEventListener("DOMContentLoaded", async () => {
-		try {
-			// Step 1: Get the real public IP of the user
-			const ipRes = await fetch("https://api.ipify.org?format=json");
-			const ipData = await ipRes.json();
-			const clientIp = ipData.ip;
+    document.addEventListener("DOMContentLoaded", async () => {
+        try {
+            // Step 1: Get the real public IP of the user
+            const ipRes = await fetch("https://api.ipify.org?format=json");
+            const ipData = await ipRes.json();
+            const clientIp = ipData.ip;
 
-			console.log("Client Public IP:", clientIp);
+            console.log("Client Public IP:", clientIp);
 
-			// Step 2: Send IP to PHP backend
-			const vpnRes = await fetch(`/assets/php-files/vpn.php?ip=${clientIp}`);
-			const data = await vpnRes.json();
+            // Step 2: Send IP to PHP backend
+            const vpnRes = await fetch(`/assets/php-files/vpn.php?ip=${clientIp}`);
+            const data = await vpnRes.json();
 
-			console.log("IPQS Data:", data);
+            console.log("IPQS Data:", data);
 
-			if (data.error) {
-				console.error("Backend error:", data.message);
-				let body = document.getElementsByTagName("body");
-				body[0].classList.remove("d-none");
-				body[0].classList.remove("page-hidden");
-				return;
-			}
+            if (data.error) {
+                console.error("Backend error:", data.message);
+                let body = document.getElementsByTagName("body");
+                body[0].classList.remove("d-none");
+                body[0].classList.remove("page-hidden");
+                return;
+            }
 
-			// Step 3: VPN/Proxy/Tor detection logic
-			const isVpnUser =
-				data.active_vpn === true ||
-				data.tor === true ||
-				(data.vpn === true && data.fraud_score > 75);
+            // Step 3: VPN/Proxy/Tor detection logic
+            const isVpnUser =
+                data.active_vpn === true ||
+                data.tor === true ||
+                (data.vpn === true && data.fraud_score > 75);
 
-			console.log("Is VPN User:", isVpnUser);
+            console.log("Is VPN User:", isVpnUser);
 
-			if (isVpnUser) {
-				// alert("VPN / Proxy detected!");
-				// window.location.href = '/vpn.html'; // optional redirect
-				let body = document.getElementsByTagName("body");
-				body[0].classList.remove("d-none");
-				body[0].classList.remove("page-hidden");
-				body[0].innerHTML = `
+            if (isVpnUser) {
+                // alert("VPN / Proxy detected!");
+                // window.location.href = '/vpn.html'; // optional redirect
+                let body = document.getElementsByTagName("body");
+                body[0].classList.remove("d-none");
+                body[0].classList.remove("page-hidden");
+                body[0].innerHTML = `
                     <div class="vpn_body">
                         <div class="vpn_card">
                             <p>
@@ -95,19 +95,19 @@ if (!window.__vpnChecked) {
                     </div>
                     `
 
-			} else {
-				let body = document.getElementsByTagName("body");
-				body[0].classList.remove("d-none");
-				body[0].classList.remove("page-hidden");
-			}
+            } else {
+                let body = document.getElementsByTagName("body");
+                body[0].classList.remove("d-none");
+                body[0].classList.remove("page-hidden");
+            }
 
-		} catch (err) {
-			let body = document.getElementsByTagName("body");
-			body[0].classList.remove("d-none");
-				body[0].classList.remove("page-hidden");
-			console.error("Fetch error:", err);
-		}
-	});
+        } catch (err) {
+            let body = document.getElementsByTagName("body");
+            body[0].classList.remove("d-none");
+            body[0].classList.remove("page-hidden");
+            console.error("Fetch error:", err);
+        }
+    });
 }
 
 //// track VPN end
@@ -123,100 +123,100 @@ if (!window.__vpnChecked) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Password eye script start
-  const logPasswordInput = document.getElementById("logInputPassword");
-  const logPassEye = document.getElementById("logPassEye");
+    // Password eye script start
+    const logPasswordInput = document.getElementById("logInputPassword");
+    const logPassEye = document.getElementById("logPassEye");
 
-  if (logPasswordInput && logPassEye) {
-    logPassEye.addEventListener("click", function () {
-      if (logPasswordInput.type === "password") {
-        logPasswordInput.type = "text";
-        logPassEye.classList.remove("bi-eye-fill");
-        logPassEye.classList.add("bi-eye-slash-fill");
-      } else {
-        logPasswordInput.type = "password";
-        logPassEye.classList.remove("bi-eye-slash-fill");
-        logPassEye.classList.add("bi-eye-fill");
-      }
-    });
-  }
-  // Password eye script end
-
-  // Comman header link
-  const navLinks = document.querySelectorAll("#navbarNav .nav-link");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navLinks.forEach((nav) => nav.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-
-  // Initialize all tooltips on the page
-  const tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  );
-  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-    new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-
-  handleScheduleDemo();
-
-  const phoneInputs = document.querySelectorAll(".phone-input");
-
-  if (phoneInputs.length === 0) return; 
-
-  phoneInputs.forEach(function (input) {
-
-    const iti = window.intlTelInput(input, {
-      initialCountry: "us",
-      separateDialCode: true,
-      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
-    });
-
-    const hiddenId = input.getAttribute("data-country-code-id");
-
-    function setDialCode() {
-      const dialCode = iti.getSelectedCountryData().dialCode;
-      if (hiddenId && document.getElementById(hiddenId)) {
-        document.getElementById(hiddenId).value = dialCode;
-      }
+    if (logPasswordInput && logPassEye) {
+        logPassEye.addEventListener("click", function () {
+            if (logPasswordInput.type === "password") {
+                logPasswordInput.type = "text";
+                logPassEye.classList.remove("bi-eye-fill");
+                logPassEye.classList.add("bi-eye-slash-fill");
+            } else {
+                logPasswordInput.type = "password";
+                logPassEye.classList.remove("bi-eye-slash-fill");
+                logPassEye.classList.add("bi-eye-fill");
+            }
+        });
     }
+    // Password eye script end
 
-    input.addEventListener("countrychange", setDialCode);
+    // Comman header link
+    const navLinks = document.querySelectorAll("#navbarNav .nav-link");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+            navLinks.forEach((nav) => nav.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
 
-    setDialCode();
-  });
+    // Initialize all tooltips on the page
+    const tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    handleScheduleDemo();
+
+    const phoneInputs = document.querySelectorAll(".phone-input");
+
+    if (phoneInputs.length === 0) return;
+
+    phoneInputs.forEach(function (input) {
+
+        const iti = window.intlTelInput(input, {
+            initialCountry: "us",
+            separateDialCode: true,
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"
+        });
+
+        const hiddenId = input.getAttribute("data-country-code-id");
+
+        function setDialCode() {
+            const dialCode = iti.getSelectedCountryData().dialCode;
+            if (hiddenId && document.getElementById(hiddenId)) {
+                document.getElementById(hiddenId).value = dialCode;
+            }
+        }
+
+        input.addEventListener("countrychange", setDialCode);
+
+        setDialCode();
+    });
 
 });
 
 function showSuccessMessage_NL(message) {
-	var processSuccessDiv = document.getElementById("flashSuccessMsg_id");
-	if (processSuccessDiv == undefined) {
-		createSuccessDivNL();
-		processSuccessDiv = document.getElementById("flashSuccessMsg_id");
-	}else{
-	addBackdrop();
-}
-	document.getElementById("flashSuccessMsgData_id").innerHTML = message;
-	showProcessMessageNL(processSuccessDiv,'successLoaderModal');
+    var processSuccessDiv = document.getElementById("flashSuccessMsg_id");
+    if (processSuccessDiv == undefined) {
+        createSuccessDivNL();
+        processSuccessDiv = document.getElementById("flashSuccessMsg_id");
+    } else {
+        addBackdrop();
+    }
+    document.getElementById("flashSuccessMsgData_id").innerHTML = message;
+    showProcessMessageNL(processSuccessDiv, 'successLoaderModal');
 }
 
 function createSuccessDivNL() {
-//	var path = imgPath + "successMessage.png";
-	var processSuccessDiv = document.createElement("div");
-	processSuccessDiv.className = "flashSuccessMsg";
-	processSuccessDiv.id = "flashSuccessMsg_id";
-	// processSuccessDiv.innerHTML = "<img src=\"images/successicon.jpg\"
-	// align=\"middle\" style=\"float:left; padding-right:5px;\"><DIV
-	// id=\"flashSuccessMsgData_id\"></DIV>";
-	// align=\"middle\" style=\"float:left; padding-right:5px;\"
-	processSuccessDiv.innerHTML = '<div class="modal fade" id="successLoaderModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"><div class="modal-dialog modal-dialog-centered"><div class="modal-content text-center "><div class="modal-body ">'
-                			+'<div class="row align-items-center"><div class="col-2"><img src="/assets/images/Successful.png" style="width:43px"/></div>'
-                			+'<div class="col-10 fs_15_fw_600_c_1313" style="padding-left: 0px;" id="flashSuccessMsgData_id"></div></div>  </div></div></div></div>';
-	document.body.appendChild(processSuccessDiv);
-	var loaderModal = new bootstrap.Modal(document.getElementById('successLoaderModal'), {});
-		//document.querySelector('.modal-backdrop').classList.add('show');
-            loaderModal.show();
+    //	var path = imgPath + "successMessage.png";
+    var processSuccessDiv = document.createElement("div");
+    processSuccessDiv.className = "flashSuccessMsg";
+    processSuccessDiv.id = "flashSuccessMsg_id";
+    // processSuccessDiv.innerHTML = "<img src=\"images/successicon.jpg\"
+    // align=\"middle\" style=\"float:left; padding-right:5px;\"><DIV
+    // id=\"flashSuccessMsgData_id\"></DIV>";
+    // align=\"middle\" style=\"float:left; padding-right:5px;\"
+    processSuccessDiv.innerHTML = '<div class="modal fade" id="successLoaderModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false"><div class="modal-dialog modal-dialog-centered"><div class="modal-content text-center "><div class="modal-body ">'
+        + '<div class="row align-items-center"><div class="col-2"><img src="/assets/images/Successful.png" style="width:43px"/></div>'
+        + '<div class="col-10 fs_15_fw_600_c_1313" style="padding-left: 0px;" id="flashSuccessMsgData_id"></div></div>  </div></div></div></div>';
+    document.body.appendChild(processSuccessDiv);
+    var loaderModal = new bootstrap.Modal(document.getElementById('successLoaderModal'), {});
+    //document.querySelector('.modal-backdrop').classList.add('show');
+    loaderModal.show();
 }
 
 function addBackdrop() {
@@ -225,71 +225,71 @@ function addBackdrop() {
     document.body.appendChild(backdropDiv);
 }
 
-function showProcessMessageNL(flashMsgDivObj,modalId) {
-	needToShowNote = false;
-	flashMsg_idObj = flashMsgDivObj;
+function showProcessMessageNL(flashMsgDivObj, modalId) {
+    needToShowNote = false;
+    flashMsg_idObj = flashMsgDivObj;
 
-	this.flashMsg_idObj.style.zIndex = 9999999;
-	this.flashMsg_idObj.style.position = "absolute";
-	this.flashMsg_idObj.style.alignself = "center";
+    this.flashMsg_idObj.style.zIndex = 9999999;
+    this.flashMsg_idObj.style.position = "absolute";
+    this.flashMsg_idObj.style.alignself = "center";
 
-	 confirm_interval = setTimeout(() => {
+    confirm_interval = setTimeout(() => {
         autoHideConfirmMessageNL(modalId);
     }, 3500);
 
 
-	var topOffset = Math.max(document.body.scrollTop,
-			document.documentElement.scrollTop);
-	var brSize = getBrowserSize();
-	var bodyWidth = brSize[0];
-	var bodyHeight = brSize[1];
-	flashMsg_idObj.style.display="block";
-	var tmpWidth = this.flashMsg_idObj.clientWidth?this.flashMsg_idObj.clientWidth: this.flashMsg_idObj.offsetWidth;
-	var tmpHeight = this.flashMsg_idObj.clientHeight? this.flashMsg_idObj.clientHeight: this.flashMsg_idObj.offsetHeight;
-	// Setting width and height of left transparent div
+    var topOffset = Math.max(document.body.scrollTop,
+        document.documentElement.scrollTop);
+    var brSize = getBrowserSize();
+    var bodyWidth = brSize[0];
+    var bodyHeight = brSize[1];
+    flashMsg_idObj.style.display = "block";
+    var tmpWidth = this.flashMsg_idObj.clientWidth ? this.flashMsg_idObj.clientWidth : this.flashMsg_idObj.offsetWidth;
+    var tmpHeight = this.flashMsg_idObj.clientHeight ? this.flashMsg_idObj.clientHeight : this.flashMsg_idObj.offsetHeight;
+    // Setting width and height of left transparent div
 
-	var leftPoint = ((bodyWidth / 2) - (tmpWidth / 2));
-	//alert("leftPoint=" + leftPoint);
-	flashMsg_idObj.style.left = leftPoint + 'px';
-	flashMsg_idObj.style.top = (Math.ceil((bodyHeight - tmpHeight) / 2) + topOffset)+ 'px';
-	flashMsg_idObj.style.display = "block";
+    var leftPoint = ((bodyWidth / 2) - (tmpWidth / 2));
+    //alert("leftPoint=" + leftPoint);
+    flashMsg_idObj.style.left = leftPoint + 'px';
+    flashMsg_idObj.style.top = (Math.ceil((bodyHeight - tmpHeight) / 2) + topOffset) + 'px';
+    flashMsg_idObj.style.display = "block";
 
 }
 
 function autoHideConfirmMessageNL(modalId) {
-	needToShowNote = true;
-	flashMsg_idObj.style.display = "none";
-	 var loaderModal = new bootstrap.Modal(document.getElementById(modalId), {});
-  
-	   loaderModal.hide();
-  document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
-setTimeout(() => {
-  document.body.classList.remove('modal-open');
-   if(modalId === "sendLoaderModal"){
-		document.body.style.overflow = 'auto';
-   }
-  //document.body.style.overflow = 'auto';
-}, 300);
-	clearInterval(confirm_interval);
+    needToShowNote = true;
+    flashMsg_idObj.style.display = "none";
+    var loaderModal = new bootstrap.Modal(document.getElementById(modalId), {});
+
+    loaderModal.hide();
+    document.querySelectorAll('.modal-backdrop').forEach(backdrop => backdrop.remove());
+    setTimeout(() => {
+        document.body.classList.remove('modal-open');
+        if (modalId === "sendLoaderModal") {
+            document.body.style.overflow = 'auto';
+        }
+        //document.body.style.overflow = 'auto';
+    }, 300);
+    clearInterval(confirm_interval);
 }
 
-getBrowserSize = function() {
-	// var bodyWidth = document.documentElement.clientWidth;
-	// var bodyHeight = document.documentElement.clientHeight;
-	var bodyWidth, bodyHeight;
-	if (self.innerHeight) { // all except Explorer
-		bodyWidth = self.innerWidth;
-		bodyHeight = self.innerHeight;
-	} else if (document.documentElement
-			&& document.documentElement.clientHeight) {
-		// Explorer 6 Strict Mode
-		bodyWidth = document.documentElement.clientWidth;
-		bodyHeight = document.documentElement.clientHeight;
-	} else if (document.body) {// other Explorers
-		bodyWidth = document.body.clientWidth;
-		bodyHeight = document.body.clientHeight;
-	}
-	return [bodyWidth, bodyHeight];
+getBrowserSize = function () {
+    // var bodyWidth = document.documentElement.clientWidth;
+    // var bodyHeight = document.documentElement.clientHeight;
+    var bodyWidth, bodyHeight;
+    if (self.innerHeight) { // all except Explorer
+        bodyWidth = self.innerWidth;
+        bodyHeight = self.innerHeight;
+    } else if (document.documentElement
+        && document.documentElement.clientHeight) {
+        // Explorer 6 Strict Mode
+        bodyWidth = document.documentElement.clientWidth;
+        bodyHeight = document.documentElement.clientHeight;
+    } else if (document.body) {// other Explorers
+        bodyWidth = document.body.clientWidth;
+        bodyHeight = document.body.clientHeight;
+    }
+    return [bodyWidth, bodyHeight];
 }
 
 
@@ -298,8 +298,51 @@ const handleScheduleDemo = (el) => {
 
     const scheduleDemoForm = document.querySelector('.schedule_demo_form');
     if (!scheduleDemoForm) {
-        return; 
+        return;
     }
+    const currentPath = window.location.pathname;
+
+    if (currentPath === "/rfq-software.html") {
+        scheduleDemoForm.innerHTML = `<div class="col-12 col-md-6 col-xl-4">
+                    <div class="">
+                        <label for="exampleInputEmail1" class="form-label">Full Name <span
+                                class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="df_fullName" aria-describedby="emailHelp"
+                            placeholder="Full Name">
+                            <div><div style="color:red;font-size:12px;margin-top:2px;" id="df_fNameError"></div></div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                    <div class="">
+                        <label for="exampleInputEmail1" class="form-label">Work Email <span
+                                class="text-danger">*</span></label>
+                        <input type="email" class="form-control" id="df_Email" oninput="emailBoxValidate();" aria-describedby="emailHelp"
+                            placeholder="Work Email">
+                            <div><div style="color:red;font-size:12px;margin-top:2px;" id="df_emailError"></div></div>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-6 col-xl-4">
+                    <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                        <input type="hidden" id="phoneCountryCode1" name="phoneCountryCode" />
+                        <input type="tel" class="form-control phone-input" data-country-code-id="phoneCountryCode1" oninput="phoneValidation();" id="df_phone" maxLength="15" name="phone" placeholder="Phone Number" />
+                        <div><div style="color:red;font-size:12px;margin-top:2px;" id="df_phoneError"></div></div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 mt-4">
+
+                    <div class="d-flex justify-content-center mb-1 h-100 align-items-end">
+
+                        <button class="btn book_btn" onclick="demoForm_submit_popup(this);">Book now</button>
+                    </div>
+                </div>
+                 <input type="hidden" id="df_timezone" name="df_timezone">
+                <input type="hidden" id="df_loaded_at" name="df_LoadedAt">
+                `;
+    } else {
 
         scheduleDemoForm.innerHTML = `
             <div class="row gx-4 gy-2">
@@ -326,143 +369,142 @@ const handleScheduleDemo = (el) => {
                 </div>
             </div>
         `;
-        
+    }
+
+
+
 
 
 };
 
 
- // demo form submit work start
-      
+// demo form submit work start
 
-        function demoForm_submit_popup(scheduleDemoForm)
-        {
-            if(validateDemoForm())
-            {
-                 const currentPath = window.location.pathname;
-                const demoSource = pageMapForSource[currentPath] ?? currentPath;
-                const formData = {
-                    fullName: document.getElementById('df_fullName').value || '',
-                    email: document.getElementById('df_Email').value || '',
-                    phone: document.getElementById('df_phone').value || '',
-                    timezone: document.getElementById('df_timezone').value || '',
-                    formLoadedAt: document.getElementById('df_loaded_at').value || '',
-                    phoneCountryCode: document.getElementById('phoneCountryCode1').value || '',
-                      leadSource:demoSource
-                    
-                };
-                console.log(formData);
-                const params = new URLSearchParams();
-                Object.keys(formData).forEach(key => {
-                    if (Array.isArray(formData[key])) {
-                        formData[key].forEach(val => {
-                            params.append(key + "[]", val);
-                        });
-                    } else {
-                        params.append(key, formData[key]);
-                    }
+
+function demoForm_submit_popup(scheduleDemoForm) {
+    if (validateDemoForm()) {
+        const currentPath = window.location.pathname;
+        const demoSource = pageMapForSource[currentPath] ?? currentPath;
+        const formData = {
+            fullName: document.getElementById('df_fullName').value || '',
+            email: document.getElementById('df_Email').value || '',
+            phone: document.getElementById('df_phone').value || '',
+            timezone: document.getElementById('df_timezone').value || '',
+            formLoadedAt: document.getElementById('df_loaded_at').value || '',
+            phoneCountryCode: document.getElementById('phoneCountryCode1').value || '',
+            leadSource: demoSource
+
+        };
+        console.log(formData);
+        const params = new URLSearchParams();
+        Object.keys(formData).forEach(key => {
+            if (Array.isArray(formData[key])) {
+                formData[key].forEach(val => {
+                    params.append(key + "[]", val);
                 });
-
-                  fetch('/ScheduleDemoFormInsert.php', {
-                     method: 'POST',
-                      body: params
-                  })
-                  .then(res => res.json())
-                  .then(data => {
-                      if (data.status === 'success') {
-                           window.location.href = "/schedule-a-demo.html?name="+document.getElementById('df_fullName').value+"&email="+document.getElementById('df_Email').value;
-                           
-                      }
-                  });
-                
-
-
-                
-                //closePopup();
-
-               
-
-            }
-        }
-
-
-        function validateDemoForm() {
-            let valid = true;
-            
-            const df_fullName = document.getElementById('df_fullName').value.trim();
-            const df_Email = document.getElementById('df_Email').value.trim();
-            const df_phone = document.getElementById('df_phone').value.trim();
-
-
-            document.getElementById('df_fNameError').innerHTML = "";
-            document.getElementById('df_emailError').innerHTML = "";
-            document.getElementById('df_phoneError').innerHTML = "";
-
-            if (df_fullName === "") {
-                document.getElementById('df_fNameError').innerHTML = "Full Name is required.";
-                valid = false;
-            }
-
-            
-            const df_emailError = validatePopupEmail(df_Email);
-            if (df_emailError !== "") {
-            document.getElementById('df_emailError').innerHTML = df_emailError;
-            valid = false;
-            }
-
-            const phoneErrorMsg = validateDemoPhone(df_phone);
-            if (phoneErrorMsg !== "") {
-                document.getElementById('df_phoneError').innerHTML = phoneErrorMsg;
-                valid = false;
-            }
-
-        return valid;
-        }
-        function emailBoxValidate()
-        {
-            const df_emailField = document.getElementById('df_Email');
-            const email = df_emailField.value.trim();
-            if (email !== "") {
-                const errorMsg = validatePopupEmail(email);
-                document.getElementById('df_emailError').innerHTML = errorMsg;
             } else {
-                document.getElementById('df_emailError').innerHTML = "";
+                params.append(key, formData[key]);
             }
-          
-        }
+        });
 
-        function phoneValidation()
-        {
-            const df_phonefield = document.getElementById('df_phone');
-            const phone = df_phonefield.value.trim();
+        fetch('/ScheduleDemoFormInsert.php', {
+            method: 'POST',
+            body: params
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    window.location.href = "/schedule-a-demo.html?name=" + document.getElementById('df_fullName').value + "&email=" + document.getElementById('df_Email').value;
 
-            const numericOnly = phone.replace(/\D/g, '');
-            df_phonefield.value = numericOnly;
+                }
+            });
 
-            if (numericOnly !== "") {
-                const errorMsg = validateDemoPhone(numericOnly);
-                document.getElementById('df_phoneError').innerHTML = errorMsg;
-            } else {
-                document.getElementById('df_phoneError').innerHTML = "";
-            }
-        }
 
-        function validateDemoPhone(phone) {
 
-            if (phone === "") {
-                return "Phone Number is required.";
-            }
-            if (!/^\d+$/.test(phone)) {
-                return "Phone Number should contain digits only.";
-            }
-            if (phone.length < 10) {
-                return "Phone Number must be at least 10 digits.";
-            }
-            if (phone.length > 15) {
-                return "Phone Number must not exceed 15 digits.";
-            }
-            return ""; 
 
-        }
+        //closePopup();
+
+
+
+    }
+}
+
+
+function validateDemoForm() {
+    let valid = true;
+
+    const df_fullName = document.getElementById('df_fullName').value.trim();
+    const df_Email = document.getElementById('df_Email').value.trim();
+    const df_phone = document.getElementById('df_phone').value.trim();
+
+
+    document.getElementById('df_fNameError').innerHTML = "";
+    document.getElementById('df_emailError').innerHTML = "";
+    document.getElementById('df_phoneError').innerHTML = "";
+
+    if (df_fullName === "") {
+        document.getElementById('df_fNameError').innerHTML = "Full Name is required.";
+        valid = false;
+    }
+
+
+    const df_emailError = validatePopupEmail(df_Email);
+    if (df_emailError !== "") {
+        document.getElementById('df_emailError').innerHTML = df_emailError;
+        valid = false;
+    }
+
+    const phoneErrorMsg = validateDemoPhone(df_phone);
+    if (phoneErrorMsg !== "") {
+        document.getElementById('df_phoneError').innerHTML = phoneErrorMsg;
+        valid = false;
+    }
+
+    return valid;
+}
+function emailBoxValidate() {
+    const df_emailField = document.getElementById('df_Email');
+    const email = df_emailField.value.trim();
+    if (email !== "") {
+        const errorMsg = validatePopupEmail(email);
+        document.getElementById('df_emailError').innerHTML = errorMsg;
+    } else {
+        document.getElementById('df_emailError').innerHTML = "";
+    }
+
+}
+
+function phoneValidation() {
+    const df_phonefield = document.getElementById('df_phone');
+    const phone = df_phonefield.value.trim();
+
+    const numericOnly = phone.replace(/\D/g, '');
+    df_phonefield.value = numericOnly;
+
+    if (numericOnly !== "") {
+        const errorMsg = validateDemoPhone(numericOnly);
+        document.getElementById('df_phoneError').innerHTML = errorMsg;
+    } else {
+        document.getElementById('df_phoneError').innerHTML = "";
+    }
+}
+
+function validateDemoPhone(phone) {
+
+    if (phone === "") {
+        return "Phone Number is required.";
+    }
+    if (!/^\d+$/.test(phone)) {
+        return "Phone Number should contain digits only.";
+    }
+    if (phone.length < 10) {
+        return "Phone Number must be at least 10 digits.";
+    }
+    if (phone.length > 15) {
+        return "Phone Number must not exceed 15 digits.";
+    }
+    return "";
+
+}
 
 // schedule a demo work End here
