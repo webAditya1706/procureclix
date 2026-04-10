@@ -156,6 +156,10 @@
   color: #007cba !important;
 }
 
+.radius_24{
+  border-radius: 24px !important;
+}
+
 .primary_linear_color {
   background: var(
     --Gradient,
@@ -426,7 +430,7 @@
 }
 
 .book_demo_form input {
-  padding: 12px 9px 15px 20px;
+  padding: 12px 15px;
 
   border-radius: 8px;
   border: 1px solid var(--Grey, #afafaf);
@@ -451,13 +455,9 @@
 }
 
 .book_demo_form .iti--separate-dial-code .iti__selected-flag {
-  /* background: var(--Screen-background, #F6F8FA); */
-}
-
-.book_demo_form .iti--separate-dial-code .iti__selected-flag {
-  background-color: #f6f8fa;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  /* background-color: #f6f8fa; */
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .footer_bg .book_demo_form .form-label {
@@ -472,8 +472,7 @@
 }
 
 .footer_bg .book_demo_form input {
-  padding: 12px 9px 15px 20px;
-
+  padding: 12px 15px;
   border-radius: 8px;
   border: 1px solid var(--Screen-background, #f6f8fa);
   background: rgba(255, 255, 255, 0.4);
@@ -498,8 +497,13 @@
 
 .footer_bg .book_demo_form .iti--separate-dial-code .iti__selected-flag {
   background: rgba(246, 248, 250, 0.4);
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.footer_bg .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag{
+  background: rgba(246, 248, 250, 0.4);
+
 }
 
 .footer_bg .book_btn {
