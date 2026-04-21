@@ -42,7 +42,7 @@
   line-height: 24px;
 }
 
-.fw_400{
+.fw_400 {
   font-weight: 400 !important;
 }
 
@@ -156,7 +156,7 @@
   color: #007cba !important;
 }
 
-.radius_24{
+.radius_24 {
   border-radius: 24px !important;
 }
 
@@ -501,9 +501,8 @@
   border-bottom-left-radius: 5px;
 }
 
-.footer_bg .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag{
+.footer_bg .iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
   background: rgba(246, 248, 250, 0.4);
-
 }
 
 .footer_bg .book_btn {
@@ -527,6 +526,96 @@
 .iti {
   width: 100%;
 }
+
+/* freight page css */
+
+.custom_gap {
+  column-gap: 20px; /* horizontal (x) */
+  row-gap: 12px; /* vertical (y) */
+}
+
+.freight_why_procureclix_col {
+  padding: 32px;
+  align-items: flex-start;
+  border-radius: 0 24px 24px 0;
+  background: #f5f9ff;
+  border-radius: 0 24px 24px 0;
+
+}
+
+/* table css */
+.freight_table .table {
+  --bs-table-border-color: #b9b9b9;
+  border-radius: 20px;
+}
+
+.freight_table .table-bordered > :not(caption) > * > * {
+  border-width: 3px !important;
+}
+.freight_table th,
+.freight_table td {
+  padding: 25px 35px;
+}
+
+.freight_table th {
+  color: #131415;
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 31.2px */
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.freight_table td {
+  color: var(--Black-2, #2c2d2d);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.freight_table .table-bordered > :not(caption) > * > td {
+  border-top-width: 0 !important;
+}
+.freight_table .table-bordered > :not(caption) > * > td:not(:last-child) {
+  border-right-width: 0 !important;
+}
+.freight_table .table-bordered > :not(caption) > * > th:not(:last-child) {
+  border-right-width: 0 !important;
+}
+/* wrapper handles clipping */
+.freight_table {
+  overflow: hidden;
+}
+
+/* important for proper radius behavior */
+.freight_table table {
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+/* top-left th corner */
+.freight_table thead tr th:first-child {
+  border-top-left-radius: 10px;
+}
+
+/* top-right th corner */
+.freight_table thead tr th:last-child {
+  border-top-right-radius: 10px;
+}
+/* bottom-left td corner */
+.freight_table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+/* bottom-right td corner */
+.freight_table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* freight page css */
 
 /* media responsive style */
 @media (max-width: 576px) {

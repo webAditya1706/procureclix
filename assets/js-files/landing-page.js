@@ -78,6 +78,10 @@ function handleLandingPageForm() {
 
         const isLast = index === landingDemoForm.length - 1;
         const errorColor = isLast ? "white" : "red";
+
+        const path = window.location.pathname;
+        const isReverseAuction = path.includes("/freight-reverse-auction.html");
+
         form.innerHTML = `
                 <div class="col-12 col-md-6 col-xl-4">
                     <div class="">
@@ -105,11 +109,19 @@ function handleLandingPageForm() {
                 </div>
 
 
-                <div class="col-12">
+                <div class="col-12 mt-4">
 
-                    <div class="d-flex justify-content-center mb-1 mt-2 h-100 align-items-end">
+                    <div class="d-flex justify-content-center mb-1 h-100 align-items-end gap-4">
 
-                        <button class="btn book_btn" onclick="landingForm_submit_popup(this);">Book now</button>
+                        <button class="btn book_btn"
+                                style="min-width: ${isReverseAuction ? 'auto' : '220px'};" 
+                                onclick="landingForm_submit_popup(this);">Book now</button>
+                        ${isReverseAuction ?
+                            `<button 
+                                class="btn ${isLast ? 'book_btn' : 'out_line_btn'}" 
+                                style="min-width: ${isReverseAuction ? 'auto' : '220px'};"
+                                 onclick="routeContactUs()">Contact us</button>`
+                        : ''}
                     </div>
                 </div>
                  
@@ -119,6 +131,9 @@ function handleLandingPageForm() {
 
 }
 
+const routeContactUs = () => {
+    window.location.href = "/contact-us.html"
+}
 
 function landingForm_submit_popup(btn) {
 
