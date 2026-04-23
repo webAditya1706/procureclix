@@ -80,7 +80,7 @@ function handleLandingPageForm() {
         const errorColor = isLast ? "white" : "red";
 
         const path = window.location.pathname;
-        const isReverseAuction = path.includes("/freight-reverse-auction.html");
+        const isReverseAuction = path.includes("/transport-freight-&-logistics.html");
 
         form.innerHTML = `
                 <div class="col-12 col-md-6 col-xl-4">
