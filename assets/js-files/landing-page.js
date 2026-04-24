@@ -64,9 +64,110 @@ document.addEventListener("DOMContentLoaded", async () => {
         setDialCode(); // initial set
     });
 
+    
+    
+     // auto captured work start from here
+      let visitorId = localStorage.getItem("lp_visitorId");
+      if(!visitorId){
+        visitorId = crypto.randomUUID();
+        localStorage.setItem("lp_visitorId", visitorId);
+      }
+      document.getElementById("lp_visitorId").value = visitorId;
+
 
 
 });
+
+
+document.addEventListener("input", function(e) {
+
+    if (
+        e.target.classList.contains("lp_fullName") ||
+        e.target.classList.contains("lp_Email") ||
+        e.target.classList.contains("lp_phone")
+    ) {
+        triggerSaveLP(e.target);
+    }
+
+});
+
+
+function triggerSaveLP(input){
+
+    const form = input.closest(".landing_demo_form");
+
+    if(form._timer){
+        clearTimeout(form._timer);
+    }
+
+    form._timer = setTimeout(() => {
+        saveDraftLP(form);
+    }, 2000);
+}
+
+function getFormDataLP(form){
+
+    const phoneInput = form.querySelector(".lp_phone");
+    const countryCodeId = phoneInput?.getAttribute("data-country-code-id");
+    return {
+        visitorId: document.getElementById("lp_visitorId").value,
+        fullName: form.querySelector(".lp_fullName")?.value || "",
+        email: form.querySelector(".lp_Email")?.value || "",
+        phone: phoneInput?.value || "",
+        phoneCountryCode: form.querySelector(`#${countryCodeId}`)?.value || "", // ✅ add
+        leadSource : window.location.pathname,
+        timezone: document.getElementById('lp_timezone').value || '',
+        formLoadedAt: document.getElementById('lp_loaded_at').value || '',
+    };
+}
+
+function saveDraftLP(form){
+
+    const data = getFormDataLP(form);
+
+    console.log("Auto saving:", data);
+
+     fetch("saveContactFormDraft.php",{
+         method:"POST",
+         headers:{
+             "Content-Type":"application/json"
+         },
+         body: JSON.stringify(data)
+     });
+
+}
+
+function finalizeLeadLP(){
+
+        if(isSubmittingLPForm) return;
+        const visitorId = localStorage.getItem("lp_visitorId");
+
+        if(!visitorId) return;
+
+        const data = JSON.stringify({
+            visitorId: visitorId,
+            action: "finalize"
+        });
+
+        navigator.sendBeacon("/finalizeLeadAndDeleteOnSubmit.php", data);
+    }
+    function deleteSavedDraftLP()
+    {
+        const visitorId = localStorage.getItem("lp_visitorId");
+        if(!visitorId) return;
+        
+        fetch("/finalizeLeadAndDeleteOnSubmit.php",{
+              method:"POST",
+              headers:{
+                  "Content-Type":"application/json"
+              },
+              body: JSON.stringify({
+                  visitorId: visitorId,
+                  action: "delete"
+              })
+          });
+    }
+    window.addEventListener("pagehide", finalizeLeadLP);
 
 function handleLandingPageForm() {
     const landingDemoForm = document.querySelectorAll('.landing_demo_form');
@@ -115,12 +216,12 @@ function handleLandingPageForm() {
 
                         <button class="btn book_btn"
                                 style="min-width: ${isReverseAuction ? 'auto' : '220px'};" 
-                                onclick="landingForm_submit_popup(this);">Book now</button>
+                                onclick="landingForm_submit_popup(this);">Book Now</button>
                         ${isReverseAuction ?
                             `<button 
                                 class="btn ${isLast ? 'book_btn' : 'out_line_btn'}" 
                                 style="min-width: ${isReverseAuction ? 'auto' : '220px'};"
-                                 onclick="routeContactUs()">Contact us</button>`
+                                 onclick="routeContactUs()">Contact Us</button>`
                         : ''}
                     </div>
                 </div>
@@ -134,7 +235,7 @@ function handleLandingPageForm() {
 const routeContactUs = () => {
     window.location.href = "/contact-us.html"
 }
-
+ let isSubmittingLPForm = false;
 function landingForm_submit_popup(btn) {
 
     let form = btn.closest(".landing_demo_form");
@@ -143,7 +244,9 @@ function landingForm_submit_popup(btn) {
 
         const currentPath = window.location.pathname;
         const demoSource = pageMapForSourceLP[currentPath] ?? currentPath;
-
+        isSubmittingLPForm = true;
+        deleteSavedDraftLP();
+        
         const formData = {
             fullName: form.querySelector('.lp_fullName').value || '',
             email: form.querySelector('.lp_Email').value || '',
