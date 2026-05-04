@@ -90,6 +90,7 @@ let HeaderHTML = `
                                         Glossary</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement-conferences.html">Procurement
                                         Conferences</a></li>
+                                <li><a class="dropdown-item" target="_blank" href="/resources/trust-center.html">Trust Center</a></li>
                             </ul>
                         </div>
                     </li>
@@ -206,6 +207,7 @@ let HeaderHTML = `
                                         Glossary</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement-conferences.html">Procurement
                                         Conferences</a></li>
+                                 <li><a class="dropdown-item" target="_blank" href="/resources/trust-center.html">Trust Center</a></li>       
                             </ul>
                         </div>
                     </li>
@@ -330,6 +332,7 @@ let FooterHTML = `
                                         Glossary</a>
                                     <a href="/resources/procurement-conferences.html" class="footer_link">Procurement
                                         Conferences</a>
+                                    <a href="/resources/trust-center.html" target="_blank" class="footer_link">Trust Center</a>
                                 </div>
                             </div>
                         </div>
