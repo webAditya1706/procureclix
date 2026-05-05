@@ -90,7 +90,7 @@ let HeaderHTML = `
                                         Glossary</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement-conferences.html">Procurement
                                         Conferences</a></li>
-                                <li><a class="dropdown-item" target="_blank" href="/resources/trust-center.html">Trust Center</a></li>
+                                
                             </ul>
                         </div>
                     </li>
@@ -207,7 +207,7 @@ let HeaderHTML = `
                                         Glossary</a></li>
                                 <li><a class="dropdown-item" href="/resources/procurement-conferences.html">Procurement
                                         Conferences</a></li>
-                                 <li><a class="dropdown-item" target="_blank" href="/resources/trust-center.html">Trust Center</a></li>       
+                                   
                             </ul>
                         </div>
                     </li>
@@ -303,7 +303,7 @@ let FooterHTML = `
 
                         <!-- Column 2: Services -->
                         <div class="col-12 col-sm-auto">
-                            <div class="footer_menu">
+                            <div class="footer_menu mb-4">
                                 <span class="footer_menu_title">Services</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
                                     <a href="/services/procurement-spend-analysis-services.html" class="footer_link">Spend Analysis</a>
@@ -311,6 +311,14 @@ let FooterHTML = `
                                         | RFP</a>
                                     <a href="/services/managed-reverse-auction-software-services.html" class="footer_link">Managed
                                         Reverse Auctions</a>
+                                </div>
+                            </div>
+                            <div class="footer_menu">
+                                <span class="footer_menu_title">Legal</span>
+                                <div class="d-flex flex-column gap-2 mt-2">
+                                    <a href="/legal/trust-center.html" class="footer_link">Trust Center</a>
+                                    <a href="/legal/privacy-policy.html" class="footer_link">Privacy Policy</a>
+                                    <a href="/legal/terms-of-service.html" class="footer_link">Terms of Service</a>
                                 </div>
                             </div>
                         </div>
@@ -332,7 +340,7 @@ let FooterHTML = `
                                         Glossary</a>
                                     <a href="/resources/procurement-conferences.html" class="footer_link">Procurement
                                         Conferences</a>
-                                    <a href="/resources/trust-center.html" target="_blank" class="footer_link">Trust Center</a>
+                                   
                                 </div>
                             </div>
                         </div>

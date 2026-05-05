@@ -78,7 +78,7 @@
     rel="stylesheet" />
 
   <!-- Canonical link -->
-  <link rel="canonical" href="https://procureclix.com/resources/trust-center.html" />
+  <link rel="canonical" href="https://procureclix.com/legal/trust-center.html" />
 
   <script>function initApollo() {
       var n = Math.random().toString(36).substring(7), o = document.createElement("script");
@@ -173,7 +173,7 @@
     <div class="container">
       <div class="row align-items-center justify-content-between">
         <div class="col-6">
-          <img src="/assets/images/others/procureclix_logo.png" class="w_150" alt="">
+          <img src="/assets/images/others/procureclix_logo.png" onclick="redirectHomePage()" class="w_150" alt="">
         </div>
         <div class="col-6 d-flex justify-content-end">
           <button type="button" class="out_line_btn" onclick="scheduleDemo()">Book a Demo</button>
@@ -1254,6 +1254,11 @@
       window.location.assign("/schedule-a-demo.html");
     };
 
+    
+    const redirectHomePage= () => {
+        window.location.assign("/");
+    }
+
     function openSecurityDocsPopup() {
             document.getElementById('tpopup_fName').value = "";
             document.getElementById('tpopup_lName').value = "";
@@ -1407,6 +1412,7 @@
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/js-files/common_js.min.js"></script>
 </body>
 
 </html>
