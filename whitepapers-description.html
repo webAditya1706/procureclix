@@ -38,24 +38,6 @@
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"691c5555985e730021baf3b0"})},
 document.head.appendChild(o)}initApollo();</script>
-
-
-
-
-<!-- Tracking Code -->
-    <script> (function(e, f, g, h, i){
-        $salespanel = window.$salespanel || (window.$salespanel = []);
-        __sp = i;
-        var a=f.createElement(g);
-        a.type="text/javascript";
-        a.async=1;
-        a.src=("https:" == f.location.protocol ? "https://" : "http://") + h;
-        var b = f.getElementsByTagName(g)[0];
-        b.parentNode.insertBefore(a,b);
-    })(window, document, "script", "salespanel.io/src/js/e2d6ea50-0516-4d43-9d5e-1db0f7820581/sp.js", "e2d6ea50-0516-4d43-9d5e-1db0f7820581");
-    </script>
-<!-- Tracking Code -->
-
 <!-- Google Analytics tag -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZRRX8XDNQP"></script>
     <script>
@@ -68,8 +50,8 @@ document.head.appendChild(o)}initApollo();</script>
     <!-- Canonical link -->
     <link href="https://procureclix.com/contact-us.html" rel="canonical" />
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../assets/css-files/main_file.min.css" rel="stylesheet" />
-    <link href="../../assets/css-files/custom.min.css" rel="stylesheet" />
+    <link href="../../assets/css-files/main_file.css" rel="stylesheet" />
+    <link href="../../assets/css-files/custom.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -83,36 +65,10 @@ document.head.appendChild(o)}initApollo();</script>
     </meta>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.min.css">
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
-    <script src="../../assets/js-files/leadSourceMap.min.js"></script>
-
-  <!-- Google Tag Manager -->
-
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-
-    })(window, document, 'script', 'dataLayer', 'GTM-PTXQG4M8');</script>
-
-  <!-- End Google Tag Manager -->
-
+    <script src="../../assets/js-files/leadSourceMap.js"></script>
 </head>
 
-<body class="page-hidden">
-
-  <!-- Google Tag Manager (noscript) -->
-
-  <noscript><iframe src=https://www.googletagmanager.com/ns.html?id=GTM-PTXQG4M8 height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-
-  <!-- End Google Tag Manager (noscript) -->
-   
+<body>
     <!--  Clickcease.com tracking-->
     <script type='text/javascript'>var script = document.createElement('script');
         script.async = true; script.type = 'text/javascript';
@@ -163,14 +119,15 @@ document.head.appendChild(o)}initApollo();</script>
                                         <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" />
                                     <div class="error" id="lastNameError"></div>
                                     </div>
-                      <div class="col-12">
+                                    <div class="col-12">
                                         <label class="form-label" for="workEmail">Work Email<span class="text-danger">*</span></label>
                                          <div class="position-relative ">
                                             <input class="form-control" name="email" id="email" placeholder="Work Email" type="email" />
                                             <div id="emailVerifyErrorID" class="whitepaper_email"></div>
                                             <div><div class="error" id="emailError"></div></div>
                                         </div>
-                                    </div>                 <div class="col-12">
+                                    </div>
+                                    <div class="col-12">
                                         <label class="form-label" for="companyName">Company Name<span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="companyName" id="companyName" placeholder="Company Name" maxlength="100"/>
@@ -264,10 +221,12 @@ document.head.appendChild(o)}initApollo();</script>
         });
 
         emailField.addEventListener('blur', () => {
-          const email = document.getElementById('email').value.trim();
-    const emailError = validateEmail(email);
-    if (emailError == "") {
-         document.getElementById('emailVerifyErrorID').style.top="";
+        
+        const email = document.getElementById('email').value.trim();
+        const emailError = validateEmail(email);
+        if (emailError == "") {
+
+        document.getElementById('emailVerifyErrorID').style.top="";
         document.getElementById('emailError').innerHTML = "";
         document.getElementById('emailVerifyErrorID').innerHTML = '';
         const submitBtn = document.getElementById("submitBtnID");
@@ -282,14 +241,13 @@ document.head.appendChild(o)}initApollo();</script>
             if (!isEmailValid && email !== "") {
                 emailErrorDiv.innerHTML = "Email address is not valid";
                 document.getElementById('emailVerifyErrorID').innerHTML = '<i class="fa-solid fa-xmark text-danger"></i>';
-                 document.getElementById('emailVerifyErrorID').style.top="10px";
+                document.getElementById('emailVerifyErrorID').style.top="10px";
             
             }else if(isEmailValid && email !== ""){
                 document.getElementById('emailVerifyErrorID').innerHTML = '<i class="fa-solid fa-check text-success"></i>';
                 submitBtn.disabled = false;
             
             }else{
-                
                 document.getElementById('emailVerifyErrorID').innerHTML = '';
                 submitBtn.disabled = false;
             }
@@ -327,11 +285,10 @@ document.head.appendChild(o)}initApollo();</script>
                     heading: whitepaper_heading || '',
                     fileName: whitepaper_fileName || '',
                     emailVerifyStatus: document.getElementById('emailVerifyStatus').value.trim() || '',
-                    phoneCountryCode: document.getElementById('phoneCountryCode').value.trim() || '',
-                    formToken : window.formToken
+                    phoneCountryCode: document.getElementById('phoneCountryCode').value.trim() || ''
                 };
 
-                fetch('/whitepaperdownloadInsert.php', {
+                fetch('/whitepaperdownloadinsert.php', {
                     method: 'POST',
                     body: new URLSearchParams(formData)
                 })
@@ -526,7 +483,7 @@ document.head.appendChild(o)}initApollo();</script>
 
         document.addEventListener("DOMContentLoaded", function () {
             
-        const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const userTimezone = ""; //Intl.DateTimeFormat().resolvedOptions().timeZone;
             document.getElementById("timezone").value = userTimezone;
         });
 
@@ -535,8 +492,8 @@ document.head.appendChild(o)}initApollo();</script>
         </script>
 
 
-    <script src="../../assets/js-files/common_js.min.js"></script>
-    <script src="../../assets/js-files/HeaderFooter.min.js"></script>
+    <script src="../../assets/js-files/comman_js.js"></script>
+    <script src="../../assets/js-files/HeaderFooter.js"></script>
     <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
@@ -584,14 +541,6 @@ document.head.appendChild(o)}initApollo();</script>
   });
 
 </script>
-
-
-    
-  
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.css" />
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/utils.js"></script>
 
 </body>
 

@@ -329,7 +329,8 @@ document.head.appendChild(o)}initApollo();</script>
                     heading: whitepaper_heading || '',
                     fileName: whitepaper_fileName || '',
                     emailVerifyStatus: document.getElementById('emailVerifyStatus').value.trim() || '',
-                    phoneCountryCode: document.getElementById('phoneCountryCode').value.trim() || ''
+                    phoneCountryCode: document.getElementById('phoneCountryCode').value.trim() || '',
+                    formToken : window.formToken
                 };
 
                 fetch('/casestudydownloadInsert.php', {

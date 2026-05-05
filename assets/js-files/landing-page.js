@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         input.addEventListener("countrychange", setDialCode);
 
         setDialCode(); // initial set
+
+        
     });
 
     
@@ -74,10 +76,25 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
       document.getElementById("lp_visitorId").value = visitorId;
 
-
+      fetchTokenAndSet();
 
 });
 
+function fetchTokenAndSet() {
+    fetch("/getToken.php")  
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === "success") {
+                const token = data.token;
+
+                window.landing_formToken = token;
+                console.log("landing_form Token:", token);
+            }
+        })
+        .catch(err => {
+            console.error("Token fetch error:", err);
+        });
+        }
 
 document.addEventListener("input", function(e) {
 
@@ -254,7 +271,8 @@ function landingForm_submit_popup(btn) {
             timezone: document.getElementById('lp_timezone').value || '',
             formLoadedAt: document.getElementById('lp_loaded_at').value || '',
             phoneCountryCode: form.querySelector('[name="phoneCountryCode"]').value || '',
-            leadSource: demoSource
+            leadSource: demoSource,
+            formToken: window.landing_formToken
         };
 
         console.log(formData);

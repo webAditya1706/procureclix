@@ -392,7 +392,8 @@ function demoForm_submit_popup(scheduleDemoForm) {
             timezone: document.getElementById('df_timezone').value || '',
             formLoadedAt: document.getElementById('df_loaded_at').value || '',
             phoneCountryCode: document.getElementById('phoneCountryCode1').value || '',
-            leadSource: demoSource
+            leadSource: demoSource,
+            formToken : window.formToken
 
         };
         console.log(formData);

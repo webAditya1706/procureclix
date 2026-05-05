@@ -197,17 +197,17 @@
 
           <div class="spacer_12"></div>
 
-          <h5 class="fs_20_fw_400 c_2c2d mb-0">
+          <h5 class="fs_20_fw_400 c_2c2d mb-0 text-capitalize">
             ProcureClix is built on a secure, scalable cloud infrastructure designed to protect your data,
             ensure platform reliability, and support enterprise procurement operations.
           </h5>
           <div class="spacer_12"></div>
-          <h5 class="fs_20_fw_400 c_2c2d mb-0">
+          <h5 class="fs_20_fw_400 c_2c2d mb-0 text-capitalize">
             From encryption and access controls to continuous monitoring and compliance readiness, <br />
             security is embedded into every layer of our platform.
           </h5>
           <div class="spacer_32"></div>
-          <button type="button" class=" btn privacy_btn" data-bs-toggle="modal" onclick="openSecurityDocsPopup();">
+          <button type="button" class="privacy_btn" data-bs-toggle="modal" onclick="openSecurityDocsPopup();">
             Request Security Documentation
           </button>
 
@@ -229,38 +229,38 @@
         <h3 class="fs_32_fw_600 c_1314 mb-0 text-center">Trusted Security Features</h3>
         <div class="spacer_32"></div>
         <div class="row g-3">
-          <div class="col-sm-6 col-xs-12 col-xl-4 d-flex">
+          <div class="col-6 col-xl-4 d-flex">
             <div class="trusted_security_card ">
               <img src="/assets/images/others/privacy-policy/micosoft_azure_icon.svg" alt="micosoft_azure_icon"
                 srcset="">
               <h6 class="fs_16_fw_400 c_3c3c">Hosted on Microsoft Azure</h6>
             </div>
           </div>
-          <div class="col-sm-6 col-xs-12 col-xl-4 d-flex">
+          <div class="col-6 col-xl-4 d-flex">
             <div class="trusted_security_card">
               <img src="/assets/images/others/privacy-policy/data_encrypt_icon.svg" alt="micosoft_azure_icon" srcset="">
               <h6 class="fs_16_fw_400 c_3c3c">Data Encrypted In Transit & At Rest</h6>
             </div>
           </div>
-          <div class="col-sm-6 col-xs-12 col-xl-4 d-flex">
+          <div class="col-6 col-xl-4 d-flex">
             <div class="trusted_security_card">
               <img src="/assets/images/others/privacy-policy/role_based_icon.svg" alt="micosoft_azure_icon" srcset="">
               <h6 class="fs_16_fw_400 c_3c3c">Role-Based Access Controls <br /> (RBAC)</h6>
             </div>
           </div>
-          <div class="col-sm-6 col-xs-12 col-xl-4 d-flex">
+          <div class="col-6 col-xl-4 d-flex">
             <div class="trusted_security_card">
               <img src="/assets/images/others/privacy-policy/monitring_icon.svg" alt="micosoft_azure_icon" srcset="">
               <h6 class="fs_16_fw_400 c_3c3c">24/7 Monitoring & Logging</h6>
             </div>
           </div>
-          <div class="col-sm-6 col-xs-12 col-xl-4 d-flex">
+          <div class="col-6 col-xl-4 d-flex">
             <div class="trusted_security_card">
               <img src="/assets/images/others/privacy-policy/daily_backup_icon.svg" alt="micosoft_azure_icon" srcset="">
               <h6 class="fs_16_fw_400 c_3c3c">Daily Backups & Disaster Recovery</h6>
             </div>
           </div>
-          <div class="col-sm-6 col-xs-12 col-xl-4 d-flex">
+          <div class="col-6 col-xl-4 d-flex">
             <div class="trusted_security_card">
               <img src="/assets/images/others/privacy-policy/roadmap_progress_icon.svg" alt="micosoft_azure_icon"
                 srcset="">
@@ -1173,7 +1173,7 @@
 
       </div>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn footer_btn" data-bs-toggle="modal" onclick="openSecurityDocsPopup();">Request Documentation</button>
+        <button type="button" class="footer_btn" data-bs-toggle="modal" onclick="openSecurityDocsPopup();">Request Documentation</button>
       </div>
     </div>
   </section>
@@ -1222,33 +1222,13 @@
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/js/intlTelInput.min.js"></script>
 
 
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const tuserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
       document.getElementById("tpopup_timezone").value = tuserTimezone;
       document.getElementById("tpopup_form_loaded_at").value = Date.now();
-       fetchTokenAndSet();
     });
-
-    //generate token code start from here
-    function fetchTokenAndSet() {
-        fetch("/getToken.php")  
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === "success") {
-                    const token = data.token;
-
-                    window.TrustCenterToken = token;
-                    console.log("TrustCenter Token:", token);
-                }
-            })
-            .catch(err => {
-                console.error("Token fetch error:", err);
-            });
-    }
-    //end
 
     const scheduleDemo = () => {
       window.location.assign("/schedule-a-demo.html");
@@ -1278,8 +1258,7 @@
                     email: document.getElementById('tpopup_email').value || '',
                     timezone: document.getElementById('tpopup_timezone').value || '',
                     formLoadedAt: document.getElementById('tpopup_form_loaded_at').value || '',
-                    notes: 'Request Security Documentation',
-                    formToken : window.TrustCenterToken
+                    notes: 'Request Security Documentation'
                     
                 };
                 console.log(formData);
@@ -1401,6 +1380,8 @@
             document.getElementById('tpopup_emailError').innerHTML = "";
         }
         });
+
+
   </script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17/build/css/intlTelInput.css" />

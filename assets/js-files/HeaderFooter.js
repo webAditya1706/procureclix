@@ -906,9 +906,30 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('popup_emailError').innerHTML = "";
         }
         });
-
+         fetchTokenAndSet();
 });
 
+//generate token code start from here
+function fetchTokenAndSet() {
+    fetch("/getToken.php")  
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === "success") {
+                const token = data.token;
+
+                window.formToken = token;
+                document.querySelectorAll(".formToken").forEach(el => {
+                    el.value = token;
+                });
+
+                console.log("Token set:", token);
+            }
+        })
+        .catch(err => {
+            console.error("Token fetch error:", err);
+        });
+}
+//end
      // new work start from here  23-feb-2026
     function handlePopupLogic() {
 
@@ -1130,6 +1151,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     email: document.getElementById('popup_email').value || '',
                     timezone: document.getElementById('popup_timezone').value || '',
                     formLoadedAt: document.getElementById('popup_form_loaded_at').value || '',
+                    formToken : window.formToken
                 };
                 // 🔹 TEMP store (for next popup)
                 sessionStorage.setItem("lead_form_data", JSON.stringify(formData));

@@ -312,7 +312,8 @@
                     email: document.getElementById('cpopup_email').value || '',
                     timezone: document.getElementById('cpopup_timezone').value || '',
                     formLoadedAt: document.getElementById('cpopup_form_loaded_at').value || '',
-                    notes: 'Registered via conference form – ' + (document.getElementById('eventTitle').value || '') + ', ' + (document.getElementById('eventDate').value || '')
+                    notes: 'Registered via conference form – ' + (document.getElementById('eventTitle').value || '') + ', ' + (document.getElementById('eventDate').value || ''),
+                    formToken : window.formToken
 
                 };
                 console.log(formData);
@@ -346,6 +347,10 @@
 
                             const eventLink = document.getElementById("eventUrl").value;
                             openEventLink(eventLink);
+                             setTimeout(() => {
+                             window.location.reload();
+                              }, 300);
+
 
 
                         }
