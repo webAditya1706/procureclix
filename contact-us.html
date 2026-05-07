@@ -192,7 +192,8 @@
               <input type="hidden" id="emailVerifyStatus" name="emailVerifyStatus">
               <input type="hidden" id="form_loaded_at" name="formLoadedAt">
               <input type="hidden" name="recaptcha_token" id="recaptcha_token">
-              <input type="hidden" name="formToken" class="formToken">
+              <input type="hidden" id="visitorId" name="visitorId">
+               <input type="hidden" name="formToken" class="formToken">
               <div class="row gy-3">
                 <div class="col-sm-6">
                   <label for="fullName" class="form-label">Full Name<span class="text-danger">*</span></label>
@@ -332,11 +333,14 @@
     </div>
   </div>
   <script>
+    let isSubmitting = false;
     document.getElementById("contact_us_form").addEventListener("submit", function (e) {
       e.preventDefault();
       if (!validateForm()) {
         return; // ab submit ruk gaya
       }
+      isSubmitting = true;
+      deleteSavedDraft();
       grecaptcha.ready(function () {
         grecaptcha.execute('6Lcp6VksAAAAAKVvnQEfstGrX4SRVXJoBwzuwHn5', { action: 'contact_form' }).then(function (token) {
           document.getElementById("recaptcha_token").value = token;
@@ -622,9 +626,113 @@
       utkField.name = "hubspotutk";
       utkField.value = getHubspotUTK();
       form.appendChild(utkField);
+
+      let visitorId = localStorage.getItem("visitorId");
+      if(!visitorId){
+        visitorId = crypto.randomUUID();
+        localStorage.setItem("visitorId", visitorId);
+      }
+      document.getElementById("visitorId").value = visitorId;
     });
 
 
+    function finalizeLead(){
+
+        if(isSubmitting) return;
+        const visitorId = localStorage.getItem("visitorId");
+
+        if(!visitorId) return;
+
+        const data = JSON.stringify({
+            visitorId: visitorId,
+            action: "finalize"
+        });
+
+        navigator.sendBeacon("/finalizeLeadAndDeleteOnSubmit.php", data);
+    }
+    function deleteSavedDraft()
+    {
+        const visitorId = localStorage.getItem("visitorId");
+        if(!visitorId) return;
+        
+        fetch("/finalizeLeadAndDeleteOnSubmit.php",{
+              method:"POST",
+              headers:{
+                  "Content-Type":"application/json"
+              },
+              body: JSON.stringify({
+                  visitorId: visitorId,
+                  action: "delete"
+              })
+          });
+    }
+    window.addEventListener("pagehide", finalizeLead);
+
+
+      function getFormData(){
+
+          const form = document.getElementById("contact_us_form");
+          const formData = new FormData(form);
+
+          let data = {};
+
+          formData.forEach((value,key)=>{
+
+              key = key.replace("[]","");
+              if(data[key]){
+
+                  if(!Array.isArray(data[key])){
+                      data[key] = [data[key]];
+                  }
+
+                  data[key].push(value);
+
+              }else{
+                  data[key] = value;
+              }
+
+          });
+
+          return data;
+      }
+
+      let timer;
+
+      document.querySelectorAll("#contact_us_form input, #contact_us_form textarea")
+      .forEach(field => {
+
+          field.addEventListener("input", triggerSave);
+          field.addEventListener("change", triggerSave);
+
+      });
+
+      function triggerSave(){
+
+          clearTimeout(timer);
+
+          timer = setTimeout(() => {
+            // alert("inside save draft");
+              saveDraft();
+
+          }, 2000);
+
+      }
+
+
+      function saveDraft(){
+
+          const data = getFormData();
+          console.log(data);
+
+          fetch("saveContactFormDraft.php",{
+              method:"POST",
+              headers:{
+                  "Content-Type":"application/json"
+              },
+              body: JSON.stringify(data)
+          });
+
+      }
 
   </script>
 

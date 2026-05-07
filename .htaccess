@@ -1,0 +1,97 @@
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+php_value upload_max_filesize 512M
+php_value post_max_size 512M
+php_value max_execution_time 600
+php_value max_input_time 600
+
+# Industries URLs
+Redirect 301 /industries/automotive.html https://procureclix.com/industries/procurement-software-for-automotive-companies.html
+Redirect 301 /industries/food_beverage.html https://procureclix.com/industries/procurement-software-for-food-beverage-industry.html
+Redirect 301 /industries/healthcare.html https://procureclix.com/industries/procurement-software-for-healthcare-industry.html
+Redirect 301 /industries/manufacturing.html https://procureclix.com/industries/procurement-software-for-manufacturing-industry.html
+Redirect 301 /industries/logistics.html https://procureclix.com/industries/procurement-software-for-transport-logistics-industry.html
+
+#Solutions URLs
+Redirect 301 /solutions/reverse_auction.html https://procureclix.com/solutions/best-reverse-auction-software.html
+Redirect 301 /solutions/supplier_management.html https://procureclix.com/solutions/best-supplier-management-software.html
+Redirect 301 /solutions/custom_solutions.html https://procureclix.com/solutions/custom-auction-procurement-software.html
+Redirect 301 /solutions/contract_management.html https://procureclix.com/solutions/procurement-contract-management-software.html
+Redirect 301 /solutions/spend_analysis.html https://procureclix.com/solutions/procurement-spend-analysis-software.html
+Redirect 301 /solutions/purchase_requisition.html https://procureclix.com/solutions/purchase-requisition-software.html
+
+#services
+Redirect 301 /services/about-us.html https://procureclix.com/about-us.html
+
+
+
+# Redirect comingsoon (case-insensitive) to contact page
+Redirect 301 /comingsoon/index.html https://procureclix.com/contact-us.html
+Redirect 301 /comingSoon/index.html https://procureclix.com/contact-us.html
+RedirectMatch 301 (?i)^/comingsoon/index\.html$ https://procureclix.com/contact-us.html
+
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force non-www (remove www)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Custom 404 Error Page
+ErrorDocument 404 /index.html
+
+
+# Clean URLs for root-level pages
+RewriteRule ^about/?$ about-us.html [L]
+RewriteRule ^services/?$ services.html [L]
+RewriteRule ^contact/?$ contact.html [L]
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^comingsoon/$ / [R=301,NC,L]
+
+# Redirect from procureclick.com to procureclix.com
+RewriteCond %{HTTP_HOST} ^procureclick\.com$ [NC]
+RewriteRule ^(.*)$ https://procureclix.com/$1 [L,R=301]
+
+# Redirect both /comingsoon/index.html and /comingSoon/index.html (case-insensitive)
+RewriteRule ^comingsoon/index\.html$ https://procureclix.com/contact-us.html [R=301,NC,L]
+
+
+
+# Services URLs
+RewriteRule ^services/procurement-spend-analysis-services/?$ services/procurement-spend-analysis-services.html [L]
+RewriteRule ^services/rfp-managed-services/?$ services/rfp-managed-services.html [L]
+RewriteRule ^services/managed-reverse-auction-software-services/?$ services/managed-reverse-auction-software-services.html [L]
+RewriteRule ^services/about-us\.html$ /about-us.html [R=301,L]
+
+# Industries URLs
+RewriteRule ^industries/procurement-software-for-transport-logistics-industry/?$ industries/procurement-software-for-transport-logistics-industry.html [L]
+RewriteRule ^industries/procurement-software-for-healthcare-industry/?$ industries/procurement-software-for-healthcare-industry.html [L]
+RewriteRule ^industries/procurement-software-for-automotive-companies/?$ industries/procurement-software-for-automotive-companies.html [L]
+RewriteRule ^industries/procurement-software-for-manufacturing-industry/?$ industries/procurement-software-for-manufacturing-industry.html [L]
+RewriteRule ^industries/procurement-software-for-food-beverage-industry/?$ industries/procurement-software-for-food-beverage-industry.html [L]
+RewriteRule ^industries/procurement-software-for-biotech-pharma/?$ industries/procurement-software-for-biotech-pharma.html [L]
+RewriteRule ^industries/procurement-software-for-energy-brokers-suppliers/?$ industries/procurement-software-for-energy-brokers-suppliers.html [L]
+RewriteRule ^industries/construction-&-real-estate-procurement-software/?$ industries/construction-&-real-estate-procurement-software.html [L]
+
+
+#Solutions URLs
+RewriteRule ^solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix/?$ solutions/best-rfp-software-streamline-souring-&-supplier-selection-procureclix.html [L]
+RewriteRule ^solutions/procurement-spend-analysis-software/?$ solutions/procurement-spend-analysis-software.html [L]
+RewriteRule ^solutions/best-reverse-auction-software/?$ solutions/best-reverse-auction-software.html [L]
+RewriteRule ^solutions/custom-auction-procurement-software/?$ solutions/custom-auction-procurement-software.html [L]
+RewriteRule ^solutions/purchase-requisition-software/?$ solutions/purchase-requisition-software.html [L]
+RewriteRule ^solutions/best-supplier-management-software/?$ solutions/best-supplier-management-software.html [L]
+RewriteRule ^solutions/procurement-contract-management-software/?$ solutions/procurement-contract-management-software.html [L]
+
+
+
+
+
+#Resourses URLs   

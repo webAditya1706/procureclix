@@ -1,0 +1,7 @@
+
+User-agent: *
+Allow: /
+Sitemap: https://procureclix.com/sitemap.xml
+
+Disallow: /comingsoon/
+Disallow: /slick/

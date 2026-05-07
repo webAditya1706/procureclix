@@ -316,9 +316,9 @@ let FooterHTML = `
                             <div class="footer_menu">
                                 <span class="footer_menu_title">Legal</span>
                                 <div class="d-flex flex-column gap-2 mt-2">
-                                    <a href="/legal/trust-center.html" class="footer_link">Trust Center</a>
-                                    <a href="/legal/privacy-policy.html" class="footer_link">Privacy Policy</a>
-                                    <a href="/legal/terms-of-service.html" class="footer_link">Terms of Service</a>
+                                    <a href="/Legal/trust-center.html" class="footer_link">Trust Center</a>
+                                    <a href="/Legal/privacy-policy.html" class="footer_link">Privacy Policy</a>
+                                    <a href="/Legal/terms-of-service.html" class="footer_link">Terms of Service</a>
                                 </div>
                             </div>
                         </div>
